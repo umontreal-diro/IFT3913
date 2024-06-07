@@ -32,13 +32,13 @@
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [Surviving software dependencies](https://dl.acm.org/doi/pdf/10.1145/3347446)
  
-## Semaine #9 mardi 5 novembre: Analyse de performance
+## Semaine #9 mardi 5 novembre: Test de sécurité
 - Introduction + présentations d'étudiants
-- matériel préparatoire: [Fixing Performance Regressions Before they Happen](https://netflixtechblog.com/fixing-performance-regressions-before-they-happen-eab2602b86fe)
+- matériel préparatoire: [Web Security Testing Guide](https://github.com/OWASP/wstg/releases/download/v4.2/wstg-v4.2.pdf)
  
-## Semaine #10 mardi 12 novembre: Tests d'accessibilité
+## Semaine #10 mardi 12 novembre: Test et humour
 - Introduction + présentations d'étudiants
-- matériel préparatoire
+- matériel préparatoire: [With Great Humor Comes Great Developer Engagement](https://arxiv.org/pdf/2312.01680)
  
 ## Semaine #11 mardi 19 novembre: Tester la diversité d'environnements
 - Introduction + présentations d'étudiants
