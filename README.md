@@ -6,7 +6,7 @@
  
 ## Semaine #2 jeudi 12 septembre: Études de cas
 - Cas d'études: qualité pour le logiciel open source
-- matériel préparatoire: [pdfbox](https://github.com/apache/pdfbox)
+- matériel préparatoire: [How Developers Engineer Test Cases: An Observational Study]([https://github.com/apache/pdfbox](https://azaidman.github.io/publications/anicheTSE2022.pdf))
  
 ## Semaine #3 jeudi 19 septembre: Test unitaire
 - Introduction + présentations d'étudiants
