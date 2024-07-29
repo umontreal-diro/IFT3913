@@ -16,14 +16,14 @@
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [Code Coverage Best Practices](https://testing.googleblog.com/2020/08/code-coverage-best-practices.html)
  
-## Semaine #5 jeudi 3 octobre: Tests de mutation
+## Semaine #5 jeudi 3 octobre: Test unitaire avancé
+- Introduction + présentations d'étudiants
+- matériel préparatoire: [Handling Flaky Unit Tests in Java](https://www.uber.com/en-CA/blog/handling-flaky-tests-java/)
+ 
+## Semaine #6 jeudi 10 octobre: Couverture de code avancée
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [Testing beyond coverage](https://increment.com/reliability/testing-beyond-coverage/)
- 
-## Semaine #6 jeudi 10 octobre:Revue du code 
-- Introduction + présentations d'étudiants
-- matériel préparatoire: [How to do a code review](https://google.github.io/eng-practices/review/reviewer/)
- 
+
 ## Semaine #7 jeudi 17 octobre: Test statique
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [What is Clean Code?](https://www.sonarsource.com/blog/what-is-clean-code/)
@@ -54,17 +54,75 @@
 
 # Tâches
 - Une présentation individuelle (40%)
-- Une action avec test unitaires (30%)
-- Une action avec analyse de mutation ou une action avec tests exécutés dans plusieurs environnements (30%)
+- Action n°1 : test unitaires qui augmentent la couverture de code (30%)
+- Action n°2 : choix entre une action avec analyse de mutation ou une action avec tests exécutés dans plusieurs environnements (30%)
 
 # Dates limite :
 - présentation : jour du cours
-- action n°1 : lundi 14 octobre, 17h EST
-- action n°2 : lundi 18 novembre, 17h EST
+- action n°1 : jeudi 10 octobre, 17h EST
+- action n°2 : jeudi 14 novembre, 17h EST
 
 # Critères d'évaluation
 
 ## Présentation
+| critère | description |
+|-------------------------------------------- | ----|
+|temps | la présentation dure entre 6.30 min et 7.30 min (limite stricte)|
+|structure | la présentation est bien structurée et la structure est annoncée et visible |
+|introduction | la présentation inclut une introduction qui motive l'importance du sujet|
+|contenu | la présentation inclut une partie technique avec des extraite de codes, lisibles|
+|originalité | la présentation inclut un point original |
+|réflection | la présentation inclut une partie réflection / recul sur le sujet|
+|conclusion | le dernier slide inclut un message clair et pratique pour l'audience|
+|compréhension | l'orat(rice.eur) montre une maitrise et compréhension claire du sujet et peut répondre aux questions de l'audience |
+|élocution | l'orat(rice.eur) parle clairement, avec assurance, et interagit avec l'audience. le sens de l'humour responsable est apprécié  |
+|slides | les slides sont lisibles, n'incluent pas trop de texte et contiennent des illustrations |
+|sources | les sources sont citées en bas de page et sont publiquement accessibles|
 
 
-## Actions
+La limite de temps est obligatoire. Tous les autres critères comptent pour un point.
+
+## Action n°1
+
+| critère | description |
+|-------------------------------------------- | ----|
+| exécution | l'action s'exécute avec succès sur le repo initial et sur le repo avec les nouveaux tests |
+| scénario | le repo indique clairement comment exécuter l'action sur la version initiale du repo et sur la version avec les nouveaux tests|
+| documentation | le repo de l'action inclut une page qui documente les différents éléments du repo |
+| tests | l'action exécute 10 nouveaux tests qui n'étaient pas présents dans la version initiale du repo|
+| structure | les tests sont organisés en suivant le pattern AAA (arrange-act-assert) |
+| intention | chaque test a une intention claire documentée dans un commentaire |
+| qualité | la mesure de la couverture est automatisée et l'exécution des nouveaux tests augmente la couverture de code |
+| humour | le repo inclut un élément d'humour responsable |
+
+Le critère d'exécution est obligatoire, et chaque critère compte pour un point.
+
+Bonus: l'action exécute une analyse par mutation.
+
+
+## Action n°2
+
+| critère | description |
+|-------------------------------------------- | ----|
+| exécution | l'action s'exécute avec succès sur le repo initial et sur le repo avec les nouveaux tests |
+| scénario | le repo indique clairement comment exécuter l'action sur la version initiale du repo et sur la version avec les nouveaux tests|
+| documentation | le repo de l'action inclut une page qui documente les différents éléments du repo |
+| flags | l'action exécute le build (y compris les tests) avec 5 flags différents de la JVM |
+| structure | l'action génère des logs clairs qui documente quels flags sont exécutés |
+| intention | l'intention de qualité est clairement documentée: le choix de chaque flag est justifiée vis-à-vis de son impact possible sur la qualité |
+| qualité | la mesure de la couverture est automatisée et le taux de couverture avec chaque flag est documenté |
+| humour | le repo inclut un élément d'humour responsable |
+
+Le critère d'exécution est obligatoire, et chaque critère compte pour un point.
+
+Bonus: l'action exécute une analyse par mutation.
+
+
+
+Dans le cas de l'action n°1, chaque test inclut un commentaire qui décrit l'intention du test|
+| qualité | |
+| | |
+| | |
+| | |
+| | |
+| | |
