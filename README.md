@@ -117,12 +117,3 @@ Le critère d'exécution est obligatoire, et chaque critère compte pour un poin
 
 Bonus: l'action exécute une analyse par mutation.
 
-
-
-Dans le cas de l'action n°1, chaque test inclut un commentaire qui décrit l'intention du test|
-| qualité | |
-| | |
-| | |
-| | |
-| | |
-| | |
