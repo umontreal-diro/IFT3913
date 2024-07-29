@@ -40,7 +40,7 @@
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [With Great Humor Comes Great Developer Engagement](https://arxiv.org/pdf/2312.01680)
  
-## Semaine #11 jeudi 21 novembre: Tester dans un domain spécifique
+## Semaine #11 jeudi 21 novembre: Tester dans un domaine spécifique
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [Mobile Game Testing: Types, Tools, and More](https://game-ace.com/blog/mobile-game-testing/)
  
@@ -55,7 +55,7 @@
 # Tâches
 - Une présentation individuelle (40%)
 - Action n°1 : test unitaires qui augmentent la couverture de code (30%)
-- Action n°2 : choix entre une action avec analyse de mutation ou une action avec tests exécutés dans plusieurs environnements (30%)
+- Action n°2 : tests exécutés dans plusieurs environnements (30%)
 
 # Dates limite :
 - présentation : jour du cours
