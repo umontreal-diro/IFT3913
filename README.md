@@ -115,5 +115,5 @@ Bonus: l'action exécute une analyse par mutation.
 
 Le critère d'exécution est obligatoire, et chaque critère compte pour un point.
 
-Bonus: l'action exécute une analyse par mutation.
+Bonus: les commits pour développer cette action sont documentés avec lolcommits](https://github.com/lolcommits/lolcommits).
 
