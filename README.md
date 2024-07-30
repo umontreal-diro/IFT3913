@@ -63,12 +63,12 @@ Les étudiant(e)s sont évalué(e)s sur la base de 3 [tâches](#taches), suivant
 - Présentations d'étudiants
 - matériel préparatoire: [On the Costs and Benefits of Adopting Lifelong Learning for Software Analytics](https://dl.acm.org/doi/pdf/10.1145/3639477.3639717)
 
-# Tâches {#taches}
+# Tâches
 - Une présentation individuelle (40%). date limite: jour du cours
 - Action n°1 : test unitaires qui augmentent la couverture de code (30%). date limite: jeudi 10 octobre, 17h EST
 - Action n°2 : tests exécutés dans plusieurs environnements (30%). date limite: jeudi 14 novembre, 17h EST
 
-# Critères d'évaluation {#criteres}
+# Critères d'évaluation
 
 ## Présentation
 | critère | description |
