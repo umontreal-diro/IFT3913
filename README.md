@@ -69,7 +69,7 @@
 |-------------------------------------------- | ----|
 |temps | la présentation dure entre 6.30 min et 7.30 min (limite stricte)|
 |structure | la présentation est bien structurée et la structure est annoncée et visible |
-|introduction | la présentation inclut une introduction qui motive l'importance du sujet|
+|introduction | la présentation inclut une introduction qui motive l'importance du sujet pour la qualité logicielle|
 |contenu | la présentation inclut une partie technique avec des extraite de codes, lisibles|
 |originalité | la présentation inclut un point original |
 |réflection | la présentation inclut une partie réflection / recul sur le sujet|
