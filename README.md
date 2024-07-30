@@ -8,7 +8,7 @@ Avec ce cours, les étudiant(e)s auront acquis les compétences suivantes:
 * apprentissage par diverses sources de connaissances
 * curiosité et humour pour le logiciel
 
-Les étudiant(e)s sont évalué(e)s sur la base de 3 [tâches](taches), suivant les [critères](criteres) énoncés ci-dessous.
+Les étudiant(e)s sont évalué(e)s sur la base de 3 [tâches](#taches), suivant les [critères](#criteres) énoncés ci-dessous.
 
 
 ## Semaine #1 jeudi 5 septembre: Introduction
