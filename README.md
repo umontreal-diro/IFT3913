@@ -8,7 +8,7 @@ Avec ce cours, les étudiant(e)s auront acquis les compétences suivantes:
 * apprentissage par diverses sources de connaissances
 * curiosité et humour pour le logiciel
 
-Les étudiant(e)s sont évalué(e)s sur la base de 3 [tâches](https://github.com/umontreal-diro/IFT3913/blob/main/README.md#crit%C3%A8res-d%C3%A9valuation), suivant les [critères](https://github.com/umontreal-diro/IFT3913/blob/main/README.md#crit%C3%A8res-d%C3%A9valuation) énoncés ci-dessous.
+Les étudiant(e)s sont évalué(e)s sur la base de 3 [tâches](https://github.com/umontreal-diro/IFT3913/blob/main/README.md#t%C3%A2ches), suivant les [critères](https://github.com/umontreal-diro/IFT3913/blob/main/README.md#crit%C3%A8res-d%C3%A9valuation) énoncés ci-dessous.
 
 
 ## Semaine #1 jeudi 5 septembre: Introduction
