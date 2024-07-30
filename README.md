@@ -8,43 +8,43 @@
 - Cas d'études: qualité pour le logiciel open source
 - matériel préparatoire: [How Developers Engineer Test Cases: An Observational Study]([https://github.com/apache/pdfbox](https://azaidman.github.io/publications/anicheTSE2022.pdf))
  
-## Semaine #3 jeudi 19 septembre: Test unitaire
+## Semaine #3 jeudi 19 septembre: [Test unitaire](https://github.com/umontreal-diro/IFT3913/issues/2)
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [Unit Tests for SQL](https://ieeexplore.ieee.org/iel7/52/10372482/10372508.pdf)
  
-## Semaine #4 jeudi 26 septembre: Couverture de code
+## Semaine #4 jeudi 26 septembre: [Couverture de code](https://github.com/umontreal-diro/IFT3913/issues/3)
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [Code Coverage Best Practices](https://testing.googleblog.com/2020/08/code-coverage-best-practices.html)
  
-## Semaine #5 jeudi 3 octobre: Test unitaire avancé
+## Semaine #5 jeudi 3 octobre: [Test unitaire avancé](https://github.com/umontreal-diro/IFT3913/issues/4) 
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [Handling Flaky Unit Tests in Java](https://www.uber.com/en-CA/blog/handling-flaky-tests-java/)
  
-## Semaine #6 jeudi 10 octobre: Couverture de code avancée
+## Semaine #6 jeudi 10 octobre: [Couverture de code avancée](https://github.com/umontreal-diro/IFT3913/issues/5)
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [Testing beyond coverage](https://increment.com/reliability/testing-beyond-coverage/)
 
-## Semaine #7 jeudi 17 octobre: Test statique
+## Semaine #7 jeudi 17 octobre: [Test statique](https://github.com/umontreal-diro/IFT3913/issues/6)
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [What is Clean Code?](https://www.sonarsource.com/blog/what-is-clean-code/)
 
-## Semaine #8 jeudi 31 octobre: Gestion des dépendances
+## Semaine #8 jeudi 31 octobre: [Gestion des dépendances](https://github.com/umontreal-diro/IFT3913/issues/7)
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [Surviving software dependencies](https://dl.acm.org/doi/pdf/10.1145/3347446)
  
-## Semaine #9 jeudi 7 novembre: Tester la diversité d'environnements
+## Semaine #9 jeudi 7 novembre: [Tester la diversité d'environnements](https://github.com/umontreal-diro/IFT3913/issues/8)
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [Cross Browser Testing Overview](https://www.datadoghq.com/knowledge-center/cross-browser-testing/)
  
-## Semaine #10 jeudi 14 novembre: Test et humour
+## Semaine #10 jeudi 14 novembre: [Test et humour](https://github.com/umontreal-diro/IFT3913/issues/9)
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [With Great Humor Comes Great Developer Engagement](https://arxiv.org/pdf/2312.01680)
  
-## Semaine #11 jeudi 21 novembre: Tester dans un domaine spécifique
+## Semaine #11 jeudi 21 novembre: [Tester dans un domaine spécifique](https://github.com/umontreal-diro/IFT3913/issues/10)
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [Mobile Game Testing: Types, Tools, and More](https://game-ace.com/blog/mobile-game-testing/)
  
-## Semaine #12 jeudi 28 novembre: Test en production
+## Semaine #12 jeudi 28 novembre: [Test en production](https://github.com/umontreal-diro/IFT3913/issues/11)
 - Introduction + présentations d'étudiants
 - matériel préparatoire: [I test in prod](https://increment.com/testing/i-test-in-production/)
  
