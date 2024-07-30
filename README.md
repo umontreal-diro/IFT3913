@@ -77,7 +77,7 @@
 |compréhension | l'orat(rice.eur) montre une maitrise et compréhension claire du sujet et peut répondre aux questions de l'audience |
 |élocution | l'orat(rice.eur) parle clairement, avec assurance, et interagit avec l'audience. le sens de l'humour responsable est apprécié  |
 |slides | les slides sont lisibles, n'incluent pas trop de texte et contiennent des illustrations |
-|sources | les sources sont citées en bas de page et sont publiquement accessibles|
+|sources | la présentation s'appuie sur au moins 3 sources extérieures qui sont citées en bas de page et sont publiquement accessibles|
 
 
 La limite de temps est obligatoire. Tous les autres critères comptent pour un point.
