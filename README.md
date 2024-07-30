@@ -1,4 +1,15 @@
-# Syllabus pour IFT3913 [automne 2024]
+# IFT3913 - Qualité du logiciel 
+
+Ce cours est offert à l'automne 2024. Il est organisé suivant le calendrier ci-dessous.
+
+Avec ce cours, les étudiant(e)s auront acquis les compétences suivantes: 
+* évaluation automatique de la qualité logicielle
+* concepts fondamentaux du test logicel: données, scénarios, oracles
+* apprentissage par diverses sources de connaissances
+* curiosité et humour pour le logiciel
+
+Les étudiant(e)s sont évalué(e)s sur la base de 3 [tâches](taches), suivant les [critères](criteres) énoncés ci-dessous.
+
 
 ## Semaine #1 jeudi 5 septembre: Introduction
 - présentation du cours et des modalités
@@ -52,17 +63,12 @@
 - Présentations d'étudiants
 - matériel préparatoire: [On the Costs and Benefits of Adopting Lifelong Learning for Software Analytics](https://dl.acm.org/doi/pdf/10.1145/3639477.3639717)
 
-# Tâches
-- Une présentation individuelle (40%)
-- Action n°1 : test unitaires qui augmentent la couverture de code (30%)
-- Action n°2 : tests exécutés dans plusieurs environnements (30%)
+# Tâches {#taches}
+- Une présentation individuelle (40%). date limite: jour du cours
+- Action n°1 : test unitaires qui augmentent la couverture de code (30%). date limite: jeudi 10 octobre, 17h EST
+- Action n°2 : tests exécutés dans plusieurs environnements (30%). date limite: jeudi 14 novembre, 17h EST
 
-# Dates limite :
-- présentation : jour du cours
-- action n°1 : jeudi 10 octobre, 17h EST
-- action n°2 : jeudi 14 novembre, 17h EST
-
-# Critères d'évaluation
+# Critères d'évaluation {#criteres}
 
 ## Présentation
 | critère | description |
