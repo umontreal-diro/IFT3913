@@ -101,7 +101,9 @@ La limite de temps est obligatoire. Tous les autres critères comptent pour un p
 | qualité | la mesure de la couverture est automatisée et l'exécution des nouveaux tests augmente la couverture de code |
 | humour | le repo inclut un élément d'humour responsable |
 
-Le critère d'exécution est obligatoire, et chaque critère compte pour un point.
+Le critère d'exécution est très fortement conseillé, et chaque critère compte pour un point.
+
+Si l'action ne s'exécute pas correctement, la note maximale pour cette tâche ne pourra pas dépasser 4/10.
 
 Bonus: l'action exécute une analyse par mutation.
 
