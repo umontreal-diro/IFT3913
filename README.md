@@ -121,7 +121,9 @@ Bonus: l'action exécute une analyse par mutation.
 | qualité | la mesure de la couverture est automatisée et le taux de couverture avec chaque flag est documenté |
 | humour | le repo inclut un élément d'humour responsable |
 
-Le critère d'exécution est obligatoire, et chaque critère compte pour un point.
+Le critère d'exécution est très fortement conseillé, et chaque critère compte pour un point.
 
-Bonus: les commits pour développer cette action sont documentés avec lolcommits](https://github.com/lolcommits/lolcommits).
+Si l'action ne s'exécute pas correctement, la note maximale pour cette tâche ne pourra pas dépasser 4/10.
+
+Bonus: les commits pour développer cette action sont documentés avec [lolcommits](https://github.com/lolcommits/lolcommits).
 
