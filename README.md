@@ -64,13 +64,14 @@ Les étudiant(e)s sont évalué(e)s sur la base de 3 [tâches](https://github.co
 - matériel préparatoire: [On the Costs and Benefits of Adopting Lifelong Learning for Software Analytics](https://dl.acm.org/doi/pdf/10.1145/3639477.3639717)
 
 # Tâches
-- Une présentation individuelle (40%). date limite: jour du cours
-- Action n°1 : test unitaires qui augmentent la couverture de code (30%). date limite: jeudi 10 octobre, 17h EST
-- Action n°2 : tests exécutés dans plusieurs environnements (30%). date limite: jeudi 14 novembre, 17h EST
+- tâche #1: présentation individuelle (40%). date limite: jour du cours
+- tâche #2: augmentation d'une suite de tests automatique (30%). date limite: jeudi 10 octobre, 17h EST 
+- tâche #3: automatisation des tests sur divers environnements. date limite: jeudi 14 novembre, 17h EST
 
 # Critères d'évaluation
 
-## Présentation
+## Tâche #1: présentation
+
 | critère | description |
 |-------------------------------------------- | ----|
 |temps | la présentation dure entre 6.30 min et 7.30 min (limite stricte)|
@@ -88,18 +89,17 @@ Les étudiant(e)s sont évalué(e)s sur la base de 3 [tâches](https://github.co
 
 La limite de temps est obligatoire. Tous les autres critères comptent pour un point.
 
-## Action n°1
+## Tâche #2: tests unitaires automatiques
 
 | critère | description |
 |-------------------------------------------- | ----|
-| exécution | l'action s'exécute avec succès sur le repo initial et sur le repo avec les nouveaux tests |
-| scénario | le repo indique clairement comment exécuter l'action sur la version initiale du repo et sur la version avec les nouveaux tests|
-| documentation | le repo de l'action inclut une page qui documente les différents éléments du repo |
-| tests | l'action exécute 10 nouveaux tests qui n'étaient pas présents dans la version initiale du repo|
-| structure | les tests sont organisés en suivant le pattern AAA (arrange-act-assert) |
-| intention | chaque test a une intention claire documentée dans un commentaire |
-| qualité | la mesure de la couverture est automatisée et l'exécution des nouveaux tests augmente la couverture de code |
-| humour | le repo inclut un élément d'humour responsable |
+| tests 		| 10 nouveaux tests qui n'étaient pas présents dans la version initiale du repo| 
+| oracle		| chaque test inclut un oracle qui vérifie, automatiquement, que le programme a le comportement attendu| 
+| intention 	| chaque test a une intention claire documentée dans un commentaire| 
+| structure 	| les tests sont organisés en suivant le pattern AAA (arrange-act-assert)| 
+| documentation 	| le repo inclut une page qui documente où se trouvent les nouveaux tests et justifie les choix des méthodes testées| 
+| qualité 	| la mesure de la couverture est automatisée et l'exécution des nouveaux tests augmente la couverture de code| 
+| exécution 	| les tests, y compris les 10 nouveaux, s'exécutent avec succès dans une Github action| 
 
 Le critère d'exécution est très fortement conseillé, et chaque critère compte pour un point.
 
@@ -108,18 +108,18 @@ Si l'action ne s'exécute pas correctement, la note maximale pour cette tâche n
 Bonus: l'action exécute une analyse par mutation.
 
 
-## Action n°2
+## Tâche #3: test sur divers environnements
 
 | critère | description |
 |-------------------------------------------- | ----|
-| exécution | l'action s'exécute avec succès sur le repo initial et sur le repo avec les nouveaux tests |
+| flags | l'action exécute le build (y compris les tests) avec 5 flags différents de la JVM |
 | scénario | le repo indique clairement comment exécuter l'action sur la version initiale du repo et sur la version avec les nouveaux tests|
 | documentation | le repo de l'action inclut une page qui documente les différents éléments du repo |
-| flags | l'action exécute le build (y compris les tests) avec 5 flags différents de la JVM |
 | structure | l'action génère des logs clairs qui documente quels flags sont exécutés |
 | intention | l'intention de qualité est clairement documentée: le choix de chaque flag est justifiée vis-à-vis de son impact possible sur la qualité |
 | qualité | la mesure de la couverture est automatisée et le taux de couverture avec chaque flag est documenté |
 | humour | le repo inclut un élément d'humour responsable |
+| exécution | l'action s'exécute avec succès sur le repo initial et sur le repo avec les nouveaux tests |
 
 Le critère d'exécution est très fortement conseillé, et chaque critère compte pour un point.
 
