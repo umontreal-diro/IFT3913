@@ -64,9 +64,10 @@ Les étudiant(e)s sont évalué(e)s sur la base de 3 [tâches](https://github.co
 - matériel préparatoire: [On the Costs and Benefits of Adopting Lifelong Learning for Software Analytics](https://dl.acm.org/doi/pdf/10.1145/3639477.3639717)
 
 # Tâches
-- tâche #1: présentation individuelle (40%). date limite: jour du cours
-- tâche #2: augmentation d'une suite de tests automatique (30%). date limite: jeudi 10 octobre, 17h EST 
-- tâche #3: automatisation des tests sur divers environnements. date limite: jeudi 14 novembre, 17h EST
+- tâche #1: présentation individuelle (40%). Les étudiants choisissent un thème parmi tous ceux abordés chaque semaine et préparent une présentation technique de 7 minutes sur ce thème. date limite: jour du cours
+- tâche #2: augmentation d'une suite de tests automatique (30%). Les étudiants travaillent en binôme. Chaque binôme choisit un des [10 projets]() sélectionnés pour le cours, ajoute, documente et automatise l'exécution de 10 nouveaux tests unitaires. date limite: jeudi 10 octobre, 17h EST 
+- tâche #3: automatisation des tests sur divers environnements. Les étudiants travaillent en binôme, le même binôme que pour la tâche #2. Chaque binôme travaille sur le même projet que pour la tâche #2, afin d'automatiser l'exécution des tests dans une diversité d'environnements. date limite: jeudi 14 novembre, 17h EST
+- Bonus: poser au moins une question à plus de la moitié des cours (5%)
 
 # Critères d'évaluation
 
@@ -97,31 +98,32 @@ La limite de temps est obligatoire. Tous les autres critères comptent pour un p
 | oracle		| chaque test inclut un oracle qui vérifie, automatiquement, que le programme a le comportement attendu| 
 | intention 	| chaque test a une intention claire documentée dans un commentaire| 
 | structure 	| les tests sont organisés en suivant le pattern AAA (arrange-act-assert)| 
-| documentation 	| le repo inclut une page qui documente où se trouvent les nouveaux tests et justifie les choix des méthodes testées| 
-| qualité 	| la mesure de la couverture est automatisée et l'exécution des nouveaux tests augmente la couverture de code| 
+| documentation | le repo inclut une page qui documente où se trouvent les méthodes testées et justifie les choix des méthodes testées| 
+| qualité 	    | la mesure de la couverture est automatisée |
+| utilité       | l'exécution des nouveaux tests augmente la couverture de code| 
 | exécution 	| les tests, y compris les 10 nouveaux, s'exécutent avec succès dans une Github action| 
 
-Le critère d'exécution est très fortement conseillé, et chaque critère compte pour un point.
+Chacun des critères compte pour un point.
 
-Si l'action ne s'exécute pas correctement, la note maximale pour cette tâche ne pourra pas dépasser 4/10.
+Il est très fortement conseillé que les tests s'exécutent automatiquement et correctement dans une Github action (dernier critère). Si ce n'est pas le cas, la note maximale pour cette tâche ne pourra pas dépasser 4/10.
 
-Bonus: l'action exécute une analyse par mutation.
+Bonus: au moins un test utilise la bibliothèque [java-faker](https://github.com/DiUS/java-faker).
 
 
 ## Tâche #3: test sur divers environnements
 
 | critère | description |
 |-------------------------------------------- | ----|
-| flags | l'action exécute le build (y compris les tests) avec 5 flags différents de la JVM |
-| scénario | le repo indique clairement comment exécuter l'action sur la version initiale du repo et sur la version avec les nouveaux tests|
-| documentation | le repo de l'action inclut une page qui documente les différents éléments du repo |
-| structure | l'action génère des logs clairs qui documente quels flags sont exécutés |
-| intention | l'intention de qualité est clairement documentée: le choix de chaque flag est justifiée vis-à-vis de son impact possible sur la qualité |
-| qualité | la mesure de la couverture est automatisée et le taux de couverture avec chaque flag est documenté |
-| humour | le repo inclut un élément d'humour responsable |
-| exécution | l'action s'exécute avec succès sur le repo initial et sur le repo avec les nouveaux tests |
+| flags         | l'action exécute la compilation et les tests avec 5 flags différents de la JVM |
+| scénario      | le repo indique clairement comment exécuter l'action sur la version initiale du repo et sur la version avec les diverses options de la JVM|
+| documentation | le repo inclut une page qui documente les changements apportés à la Github action pour permettre l'exécution avec divers flags |
+| structure     | l'action génère des logs clairs qui documente quels flags sont exécutés |
+| intention     | l'intention de qualité est clairement documentée: le choix de chaque flag est justifiée vis-à-vis de son impact possible sur la qualité |
+| qualité       | la mesure de la couverture est automatisée et le taux de couverture avec chaque flag est documenté |
+| humour        | le repo inclut un élément d'humour responsable |
+| exécution     | l'action s'exécute avec succès sur le repo initial et sur le repo avec les nouveaux flags |
 
-Le critère d'exécution est très fortement conseillé, et chaque critère compte pour un point.
+Chaque critère compte pour un point.
 
 Si l'action ne s'exécute pas correctement, la note maximale pour cette tâche ne pourra pas dépasser 4/10.
 
