@@ -10,6 +10,8 @@ Avec ce cours, les étudiant(e)s auront acquis les compétences suivantes:
 
 Les étudiant(e)s sont évalué(e)s sur la base de 3 [tâches](https://github.com/umontreal-diro/IFT3913/blob/main/README.md#t%C3%A2ches), suivant les [critères](https://github.com/umontreal-diro/IFT3913/blob/main/README.md#crit%C3%A8res-d%C3%A9valuation) énoncés ci-dessous.
 
+Prérequis: programmation Java, [git et github](https://github.com/umontreal-diro/IFT3913/issues/13).
+
 
 ## Semaine #1 jeudi 5 septembre: Introduction
 - présentation du cours et des modalités
@@ -65,7 +67,7 @@ Les étudiant(e)s sont évalué(e)s sur la base de 3 [tâches](https://github.co
 
 # Tâches
 - tâche #1: présentation individuelle (40%). Les étudiants choisissent un thème parmi tous ceux abordés chaque semaine et préparent une présentation technique de 7 minutes sur ce thème. date limite: jour du cours
-- tâche #2: augmentation d'une suite de tests automatique (30%). Les étudiants travaillent en binôme. Chaque binôme choisit un des [10 projets]() sélectionnés pour le cours, ajoute, documente et automatise l'exécution de 10 nouveaux tests unitaires. date limite: jeudi 10 octobre, 17h EST 
+- tâche #2: augmentation d'une suite de tests automatique (30%). Les étudiants travaillent en binôme. Chaque binôme choisit une des [études de cas](cas-etude.md) sélectionnées pour le cours, ajoute, documente et automatise l'exécution de 10 nouveaux tests unitaires. date limite: jeudi 10 octobre, 17h EST 
 - tâche #3: automatisation des tests sur divers environnements. Les étudiants travaillent en binôme, le même binôme que pour la tâche #2. Chaque binôme travaille sur le même projet que pour la tâche #2, afin d'automatiser l'exécution des tests dans une diversité d'environnements. date limite: jeudi 14 novembre, 17h EST
 - Bonus: poser au moins une question à plus de la moitié des cours (5%)
 
