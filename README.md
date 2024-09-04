@@ -67,9 +67,15 @@ Le cours a lieu en personne les jeudis de 8.30 à 11.30, en salle Z-317 au [Pavi
 - matériel préparatoire: [On the Costs and Benefits of Adopting Lifelong Learning for Software Analytics](https://dl.acm.org/doi/pdf/10.1145/3639477.3639717)
 
 # Tâches
-- tâche #1: présentation individuelle (40%). Les étudiants choisissent un thème parmi tous ceux abordés chaque semaine et préparent une présentation technique de 7 minutes sur ce thème. date limite: jour du cours
-- tâche #2: augmentation d'une suite de tests automatique (30%). Les étudiants travaillent en binôme. Chaque binôme choisit une des [études de cas](cas-etude.md) sélectionnées pour le cours, ajoute, documente et automatise l'exécution de 10 nouveaux tests unitaires. date limite: jeudi 10 octobre, 17h EST 
-- tâche #3: automatisation des tests sur divers environnements. Les étudiants travaillent en binôme, le même binôme que pour la tâche #2. Chaque binôme travaille sur le même projet que pour la tâche #2, afin d'automatiser l'exécution des tests dans une diversité d'environnements. date limite: jeudi 14 novembre, 17h EST
+- tâche #1: présentation individuelle (40%). Les étudiants choisissent un thème parmi tous ceux abordés chaque semaine et préparent une présentation technique de 7 minutes sur ce thème.
+  - [instructions détaillés](./presentations/readme.md) 
+  - date limite: jour du cours
+- tâche #2: augmentation d'une suite de tests automatique (30%). Les étudiants travaillent en binôme. Chaque binôme choisit une des [études de cas](cas-etude.md) sélectionnées pour le cours, ajoute, documente et automatise l'exécution de 10 nouveaux tests unitaires. 
+  - [instructions détaillées](./tache2/readme.md)
+  - date limite: jeudi 10 octobre, 17h EST 
+- tâche #3: automatisation des tests sur divers environnements. Les étudiants travaillent en binôme, le même binôme que pour la tâche #2. Chaque binôme travaille sur le même projet que pour la tâche #2, afin d'automatiser l'exécution des tests dans une diversité d'environnements. 
+  - [instructions détaillées](./tache3/readme.md)
+  - date limite: jeudi 14 novembre, 17h EST
 - Bonus: poser au moins une question à plus de la moitié des cours (5%)
 
 # Critères d'évaluation
