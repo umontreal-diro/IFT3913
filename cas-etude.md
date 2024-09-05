@@ -37,19 +37,6 @@ notamment l'analyse du HTML à partir d'une URL, l'extraction de données en par
 | org.jsoup.jsoup | 1359  |
 | **Coverage**    | 90.4% |
 
-## [Guava](https://github.com/umontreal-diro/guava)
-
-Ce référentiel contient un ensemble de bibliothèques 'core' de Google. Ces bibliothèques incluent de nouveaux types de collection tels que multimap
-et multiset, des versions légères de cache, des solutions de publication-abonnement et des extensions aux types de données primitifs Java.
-
-| Stats                          | #      |
-|:-------------------------------|--------|
-| **Modules**                    | 5      |
-| **Tests**                      |        |
-| com.google.guava.guava-testlib | 856734 |
-| com.google.guava.guava-tests   | 857854 |
-| **Coverage**                   | 90.2%  |
-
 ## [Jackson](https://github.com/umontreal-diro/jackson-core)
 
 La bibliothèque principale du projet Jackson, un des meilleurs outils pour l'analyse de JSON Java. Les abstractions principales de ce projet prennent également en charge leur implémentation dans d'autres formats de données tels que XML, CSV et Protobuf. Ce projet contient certaines des classes les plus couramment utilisées dans les projets Java pour la lecture/écriture de contenus JSON, telles que JSONParser, JSONGenerator et JSONFactory.
@@ -136,10 +123,6 @@ et de gouvernance dans l'architecture de microservices. Les principales fonction
 | org.apache.dubbo.dubbo-auth                                    | 18    |
 | org.apache.dubbo.dubbo-security                                | 24    |
 | org.apache.dubbo.dubbo-reactive                                | 6     |
-| org.apache.dubbo.dubbo-spring-security                         | 1     |
-| org.apache.dubbo.dubbo-spring-boot-autoconfigure-compatible    | 20    |
-| org.apache.dubbo.dubbo-spring-boot-observability-autoconfigure | 7     |
-| org.apache.dubbo.dubbo-spring-boot-actuator-compatible         | 8     |
 | org.apache.dubbo.dubbo-test-spring                             | 3     |
 | org.apache.dubbo.dubbo-test-modules                            | 7     |
 | **Coverage**                                                   | 66.2% |
