@@ -127,7 +127,7 @@ Bonus: au moins un test utilise la bibliothèque [java-faker](https://github.com
 | scénario      | le repo indique clairement comment exécuter l'action sur la version initiale du repo et sur la version avec les diverses options de la JVM|
 | documentation | le repo inclut une page qui documente les changements apportés à la Github action pour permettre l'exécution avec divers flags |
 | structure     | l'action génère des logs clairs qui documente quels flags sont exécutés |
-| intention     | l'intention de qualité est clairement documentée: le choix de chaque flag est justifiée vis-à-vis de son impact possible sur la qualité |
+| intention     | l'intention de qualité est clairement documentée: le choix de chaque flag est justifié vis-à-vis de son impact possible sur la qualité |
 | qualité       | la mesure de la couverture est automatisée et le taux de couverture avec chaque flag est documenté |
 | humour        | le repo inclut un élément d'humour responsable |
 | exécution     | l'action s'exécute avec succès sur le repo initial et sur le repo avec les nouveaux flags |
