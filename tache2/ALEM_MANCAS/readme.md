@@ -1,1 +1,3 @@
-Test readme pour la presentation
+ALEM Nada, MANCAS Alessandra
+
+Étude de cas choisie: **Graphopper**
