@@ -110,7 +110,6 @@ La limite de temps est obligatoire. Tous les autres critères comptent pour un p
 | intention 	| chaque test a une intention claire documentée dans un commentaire| 
 | structure 	| les tests sont organisés en suivant le pattern AAA (arrange-act-assert)| 
 | documentation | le repo inclut une page qui documente où se trouvent les méthodes testées et justifie les choix des méthodes testées| 
-| qualité 	    | la mesure de la couverture est automatisée |
 | utilité       | l'exécution des nouveaux tests augmente la couverture de code| 
 | exécution 	| les tests, y compris les 10 nouveaux, s'exécutent avec succès dans une Github action| 
 
@@ -126,13 +125,11 @@ Bonus: au moins un test utilise la bibliothèque [java-faker](https://github.com
 | critère | description |
 |-------------------------------------------- | ----|
 | flags         | l'action exécute la compilation et les tests avec 5 flags différents de la JVM |
-| scénario      | le repo indique clairement comment exécuter l'action sur la version initiale du repo et sur la version avec les diverses options de la JVM|
 | documentation | le repo inclut une page qui documente les changements apportés à la Github action pour permettre l'exécution avec divers flags |
 | structure     | l'action génère des logs clairs qui documente quels flags sont exécutés |
 | intention     | l'intention de qualité est clairement documentée: le choix de chaque flag est justifié vis-à-vis de son impact possible sur la qualité |
 | qualité       | la mesure de la couverture est automatisée et le taux de couverture avec chaque flag est documenté |
-| humour        | le repo inclut un élément d'humour responsable |
-| exécution     | l'action s'exécute avec succès sur le repo initial et sur le repo avec les nouveaux flags |
+| humour        | le repo inclut un élément d'humour responsable et documenté |
 
 Chaque critère compte pour un point.
 
