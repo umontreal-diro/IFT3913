@@ -1,3 +1,3 @@
-Test unitaire en Java
+Test unitaire en Java - David Qi
 
 La présentation aborde l'importance des tests unitaires en Java pour garantir la qualité logicielle, en expliquant comment ces tests permettent de détecter rapidement les bugs et de maintenir un code stable. Après une introduction sur leur rôle essentiel, un exemple concret de test avec JUnit est présenté, suivi d'une démonstration de l'utilisation de Mockito pour simuler des objets et isoler les tests. Une réflexion sur les avantages et les limites des tests unitaires est ensuite discutée, et la présentation se conclut par un appel à intégrer les tests dès le début du développement pour garantir un code fiable.
