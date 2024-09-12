@@ -14,13 +14,15 @@ Prérequis: programmation Java, [git et github](https://github.com/umontreal-dir
 
 Le cours a lieu en personne les jeudis de 8.30 à 11.30, en salle Z-317 au [Pavillon Claire-McNicoll](https://plancampus.umontreal.ca/montreal/?tx_udemplancampus_pi1%5Bbuilding%5D=384&tx_udemplancampus_pi1%5Baction%5D=show&tx_udemplancampus_pi1%5Bcontroller%5D=Building&cHash=21d285a99ff9b02e3952d15b1a39ab0f). Les séances de travaux pratique ont lieu les mardis de 8.30 à 10.30, en salle 1355 au [Pavillon André-Aisenstadt](https://plancampus.umontreal.ca/montreal/?tx_udemplancampus_pi1%5Bbuilding%5D=376&tx_udemplancampus_pi1%5Baction%5D=show&tx_udemplancampus_pi1%5Bcontroller%5D=Building&cHash=43ca17f8d3bcc8f02b40497fb5a5614a).
 
+Vous pouvez contacter les assistants de cours, Meriem, Yogya et Oussama, à cette adresse: dift3913@iro.umontreal.ca
+
 ## Semaine #1 jeudi 5 septembre: Introduction
 - présentation du cours et des modalités
 - matériel préparatoire: [Operational Excellence](https://dl.acm.org/doi/pdf/10.1145/3155112.3171529)
  
 ## Semaine #2 jeudi 12 septembre: Études de cas
 - Cas d'études: qualité pour le logiciel open source
-- matériel préparatoire: [How Developers Engineer Test Cases: An Observational Study]([https://github.com/apache/pdfbox](https://azaidman.github.io/publications/anicheTSE2022.pdf))
+- matériel préparatoire: [How Developers Engineer Test Cases: An Observational Study](https://azaidman.github.io/publications/anicheTSE2022.pdf)
  
 ## Semaine #3 jeudi 19 septembre: [Test unitaire](https://github.com/umontreal-diro/IFT3913/issues/2)
 - Introduction + présentations d'étudiants
@@ -108,7 +110,6 @@ La limite de temps est obligatoire. Tous les autres critères comptent pour un p
 | intention 	| chaque test a une intention claire documentée dans un commentaire| 
 | structure 	| les tests sont organisés en suivant le pattern AAA (arrange-act-assert)| 
 | documentation | le repo inclut une page qui documente où se trouvent les méthodes testées et justifie les choix des méthodes testées| 
-| qualité 	    | la mesure de la couverture est automatisée |
 | utilité       | l'exécution des nouveaux tests augmente la couverture de code| 
 | exécution 	| les tests, y compris les 10 nouveaux, s'exécutent avec succès dans une Github action| 
 
@@ -124,13 +125,11 @@ Bonus: au moins un test utilise la bibliothèque [java-faker](https://github.com
 | critère | description |
 |-------------------------------------------- | ----|
 | flags         | l'action exécute la compilation et les tests avec 5 flags différents de la JVM |
-| scénario      | le repo indique clairement comment exécuter l'action sur la version initiale du repo et sur la version avec les diverses options de la JVM|
 | documentation | le repo inclut une page qui documente les changements apportés à la Github action pour permettre l'exécution avec divers flags |
 | structure     | l'action génère des logs clairs qui documente quels flags sont exécutés |
 | intention     | l'intention de qualité est clairement documentée: le choix de chaque flag est justifié vis-à-vis de son impact possible sur la qualité |
 | qualité       | la mesure de la couverture est automatisée et le taux de couverture avec chaque flag est documenté |
-| humour        | le repo inclut un élément d'humour responsable |
-| exécution     | l'action s'exécute avec succès sur le repo initial et sur le repo avec les nouveaux flags |
+| humour        | le repo inclut un élément d'humour responsable et documenté |
 
 Chaque critère compte pour un point.
 
