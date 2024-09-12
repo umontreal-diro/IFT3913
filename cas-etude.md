@@ -4,7 +4,6 @@ Pour les tâches 2 et 3 du cours, vous choisirez un projet parmi la liste ci-des
 
 - [Makelangelo](#makelangelo)
 - [jsoup](#jsoup)
-- [guava](#guava)
 - [Jackson](#jackson)
 - [Graphhopper](#graphhopper)
 - [Dubbo](#dubbo)
@@ -22,7 +21,7 @@ projet a été créé à l'origine pour le [Makelangelo Art Robot](http://www.ma
 | **Modules**                      | 1     |
 | **Tests**                        |       |
 | com.marginallyclever.makelangelo | 149   |
-| **Coverage**                     | 24.4% |
+| **Coverage**                     | 24.46% |
 
 
 ## [jsoup](https://github.com/umontreal-diro/jsoup)
@@ -35,7 +34,7 @@ notamment l'analyse du HTML à partir d'une URL, l'extraction de données en par
 | **Modules**     | 1     |
 | **Tests**       |       |
 | org.jsoup.jsoup | 1359  |
-| **Coverage**    | 90.4% |
+| **Coverage**    | 90.41% |
 
 ## [Jackson](https://github.com/umontreal-diro/jackson-core)
 
@@ -46,7 +45,7 @@ La bibliothèque principale du projet Jackson, un des meilleurs outils pour l'an
 | **Modules**                        | 1     |
 | **Tests**                          |       |
 | com.fasterxml.jackson.jackson-base | 1412  |
-| **Coverage**                       | 81.5% |
+| **Coverage**                       | 81.58% |
 
 ## [Graphhopper](https://github.com/umontreal-diro/graphhopper)
 
@@ -60,13 +59,17 @@ algorithmes de routage populaires tels que Dijkstra ou A*.
 | **Tests**                   |       |
 | com.graphhopper.core        | 2532  |
 | com.graphhopper.reader-gtfs | 284   |
-| com.graphhopper.web-bundle  | 9     |
 | com.graphhopper.web-api     | 43    |
 | com.graphhopper.web         | 196   |
 | com.graphhopper.client-hc   | 24    |
 | com.graphhopper.navigation  | 22    |
-| com.graphhopper.example     | 4     |
-| **Coverage**                | 78.1% |
+| **Coverage**                |       |
+| com.graphhopper.core        | 83.75% |
+| com.graphhopper.reader-gtfs | 46.63% |
+| com.graphhopper.web-api     | 37.53% |
+| com.graphhopper.web         | 20.45% |
+| com.graphhopper.client-hc   | 52.88% |
+| com.graphhopper.navigation  | 81.89% |
 
 ## [Dubbo](https://github.com/umontreal-diro/dubbo)
 
@@ -81,51 +84,15 @@ et de gouvernance dans l'architecture de microservices. Les principales fonction
 | org.apache.dubbo.dubbo-serialization-hessian2                  | 808   |
 | org.apache.dubbo.dubbo-serialization-fastjson2                 | 806   |
 | org.apache.dubbo.dubbo-remoting-api                            | 806   |
-| org.apache.dubbo.dubbo-rpc-api                                 | 146   |
-| org.apache.dubbo.dubbo-remoting-http                           | 11    |
-| org.apache.dubbo.dubbo-remoting-netty                          | 14    |
-| org.apache.dubbo.dubbo-dubbo-rpc-injvm                         | 9     |
 | org.apache.dubbo.dubbo-dubbo-metrics-api                       | 1135  |
-| org.apache.dubbo.dubbo-dubbo-metrics-registry                  | 19    |
-| org.apache.dubbo.dubbo-dubbo-metrics-default                   | 36    |
-| org.apache.dubbo.dubbo-cluster                                 | 291   |
-| org.apache.dubbo.dubbo-metrics-metadata                        | 9     |
-| org.apache.dubbo.dubbo-metadata-api                            | 47    |
-| org.apache.dubbo.dubbo-rpc-rest                                | 72    |
-| org.apache.dubbo.dubbo-remoting-zookeeper                      | 29    |
-| org.apache.dubbo.dubbo-remoting-zookeeper-curator5             | 28    |
-| org.apache.dubbo.dubbo-remoting-netty4                         | 32    |
-| org.apache.dubbo.dubbo-rpc-dubbo                               | 68    |
-| org.apache.dubbo.dubbo-rpc-triple                              | 98    |
-| org.apache.dubbo.dubbo-registry-api                            | 103   |
-| org.apache.dubbo.dubbo-registry-multicast                      | 13    |
-| org.apache.dubbo.dubbo-registry-zookeeper                      | 34    |
-| org.apache.dubbo.dubbo-registry-multiple                       | 5     |
-| org.apache.dubbo.dubbo-monitor-api                             | 9     |
-| org.apache.dubbo.dubbo-monitor-default                         | 9     |
-| org.apache.dubbo.dubbo-metrics-config-center                   | 2     |
-| org.apache.dubbo.dubbo-metrics-prometheus                      | 6     |
-| org.apache.dubbo.dubbo-configcenter-zookeeper                  | 4     |
-| org.apache.dubbo.dubbo-metadata-report-zookeeper               | 9     |
-| org.apache.dubbo.dubbo-metadata-report-redis                   | 6     |
-| org.apache.dubbo.dubbo-configcenter-nacos                      | 6     |
-| org.apache.dubbo.dubbo-filter-cache                            | 25    |
-| org.apache.dubbo.dubbo-filter-validation                       | 20    |
 | org.apache.dubbo.dubbo-config-api                              | 682   |
-| org.apache.dubbo.dubbo-config-spring                           | 147   |
-| org.apache.dubbo.dubbo-metadata-report-nacos                   | 3     |
-| org.apache.dubbo.dubbo-qos                                     | 104   |
-| org.apache.dubbo.dubbo-native                                  | 1     |
-| org.apache.dubbo.dubbo-metadata-processor                      | 83    |
-| org.apache.dubbo.dubbo-compatible                              | 236   |
-| org.apache.dubbo.dubbo-configcenter-apollo                     | 3     |
-| org.apache.dubbo.dubbo-metadata-definition-protobuf            | 1     |
-| org.apache.dubbo.dubbo-auth                                    | 18    |
-| org.apache.dubbo.dubbo-security                                | 24    |
-| org.apache.dubbo.dubbo-reactive                                | 6     |
-| org.apache.dubbo.dubbo-test-spring                             | 3     |
-| org.apache.dubbo.dubbo-test-modules                            | 7     |
-| **Coverage**                                                   | 66.2% |
+| **Coverage**                                                   |       |
+| org.apache.dubbo.dubbo-common                                  | 65.38% |
+| org.apache.dubbo.dubbo-serialization-hessian2                  | 56.79% |
+| org.apache.dubbo.dubbo-serialization-fastjson2                 | 68.38% |
+| org.apache.dubbo.dubbo-remoting-api                            | 53.44% |
+| org.apache.dubbo.dubbo-dubbo-metrics-api                       | 34.24% |
+| org.apache.dubbo.dubbo-config-api                              | 74.58% |
 
 ## [Cryptomator](https://github.com/umontreal-diro/cryptomator)
 
@@ -137,4 +104,4 @@ tel que Dropbox, Google Drive ou OneDrive.
 | **Modules**                 | 1     |
 | **Tests**                   |       |
 | org.cryptomator.cryptomator | 287   |
-| **Coverage**                | 13.4% |
+| **Coverage**                | 13.43% |
