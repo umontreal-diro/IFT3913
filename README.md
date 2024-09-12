@@ -23,6 +23,7 @@ Vous pouvez contacter les assistants de cours, Meriem, Yogya et Oussama, à cett
 ## Semaine #2 jeudi 12 septembre: Études de cas
 - Cas d'études: qualité pour le logiciel open source
 - matériel préparatoire: [How Developers Engineer Test Cases: An Observational Study](https://azaidman.github.io/publications/anicheTSE2022.pdf)
+- Démonstration: [Github Actions](https://udemontreal-my.sharepoint.com/:b:/g/personal/oussama_ben_sghaier_umontreal_ca/EQT2_ZKAMlxIsReH3OEdbLIBQxCRF5nC6VomdmU3_kwZIw?e=2Z1qzU)
  
 ## Semaine #3 jeudi 19 septembre: [Test unitaire](https://github.com/umontreal-diro/IFT3913/issues/2)
 - Introduction + présentations d'étudiants
