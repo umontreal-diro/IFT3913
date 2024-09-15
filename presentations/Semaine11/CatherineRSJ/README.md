@@ -1,3 +1,5 @@
+Catherine Roy-St-Jean
+
 Semaine 11 - Tester dans un domaine spécifique
 
 Sujet -> Tester pour des systèmes embarqués
