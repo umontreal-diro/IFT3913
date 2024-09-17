@@ -1,3 +1,4 @@
+NOM : Fathya Salim
 Présentation sur le Mutation Testing
 Objectif de la présentation
 Dans cette présentation, nous allons explorer un concept avancé en matière de test logiciel : le mutation testing. Nous aborderons pourquoi les tests unitaires sont essentiels, mais surtout comment aller plus loin pour améliorer leur qualité grâce à ce type de test.
