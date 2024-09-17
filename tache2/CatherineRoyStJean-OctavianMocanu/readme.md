@@ -1,5 +1,6 @@
 # Repertoire choisi
 [jackson](https://github.com/umontreal-diro/jackson-core)
+[Répertoire](https://github.com/CatherineRSJ/jackson-core-tests)
 
 
 ## Membres
