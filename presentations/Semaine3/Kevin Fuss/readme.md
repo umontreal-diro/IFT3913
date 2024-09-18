@@ -7,6 +7,9 @@ Résumé rapide : Faire des test unitaires pour un jeu paraît très difficile, 
 
 Sources
 1. https://gamesfromwithin.com/stepping-through-the-looking-glass-test-driven-game-development-part-1
-2. https://betterprogramming.pub/how-can-you-unit-test-as-a-game-dev-e316af9b5291
-3. https://discussions.unity.com/t/do-you-write-unit-tests-when-developing-games/889736
-4. https://p99soft.com/unit-testing-in-game-development/
+2. https://gamesfromwithin.com/stepping-through-the-looking-glass-test-driven-game-development-part-2#more-35
+3. https://gamesfromwithin.com/stepping-through-the-looking-glass-test-driven-game-development-part-3
+4. https://betterprogramming.pub/how-can-you-unit-test-as-a-game-dev-e316af9b5291
+5. https://discussions.unity.com/t/do-you-write-unit-tests-when-developing-games/889736
+6. https://p99soft.com/unit-testing-in-game-development/
+7. https://gamesfromwithin.com/backwards-is-forward-making-better-games-with-test-driven-development
