@@ -1,7 +1,7 @@
 Présentation pour la semaine 4 du cours IFT-3913
 par Kevin Fuss
 
-Sujet : Tests unitaires dans le développement de jeux vidéos
+Sujet : Comment écrire des tests unitaires dans le développement de jeux vidéos
 
 Résumé rapide : Faire des test unitaires pour un jeu paraît très difficile, voire impossible, mais il faut tout simplement regarder au bon endroit et du bon point de vue. Ces deux facteurs sont influençables par l'auteur du code pour justement créer un environnement qui facilite la création de tests unitaires.
 
