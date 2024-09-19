@@ -5,3 +5,4 @@
 - [test unitaire Python](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine3/QiyunOu) (Qiyun Ou)
 - [test unitaire sur la Programmation pilotée par le comportement](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine3/XinningXu) (Xinning Xu)
 - [Test par mutation](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine3/FathyaSalim) (Fathya Salim)
+- [Tests Unitaires](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine3/EmanuelRollin) (EmanuelRollin)
