@@ -1,0 +1,6 @@
+- [Test unitaire en Java](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine3/David%20Qi) (David Qi)
+- [Anti-patterns dans les test unitaires](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine3/Jiadong%20Jin) (Jiadong Jin)
+- [Tests unitaires dans le développement de jeux vidéos](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine3/Kevin%20Fuss) (Kevin Fuss)
+- [IA pour tests unitaires](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine3/NahomyDurand) (Nahomy Durand)
+- [test unitaire Python](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine3/QiyunOu) (Qiyun Ou)
+- [Test par mutation](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine3/FathyaSalim) (Fathya Salim)
