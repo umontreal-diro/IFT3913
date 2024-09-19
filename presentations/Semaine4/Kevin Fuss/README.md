@@ -1,4 +1,4 @@
-Présentation pour la semaine 3 du cours IFT-3913
+Présentation pour la semaine 4 du cours IFT-3913
 par Kevin Fuss
 
 Sujet : Tests unitaires dans le développement de jeux vidéos
