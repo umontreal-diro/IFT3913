@@ -2,7 +2,7 @@
 
 ******
 
-Sujet : Software Unit Test Smells 
+Sujet : Anti-patrons pour les tests unitaires 
 
 Présentateur : Jiadong Jin
 
