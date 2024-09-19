@@ -1,12 +1,14 @@
-INTRODUCTION: 
-- Contexte, Définition
-- Pourquoi la couverture de code est cruciale pour la qualité du logiciel?
+Introduction: 
+- Contexte, Définition, Pourquoi la couverture de code est cruciale pour la qualité du logiciel?
 
-TYPES DE COUVERTURE DE CODE:
-- Définitions, But et exemples de code de 4-5 types de couverture de code différents
+Survol rapide des TYPES DE COUVERTURE DE CODE:
+
+Présentation de la couverture des branches
+- Définition, But et exemples de code 
+
 
 LIMITES DE COUVERTURE DE CODE:
 - Pourquoi la couverture de code ne suffit pas à elle seule?
 
 CONCLUSION:
-- Pratiques recommandées pour utiliser la couverture de code efficacement
+- Pratiques recommandées pour utiliser la couverture de code efficacement (si j'ai le temps)
