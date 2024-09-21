@@ -9,4 +9,4 @@ Carl Thibault - 0985781
 [Makelangelo](https://github.com/umontreal-diro/Makelangelo-software)
 
 ### Repo Github
-À suivre.
+[Fork du repo](https://github.com/lalogiquefloue/Makelangelo-software)
