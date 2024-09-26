@@ -12,3 +12,5 @@ Ma présentation devrait se tenir au sommaire mentionné ci-bas:
 - Conclusion
 
 Le tout tiendra dans la range de 6 min 30 à 7 min 30, quitte à raccourcir certains passages si nécessaire.
+
+Lien des diapositives: https://docs.google.com/presentation/d/1gWDQltbdVtCM0ik4QG7U1PWpQN7ZknzPSbnQqclQv8w/edit#slide=id.p
