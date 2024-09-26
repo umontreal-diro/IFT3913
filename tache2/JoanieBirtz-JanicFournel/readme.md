@@ -1,5 +1,4 @@
-Joanie Birtz
-Janic Fournel
+Équipe: Joanie Birtz & Janic Fournel
 
 Étude de cas choisi: Makelangelo
 
