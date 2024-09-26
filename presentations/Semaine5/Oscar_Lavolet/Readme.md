@@ -4,6 +4,10 @@
 Je vais parler dans ma présentation de comment tester des programmes qui produisent un output visuel
     avec des tests unitaires
 
+Nous passerons à travers le TDD assez rapidement pour justifier les tests dans le domaine graphique, puis
+    expliquerons comment tester nos outputs visuels et commenterons enfin sur d'autres méthodes, alternatives
+    et bonnes pratiques.
+
 
 ### ressources
  - [when is it okay not to TDD](https://gamesfromwithin.com/when-is-it-ok-not-to-tdd)
