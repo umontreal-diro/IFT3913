@@ -13,7 +13,7 @@ Quels sont les outils pour les réduire?
 Un exemple.
 
 conclusion:
-mon opinion 
+conclusion sur flaky test.
 
 Sources:
 (Sommaire sur le flaky test)
