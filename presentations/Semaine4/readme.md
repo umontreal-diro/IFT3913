@@ -3,4 +3,6 @@
 * [La couverture de code : Un gage infaillible de la qualité du code...?](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine4/Nathan%20Riantsoa%20Razafindrakoto), Nathan Razafindrakoto
 * [Couverture de code .NET dans un environnement de travail CI/CD](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine4/PeloquinVincent), Vincent Péloquin
 * [Types de couverture de code](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine4/ShiniYang), Shini Yang
-* [Couverture de code à Google](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine4/andy3035), Andy Le   
+* [Couverture de code à Google](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine4/andy3035), Andy Le
+* [Pytest-cov](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine4/ArmanNunez), Arman Nunez
+* [Tests unitaires dans le développement de jeux vidéos](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine4/Kevin%20Fuss), Kevin Fuss
