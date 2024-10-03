@@ -1,6 +1,8 @@
 Sujet: Présentation sur flaky test 
 Xinning Xu matricule 20213497
 
+Présentation: https://docs.google.com/presentation/d/1YTgCGh-iBHB_o8Z82soYYrRCsO8Yrbc7zOsnebMkcY0/edit?usp=sharing
+
 Introduction:
 Qu'est-ce que le flaky test?
 
