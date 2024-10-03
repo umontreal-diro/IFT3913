@@ -2,7 +2,7 @@
 
 ******
 
-Sujet : Analyse de l'intérêt de Couverture de Tests avancée pour BCI : Cas pratique de CAMBI-tech avec BCIpy
+Sujet : Analyse de l'intérêt de Couverture de Tests avancés pour BCI : Cas pratique de CAMBI-tech avec BCIpy
 
 Présentateur : Angelo Adragna
 
