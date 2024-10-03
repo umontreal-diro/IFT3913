@@ -13,5 +13,5 @@ https://dl.acm.org/doi/10.1145/3597503.3639115
 Gestion des "flaky tests" avec pytest-rerunfailures:
 https://pypi.org/project/pytest-rerunfailures/
 
-Gestion des "flaky tests", Data Providers avec TestNG:
+Gestion des "flaky tests", DataProviders avec TestNG:
 https://testng.org/
