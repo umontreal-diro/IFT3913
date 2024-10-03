@@ -8,7 +8,7 @@
 * [DeFlaker automatically detecting flaky tests](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine5/LouisMalenfant-Poulin), Louis Malenfant-Poulin
 * [Flaky tests]() , Samuel Miller
 * [flaky test](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine5/XinningXu) , Xinning Xu
-* [Mocking avec EasyMock](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine5/ElliotPozucek), Elliot Pozucek
+
 
 
 
