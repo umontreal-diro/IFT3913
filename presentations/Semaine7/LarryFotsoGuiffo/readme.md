@@ -10,5 +10,8 @@ liens vers des references:
 https://www.guru99.com/testing-review.html
 https://www.geeksforgeeks.org/software-testing-static-testing/
 
+liens vers les slides
+https://docs.google.com/presentation/d/15x0vUp0_mfgkr_0YHWD01bPXIO1urt3p/edit?usp=sharing&ouid=106181653732414549527&rtpof=true&sd=true
+
 nom:Larry Fotso Guiffo
 matricule : 20201552
