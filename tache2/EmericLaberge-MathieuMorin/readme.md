@@ -5,9 +5,9 @@ Mathieu Morin 20163634
 
 ---
 
-Étude de cas:
+Étude de cas: Makelangelo
 
-Lien:
+Lien du fork: https://github.com/Math-Morin/Makelangelo-software
 
 Documentation:
 
