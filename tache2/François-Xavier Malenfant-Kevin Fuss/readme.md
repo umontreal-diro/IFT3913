@@ -5,7 +5,7 @@ Kevin Fuss 20246906
 
 ---
 
-Étude de cas: Graphhopper
+Étude de cas: Makelangelo
 
 Lien du fork: https://github.com/Framal42/Makelangelo-software.git
 
