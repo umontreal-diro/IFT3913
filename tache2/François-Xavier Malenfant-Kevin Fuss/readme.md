@@ -12,3 +12,6 @@ Lien du fork: https://github.com/Framal42/Makelangelo-software.git
 Documentation:
 
 Taux de couverture final:
+
+turtle file pre: 100% class, 75% method, 76% line
+turtle file post: 100% class, 75% method, 84% line
