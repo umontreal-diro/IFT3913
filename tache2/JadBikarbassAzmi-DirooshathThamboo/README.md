@@ -9,12 +9,12 @@ Membres de l’équipe
 
 Lien du dépôt qui inclut les nouveaux tests
 
-	•	(TODO)
+	•	[Depôt](https://github.com/JadBika/cryptomator)
 
-Documentation des nouveaux tests unitaires
+Lien vers la documentation des nouveaux tests unitaires
 
-	•	(TODO)
+	•	[Documentation](https://github.com/JadBika/cryptomator?tab=readme-ov-file#documentation-des-10-nouveaux-tests)
 
-Taux de couverture après l’ajout des nouveaux tests :
+Taux de couverture après l’ajout des nouveaux tests
 
 	•	(TODO)
