@@ -10,9 +10,9 @@ Présentateur : Colin PALAZZETTI RUBERA
 Je vais parler de la couverture des requêtes SQL et de l'application avec tsqlt
 
 
-Ressources actuelles :
+### Ressources actuelles :
 - https://in3test.lsi.uniovi.es/desarrollo/giis/testing/papers/fse2004-sql.pdf
 - https://tsqlt.org/
 
-Lien diapo :
+### Lien diapo :
 - 
