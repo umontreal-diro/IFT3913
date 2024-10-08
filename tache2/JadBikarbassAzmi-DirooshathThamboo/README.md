@@ -9,7 +9,7 @@ Membres de l’équipe
 
 Lien du dépôt qui inclut les nouveaux tests
 
-- [Depôt](https://github.com/JadBika/cryptomator)
+- [Dépôt](https://github.com/JadBika/cryptomator)
 
 Lien vers la documentation des nouveaux tests unitaires
 
