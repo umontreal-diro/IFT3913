@@ -15,3 +15,6 @@
 - [Code coverage best practices](https://testing.googleblog.com/2020/08/code-coverage-best-practices.html)
 - [Jest doc on coverage](https://jestjs.io/docs/cli#--coverageboolean)
 - [How to use Jest --coverage](https://medium.com/@blturner3527/code-coverage-and-testing-with-jest-9641b5d0e0bc)
+
+### Google Slides: 
+https://docs.google.com/presentation/d/1w4oKHJpOHhj2-vruTsXKOsUOGjspTu41M9yVAwqxq2U/edit?usp=sharing
