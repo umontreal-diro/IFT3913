@@ -3,7 +3,7 @@
 - Louis Forrer (20170329)
 
 Lien du repo avec les nouveaux tests
-- [Dépôt](https://github.com/nahodura/tache2)
+- [Repo Github](https://github.com/nahodura/tache2)
 
 Lien vers la doc. des tests
 - //TODO
