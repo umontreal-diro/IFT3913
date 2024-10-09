@@ -9,4 +9,4 @@ Lien vers la doc. des tests
 - //TODO
 
 Taux de couverture final :
-- // TODO
+- 14.06%
