@@ -13,5 +13,12 @@ Documentation: https://github.com/Framal42/IFT3913/blob/main/tache2/Fran%C3%A7oi
 
 Taux de couverture final:
 
-turtle file pre: 100% class, 75% method, 76% line
-turtle file post: 100% class, 75% method, 84% line
+turtle file pre: 100% class, 75% method, 76% line \n
+turtle file post: 100% class, 75% method, 84% line \n
+
+paper file pre : 100% class, 64% method, 60% line \n
+paper file post : 100% class, 48% method, 56% line \n
+
+marlinPanel file pre : 100% class, 51% method, 45% line \n
+marlinPanel file post : 100% class, 70% method, 51% line \n
+
