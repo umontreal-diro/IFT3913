@@ -2,7 +2,7 @@
 [makelangelo](https://github.com/umontreal-diro/Makelangelo-software)
 [Répertoire de l'équipe](https://github.com/sarahbedn/Makelangelo-software)
 
-Couvertue obtenue: 24.58%
+Couverture obtenue: 24.58%
 
 [Documentation](https://github.com/sarahbedn/Makelangelo-software/blob/master/IFT3913_Tests.md)
 
