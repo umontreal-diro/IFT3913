@@ -1,0 +1,16 @@
+Ajouts a test/java/makelangelo/turtle/TurtleTest:
+
+testGetBoundsHits0:
+Ajout de coverage dans le cas ou GetBounds ne détecte aucun "hit"
+
+testRotate:
+Vérifie que rotate effectue bien la rotation de 90 degrés (dans le sens contraire des aiguilles d'une montre)
+
+testAddLineSegments:
+Vérifie que le segment est bien ajouté lorsque d>minDrawSquared
+
+testGetFirstColor:
+Vérifie que getFirstColor retourne le default lorsque le history de la tortue est vide
+
+testInterpolateLargeT:
+Test différent de celui déja écrit pour tester les dernières lignes, incluant la valeur retournée
