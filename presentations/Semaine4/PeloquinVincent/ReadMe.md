@@ -27,9 +27,11 @@ Dans cette présentation, nous explorerons comment l'intégration des mesures de
    - Importance de tests significatifs, et pas seulement d'une couverture élevée.
    - Les défis de l'équilibre entre la couverture et la qualité des tests.
 
-## Resources:
+## Ressources:
 
 - **Documentation Microsoft** - [Use Code Coverage for Unit Testing](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage?tabs=windows)  
 - **Documentation SonarQube** - [SonarQube .NET Test Coverage](https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/test-coverage/dotnet-test-coverage/)  
 - **Documentation Microsoft** - [Review Code Coverage Results in Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/pipelines/test/review-code-coverage-results?view=azure-devops)
+
+Liens de la présentation: https://1drv.ms/p/s!AraHMNMhn6wxh95nSKxMRXs0KXc4ZA?e=ebNQiw
 
