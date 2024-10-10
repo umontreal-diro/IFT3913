@@ -13,7 +13,7 @@ Lien du dépôt qui inclut les nouveaux tests
 
 Lien vers la documentation des nouveaux tests unitaires
 
-- [Documentation](https://github.com/JadBika/cryptomator/blob/develop/Documentation.md)
+- [Documentation](https://github.com/JadBika/cryptomator/blob/develop/DOCUMENTATION.md)
 
 Taux de couverture après l’ajout des nouveaux tests
 
