@@ -13,3 +13,6 @@ Sujet Choisi: Couverture condition / décision modifiée (MC/DC)
 - Logique morte
 - Avantages et limitation de la métrique
 - Conclusion
+
+## Lien de la présentation:
+https://docs.google.com/presentation/d/1FCMhluMyNGTsoO7c4jslNrEkC6dxUIInBialOg6oL3k/edit#slide=id.p
