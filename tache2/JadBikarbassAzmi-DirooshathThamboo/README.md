@@ -13,7 +13,7 @@ Lien du dépôt qui inclut les nouveaux tests
 
 Lien vers la documentation des nouveaux tests unitaires
 
-- [Documentation](https://github.com/JadBika/cryptomator/blob/develop/README.md#10-nouveaux-tests-pour-le-cours-ift3913)
+- [Documentation](https://github.com/JadBika/cryptomator/blob/develop/Documentation.md)
 
 Taux de couverture après l’ajout des nouveaux tests
 
