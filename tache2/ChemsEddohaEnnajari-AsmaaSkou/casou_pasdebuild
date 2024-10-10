@@ -1,0 +1,288 @@
+package com.marginallyclever.makelangelo;
+
+import com.marginallyclever.util.PreferencesHelper;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import javax.swing.JFrame;
+
+import java.awt.*;
+import java.util.prefs.BackingStoreException;
+import java.util.prefs.Preferences;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+/**
+ * Unit tests for the MainFrame class.
+ * These tests focus on verifying the window size and position settings,
+ * ensuring that the MainFrame class correctly reads preferences and applies them
+ * to the window dimensions and screen position it should open at.
+ */
+public class MainFrameTest {
+
+    private static final int DEFAULT_WIDTH = 800;  // Default width of the window
+    private static final int DEFAULT_HEIGHT = 600; // Default height of the window
+
+    @BeforeAll
+    public static void beforeAll() {
+        // Initialize the PreferencesHelper before any tests run
+        PreferencesHelper.start();
+    }
+
+    @AfterEach
+    public void clean() throws BackingStoreException {
+        // Clean up preferences after each test run to avoid side effects
+        Preferences graphics = PreferencesHelper.getPreferenceNode(PreferencesHelper.MakelangeloPreferenceKey.GRAPHICS);
+        graphics.remove("windowWidth");
+        graphics.remove("windowHeight");
+        graphics.remove("windowX");
+        graphics.remove("windowY");
+        graphics.remove("isFullscreen");
+        graphics.flush();
+    }
+
+    /**
+     * Test to verify that the MainFrame initializes with default size and position
+     * according to the predefined preferences when no custom settings are provided.
+     */
+    @Test
+    public void testDefaultSizeAndPosition() {
+        Preferences graphics = PreferencesHelper.getPreferenceNode(PreferencesHelper.MakelangeloPreferenceKey.GRAPHICS);
+
+        // Set default values explicitly to ensure test uses them
+        graphics.putInt("windowWidth", DEFAULT_WIDTH);
+        graphics.putInt("windowHeight", DEFAULT_HEIGHT);
+        graphics.putInt("windowX", (Toolkit.getDefaultToolkit().getScreenSize().width - DEFAULT_WIDTH) / 2);
+        graphics.putInt("windowY", (Toolkit.getDefaultToolkit().getScreenSize().height - DEFAULT_HEIGHT) / 2);
+
+        // Create MainFrame with the given preferences
+        MainFrame frame = new MainFrame("", graphics);
+        frame.setWindowSizeAndPosition();
+
+        // Verify that the frame has the default size
+        assertEquals(DEFAULT_WIDTH, frame.getWidth());
+        assertEquals(DEFAULT_HEIGHT, frame.getHeight());
+
+        // Verify that the frame is centered on the screen
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        assertEquals((screenSize.width - DEFAULT_WIDTH) / 2, frame.getX());
+        assertEquals((screenSize.height - DEFAULT_HEIGHT) / 2, frame.getY());
+    }
+
+    /**
+     * Test to confirm that the MainFrame's size and position can be customized
+     * and that it adheres to the given size and position preferences.
+     */
+    @Test
+    public void testCustomSizeAndPosition() throws BackingStoreException {
+        int width = 100;  // Custom width for the window
+        int height = 200; // Custom height for the window
+        int x = 300;      // Custom X position for the window
+        int y = 400;      // Custom Y position for the window
+        Preferences graphics = PreferencesHelper.getPreferenceNode(PreferencesHelper.MakelangeloPreferenceKey.GRAPHICS);
+        graphics.putInt("windowWidth", width);
+        graphics.putInt("windowHeight", height);
+        graphics.putInt("windowX", x);
+        graphics.putInt("windowY", y);
+        graphics.flush();
+
+        // Create MainFrame with the given preferences
+        MainFrame frame = new MainFrame("", graphics);
+        frame.setWindowSizeAndPosition();
+
+        // Verify that the frame has the custom size
+        assertEquals(width, frame.getWidth());
+        assertEquals(height, frame.getHeight());
+
+        // Verify that the frame is positioned according to the custom settings
+        assertEquals(x, frame.getX());
+        assertEquals(y, frame.getY());
+    }
+
+}
+
+
+
+
+package com.marginallyclever.makelangelo;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.prefs.BackingStoreException;
+import java.util.prefs.Preferences;
+
+import javax.swing.JMenuItem;
+
+import com.marginallyclever.util.PreferencesHelper;
+import com.marginallyclever.util.PreferencesHelper.MakelangeloPreferenceKey;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * Unit tests for the RecentFiles class.
+ * These tests cover the functionality of managing a list of recent files,
+ * including adding, retrieving, removing filenames, and ensuring persistence
+ * of this list using preferences.
+ */
+public class RecentFilesTest {
+    private RecentFiles recentFiles;
+    protected int testObservation; // Counter to test observer pattern
+
+    @BeforeEach
+    public void beforeEach() throws BackingStoreException {
+        // Clear the preferences to ensure a clean state before each test
+        Preferences prefs = PreferencesHelper.getPreferenceNode(MakelangeloPreferenceKey.LEGACY_MAKELANGELO_ROOT);
+        prefs.clear();
+
+        // Initialize the RecentFiles instance before each test
+        recentFiles = new RecentFiles("Reopen");
+    }
+
+    /**
+     * Test adding filenames to RecentFiles.
+     * Verify that filenames are added correctly with the most recent on top,
+     * duplicates are not added twice, and invalid inputs are ignored.
+     */
+    @Test
+    public void testAddFilename() {
+        recentFiles.addFilename("/home/test/file1.txt");
+        assertEquals("/home/test/file1.txt", recentFiles.getFile(0));
+
+        recentFiles.addFilename("/home/test/file2.txt");
+        assertEquals("/home/test/file2.txt", recentFiles.getFile(0));
+        assertEquals("/home/test/file1.txt", recentFiles.getFile(1));
+        // Verify that if a filename already exists, it will be moved to the top of the list
+        recentFiles.addFilename("/home/test/file1.txt");
+        assertEquals("/home/test/file1.txt", recentFiles.getFile(0));
+        assertEquals("/home/test/file2.txt", recentFiles.getFile(1));
+
+        // Verify null value (should not add to the list)
+        recentFiles.addFilename(null);
+        assertEquals(2, recentFiles.getMenuComponentCount(), "Null filename should not be added");
+
+        // Verify empty value (should not add to the list)
+        recentFiles.addFilename("");
+        assertEquals(2, recentFiles.getMenuComponentCount(), "Empty filename should not be added");
+
+        // Verify blank value (should not add to the list)
+        recentFiles.addFilename("   ");
+        assertEquals(2, recentFiles.getMenuComponentCount(), "Blank filename should not be added");
+
+        // Verify adding more filenames
+        Set<String> uniqueFilenames = new HashSet<>();
+        uniqueFilenames.add("/home/test/file1.txt");
+        uniqueFilenames.add("/home/test/file2.txt");
+
+        int filesToAdd = recentFiles.getMaxFiles() + 1; // filesToAdd = 11
+
+        for (int i = 0; i < filesToAdd; i++) {
+            String filename = "/home/test/file" + i + ".txt";
+            uniqueFilenames.add(filename);
+            recentFiles.addFilename(filename);
+        }
+
+        int expectedMenuComponentCount = uniqueFilenames.size();
+
+        assertEquals(expectedMenuComponentCount, recentFiles.getMenuComponentCount(),
+            "Menu component count should reflect the number of unique valid filenames added");
+    }
+
+    /**
+     * Test to ensure the maximum limit of recent files stored is correct.
+     */
+    @Test
+    public void testGetMaxFiles() {
+        assertEquals(10, recentFiles.getMaxFiles(), 
+            "The maximum number of recent files should be 10");
+    }
+
+    /**
+     * Test the persistence of the recent files list through storage and retrieval.
+     * Ensure that files added to one instance are retrieved correctly in a new instance.
+     */
+    @Test
+    public void testStorageAndRetrieval() {
+        recentFiles.addFilename("file1.txt");
+        recentFiles.addFilename("file2.txt");
+
+        RecentFiles newRecentFiles = new RecentFiles("Reopen");
+        assertEquals("file2.txt", newRecentFiles.getFile(0));
+        assertEquals("file1.txt", newRecentFiles.getFile(1));
+    }
+
+    /**
+     * Test removing filenames from the RecentFiles list.
+     * Ensure that the list updates correctly after removals.
+     */
+    @Test
+    public void testRemoveFilename() {
+        recentFiles.addFilename("/home/test/file1.txt");
+        recentFiles.addFilename("/home/test/file2.txt");
+        assertEquals("/home/test/file2.txt", recentFiles.getFile(0));
+        assertEquals("/home/test/file1.txt", recentFiles.getFile(1));
+        recentFiles.removeFilename("/home/test/file2.txt");
+        assertEquals("/home/test/file1.txt", recentFiles.getFile(0));
+        recentFiles.removeFilename("/home/test/file1.txt");
+        assertEquals(0, recentFiles.getMenuComponentCount());
+    }
+
+    /**
+     * Test adding a duplicate filename to ensure duplicates are not stored twice.
+     */
+    @Test
+    public void testAddFileNameTwice() {
+        recentFiles.addFilename("file1.txt");
+        recentFiles.addFilename("file2.txt");
+        recentFiles.addFilename("file1.txt"); // Add duplicate
+        assertEquals(2, recentFiles.getMenuComponentCount(), 
+                     "Menu must contain 2 elements; the duplicated filename is not added twice");
+        assertEquals("file1.txt", recentFiles.getFile(0));
+        assertEquals("file2.txt", recentFiles.getFile(1));
+    }
+
+    /**
+     * Test adding an empty filename to ensure it is not added to the list.
+     */
+    @Test
+    public void testAddEmptyFileName() {
+        recentFiles.addFilename(""); // Add empty filename
+        assertEquals(0, recentFiles.getMenuComponentCount(), "Menu must be empty");
+    }
+
+    /**
+     * Test behavior when trying to remove a filename that doesn't exist in the list.
+     */
+    @Test
+    public void testRemoveNonExistentFilename() {
+        recentFiles.addFilename("file1.txt");
+        recentFiles.removeFilename("file2.txt"); // Removing a file that doesn't exist
+        assertEquals(1, recentFiles.getMenuComponentCount(), 
+            "Menu should still contain the existing file");
+        assertEquals("file1.txt", recentFiles.getFile(0));
+    }
+
+    /**
+     * Test the functionality of adding a submenu listener to handle file selection.
+     */
+    @Test
+    public void testAddSubmenuListener() {
+        // Test observer fires
+        testObservation = 0;
+        recentFiles.addFilename("file1.txt");
+        recentFiles.addSubmenuListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ++testObservation;
+                assertEquals("file1.txt", e.getActionCommand());
+            }
+        });
+        ((JMenuItem) recentFiles.getMenuComponent(0)).doClick();
+        assertTrue(testObservation > 0);
+    }
+}
+RecentFilesTest.java
