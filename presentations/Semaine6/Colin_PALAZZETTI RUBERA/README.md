@@ -4,7 +4,7 @@
 
 Sujet : Coverage en SQL ?
 
-Présentateur : Colin PALAZZETTI RUBERA
+Présentateur : Colin PALAZZETTI RUBERA - 20316676
 
 ### Résumé : 
 Je vais parler de la couverture des requêtes SQL et de l'application avec tsqlt
