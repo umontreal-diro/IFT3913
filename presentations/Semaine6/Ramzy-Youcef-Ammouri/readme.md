@@ -26,3 +26,8 @@
 - [Behavior-Driven Development - Wikipedia](https://en.wikipedia.org/wiki/Behavior-driven_development)
 - [Glossary of BDD - Agile Alliance](https://www.agilealliance.org/glossary/bdd/)
 - [Differences Between JBehave and Cucumber - Stack Overflow](https://stackoverflow.com/questions/7954755/what-are-the-differences-between-jbehave-and-cucumber)
+
+### Lien vers la présentation:
+-https://docs.google.com/presentation/d/1SsaFCujOVaYr7NGM1rNDmh2AMGTv7Diq6EqnY03ETEs/edit#slide=id.p
+
+
