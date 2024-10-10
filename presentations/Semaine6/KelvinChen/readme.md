@@ -27,3 +27,6 @@ Measurement Tool](https://csrc.nist.rip/groups/SNS/acts/documents/CCM-guide-1301
 - [Software component interaction testing: Coverage measurement and generation of configurations](https://ruor.uottawa.ca/items/ccb46f22-e418-4b9e-9c64-85d2e8ad691f)
 - [Interaction Testing in Model-Based Development: Effect on Model-Coverage](https://homepages.inf.ed.ac.uk/arajan/My-Pubs/interaction-coverage-APSEC-06.pdf)
 - [Test suite prioritization by interaction coverage](https://dl.acm.org/doi/10.1145/1294921.1294922)
+
+### Lien de la présentation
+[slides](https://docs.google.com/presentation/d/1dE-o1C3OJLzfJxOp8az0EwL1GoqDt9pm/edit?usp=sharing&ouid=116096589723584177688&rtpof=true&sd=true)
