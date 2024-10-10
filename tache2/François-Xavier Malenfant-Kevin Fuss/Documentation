@@ -14,3 +14,21 @@ Vérifie que getFirstColor retourne le default lorsque le history de la tortue e
 
 testInterpolateLargeT:
 Test différent de celui déja écrit pour tester les dernières lignes, incluant la valeur retournée
+
+testGetPaperLeft:
+Vérifie la borne négative sur l'abcisse correspond bien à la moitié de la largeur centrée à 0
+
+testGetPaperRight:
+Vérifie la borne positive sur l'abcisse correspond bien à la moitié de la largeur centrée à 0
+
+testGetPaperTop:
+Vérifie la borne négative sur l'ordonnée correspond bien à la moitié de la hauteur centrée à 0
+
+testGetPaperBottom:
+Vérifie la borne négative sur l'ordonnée correspond bien à la moitié de la hauteur centrée à 0
+
+testRemoveListener:
+Vérifie que le array list qui contiens les listeners est bien vide au début, et que après avoir ajouté et enlevé les listeners, est toujours vide
+
+testGetIsBusy:
+Vérifie que si jamais le busyCount arrive à 0 ou moins, que la méthode getIsBusy retournera True, comme quoi ; "non, il n'est pas occupé"
