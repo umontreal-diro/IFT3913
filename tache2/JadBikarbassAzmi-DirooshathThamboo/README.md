@@ -17,4 +17,4 @@ Lien vers la documentation des nouveaux tests unitaires
 
 Taux de couverture après l’ajout des nouveaux tests
 
-- 14.2 %
+- 14.43 %
