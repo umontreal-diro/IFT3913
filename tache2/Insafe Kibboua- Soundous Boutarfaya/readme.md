@@ -8,9 +8,12 @@ Lien vers le référentiel (repository) Github qui inclut la tâche:
 [Cryptomator](https://github.com/umontreal-diro/cryptomator.git)
 
 
-Lien vers la page qui documente les nouveaux test unitaires:
+Lien vers la page qui documente les nouveaux test unitaires: 
+[Document](https://github.com/DOUCEEE/cryptomator)
+
 
 Taux de couverture final après l'ajout des tests:
+[Taux](file:///Users/soundous/Downloads/Cryptomator-develop-4-3/htmlReport/index.html)
 
 
 
