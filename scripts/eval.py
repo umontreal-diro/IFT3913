@@ -67,6 +67,11 @@ def write_link_to_file(file_path, link):
 
 # Main function to check all READMEs in the directories
 def check_readmes(base_dir):
+    # Create empty result files
+    open(no_links_file, 'w').close()
+    open(no_actions_file, 'w').close()
+    open(successful_file, 'w').close()
+    open(unsuccessful_file, 'w').close()
     for root, dirs, files in os.walk(base_dir):
         for file_name in files:
             if file_name.lower() == 'readme.md':

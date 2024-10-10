@@ -28,28 +28,24 @@ jobs:
           python scripts/eval.py
 
       - name: Upload no_links.txt
-        if: success() && (steps.check-readmes.outputs.no_links != '')
         uses: actions/upload-artifact@v3
         with:
           name: no_links
           path: no_links.txt
 
       - name: Upload no_actions.txt
-        if: success() && (steps.check-readmes.outputs.no_actions != '')
         uses: actions/upload-artifact@v3
         with:
           name: no_actions
           path: no_actions.txt
 
       - name: Upload successful.txt
-        if: success() && (steps.check-readmes.outputs.successful != '')
         uses: actions/upload-artifact@v3
         with:
           name: successful
           path: successful.txt
 
       - name: Upload unsuccessful.txt
-        if: success() && (steps.check-readmes.outputs.unsuccessful != '')
         uses: actions/upload-artifact@v3
         with:
           name: unsuccessful
