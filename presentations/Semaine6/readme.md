@@ -1,5 +1,7 @@
 # Couverture de test avancée
 
+[Lien zoom](https://umontreal.zoom.us/j/82569332094?pwd=JOREZjnV51D4eKrGXYFaiAeSpJ7aUI.1) pour la semaine 6
+
 - [L'importance des mutants personnalisés dans le domaine du Machine Learning](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine6/KelvinChen), Octavian Mocanu
 - [Analyse de mutation en Python : Améliorer la qualité des tests avec mutmut](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine6/Herve_Ngisse), Hervé Ng'isse
 - [Couverture des conditions/décisions modifiées](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine6/ZakyHarras), Zaky Harras
