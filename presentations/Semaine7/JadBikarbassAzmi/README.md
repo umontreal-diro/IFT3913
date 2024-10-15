@@ -1,6 +1,8 @@
 # Tâche 1 : Présentation
 
-Présentateur : Jad Bikarbass Azmi (20252136)
+Présentateur : 
+
+- Jad Bikarbass Azmi (20252136)
 
 ## ESLint : Améliorer la qualité du code JavaScript grâce à l’analyse statique
 
