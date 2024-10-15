@@ -9,5 +9,5 @@
 - [ESLint](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine7/JadBikarbassAzmi),JadBikarbassAzmi
 - [L'évolution des outils de tests statiques](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine7/SongjuLee), Songju Lee 
 - [Tests statiques pour détecter des failles de sécurité](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine7/AlessandraMancas),Alessandra Mancas
-- [Règles de typage](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine7/CintiaDalilaSoares),Cintia Dalila Soares
+- [Les analyseurs statiques de code(False Negative, False Positiv)](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine7/CintiaDalilaSoares),Cintia Dalila Soares
 - [](),
