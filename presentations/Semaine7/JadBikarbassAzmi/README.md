@@ -2,7 +2,7 @@
 
 Présentateur : 
 
-- Jad Bikarbass Azmi (20252136)
+	•	Jad Bikarbass Azmi (20252136)
 
 ## ESLint : Améliorer la qualité du code JavaScript grâce à l’analyse statique
 
