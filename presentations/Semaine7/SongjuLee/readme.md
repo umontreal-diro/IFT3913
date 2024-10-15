@@ -1,5 +1,5 @@
 ## Semaine 7 - Tests statiques
-## Songju Lee (20198117)
+### Songju Lee (20198117)
 
 **Sujet : L'évolution des outils de tests statiques**
 
