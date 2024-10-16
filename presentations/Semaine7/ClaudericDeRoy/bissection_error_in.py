@@ -1,21 +1,21 @@
 """exemple avec la méthode de bissection"""
 
-def bissection(function,a,b,precision,error):
+def bissection(func,pointUn,pointDeux,p,e):
     """la méthode de bissection"""
-    c = (a + b) / 2
-    it = 0
-    while abs(a - b) >= precision and abs(function(c)) >= error:
-        c = (a + b) / 2
-        it += 1
-        if function(a) * function(c) <= 0:
-            b = c
+    pointTrois = (pointUn + pointDeux) / 2
+    comptIt = 0
+    while abs(pointUn - pointDeux) >= p and abs(func(pointTrois)) >= e:
+        pointTrois = (pointUn + pointDeux) / 2
+        comptIt += 1
+        if func(pointUn) * func(pointTrois) <= 0:
+            pointDeux = pointTrois
         else:
-            a = c
-        print("Current iteration : " + str(it))
-    return c
+            pointUn = pointTrois
+        print("Current iteration : " + str(comptIt))
+    return pointTrois
 
-def func_to_compute(x):
+def funcToCompute(x):
     """la function dont il faut trouver un zéro"""
     return (((x+1) * x - 3)) * x - 3
 
-print(bissection(func_to_compute, 1.5, 2, 0.0005, 0.00001))
+print(bissection(funcToCompute, 1.5, 2, 0.0005, 0.00001))
