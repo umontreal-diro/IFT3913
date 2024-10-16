@@ -8,7 +8,7 @@ Présentateur :
 
 Lien vers les slides :
 
-- [Google Slides](https://docs.google.com/presentation/d/1AiaVMzyNALM2yTjEXgoL68FsByIS1TIt7zql-3rPKFQ/edit?usp=sharing)
+- [Slides](https://docs.google.com/presentation/d/1AiaVMzyNALM2yTjEXgoL68FsByIS1TIt7zql-3rPKFQ/edit?usp=sharing)
 
 Résumé :
 
