@@ -4,11 +4,11 @@ Présentateur :
 
 	•	Jad Bikarbass Azmi (20252136)
 
-## ESLint : Améliorer la qualité du code JavaScript grâce à l’analyse statique
+## ESLint : Améliorer la qualité du code JavaScript
 
 Lien vers les slides :
 
-- [Google Slides] // TODO
+- [Google Slides] (https://docs.google.com/presentation/d/1AiaVMzyNALM2yTjEXgoL68FsByIS1TIt7zql-3rPKFQ/edit?usp=sharing)
 
 Résumé :
 
