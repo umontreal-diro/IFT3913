@@ -3,7 +3,11 @@
 **Présentateur** : Dirooshath Thamboo
 
 ## Sommaire
-Introduction aux **tests de mutation**, qui insèrent des modifications dans le code pour tester la solidité des tests unitaires. Présentation de l'outil **Cosmic Ray** pour exécuter ces tests, en montrant son usage et l'interprétation des résultats. L'objectif est de renforcer la qualité des tests en détectant les faiblesses.
+je vais parler de Pyright, un vérificateur de type statique.
+- Test statique et Vérificateur de type statique
+- Comment ça marche
+- Avantages et Points faibles
+- Exemples
 
 ## Sources
 - https://microsoft.github.io/pyright/#/ 
