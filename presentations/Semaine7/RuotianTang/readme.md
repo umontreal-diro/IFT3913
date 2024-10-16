@@ -14,3 +14,5 @@ https://flake8.pycqa.org/en/4.0.1/index.html
 https://www.geeksforgeeks.org/software-testing-static-testing/
 
 https://betterscientificsoftware.github.io/python-for-hpc/syntax-and-style-analysis/
+
+Lien: https://docs.google.com/presentation/d/1btTwnwSzaYFsUfWUbf1K6tudBBcignHwmOdGGUtzkEs/edit?usp=sharing
