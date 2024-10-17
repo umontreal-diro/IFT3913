@@ -125,12 +125,14 @@ Bonus: au moins un test utilise la bibliothèque [java-faker](https://github.com
 
 | critère | description |
 |-------------------------------------------- | ----|
-| flags         | l'action exécute la compilation et les tests avec 5 flags différents de la JVM |
-| documentation | le repo inclut une page qui documente les changements apportés à la Github action pour permettre l'exécution avec divers flags |
-| structure     | l'action génère des logs clairs qui documente quels flags sont exécutés |
-| intention     | l'intention de qualité est clairement documentée: le choix de chaque flag est justifié vis-à-vis de son impact possible sur la qualité |
-| qualité       | la mesure de la couverture est automatisée et le taux de couverture avec chaque flag est documenté |
+| flags         | l'action exécute la compilation et les tests avec 5 flags différents de la JVM * |
+| documentation | le repo inclut une page qui documente les changements apportés à la Github action pour permettre l'exécution avec cinq flags |
+| structure     | l'action génère des logs clairs qui documentent quels flags sont exécutés |
+| motivation    | le choix de chaque flag est justifié vis-à-vis de son impact possible sur la qualité, la performance, l'observabilité |
+| qualité       | la mesure de la couverture est automatisée et le taux de couverture est mesuré à chaque build avec un flag différent; cinq taux de couverture sont mesurés par l'action |
 | humour        | le repo inclut un élément d'humour responsable et documenté |
+
+* les flags doivent être de différents types (par exemple pas 2 flags de type print ou GC)
 
 Chaque critère compte pour un point.
 
