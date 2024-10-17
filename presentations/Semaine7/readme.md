@@ -12,3 +12,4 @@
 - ~~[Les analyseurs statiques de code(False Negative, False Positiv)](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine7/CintiaDalilaSoares), Cintia Dalila Soares~~
 - [Chronologie et Tests Statiques dans l'Histoire](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine7/LucasGuillon), Guillon Lucas
 - [Test statique en Python avec Flake8](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine7/RuotianTang), Ruotian Tang
+- [Développer son propre code analyzer](),Nada Alem
