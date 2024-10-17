@@ -3,7 +3,13 @@ L'analyse statique de code
 - definition 
 - comment fonctionne l'analyse statique
 - types d'analyse statique
+- analyseur statique
 - exemple d'outils
 - normes suivies
-- solutions
-- exemple de developpement personnalise (pour Lua, en Java)
+- exemple de developpement personnalisé (pour Lua, en Java)
+
+Lien de la présentation : 
+https://analyseurstatique.my.canva.site/
+
+Lien ANTLR :
+http://lab.antlr.org/
