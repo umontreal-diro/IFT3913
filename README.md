@@ -132,7 +132,7 @@ Bonus: au moins un test utilise la bibliothèque [java-faker](https://github.com
 | qualité       | la mesure de la couverture est automatisée et le taux de couverture est mesuré à chaque build avec un flag différent; cinq taux de couverture sont mesurés par l'action |
 | humour        | le repo inclut un élément d'humour responsable et documenté |
 
-  * les flags doivent être de différents types (par exemple pas 2 flags de type print ou GC)
+ * les flags doivent être de différents types (par exemple pas 2 flags de type print ou GC)
 
 Chaque critère compte pour un point.
 
