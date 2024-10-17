@@ -1,6 +1,6 @@
 # Tests Statiques
 
-[Lien zoom](https://umontreal.zoom.us/j/87084240534?pwd=nplD1IJ96lai5C0WgckdUVFiVjvuvt.1) pour la semaine 7
+[Lien zoom](https://umontreal.zoom.us/j/6315628084?pwd=IugzriDtO2SVse4EySWxISSHoPj2lS.1) pour la semaine 7
 
 - [Introduction aux tests statique](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine7/LarryFotsoGuiffo), Larry Fotso Guiffo
 - [ESLint](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine7/JadBikarbassAzmi), Jad Bikarbass Azmi
