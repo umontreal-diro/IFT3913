@@ -1,11 +1,12 @@
-# Sokhara Vincent Sieu (20213388) et Félix Cormier (20212545)
+# Sokhara Vincent Sieu et Félix Cormier
 
-Nous avons travaillé sur Graphhopper.
+Nous allons travailler sur Graphhopper.
 
-## [Notre référenciel de Graphhopper](https://github.com/sokharasieu/graphhopper/tree/master/web-api)
+## [Graphhopper](https://github.com/umontreal-diro/graphhopper)
 
-## [Lien vers la nouvelle documentation](https://github.com/sokharasieu/graphhopper/tree/master/web-api/README.md)
-
+Graphhopper est un moteur de routage qui peut être utilisé comme bibliothèque Java ou comme serveur Web autonome pour calculer la distance,
+le temps, les instructions étape par étape et de nombreux attributs routiers pour un itinéraire entre deux ou plusieurs points. Il prend en charge plusieurs
+algorithmes de routage populaires tels que Dijkstra ou A*.
 
 | Stats                       | #     |
 |:----------------------------|-------|
@@ -24,15 +25,3 @@ Nous avons travaillé sur Graphhopper.
 | com.graphhopper.web         | 20.45% |
 | com.graphhopper.client-hc   | 52.88% |
 | com.graphhopper.navigation  | 81.89% |
-
-| Stats Initiales             | #     |
-|:----------------------------|-------|
-| **Coverage**                |       |
-| com.graphhopper.web-api     | 37.53% |
-
-| Stats Finales               | #     |
-|:----------------------------|-------|
-| **Coverage**                |       |
-| com.graphhopper.web-api     | 41%   |
-
-![capture d'écran du résultat de tests](https://github.com/sokharasieu/graphhopper/tree/master/web-api/testResults.png)
