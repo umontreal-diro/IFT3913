@@ -126,9 +126,9 @@ Bonus: au moins un test utilise la bibliothèque [java-faker](https://github.com
 | critère | description |
 |-------------------------------------------- | ----|
 | flags         | l'action exécute la compilation et les tests avec 5 flags différents de la JVM * |
-| documentation | le repo inclut une page qui documente les changements apportés à la Github action pour permettre l'exécution avec cinq flags |
 | structure     | l'action génère des logs clairs qui documentent quels flags sont exécutés |
-| motivation    | le choix de chaque flag est justifié vis-à-vis de son impact possible sur la qualité, la performance, l'observabilité |
+| documentation | le repo inclut une page qui documente les changements apportés à la Github action pour permettre l'exécution avec cinq flags |
+| motivation    | la documentation inclut une section qui justifie le choix de chaque flag vis-à-vis de son impact possible sur la qualité, la performance, l'observabilité |
 | qualité       | la mesure de la couverture est automatisée et le taux de couverture est mesuré à chaque build avec un flag différent; cinq taux de couverture sont mesurés par l'action |
 | humour        | le repo inclut un élément d'humour responsable et documenté |
 
