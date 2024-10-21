@@ -8,3 +8,5 @@ J'aimerais parler de quelques points :
 - Le fonctionnement général de Pylint
 - Faire une démonstrations de Pylint avec des exemples (très similaire à ce que je pense qu'on aurait fait dans une séance de travaux pratiques)
 
+Lien vers la présentation : [slide](https://github.com/neurok8050/IFT3913/blob/main/presentations/Semaine7/ClaudericDeRoy/presentation_CD.pdf)
+
