@@ -1,11 +1,10 @@
-Bonjour, 
-
-J'aimerais parler des règles de typage dans les tests statiques. Est-ce que vous avez-vous des références à me donner qui seraient très pertinentes pour le cours ? 
-J'ai déjà lu quelques chapitres du livre :"Types and Programming Languages" de 
-Benjamin C. Pierce, mais je voulais présenter des outils très pratiques, je fais 
-ma recherche là dedans, si je suis dans une mauvaise direction, svp fait moi le 
-savoir, merci.
-
 Cíntia Dalila Soares
-
 C2791
+
+Je parlerai des faux positifs et faux négatifs dans les analyseurs statiques de 
+code. J'aborderai également le fonctionnement des règles de vérification mises 
+en place par ces analyseurs, illustré par quelques exemples concrets.
+
+An Empirical Study of False Negatives and Positives of Static
+Code Analyzers From the Perspective of Historical Issues
+https://arxiv.org/pdf/2408.13855

@@ -15,4 +15,5 @@ https://www.cambi.tech/about
 https://github.com/CAMBI-tech/BciPy
 
 lien slide :
-https://udemontreal-my.sharepoint.com/:p:/r/personal/angelo_adragna_umontreal_ca/_layouts/15/Doc.aspx?sourcedoc=%7B34364E97-AC86-4091-BF26-8BC87DD6DA1B%7D&file=IFT3913.pptx&action=edit&mobileredirect=true&DefaultItemOpen=1&ct=1728309167350&wdOrigin=OFFICECOM-WEB.MAIN.REC&cid=48cb7afe-8f60-4947-b7e8-4c3bf8cf9562&wdPreviousSessionSrc=HarmonyWeb&wdPreviousSession=8ab09e0b-e59e-4f13-a0a9-f5e9a33cc707
+https://udemontreal-my.sharepoint.com/:p:/g/personal/angelo_adragna_umontreal_ca/EZdONjSGrJFAvyaLyH3W2hsBmzddDfTGL64AC25bXmaoxA?e=MTtlIC
+
