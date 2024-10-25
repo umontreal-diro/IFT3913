@@ -2,11 +2,11 @@
 
 # @RaymondCung
 
-**Sujet: Cross-platform testing with appium.**
+**Sujet : Cross-platform testing with appium.**
 
 1. Introduction
 2. définition, fonctionnement, appareil IOS et Android
-3. Comment éxecuter le test appium?
+3. Comment exécuter le test appium?
 4. Qu'est-ce qui rend Appium si populaire ?
 5. Avantage et désavantage
 6. conclusion
