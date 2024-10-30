@@ -8,10 +8,10 @@ Présentation du gestionnaire de packets npm
 - Présentation de ses défaults ( performance )
 - Présentation très rapide de yarn et comment il améliore npm
 
+[Slides](https://docs.google.com/presentation/d/1dOqaS9myYnwdmc4vgElAwbPPToDoTbX_u2ajXEmo3lQ/edit?usp=sharing)
+
 ### Liens
 
+https://nodesource.com/blog/the-basics-of-package-json/
 https://www.npmjs.com/
-
-https://careerfoundry.com/en/blog/web-development/what-is-npm/
-
-https://www.naukri.com/code360/library/difference-between-npm-and-yarn
+https://waverleysoftware.com/blog/yarn-vs-npm/#:~:text=Yarn%20is%20installing%20the%20packages,of%20package's%20dependencies%20by%20default
