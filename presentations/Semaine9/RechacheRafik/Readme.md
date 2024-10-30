@@ -1,6 +1,6 @@
 # semaine 9 - Tester la diversité d'environnement.
 
-Thème : Selennium Webdriver  par Rechache Rafik
+Thème : Selenium Webdriver  par Rechache Rafik
 
 Introduction : Qu'est ce que Selenium webdriver et pourquoi utiliser Selenium.
 
