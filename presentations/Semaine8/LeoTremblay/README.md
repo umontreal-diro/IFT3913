@@ -2,6 +2,11 @@
 Ma presentation sera sur la notion des POMs parents et enfants dans Maven. Je vais probablement parler de la structure d'un pom.xml ainsi que la fonctionnalité du dependencyManagement.
 
 ### liens consultés:
-- https://stackoverflow.com/questions/38882221/how-to-inherit-dependency-from-a-parent-pom-to-a-child-pom
-- https://howtodoinjava.com/maven/maven-parent-child-pom-example/
-- https://medium.com/@AlexanderObregon/an-in-depth-look-at-the-maven-project-object-model-pom-3eeab0ad0b38
+- https://maven.apache.org/guides/introduction/introduction-to-the-pom.html ​
+- https://www.youtube.com/watch?v=KNGQ9JBQWhQ ​
+- https://www.baeldung.com/maven-packaging-types ​
+- https://github.com/gantsign/maven-parent-poms/tree/master ​
+- https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html​
+
+### Lien vers les slides:
+https://udemontreal-my.sharepoint.com/:p:/g/personal/leo_tremblay_umontreal_ca/EV3owEAuHmFHqk2qa0B3tnUBqN9o2YwbQfq7SXomb4Ibjg?e=GKrQEZ
