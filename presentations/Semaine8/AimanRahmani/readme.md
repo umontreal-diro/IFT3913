@@ -32,3 +32,4 @@
 - [Introduction à l'automatisation des mises à jour de dépendances](https://blog.example.com/automatisation-mises-a-jour-dependances)
 
 ### Lien de la Présentation
+https://udemontreal-my.sharepoint.com/:p:/g/personal/mohammed_aiman_rahmani_umontreal_ca/ETFnec409o9OplTwgYpcLdsBssBZI05FZiTvGlJ9rCc6uQ?e=RGsUUa
