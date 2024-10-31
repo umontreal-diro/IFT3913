@@ -8,6 +8,4 @@
 - [Gestionnaire de packets npm](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine8/SamuelArgeris), Samuel Argeris
 - [Nix](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine8/EmericLaberge), Emeric Laberge
 - [Gestion des packets dans des environements virtuels comme Docker](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine8/SamuelMaltais), Samuel Maltais
-- [Présentation de Nix](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine8/EmericLaberge), Emeric Laberge
-
 
