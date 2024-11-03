@@ -1,6 +1,6 @@
 ## Sujet: Tests basés sur les requis (requirements-based testing) et leurs couverture
 
-#### Lien: [Présentation](https://docs.google.com/document/d/e/2PACX-1vQFDzvJOPu9k-s6Ulu81-20E1KXWy9QEc5BhO54bnEZAAi89HtQKZPT2ACnPmW0pcmvHX-vm8LJgPz9/pub)
+#### Lien: [Présentation](https://docs.google.com/presentation/d/e/2PACX-1vSSH3dLFqAf5x0QBFtWSkp6Kitqq8LYmL98cWZ3qyx9-bZTu1Q1zSRoLOEH72CVa8NtWW9_zV8Ivc_k/pub#slide=id.p)
 
 ### Structure de la présentation:
 - Les tests basés sur les requis.
