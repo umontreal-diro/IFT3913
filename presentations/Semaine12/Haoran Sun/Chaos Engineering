@@ -1,0 +1,16 @@
+Sujet: Chaos Engineering (Test en production)
+Author: Haoran Sun, 20260543
+  
+Voici la structure de présentation  :
+
+1. À propos de Chaos Engineering
+   - Introduction
+   - Principes
+   - Modèle de maturité
+   - Processus de pratique
+   - Scénarios de panne de Chaos Engineering
+
+2. Pratiques sur les plateformes open source de Chaos Engineering
+   - ChaosBlade
+   - Expérience utilisateur avec code et scénario
+   - Modèle d'expérimentation
