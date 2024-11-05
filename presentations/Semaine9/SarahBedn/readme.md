@@ -1,14 +1,8 @@
 Sarah Bedn
-Brainstorming des points que j'aborderais:
 
-Introduction : Pourquoi le Cross Browser Testing est important pour assurer la compatibilité d'une application sur différents environnements.
+Introduction : L'importance du Cross Browser Testing
 
-Problématique : Diversité d'environnements 
-Problèmes courants comme l'incompatibilité CSS/JS.
+Problématique : Incompatibilité CSS/JS dans les différents navigateurs
 
-Technique: Utilisation d’outils comme Selenium et BrowserStack pour tester différents navigateurs.
-Exemples de code pour illustrer les tests automatisés multi-navigateurs.
-Intégrer les tests d’accessibilité (WCAG) dans les tests multi-navigateurs avec des outils comme axe-core.
-
-Conclusion: Évolution rapide des navigateurs et frameworks, et les limites des outils actuels.
+Technique: Test avec Lambdatest
 
