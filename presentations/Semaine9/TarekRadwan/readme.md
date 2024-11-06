@@ -18,6 +18,9 @@ Démonstration de l'utilisation de Cypress pour exécuter des tests automatisés
 -Conclusion:
 Résumé des points clés et des avantages de l'utilisation de Cypress pour garantir la qualité des applications web sur plusieurs environnements.
 
+liens vers les slides:
+https://docs.google.com/presentation/d/1PUrS1k6FHNJLJJIirNWRpZKhOlivqjpmWnWgruLqTfQ/edit#slide=id.p
+
 Références :
 
 - https://docs.cypress.io/app/get-started/why-cypress
