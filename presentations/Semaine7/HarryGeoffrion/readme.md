@@ -1,3 +1,14 @@
+Voici le lien au powerpoint:
+
+https://docs.google.com/presentation/d/1fGahAUHyv-UuQ-I4nn-E5LLa8JJdpDIK2FIZOUFh4t8/edit?usp=sharing
+
+
+*Le plan de la présentation a changé un peu en raison de manque de temps. Je passerai plus de temps sur Docker et les containers, et je me limiterai au processus de tests sous différentes distributions Linux quand je donne l'exemple de la compagnie chez qui j'ai fais mon stage.
+
+
+
+
+
 Je présenterai le processus de développement logiciel de la compagnie où j'ai fait mon stage cet été. Ce processus commence au moment où nous nous faisons assigner une tâche jusqu'au moment où nous déterminons que la mise à jour peut être envoyée aux clients. Puisque le sujet de la semaine est "tests sous différents environnements", l'aspect technique principal de la présentation sera l'utilisation de containers Docker pour compiler et tester le logiciel sous différentes distributions Linux. Cela répondra aux questions suivantes :
 - pourquoi veut-on utiliser Docker?
 - comment utiliser Docker?
