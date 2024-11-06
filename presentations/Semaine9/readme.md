@@ -1,5 +1,7 @@
 # Tester la diversité d'environnements 
 
+[Lien zoom](https://umontreal.zoom.us/j/86197287724?pwd=r4HQGELSeHRib8NGZua4BnB8Asiulj.1) pour la semaine 9
+
 - [Cross-platform testing with appium](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine9/Raymond%20Cung), Raymond Cung
 - [Cross-browser testing](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine9/MehtabAliRajput), Mehtab-Ali Rajput
 - [Tester la diversité d’environnement dans les navigateurs web](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine9/JoeyFanor), Joey Fanor 
