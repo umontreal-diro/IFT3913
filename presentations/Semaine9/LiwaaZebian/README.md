@@ -24,4 +24,4 @@ Carina permet d'unifier les tests pour les applications mobiles, web, API, et ba
 1. [Carina GitHub Repository](https://github.com/zebrunner/carina)
 2. [Datadog - Cross-Browser Testing](https://www.datadoghq.com/knowledge-center/cross-browser-testing/)
 
-### [Accès à la presentation] (https://docs.google.com/presentation/d/1250VTtzQvXiOZlpNJZ5b0o0i3j_Rhgvq/edit?usp=sharing&ouid=110422813732574293250&rtpof=true&sd=true)
+### [Accès à la presentation](https://docs.google.com/presentation/d/1250VTtzQvXiOZlpNJZ5b0o0i3j_Rhgvq/edit?usp=sharing&ouid=110422813732574293250&rtpof=true&sd=true)
