@@ -4,3 +4,6 @@ Ma présentation portera sur l'utilisation de CMake et CTest afin d'exécuter un
 
 Je présenterai brièvement le fonctionnement de CMake avec CTest en liant ses caractéristiques à leur pertinence dans le contexte du test dans différents environnements. Ensuite, je ferai un survol de quelques générateurs CMake fréquemment utilisés et finalement je donnerai un exemple d'utilisation du générateur Ninja dans l'IDE CLion sur Linux.
 
+
+Lien vers les diapositives et le mini-programme: https://github.com/0fil0/presentation-CMake-CTest (format .pptx)
+
