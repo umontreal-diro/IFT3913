@@ -5,15 +5,16 @@
 (Le plan suivant pourrait changer)
 
 - Je vais débuter ma présentation par une courte introduction et explication de Django.
-- Importance des tests dans Django.
 - Ensuite, je vais parler de des différents types de tests à l'intérieur de Django avec des exemples.
-    - Tests Unitaires
-    - Tests d'intégration
-    - Tests de Vue (End-to-End)
+    - Tests des modèles
+    - Tests des vues
+    - Tests des templates
 - Explication de la différence entre ces tests.
 - Couverture des tests Django et exécution des tests.
-- Réflexion (impact de ces tests en production).
+- Importance des tests dans Django.
 - Conclusion
+
+slides : https://docs.google.com/presentation/d/1eZgSqElua4EpqVTxzxs9UmLtrybZuGwq-oWZImjP0qg/edit?usp=sharing
 
 ## Sources
 1. https://realpython.com/testing-in-django-part-1-best-practices-and-examples/#types-of-tests
