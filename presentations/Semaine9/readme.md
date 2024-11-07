@@ -11,3 +11,4 @@
 - [Une introduction aux systèmes de construction logicielle (build system) dans l'optique du test dans divers environnements](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine9/FelixCormier), Félix Cormier
 - [Cypress io](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine9/SokharaVincentSieu), Sokhara Vincent Sieu
 - [Cross-Browser Testing avec le Framework Carina](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine9/LiwaaZebian), Liwaa Zebian
+- [Tests sous différentes distributions Linux](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine9/HarryGeoffrion), Harry Geoffrion
