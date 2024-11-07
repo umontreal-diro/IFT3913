@@ -1,10 +1,12 @@
-Sarah Bedn - 20214949
+.lSarah Bedn - 20214949
 
 Introduction : L'importance du Cross Browser Testing
 
 Problématique : Incompatibilité CSS/JS dans les différents navigateurs
 
 Technique: Tests de différentes fonctionnalités CSS/JS avec BrowserStack 
+
+Lien vers la présentation: https://docs.google.com/presentation/d/1nf0KCe6aiao9mT6WNUmmeLuuP1LA_-mtLlhcY76fpYQ
 
 Sources:
 - https://caniuse.com/?search=array%20at
