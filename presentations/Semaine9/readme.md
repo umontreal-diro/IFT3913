@@ -12,3 +12,4 @@
 - [Cypress io](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine9/SokharaVincentSieu), Sokhara Vincent Sieu
 - [Cross-Browser Testing avec le Framework Carina](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine9/LiwaaZebian), Liwaa Zebian
 - [Tests sous différentes distributions Linux](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine9/HarryGeoffrion), Harry Geoffrion
+- [Flutter: La Solution de Google pour le Test CrossPlateforme](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine9/TomSasia), Tom Sasia
