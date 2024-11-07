@@ -11,6 +11,8 @@
 5. Avantage et désavantage
 6. conclusion
 
+Liens vers la présentation : https://1drv.ms/p/c/7bf0011e4f9be813/ET9sboDsx_xOoGsN-4nmI8IBPmnTrgtrnDyxdotP7bH7rw?e=z4jEbs
+
 Source : 
 
 https://www.browserstack.com/guide/appium-tutorial-for-testing
