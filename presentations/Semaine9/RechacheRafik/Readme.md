@@ -8,6 +8,11 @@ Développement : Configurer et créer un code selenium (exemple de code, xpath e
 
 Conclusion : Avantages et limitations : (gratuit, flexible ...) , perspectives : Mentionner l’émergence de nouveaux outils (comme Playwright) et les tendances de l’automatisation headless.
 
+
+
+[Tache-1-presentation.pptx](https://github.com/user-attachments/files/17662139/Tache-1-presentation.pptx)
+
+
 sources : 
 
 https://www.browserstack.com/guide/selenium-webdriver-tutorial
