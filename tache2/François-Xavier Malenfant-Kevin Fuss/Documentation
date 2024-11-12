@@ -1,0 +1,34 @@
+Ajouts a test/java/makelangelo/turtle/TurtleTest:
+
+testGetBoundsHits0:
+Ajout de coverage dans le cas ou GetBounds ne détecte aucun "hit"
+
+testRotate:
+Vérifie que rotate effectue bien la rotation de 90 degrés (dans le sens contraire des aiguilles d'une montre)
+
+testAddLineSegments:
+Vérifie que le segment est bien ajouté lorsque d>minDrawSquared
+
+testGetFirstColor:
+Vérifie que getFirstColor retourne le default lorsque le history de la tortue est vide
+
+testInterpolateLargeT:
+Test différent de celui déja écrit pour tester les dernières lignes, incluant la valeur retournée
+
+testGetPaperLeft:
+Vérifie la borne négative sur l'abcisse correspond bien à la moitié de la largeur centrée à 0
+
+testGetPaperRight:
+Vérifie la borne positive sur l'abcisse correspond bien à la moitié de la largeur centrée à 0
+
+testGetPaperTop:
+Vérifie la borne négative sur l'ordonnée correspond bien à la moitié de la hauteur centrée à 0
+
+testGetPaperBottom:
+Vérifie la borne négative sur l'ordonnée correspond bien à la moitié de la hauteur centrée à 0
+
+testRemoveListener:
+Vérifie que le array list qui contiens les listeners est bien vide au début, et que après avoir ajouté et enlevé les listeners, est toujours vide
+
+testGetIsBusy:
+Vérifie que si jamais le busyCount arrive à 0 ou moins, que la méthode getIsBusy retournera True, comme quoi ; "non, il n'est pas occupé"
