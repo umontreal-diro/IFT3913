@@ -8,4 +8,3 @@
 ## membres
 Qiyun Ou - 20264284 <br> 
 Laura Cadillo -20251700 <br> 
->>>>>>> Stashed changes
