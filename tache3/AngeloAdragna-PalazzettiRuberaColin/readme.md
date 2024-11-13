@@ -11,3 +11,6 @@ projet a été créé à l'origine pour le [Makelangelo Art Robot](http://www.ma
 ## [Readme partie 3](https://github.com/Equanime/Makelangelo-software/blob/master/TACHE-3.md)
 
 
+J'ai vu que la dernière exécution s'affiche avec une ❌
+
+C'est dû au fait que j'ai cancel l'éxécution de plusieurs tests (Vu que c'était une PR vers le master)
