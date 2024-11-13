@@ -10,3 +10,5 @@ Voici ce que je vais aborder pour la présentation:
   Réflection
   Conclusion
   Bibliographie
+
+lien vers la présentation: https://docs.google.com/presentation/d/1pI1rKaiagCeaAQ05VmChJPbFimKs_9D2XU9tYQu-K9I/edit?usp=sharing

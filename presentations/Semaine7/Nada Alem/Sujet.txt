@@ -1,0 +1,15 @@
+Sujet de presentation orale :
+L'analyse statique de code
+- definition 
+- comment fonctionne l'analyse statique
+- types d'analyse statique
+- analyseur statique
+- exemple d'outils
+- normes suivies
+- exemple de developpement personnalisé (pour Lua, en Java)
+
+Lien de la présentation : 
+https://analyseurstatique.my.canva.site/
+
+Lien ANTLR :
+http://lab.antlr.org/
