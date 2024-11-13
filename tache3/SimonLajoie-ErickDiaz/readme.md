@@ -11,7 +11,7 @@ Erick Diaz - 20233602
 [Repo](https://github.com/Simon-Lajoie/Makelangelo-software)
 
 # Lien GitHub-Actions
-[GitHub-Actions] https://github.com/Simon-Lajoie/Makelangelo-software/blob/master/.github/github-actions.md
+[GitHub-Actions] https://github.com/Simon-Lajoie/Makelangelo-software/blob/master/.github/workflows/tests.yml
 
-# Lien documentation de GitHub-Actions
+# Documentation de GitHub-Actions
 [Documentation] https://github.com/Simon-Lajoie/Makelangelo-software/blob/master/.github/github-actions.md
