@@ -3,5 +3,5 @@
 [Notre Repo](https://github.com/Framal42/Makelangelo-software) 
 
 ## Membres de l'équipe
-Kevin Fuss - 20246906
+Kevin Fuss - 20246906 <br>
 François-Xavier Malenfant - 20190905
