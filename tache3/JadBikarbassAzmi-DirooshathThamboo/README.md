@@ -13,4 +13,4 @@ Lien du dépôt qui inclut la github action qui a été modifiée
 
 Lien vers la documentation des flags utilisés dans la github action
 
-- [Documentation](TODO)
+- [Documentation](https://github.com/JadBika/cryptomator/blob/develop/JVM-FLAGS.md)
