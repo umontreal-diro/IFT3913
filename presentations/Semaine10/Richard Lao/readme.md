@@ -12,8 +12,10 @@ la communauté r/ProgrammerHumor et des recherches académiques, nous analyseron
 la qualité des tests et la collaboration entre les développeurs.
 
 Reference: 
-https://www.reddit.com/r/ProgrammerHumor/comments/197qxn2/unittestcoverage/ 
-https://www.reddit.com/r/ProgrammerHumor/
-https://arxiv.org/abs/2410.07020 (What Makes Programmers Laugh? Exploring the Subreddit r/ProgrammerHumor)
+- https://www.reddit.com/r/ProgrammerHumor/comments/197qxn2/unittestcoverage/ 
+- https://www.reddit.com/r/ProgrammerHumor/
+- https://arxiv.org/abs/2410.07020 (What Makes Programmers Laugh? Exploring the Subreddit r/ProgrammerHumor)
 
+Slides
+- https://docs.google.com/presentation/d/1nvFJ-KVuHenwVSdnx4oaEmkv3h1C5ohp/edit?usp=sharing&ouid=115841619454625465477&rtpof=true&sd=true
 
