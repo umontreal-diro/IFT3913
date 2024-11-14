@@ -1,11 +1,14 @@
-Bonjour, 
+# Cíntia Dalila Soares  
+**maticule:** C2791  
 
-J'aimerais parler des règles de typage dans les tests statiques. Est-ce que vous avez-vous des références à me donner qui seraient très pertinentes pour le cours ? 
-J'ai déjà lu quelques chapitres du livre :"Types and Programming Languages" de 
-Benjamin C. Pierce, mais je voulais présenter des outils très pratiques, je fais 
-ma recherche là dedans, si je suis dans une mauvaise direction, svp fait moi le 
-savoir, merci.
+Cette présentation explore les erreurs courantes des analyseurs de code statiques, particulièrement les faux positifs (FP) et faux négatifs (FN). Basée sur l'article :
 
-Cíntia Dalila Soares
+**An Empirical Study of False Negatives and Positives of Static Code Analyzers From the Perspective of Historical Issues**  
+[https://arxiv.org/pdf/2408.13855](https://arxiv.org/pdf/2408.13855)
 
-C2791
+Ressources des analyseurs :
+- SpotBugs : [https://spotbugs.readthedocs.io/en/stable/bugDescriptions.html#](https://spotbugs.readthedocs.io/en/stable/bugDescriptions.html#)
+- PMD : [https://docs.pmd-code.org/latest/pmd_rules_java.html](https://docs.pmd-code.org/latest/pmd_rules_java.html)
+
+Slides:
+- [https://drive.google.com/file/d/1xUmHxTFN7C3FRrzjreJlYOe_JM_Gunr_/view?usp=sharing](https://drive.google.com/file/d/1xUmHxTFN7C3FRrzjreJlYOe_JM_Gunr_/view?usp=sharing)

@@ -1,4 +1,8 @@
 # Andy Le 
+
+# Lien vers les slides 
+https://docs.google.com/presentation/d/1BWVWZPHK38olSFnx5q8lSq0lS_psImvI708ZMjtrA4s/edit?usp=sharing
+
 # Couverture de code à Google
 1. Introduction
 2. Infrastructure et importance de l'automisation

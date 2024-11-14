@@ -18,3 +18,6 @@ Ensuite, il y a plusieurs **interfaces** disponibles dans le cadre d'automatisat
 **Exécution des tests à partir de l'interface de l'éditeur**: Un guide sur la façon d'exécuter des tests via l'interface de l'éditeur Unreal, y compris les étapes à suivre pour lancer les tests et surveiller leur progression.
 
 https://dev.epicgames.com/documentation/en-us/unreal-engine/automation-test-framework-in-unreal-engine
+
+slides:
+https://www.canva.com/design/DAGREMSs9FU/pEF0UbZPwNzMea2ebn0sRw/edit
