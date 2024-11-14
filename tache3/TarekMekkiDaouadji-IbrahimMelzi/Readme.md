@@ -6,3 +6,4 @@ Répertoire : [https://github.com/frivar31/Makelangelo-software](https://github.
 
 Documentation : [https://github.com/frivar31/Makelangelo-software/blob/master/tache3.md](https://github.com/frivar31/Makelangelo-software/blob/master/tache3.md) (lien vers la documentation de la tache3)
 
+[Lien vers le fichier test.yml](https://github.com/frivar31/Makelangelo-software/blob/master/.github/workflows/test.yml)
