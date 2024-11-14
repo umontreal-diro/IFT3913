@@ -1,6 +1,6 @@
 Jaeheon Kim
 
-// J'ai vu que quelqu'un d'autre a déjà réclamé le sujet, donc si des présentations doubles ne sont pas permises, il y avait un autre sujet que j'ai travaillé dessus:
+/*J'ai vu que quelqu'un d'autre a déjà réclamé le sujet, donc si des présentations doubles ne sont pas permises, il y avait un autre sujet que j'ai travaillé dessus:*/
 
 Sujet de la présentation: Impact de l'humour dans les documentations (ex. commentaires dans le code, readme.md)
 
