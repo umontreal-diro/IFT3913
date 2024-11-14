@@ -13,4 +13,8 @@ Raison : Permet d'utiliser le garbage collector Z qui est bon pour les logiciels
 Raison : Réduit la fréquence de garbage collection et par conséquent, la performance du logiciel <br>
 
 5. (-XX:MaxTenuringThreshold=0) qui spécifie le nombre de fois un objet peut passer à travers la nouvelle génération avant d'être envoyé dans la vieille ; <br>
-Raison : Permet d'éviter plusieurs petits cycles de GC et donc d'éviter que des nouveaux objets deviennent des vieux objets s'ils passent au travers du GC 
+Raison : Permet d'éviter plusieurs petits cycles de GC et donc d'éviter que des nouveaux objets deviennent des vieux objets s'ils passent au travers du GC <br>
+
+Les flags sont séparés sur deux nodes YAML afin de faire deux builds différents; cela évite des conflits, par example un conflit entre les deux flags Xmx. <br>
+Le premier build tente d'être optimisé, alors que le deuxième teste ce qui se passe si on limite la mémoire à outrance et dump les logs pour voir ce qui se passe. <br>
+Nous avons aussi ajouté des étapes à la fin de la github action qui permettent de voir tous les logs afin d'aider le débogage et de l'optimisation additionelle.
