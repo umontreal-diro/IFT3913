@@ -2,6 +2,8 @@
 
 Cours spécial, au [studio d'Ubisoft dans le mile end](https://montreal.ubisoft.com/en/)
 
+[IFT3913 à Ubisoft](https://github.com/umontreal-diro/IFT3913/blob/main/presentations/Semaine10/UdeM_Ubisoft_1.jpg)
+
 Planning:
 - 08.30: arrivée et accueil
 - 09.00 - 09.45: échanges à propos de qualité logicielle chez Ubisoft. Préparez vos questions!
