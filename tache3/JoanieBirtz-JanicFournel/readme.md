@@ -2,4 +2,6 @@
 
 Étude de cas choisi: Makelangelo
 
-Documentation et motivation changement github action:
+Lien repository GitHub: https://github.com/joanieBirtz2000/Makelangelo-software
+
+Documentation et motivation changement GitHub action: https://github.com/joanieBirtz2000/Makelangelo-software/blob/master/rapport-gitaction.html
