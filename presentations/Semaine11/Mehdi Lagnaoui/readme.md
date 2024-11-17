@@ -21,11 +21,10 @@
 ## Conclusion
 
 ## Sources potentielles
-https://docs.smith.langchain.com/evaluation
-https://www.confident-ai.com/blog/llm-testing-in-2024-top-methods-and-strategies
-https://arxiv.org/abs/2211.09110
-https://platform.openai.com/docs/guides/evals
-
+- https://docs.smith.langchain.com/evaluation
+- https://www.confident-ai.com/blog/llm-testing-in-2024-top-methods-and-strategies
+- https://arxiv.org/abs/2211.09110
+- https://platform.openai.com/docs/guides/evals
 
 
 Mehdi Lagnaoui - 20178135
