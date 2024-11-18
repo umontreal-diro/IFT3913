@@ -2,6 +2,8 @@ Catherine Roy-St-Jean
 
 Semaine 11 - Tester dans un domaine spécifique
 
+[Lien vers la présentation](https://docs.google.com/presentation/d/1McaDAMalPkWOTY5Zey8k6yoh3oiL65zHKTx2zRPFC_w/edit?usp=sharing)
+
 Sujet -> Tester pour des systèmes embarqués
 
 Intro -> Définition rapide de ce qu'est un système embarqué (caractéristiques). Pourquoi les tests des systèmes embarqués sont importants (utilisation quotidienne, généralement peu de ressources, etc.)
