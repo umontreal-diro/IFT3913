@@ -22,7 +22,7 @@ exemple de vrais vie d utilisation d outil de testage d environement et leurs av
 Résumé des points clés et des avantages de l'utilisation de Cypress pour garantir la qualité des applications web sur plusieurs environnements.
 
 liens vers les slides:
-https://github.com/IFT3913/presentations/Semaine9/TarekRadwan/slidesgo--20241118154505ISEE.pptx
+https://github.com/presentations/Semaine9/TarekRadwan/slidesgo--20241118154505ISEE.pptx
 
 
 Références :
