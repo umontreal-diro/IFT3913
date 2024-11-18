@@ -15,10 +15,14 @@ Explication des avantages de l'automatisation des tests avec Cypress, ses foncti
 -Exemple Pratique d'Utilisation sur un Site Web:
 Démonstration de l'utilisation de Cypress pour exécuter des tests automatisés sur un site web et vérifier sa compatibilité.
 
+-Exemple de BBCNews:
+exemple de vrais vie d utilisation d outil de testage d environement et leurs avantages sur le site web.
+
 -Conclusion:
 Résumé des points clés et des avantages de l'utilisation de Cypress pour garantir la qualité des applications web sur plusieurs environnements.
 
 liens vers les slides:
+
 
 
 Références :
