@@ -10,4 +10,4 @@ Ensuite, nous examinerons comment l'intelligence artificielle peut offrir des so
 
 Les références utilisés: "[Searching bug instances in gameplay video repositories,](https://asgaard.ece.ualberta.ca/papers/Journal/TG_2024_Taesiri_Searching_Bug_Instances_in_Gameplay_Video_Repositories.pdf)", "[Video Game Automated Testing Approaches: An Assessment Framework](https://ieeexplore.ieee.org/document/9234724)," et "[A Survey of Video Game Testing](https://ieeexplore.ieee.org/document/9463010)"
 
-[Slides de la présentation]()
+[Slides de la présentation](https://www.canva.com/design/DAGWxKMA7uQ/6g0FTUvXj5hm4VR4J3wpoA/edit?utm_content=DAGWxKMA7uQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
