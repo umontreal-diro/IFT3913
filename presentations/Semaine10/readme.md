@@ -20,3 +20,5 @@ Adresse: [5455 Av. de Gaspé, Montréal, QC H2T 3B3](https://www.openstreetmap.o
 - [Les mèmes et références culturelles dans les tests](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine10/Richard%20Lao), Richard Lao
 - [Les bienfaits de l'humour au travail et dans les tests SQL](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine10/JanicFournel), Janic Fournel
 - [Humour dans l'environnement de développement](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine10/Laurent%20bouchard), Laurent Bouchard
+- [L'humour en programmation et en entreprise](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine10/NicolasCampbell), Nicolas Campbell
+- [Easter eggs](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine10/HugoDS), Hugo de Souza
