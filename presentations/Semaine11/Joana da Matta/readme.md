@@ -10,9 +10,11 @@ Joana da Matta Furtado Ferreira - 20288550
 - ...
   
 bref, c'est un domain tellement riche et interesant! 
+### Lien vers la présentation:
+https://docs.google.com/presentation/d/1oH3_unpAi-Qb_HzWPJW19zJ_D2BadJj7dMMimH63mlo/edit?usp=sharing
 
 
-### Plan de la presentation: 
+### Plan de la présentation: 
 
 1. **Introduction**
 - Présenter brièvement la conduite autonome : expliquer que les véhicules autonomes utilisent une combinaison de capteurs, de caméras, et d'algorithmes pour se déplacer sans intervention humaine.
