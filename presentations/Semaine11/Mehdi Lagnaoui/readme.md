@@ -1,7 +1,5 @@
 # Sujet: Testing LLMs avec LangChain
 
-(Ps: c'est une première version du plan de la présentation, donc il peut changer un peu)
-
 ## Introduction: 
 - Contexte: Explosion de l'utilisation des LLMs dans les applications
 - Problématique : Comment s'assurer de la qualité et fiabilité des réponses de ces LLMs
@@ -20,11 +18,15 @@
 
 ## Conclusion
 
-## Sources potentielles
-- https://docs.smith.langchain.com/evaluation
-- https://www.confident-ai.com/blog/llm-testing-in-2024-top-methods-and-strategies
-- https://arxiv.org/abs/2211.09110
-- https://platform.openai.com/docs/guides/evals
+## Lien de la présentation: 
+https://docs.google.com/presentation/d/1zkyTCHIcR1rpDKd9tcH_TmD4yzaiEOgRlJo8y7Wy4Bs/edit?usp=sharing
+
+
+## Sources:
+- https://api.python.langchain.com/en/latest/langchain_api_reference.html#module-langchain.evaluation
+- https://wisernotify.com/blog/chatgpt-users/
+- https://www.projectpro.io/article/large-language-model-use-cases-and-applications/887#:~:text=LLMs%20are%20helpful%20in%20legal,rights%2C%20and%20emerging%20legal%20issues
+
 
 
 Mehdi Lagnaoui - 20178135
