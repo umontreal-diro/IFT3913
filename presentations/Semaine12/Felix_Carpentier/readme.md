@@ -1,4 +1,4 @@
-Sujet spécifique : L'importance du logging pour les tests en production
+Sujet spécifique : L'importance du logging pour l'assurance qualité en production
 
 Présentateur : Félix Carpentier - 20188286
 
