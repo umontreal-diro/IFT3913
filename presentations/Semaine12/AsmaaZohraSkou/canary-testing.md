@@ -1,6 +1,5 @@
-# Presentation : Chaos Engineering 
+# Presentation : Canary testing et Kubernetes
 
-## Sujet : Canary testing et Kubernetes
 ### Structure de la présentation:
 
 #### Intro:
