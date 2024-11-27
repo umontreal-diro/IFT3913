@@ -20,3 +20,5 @@ Rollbacks rapides et automatiques
 Importance des tests en amont (CI/CD, tests automatisés)
 Exemples concrets et cas d'utilisation.
 Présentation de scénarios où le test en production a été bénéfique, et les erreurs à éviter.
+
+Lien de la présentation : https://docs.google.com/presentation/d/1c9hn9_N4gMmfNQ0cQ0G-22zqDGKdzv5IlDjy5m5JRzo/edit?usp=sharing
