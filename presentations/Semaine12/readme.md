@@ -11,3 +11,4 @@
 - [ blue/green Structure](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine12/Xi_Chen), Xi Chen
 - [Feature Flags, Canary Releases](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine12/Akram_Znini), Akram Znini
 - [Pen Testing](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine12/Erick%20Diaz), Erick Diaz
+- [Importance et risques des tests en production](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine12/Nicholas_Gebran), Nicholas Gebran
