@@ -9,4 +9,4 @@ Simon Thivierge (20248484)
 - Étude de Cas
 - Conclusion
 
-Diapos: 
+Diapos: https://docs.google.com/presentation/d/1ohSkRi5Z3lmbWai_4D5fZ4q7WHZwx0vbaKs0fCY_nZQ/edit#slide=id.p 
