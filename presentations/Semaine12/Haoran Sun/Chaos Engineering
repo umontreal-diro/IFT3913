@@ -5,12 +5,11 @@ Voici la structure de présentation  :
 
 1. À propos de Chaos Engineering
    - Introduction
-   - Principes
-   - Modèle de maturité
-   - Processus de pratique
-   - Scénarios de panne de Chaos Engineering
+   - Practique
+   - Outils
+   - Exemple
+   - Reflections
+   - Conclusion
 
-2. Pratiques sur les plateformes open source de Chaos Engineering
-   - ChaosBlade
-   - Expérience utilisateur avec code et scénario
-   - Modèle d'expérimentation
+2. Liens: https://docs.google.com/presentation/d/1FlzrOSy_cC8N_Lo7krf3hz8p9UJ7R1mL/edit?usp=sharing&ouid=112015562846430107160&rtpof=true&sd=true
+
