@@ -15,6 +15,6 @@
 * Les tests canary sont indispensables...
 * Le monde des tests en production est vaste...
 
-Lien vers la présentation : 
+[Lien vers la présentation](https://prezi.com/p/create-prezi/?from-template-key=tomorrow_machine_background_ai )
 
 Asmaa Zohra Skou, ID: 20217232
