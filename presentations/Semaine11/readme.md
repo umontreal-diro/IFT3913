@@ -12,4 +12,5 @@
 - [Test des jeux vidéo avec IA](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine11/SimonLajoie), Simon Lajoie
 - [Tester une application web Django](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine11/Brian-Jose%20Mejia-Rivera), Brian-Jose Mejia-Rivera
 - [Tests dans le domaine de l'astronautique](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine11/Cor%C3%A9lie%20Godefroid), Corélie Godefroid
+- [Test pour l'automatisation industrielle](https://github.com/umontreal-diro/IFT3913/tree/main/presentations/Semaine11/AlexRompreBeaulieu), Alex Bompré
   
