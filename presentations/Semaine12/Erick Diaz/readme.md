@@ -2,10 +2,13 @@
 
 Plan de la presentation:
 
-- Attack DDoS
-- SQL Injection
-- MITM (man in the middle)
-- Isolation de systèmes de production pour testing
+- Introduction
+- DoS/ DDoS
+- SQL injection
+- MITM (man-in-the-middle)
+- Isolement pour les tests
+- Réflexion
+- Conclusion
 
 # Liens suggeres:
 
