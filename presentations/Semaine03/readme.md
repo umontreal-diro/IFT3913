@@ -7,7 +7,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation:
 
 [concept] Arrange, Act and Assert    
-- Nom:Yogya Gamage
+- Nom:  Benoit Baudry
 - Présentation:
 
 [concept] Unit Test Smells           
