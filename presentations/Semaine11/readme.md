@@ -4,4 +4,46 @@ Pour faire une présentation sur l'humour pour le test logiciel,  proposez votre
 
 Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontreal.ca) le plus tôt possible pour valider le sujet.
 
-https://cryptpad.fr/code/#/2/code/edit/seiDy086NPQJB-WmXKpLVMGn/
+[] SUJET
+- Nom:
+- Présentation:
+
+[] SUJET
+- Nom:
+- Présentation:
+
+[] SUJET
+- Nom:
+- Présentation:
+
+[] SUJET
+- Nom:
+- Présentation:
+
+[] SUJET
+- Nom:
+- Présentation:
+
+[] SUJET
+- Nom:
+- Présentation:
+
+[] SUJET
+- Nom:
+- Présentation:
+
+[] SUJET
+- Nom:
+- Présentation:
+
+[] SUJET
+- Nom:
+- Présentation:
+
+[] SUJET
+- Nom:
+- Présentation:
+
+[] SUJET
+- Nom:
+- Présentation:

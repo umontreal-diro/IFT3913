@@ -1,4 +1,4 @@
-name: Presentation selection validation
+name: Validation de la sélection des présentations
 
 on:
   pull_request_target:
@@ -6,7 +6,7 @@ on:
       - 'presentations/Semaine*/readme.md'
 
 jobs:
-  validate-and-approve:
+  valider-et-approuver:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -14,7 +14,7 @@ jobs:
       issues: write
     
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -59,35 +59,38 @@ jobs:
           added_content=$(grep "^+" diff.txt | grep -v "^+++" | sed 's/^+//')
           removed_content=$(grep "^-" diff.txt | grep -v "^---" | sed 's/^-//')
           
-          # Validate scenarios
+          # Validate changes - allow any modifications to Nom and Présentation fields
           valid=false
           
-          # Nom field changed
-          if [ $added_lines -eq 1 ] && [ $removed_lines -eq 1 ]; then
-            if echo "$removed_content" | grep -q "^- Nom:$" && 
-               echo "$added_content" | grep -q "^- Nom: .*[^ ].*$"; then
-              valid=true
-            fi
-          fi
-          
-          # One Nom and one Présentation field changed
-          if [ $added_lines -eq 2 ] && [ $removed_lines -eq 2 ]; then
-            # Check if we have one Nom change and one Présentation change
-            nom_removed=$(echo "$removed_content" | grep "^- Nom:$" | wc -l)
-            nom_added=$(echo "$added_content" | grep "^- Nom: .*[^ ].*$" | wc -l)
-            pres_removed=$(echo "$removed_content" | grep "^- Présentation:$" | wc -l)
-            pres_added=$(echo "$added_content" | grep "^- Présentation: .*[^ ].*$" | wc -l)
+          # Check if all changes are only to Nom or Présentation fields
+          if [ $added_lines -gt 0 ] && [ $removed_lines -ge 0 ]; then
+            all_valid=true
             
-            if [ $nom_removed -eq 1 ] && [ $nom_added -eq 1 ] && 
-               [ $pres_removed -eq 1 ] && [ $pres_added -eq 1 ]; then
-              valid=true
+            # Check removed lines
+            while IFS= read -r line; do
+              if [ -n "$line" ]; then
+                # Must be a Nom: or Présentation: field (with any content after)
+                if ! echo "$line" | grep -qE "^[[:space:]]*-[[:space:]]*Nom:[[:space:]]*.*$|^[[:space:]]*-[[:space:]]*Présentation:[[:space:]]*.*$"; then
+                  all_valid=false
+                  break
+                fi
+              fi
+            done <<< "$removed_content"
+            
+            # Check added lines - must be Nom: or Présentation: fields (can be empty or with content)
+            if [ "$all_valid" = true ]; then
+              while IFS= read -r line; do
+                if [ -n "$line" ]; then
+                  # Must be a Nom: or Présentation: field (with or without content)
+                  if ! echo "$line" | grep -qE "^[[:space:]]*-[[:space:]]*Nom:[[:space:]]*.*$|^[[:space:]]*-[[:space:]]*Présentation:[[:space:]]*.*$"; then
+                    all_valid=false
+                    break
+                  fi
+                fi
+              done <<< "$added_content"
             fi
-          fi
-          
-          # Présentation field changed
-          if [ $added_lines -eq 1 ] && [ $removed_lines -eq 1 ]; then
-            if echo "$removed_content" | grep -q "^- Présentation:$" && 
-               echo "$added_content" | grep -q "^- Présentation: .*[^ ].*$"; then
+            
+            if [ "$all_valid" = true ]; then
               valid=true
             fi
           fi
@@ -120,4 +123,7 @@ jobs:
           2. Modifier un champ 'Nom:' et son champ 'Présentation:' correspondant
           3. Modifier un seul champ 'Présentation:' de vide à rempli
           
-          Veuillez vous assurer que vos modifications correspondent exactement à l'un de ces patterns et n'affectent qu'un seul fichier readme.md dans un dossier Semaine."
+          La PR est automatiquement fermée. Veuillez corriger votre contrition et vous assurer que vos modifications correspondent exactement à l'un de ces patterns et n'affectent qu'un seul fichier readme.md dans un dossier Semaine avant de soumettre une nouvelle PR."
+
+          # Close the PR
+          gh pr close ${{ github.event.pull_request.number }}

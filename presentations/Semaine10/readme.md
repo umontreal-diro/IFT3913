@@ -4,4 +4,46 @@ Pour faire une présentation sur le test dans un domaine particulier, choisissez
 
 Ce cours est dédié à la présentation de solutions de test et assurance qualité dédiées à un type particulier de système logiciel. Les présentations doivent mettre en avant les enjeux de qualité spécifiques au domaine, ainsi que les manières innovantes de gérer le test (observabilité, oracle, tests reproductibles, etc.)
 
-https://cryptpad.fr/code/#/2/code/edit/guXEZurQvFG3UcxT6CORD7Im/
+[concept] Qualité logicielle pour l'aéronautique
+- Nom:
+- Présentation:  
+
+[concept] Assurer la qualité des systèmes bancaires
+- Nom:
+- Présentation:
+
+[concept] Test pour les véhicules autonomes
+- Nom:
+- Présentation:
+
+[concept] Tester des machines à contrôle numérique (CNC)
+- Nom:
+- Présentation:
+
+[concept] Assurance qualité pour les jeux vidéos
+- Nom:
+- Présentation:
+
+[concept] Tester des bâtiments intelligents
+- Nom:
+- Présentation:
+
+[concept] Tester un chatbot
+- Nom:
+- Présentation:
+
+[concept] Assurance qualité pour une plateforme de streaming
+- Nom:
+- Présentation:
+
+[] SUJET
+- Nom:
+- Présentation:
+
+[] SUJET
+- Nom:
+- Présentation:
+
+[] SUJET
+- Nom:
+- Présentation:

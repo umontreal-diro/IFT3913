@@ -2,4 +2,46 @@
 
 Pour faire une présentation sur le test unitaire avancé, choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
 
-https://cryptpad.fr/code/#/2/code/edit/bfN9esj7oPsDOInex5+zUzwX/
+[concept] Test par fuzzing
+- Nom:
+- Présentation:
+
+[concept] Test basé sur les propriétés
+- Nom:
+- Présentation:
+
+[concept] Tests paramétrés
+- Nom:
+- Présentation:
+
+[concept] Mocks et stubs
+- Nom:
+- Présentation:
+
+[demo] [Hypothesis](https://hypothesis.readthedocs.io/en/latest/) pour le test basé sur les propriétés en Python
+- Nom:
+- Présentation:
+
+[demo] [Mockito](https://site.mockito.org/) pour les mocks en Java
+- Nom:
+- Présentation:
+
+[demo] [msw](https://github.com/mswjs/msw) pour les mocks avec graphQL
+- Nom:
+- Présentation:
+
+[demo] [Cucumber](https://cucumber.io/) pour le test basé comportement en Java
+- Nom:
+- Présentation:
+
+[demo] [Java faker](https://github.com/DiUS/java-faker) pour l'isolation de tests en Java
+- Nom:
+- Présentation:
+
+[demo] [AutoParams](https://github.com/AutoParams/AutoParams) pour les tests paramétrés en Java
+- Nom:
+- Présentation:
+
+[demo] [afl++](https://github.com/AFLplusplus/AFLplusplus)
+- Nom:
+- Présentation:
