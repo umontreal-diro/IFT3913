@@ -18,7 +18,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 - Nom:
 - Présentation:
 
-[concept] Couverture pour les réseaux de neurones 
+[concept] Couverture pour l'art 
 - Nom:
 - Présentation:
 
