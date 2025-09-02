@@ -3,8 +3,9 @@
 Pour faire une présentation sur le test unitaire, choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
 
 [concept] Oracle de test             
-- Nom: Luciano Marchezan
+- Nom: 
 - Présentation:
+- date
 
 [concept] Arrange, Act and Assert    
 - Nom: 
