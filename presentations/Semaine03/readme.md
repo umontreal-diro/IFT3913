@@ -7,7 +7,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation:
 
 [concept] Arrange, Act and Assert    
-- Yogya Gamage
+- Nom:Yogya Gamage
 - Présentation:
 
 [concept] Unit Test Smells           
