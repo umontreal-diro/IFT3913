@@ -19,7 +19,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation:
 
 [concept] Programmation pilotée par les tests (TDD) 
-- Nom:
+- Nom: Thomas Bate
 - Présentation:
 
 [concept] Génération automatique de test unitaires                            
