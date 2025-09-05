@@ -23,7 +23,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 - Présentation:
 
 [demo] [Mockito](https://site.mockito.org/) pour les mocks en Java
-- Nom:
+- Nom: Sarah Heng
 - Présentation:
 
 [demo] [msw](https://github.com/mswjs/msw) pour les mocks avec graphQL
