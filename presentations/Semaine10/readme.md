@@ -25,7 +25,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Tester des bâtiments intelligents
-- Nom:
+- Nom: Grace Lee
 - Présentation:
 
 [concept] Tester un chatbot
