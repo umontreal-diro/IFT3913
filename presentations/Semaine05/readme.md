@@ -11,7 +11,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 - Présentation:
 
 [concept] Tests paramétrés
-- Nom:
+- Nom: Jérémie Dupuis
 - Présentation:
 
 [concept] Mocks et stubs
