@@ -27,7 +27,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation:
 
 [concept] Qualité des tests générés avec l'IA                            
-- Nom: Jacob Denault
+- Nom: Lallia Diakite
 - Présentation:
 
 [demo] Test unitaire en Java                              
