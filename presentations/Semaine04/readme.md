@@ -7,7 +7,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 - Présentation:
 
 [concept] Critère MC/DC 
-- Nom:
+- Nom: Patrick Kelvin Episseyo
 - Présentation:
 
 [concept] Couverture des domaines d'entrée 
