@@ -15,7 +15,7 @@
 - Présentation:
   
 [concept] Back to back testing
-- Nom:
+- Nom: Yuxuan Yuan
 - Présentation:
   
 [concept] 
