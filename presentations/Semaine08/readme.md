@@ -7,7 +7,7 @@
 - Présentation:
 
 [Concept] Bots pour la mise à jour des dépendances
-- Nom:
+- Nom: Luis Andres Eche Guzman
 - Présentation:
 
 [Concept] Mise à jour des dépendance qui brise le build (a.k.a breaking dependency update)
