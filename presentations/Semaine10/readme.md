@@ -13,7 +13,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Test pour les véhicules autonomes
-- Nom:
+- Nom: Naromba condé
 - Présentation:
 
 [concept] Tester des machines à contrôle numérique (CNC)
