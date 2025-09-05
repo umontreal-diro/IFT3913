@@ -19,7 +19,7 @@
 - Présentation:
 
 [Concept] le build reproductible
-- Nom:
+- Nom: Yan Shek
 - Présentation:
 
 [Concept] tree-skaing pour la réduction des dépendances
