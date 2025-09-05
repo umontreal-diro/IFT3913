@@ -11,7 +11,7 @@
 - Présentation:
   
 [concept] Test de compatibilité entre environnements
-- Nom:
+- Nom: Ariane Laverrière
 - Présentation:
   
 [concept] Back to back testing
