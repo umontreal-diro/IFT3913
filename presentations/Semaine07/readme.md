@@ -3,7 +3,7 @@
 Pour faire une présentation sur le test statique, choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
 
 [Concept] La revue de code
-- Nom:
+- Nom: Dorensky Hérard
 - Présentation:
 
 [Concept] Code lint
