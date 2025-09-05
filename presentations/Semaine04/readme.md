@@ -39,7 +39,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 - Présentation:
 
 [demo] Couverture pour les schémas de données
-- Nom:
+- Nom: Tagmouti Mohamed Mehdi
 - Présentation:
 
 [demo] Couverture de code pour Python
