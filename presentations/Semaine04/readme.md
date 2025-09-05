@@ -15,7 +15,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 - Présentation:
 
 [concept] Couverture de code à Google 
-- Nom:
+- Nom: Derin Akay
 - Présentation:
 
 [concept] Couverture pour les réseaux de neurones 
