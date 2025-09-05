@@ -11,7 +11,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Présentation:
 
 [concept] canary testing
-- Nom:
+- Nom: Ding Jun Qiu
 - Présentation:
 
 [concept] tester la performance
