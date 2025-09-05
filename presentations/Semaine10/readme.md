@@ -17,7 +17,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Tester des machines à contrôle numérique (CNC)
-- Nom:
+- Nom: Har Moni Ung
 - Présentation:
 
 [concept] Assurance qualité pour les jeux vidéos
