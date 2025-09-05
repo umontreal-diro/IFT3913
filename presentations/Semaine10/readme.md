@@ -5,7 +5,7 @@ Pour faire une présentation sur le test dans un domaine particulier, choisissez
 Ce cours est dédié à la présentation de solutions de test et assurance qualité dédiées à un type particulier de système logiciel. Les présentations doivent mettre en avant les enjeux de qualité spécifiques au domaine, ainsi que les manières innovantes de gérer le test (observabilité, oracle, tests reproductibles, etc.)
 
 [concept] Qualité logicielle pour l'aéronautique
-- Nom:
+- Nom: William Bisson
 - Présentation:  
 
 [concept] Assurer la qualité des systèmes bancaires
