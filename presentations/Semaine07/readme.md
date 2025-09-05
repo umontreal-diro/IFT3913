@@ -23,7 +23,7 @@ Pour faire une présentation sur le test statique, choisissez un des sujets list
 - Présentation:
 
 [Concept] [Revue de code chez Google](https://www.ifi.uzh.ch/dam/jcr:d3de75f7-1464-4463-a539-dde7714f0035/icse2018seip.pdf)
-- Nom: Yasmine Ben Youssef
+- Nom:
 - Présentation:
 
 [demo] [findbugs](https://github.com/findbugsproject/findbugs) pour le test statique en Java
@@ -31,7 +31,7 @@ Pour faire une présentation sur le test statique, choisissez un des sujets list
 - Présentation:
 
 [demo] [ruff](https://github.com/astral-sh/ruff) pour lint de code Python
-- Nom:
+- Nom: Paul Gayout
 - Présentation:
 
 [demo] [semgrep](https://github.com/semgrep/semgrep) pour l'analyse statique
