@@ -31,7 +31,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation:
 
 [demo] Test unitaire en Java                              
-- Nom:
+- Nom: Titouan Johanny
 - Présentation:
 
 [demo] Test unitaire en Python    
