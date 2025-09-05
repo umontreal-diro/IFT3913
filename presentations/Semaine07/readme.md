@@ -35,7 +35,7 @@ Pour faire une présentation sur le test statique, choisissez un des sujets list
 - Présentation:
 
 [demo] [semgrep](https://github.com/semgrep/semgrep) pour l'analyse statique
-- Nom:
+- Nom: Mahdi Tazerout
 - Présentation:
 
 [demo] [Frama-C](https://frama-c.com/) pour l'analyse statique en C
