@@ -15,7 +15,7 @@
 - Présentation:
 
 [Concept] le [lockfile](https://arxiv.org/pdf/2505.04834)
-- Nom:
+- Nom: Yasmine Ben Youssef
 - Présentation:
 
 [Concept] le build reproductible
