@@ -23,7 +23,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation: https://udemontreal-my.sharepoint.com/:b:/g/personal/thomas_bate_umontreal_ca/EfhtfhKtfhtPi5PVHwUz0OUBhfa1mSq3STaUoGSVIfASmQ
 
 [concept] Génération automatique de test unitaires                            
-- Nom:
+- Nom: Félix Lacroix
 - Présentation:
 
 [concept] Qualité des tests générés avec l'IA                            
