@@ -43,5 +43,5 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 - Présentation:
 
 [demo] Couverture de code pour Python
-- Nom: Jala Fatouaki
+- Nom: Jalal Fatouaki
 - Présentation:
