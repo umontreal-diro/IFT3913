@@ -11,7 +11,7 @@ Pour faire une présentation sur le test statique, choisissez un des sujets list
 - Présentation:
 
 [Concept] Revue de code assistée par les LLM
-- Nom: Joaquim Sandler-Soussy
+- Nom: 
 - Présentation:
 
 [Concept] Mesure de complexité du code
