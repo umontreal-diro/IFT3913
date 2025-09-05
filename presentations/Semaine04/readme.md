@@ -11,7 +11,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 - Présentation:
 
 [concept] Couverture des domaines d'entrée 
-- Nom:
+- Nom: Zachary Bourgeois
 - Présentation:
 
 [concept] Couverture de code à Google 
