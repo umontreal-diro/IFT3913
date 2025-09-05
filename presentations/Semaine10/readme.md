@@ -33,7 +33,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Assurance qualité pour une plateforme de streaming
-- Nom:
+- Nom: Chiril Reabitchi
 - Présentation:
 
 [] SUJET
