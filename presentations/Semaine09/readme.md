@@ -7,7 +7,7 @@
 - Présentation:
   
 [concept] Cross-browser testing
-- Nom:
+- Nom: Léa hemidj 
 - Présentation:
   
 [concept] Test de compatibilité entre environnements
