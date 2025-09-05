@@ -3,7 +3,7 @@
 Pour faire une présentation sur le test unitaire, choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
 
 [concept] Oracle de test             
-- Nom:
+- Nom: Kevin Guo
 - Présentation:
 
 [concept] Arrange, Act and Assert    
