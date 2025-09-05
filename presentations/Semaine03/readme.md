@@ -11,7 +11,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation:
 
 [concept] Unit Test Smells           
-- Nom:
+- Nom: Nelson Kamga Newa
 - Présentation: 
 
 [concept] Programmation pilotée par le comportement (BDD)
