@@ -19,7 +19,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Présentation:
 
 [concept] test de pénétration
-- Nom:
+- Nom: Joaquim Sandler-Soussy
 - Présentation:
 
 [concept] capture and replay
