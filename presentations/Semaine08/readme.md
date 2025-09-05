@@ -35,7 +35,7 @@
 - Présentation:
 
 [demo] [poutine](https://github.com/boostsecurityio/poutine) pour l'analyse de GitHub actions
-- Nom:
+- Nom: Bilal Vandenberge
 - Présentation:
 
 [] SUJET
