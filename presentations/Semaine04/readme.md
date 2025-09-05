@@ -23,7 +23,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 - Présentation:
 
 [concept] Avantages et limites de la couverture de test 
-- Nom:
+- Nom: Emmanuelle Pilon
 - Présentation:
 
 [demo] Couverture de code pour Java 
