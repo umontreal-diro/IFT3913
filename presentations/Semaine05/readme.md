@@ -15,7 +15,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 - Présentation:
 
 [concept] Mocks et stubs
-- Nom:
+- Nom: Laurent POLZIN
 - Présentation:
 
 [demo] [Hypothesis](https://hypothesis.readthedocs.io/en/latest/) pour le test basé sur les propriétés en Python
