@@ -7,7 +7,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Présentation:
 
 [concept] injections de fautes
-- Nom:
+- Nom: Islem Chokri
 - Présentation:
 
 [concept] canary testing
