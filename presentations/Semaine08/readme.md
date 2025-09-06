@@ -11,7 +11,7 @@
 - Présentation:
 
 [Concept] Mise à jour des dépendance qui brise le build (a.k.a breaking dependency update)
-- Nom:
+- Nom: Esteban Maries
 - Présentation:
 
 [Concept] le [lockfile](https://arxiv.org/pdf/2505.04834)
