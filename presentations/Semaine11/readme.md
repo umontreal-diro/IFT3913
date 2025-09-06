@@ -9,7 +9,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Présentation:
 
 [] SUJET
-- Nom:
+- Nom: Jonathan Beaulieu
 - Présentation:
 
 [] SUJET
