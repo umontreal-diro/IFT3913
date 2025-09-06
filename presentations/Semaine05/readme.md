@@ -35,7 +35,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 - Présentation:
 
 [demo] [Java faker](https://github.com/DiUS/java-faker) pour l'isolation de tests en Java
-- Nom:
+- Nom: Charlie Peng
 - Présentation:
 
 [demo] [AutoParams](https://github.com/AutoParams/AutoParams) pour les tests paramétrés en Java
