@@ -23,7 +23,7 @@ Pour faire une présentation sur la couverture de code avancée, choisissez un d
 - Présentation:
 
 [concept] Test combinatoire
-- Nom:
+- Nom: Nikolas Lévesque
 - Présentation:
 
 [concept] Test polymorphique pour la couverture des don
