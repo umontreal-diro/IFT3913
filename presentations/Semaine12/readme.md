@@ -15,7 +15,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Présentation:
 
 [concept] tester la performance
-- Nom:Arthur Paul
+- Nom: Arthur Paul
 - Présentation:
 
 [concept] test de pénétration
@@ -23,7 +23,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Présentation:
 
 [concept] capture and replay
-- Nom:
+- Nom: Oumayma Haddour
 - Présentation:
 
 [demo] [opentelemetry](https://opentelemetry.io/) pour l'observabilité en production
