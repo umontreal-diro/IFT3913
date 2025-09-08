@@ -3,11 +3,11 @@
 Pour faire une présentation sur le test en production, choisissez un des sujets listés ci-dessous et indiquez votre nom, ou proposez votre propre sujet. Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontreal.ca) le plus tôt possible pour valider le sujet.
 
 [concept] chaos engineering
-- Nom:
+- Nom: Mandi Vigier
 - Présentation:
 
 [concept] injections de fautes
-- Nom:
+- Nom: Islem Chokri
 - Présentation:
 
 [concept] canary testing
@@ -15,7 +15,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Présentation:
 
 [concept] tester la performance
-- Nom:
+- Nom: Arthur Paul
 - Présentation:
 
 [concept] test de pénétration
@@ -23,7 +23,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Présentation:
 
 [concept] capture and replay
-- Nom:
+- Nom: Oumayma Haddour
 - Présentation:
 
 [demo] [opentelemetry](https://opentelemetry.io/) pour l'observabilité en production

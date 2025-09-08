@@ -7,7 +7,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 - Présentation:
 
 [concept] Test basé sur les propriétés
-- Nom:
+- Nom: Mohamed Atmani
 - Présentation:
 
 [concept] Tests paramétrés
@@ -15,7 +15,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 - Présentation:
 
 [concept] Mocks et stubs
-- Nom:
+- Nom: Laurent POLZIN
 - Présentation:
 
 [demo] [Hypothesis](https://hypothesis.readthedocs.io/en/latest/) pour le test basé sur les propriétés en Python
@@ -31,11 +31,11 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 - Présentation:
 
 [demo] [Cucumber](https://cucumber.io/) pour le test basé comportement en Java
-- Nom:
+- Nom: Marcelo Amarilla
 - Présentation:
 
 [demo] [Java faker](https://github.com/DiUS/java-faker) pour l'isolation de tests en Java
-- Nom:
+- Nom: Charlie Peng
 - Présentation:
 
 [demo] [AutoParams](https://github.com/AutoParams/AutoParams) pour les tests paramétrés en Java

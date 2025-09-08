@@ -27,7 +27,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation:
 
 [concept] Qualité des tests générés avec l'IA                            
-- Nom: Fachtali Kamil
+- Nom: Jacob Denault
 - Présentation:
 
 [demo] Test unitaire en Java                              
@@ -39,7 +39,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation:
 
 [demo] Test unitaire en Rust      
-- Nom:
+- Nom: Mohamed Terbaoui
 - Présentation:
 
 [demo] Test unitaire pour Node.js 
