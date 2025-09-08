@@ -3,7 +3,7 @@
 Pour faire une présentation sur le test en production, choisissez un des sujets listés ci-dessous et indiquez votre nom, ou proposez votre propre sujet. Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontreal.ca) le plus tôt possible pour valider le sujet.
 
 [concept] chaos engineering
-- Nom:
+- Nom: Mandi Vigier
 - Présentation:
 
 [concept] injections de fautes
