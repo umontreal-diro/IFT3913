@@ -27,7 +27,7 @@ Pour faire une présentation sur la couverture de code avancée, choisissez un d
 - Présentation:
 
 [concept] Test polymorphique pour la couverture des don
-- Nom:
+- Nom: Kady Danella Ingabire
 - Présentation:
 
 [demo] [jacoco-report](https://github.com/Madrapps/jacoco-report) couverture et GitHub action  
