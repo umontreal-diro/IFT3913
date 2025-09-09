@@ -27,7 +27,7 @@ Pour faire une présentation sur le test statique, choisissez un des sujets list
 - Présentation:
 
 [demo] [findbugs](https://github.com/findbugsproject/findbugs) pour le test statique en Java
-- Nom:
+- Nom:Ilyesse Bouzimmita
 - Présentation:
 
 [demo] [ruff](https://github.com/astral-sh/ruff) pour lint de code Python
