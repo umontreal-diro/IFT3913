@@ -39,7 +39,7 @@ Pour faire une présentation sur le test statique, choisissez un des sujets list
 - Présentation:
 
 [demo] [Frama-C](https://frama-c.com/) pour l'analyse statique en C
-- Nom:
+- Nom: Ryan Sari
 - Présentation:
 
 [demo] [Poutine](https://github.com/boostsecurityio/poutine) pour le test statique de GitHub actions
