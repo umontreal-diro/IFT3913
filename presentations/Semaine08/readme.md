@@ -31,7 +31,7 @@
 - Présentation:
 
 [demo] [Nix](https://nixos.org/), gestionnaire de paquets
-- Nom:
+- Nom: mohamed thameur sassi
 - Présentation:
 
 [demo] [poutine](https://github.com/boostsecurityio/poutine) pour l'analyse de GitHub actions
