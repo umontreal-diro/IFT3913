@@ -31,7 +31,7 @@ Pour faire une présentation sur la couverture de code avancée, choisissez un d
 - Présentation:
 
 [demo] [jacoco-report](https://github.com/Madrapps/jacoco-report) couverture et GitHub action  
-- Nom:
+- Nom:Lallia Diakite
 - Présentation:
 
 [demo] [Pit](https://pitest.org/) pour le test par mutation en Java
