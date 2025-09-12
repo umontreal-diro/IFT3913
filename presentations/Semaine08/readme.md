@@ -27,7 +27,7 @@
 - Présentation:
 
 [demo] [cycloneDX](https://cyclonedx.org/) pour la génération de 'software bill of materials'
-- Nom:
+- Nom: Yudi Ma
 - Présentation:
 
 [demo] [Nix](https://nixos.org/), gestionnaire de paquets
