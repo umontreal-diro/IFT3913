@@ -45,5 +45,5 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [] SUJET
-- Nom:
+- Nom: Maxime Belotti
 - Présentation:
