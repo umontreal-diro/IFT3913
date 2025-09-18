@@ -43,7 +43,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 - Présentation:
 
 [demo] [afl++](https://github.com/AFLplusplus/AFLplusplus)
-- Nom:
+- Nom:Emmanuel Paraison
 - Présentation:
 
 [demo] [XCUITest](https://developer.apple.com/documentation/xctest?utm_source=chatgpt.com)  pour l’automatisation des tests UI en Swift
