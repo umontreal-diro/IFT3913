@@ -3,45 +3,49 @@
 Pour faire une présentation sur le test unitaire avancé, choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
 
 [concept] Test par fuzzing
-- Nom:
+- Nom: Yamir Alejandro Poldo Silva
 - Présentation:
 
 [concept] Test basé sur les propriétés
-- Nom:
+- Nom: Mohamed Atmani
 - Présentation:
 
 [concept] Tests paramétrés
-- Nom:
+- Nom: Jérémie Dupuis
 - Présentation:
 
 [concept] Mocks et stubs
-- Nom:
+- Nom: Laurent POLZIN
 - Présentation:
 
 [demo] [Hypothesis](https://hypothesis.readthedocs.io/en/latest/) pour le test basé sur les propriétés en Python
-- Nom:
+- Nom: Aissatou Ndiaye
 - Présentation:
 
 [demo] [Mockito](https://site.mockito.org/) pour les mocks en Java
-- Nom:
+- Nom: Sarah Heng
 - Présentation:
 
 [demo] [msw](https://github.com/mswjs/msw) pour les mocks avec graphQL
-- Nom:
+- Nom: Simon Voglimacci Stéphanopoli
 - Présentation:
 
 [demo] [Cucumber](https://cucumber.io/) pour le test basé comportement en Java
-- Nom:
+- Nom: Marcelo Amarilla
 - Présentation:
 
 [demo] [Java faker](https://github.com/DiUS/java-faker) pour l'isolation de tests en Java
-- Nom:
+- Nom: Charlie Peng
 - Présentation:
 
 [demo] [AutoParams](https://github.com/AutoParams/AutoParams) pour les tests paramétrés en Java
-- Nom:
+- Nom: William Caron-Bastarache
 - Présentation:
 
 [demo] [afl++](https://github.com/AFLplusplus/AFLplusplus)
-- Nom:
+- Nom:Emmanuel Paraison
+- Présentation:
+
+[demo] [XCUITest](https://developer.apple.com/documentation/xctest?utm_source=chatgpt.com)  pour l’automatisation des tests UI en Swift
+- Nom: Mathias La Rochelle 
 - Présentation:

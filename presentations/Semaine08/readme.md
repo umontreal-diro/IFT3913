@@ -7,41 +7,41 @@
 - Présentation:
 
 [Concept] Bots pour la mise à jour des dépendances
-- Nom:
+- Nom: Yuan Qing Ji
 - Présentation:
 
 [Concept] Mise à jour des dépendance qui brise le build (a.k.a breaking dependency update)
-- Nom:
+- Nom: Esteban Maries
 - Présentation:
 
 [Concept] le [lockfile](https://arxiv.org/pdf/2505.04834)
-- Nom:
+- Nom: Yasmine Ben Youssef
 - Présentation:
 
 [Concept] le build reproductible
-- Nom:
+- Nom: Yan Shek
 - Présentation:
 
 [Concept] tree-skaing pour la réduction des dépendances
-- Nom:
+- Nom: Luis Andres Eche Guzman
 - Présentation:
 
 [demo] [cycloneDX](https://cyclonedx.org/) pour la génération de 'software bill of materials'
-- Nom:
+- Nom: Yudi Ma
 - Présentation:
 
 [demo] [Nix](https://nixos.org/), gestionnaire de paquets
-- Nom:
+- Nom: mohamed thameur sassi
 - Présentation:
 
 [demo] [poutine](https://github.com/boostsecurityio/poutine) pour l'analyse de GitHub actions
-- Nom:
+- Nom: Bilal Vandenberge
 - Présentation:
 
-[] SUJET
-- Nom:
+[concept] Dependency hell
+- Nom: Mariam Elwa
 - Présentation:
 
-[] SUJET
-- Nom:
-- Présentation:
+[demo] Cache de dépendances dans CI/CD avec GitHub Actions
+- Nom: Walid Bouhazza
+- Présentation: 

@@ -3,19 +3,19 @@
   Pour faire une présentation sur le test et la diversité des environnements, choisissez un des sujets listés ci-dessous et indiquez votre nom, ou proposez votre propre sujet. Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontreal.ca) le plus tôt possible pour valider le sujet.
 
 [concept] A/B testing
-- Nom:
+- Nom: Peini Li 
 - Présentation:
   
 [concept] Cross-browser testing
-- Nom:
+- Nom: Léa hemidj 
 - Présentation:
   
 [concept] Test de compatibilité entre environnements
-- Nom:
+- Nom: Ariane Laverrière
 - Présentation:
   
 [concept] Back to back testing
-- Nom:
+- Nom: Yuxuan Yuan
 - Présentation:
   
 [concept] 
@@ -23,11 +23,11 @@
 - Présentation:
   
 [demo] [gauge](https://github.com/getgauge/gauge) pour le test multi platformes
-- Nom:
+- Nom: Rémi-Antoine Joron
 - Présentation:
   
 [demo] [selenium](https://www.selenium.dev/) pour le test web
-- Nom:
+- Nom: Hazem Ben Amor
 - Présentation:
   
 [] SUJET

@@ -5,45 +5,45 @@ Pour faire une présentation sur le test dans un domaine particulier, choisissez
 Ce cours est dédié à la présentation de solutions de test et assurance qualité dédiées à un type particulier de système logiciel. Les présentations doivent mettre en avant les enjeux de qualité spécifiques au domaine, ainsi que les manières innovantes de gérer le test (observabilité, oracle, tests reproductibles, etc.)
 
 [concept] Qualité logicielle pour l'aéronautique
-- Nom:
+- Nom: William Bisson
 - Présentation:  
 
 [concept] Assurer la qualité des systèmes bancaires
-- Nom:
+- Nom: Massimo Costarella-Serra
 - Présentation:
 
 [concept] Test pour les véhicules autonomes
-- Nom:
+- Nom: Naromba condé
 - Présentation:
 
 [concept] Tester des machines à contrôle numérique (CNC)
-- Nom:
+- Nom: Har Moni Ung
 - Présentation:
 
 [concept] Assurance qualité pour les jeux vidéos
-- Nom:
+- Nom: Flora Kang
 - Présentation:
 
 [concept] Tester des bâtiments intelligents
-- Nom:
+- Nom: Grace Lee
 - Présentation:
 
 [concept] Tester un chatbot
-- Nom:
+- Nom: Ilyas Ally Musaphur
 - Présentation:
 
 [concept] Assurance qualité pour une plateforme de streaming
-- Nom:
+- Nom: Chiril Reabitchi
+- Présentation:
+
+[concept] Tester les systèmes financiers et boursiers (trading algorithmique et marchés à terme)
+- Nom: Bintou Touré
+- Présentation:
+
+[concept] Qualité et Conformité aux Standards dans le Domaine de la Santé
+- Nom: David Shorten
 - Présentation:
 
 [] SUJET
-- Nom:
-- Présentation:
-
-[] SUJET
-- Nom:
-- Présentation:
-
-[] SUJET
-- Nom:
+- Nom: Maxime Belotti
 - Présentation:
