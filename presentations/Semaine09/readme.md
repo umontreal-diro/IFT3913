@@ -18,7 +18,7 @@
 - Nom: Yuxuan Yuan
 - Présentation:
   
-[concept] 
+[concept] Fragmentation testing
 - Nom: Fatou Ndao
 - Présentation:
   
