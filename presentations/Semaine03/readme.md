@@ -40,7 +40,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 
 [demo] Test unitaire en Rust      
 - Nom: Mohamed Terbaoui
-- Présentation:
+- Présentation: https://mohamedterbaoui.github.io/Presentation_Test_Rust/
 
 [demo] Test unitaire pour Node.js 
 - Nom: Alexandre Gilbert
