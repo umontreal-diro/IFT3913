@@ -4,7 +4,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 
 [concept] Oracle de test             
 - Nom: Kevin Guo
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1oyJAT_t3c7hqt2rISNWOyQpMQM5cBqMLjEgiLauragQ/edit?usp=sharing
 
 [concept] Arrange, Act and Assert    
 - Nom: Chaimaa Dannane
