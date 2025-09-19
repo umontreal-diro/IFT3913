@@ -28,7 +28,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 
 [concept] Qualité des tests générés avec l'IA                            
 - Nom: Jacob Denault
-- Présentation:
+- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/jacob_denault_umontreal_ca/EWbb1V_L_FZOpsQ2fmUzeUoBn8ZJskykplYU4oEdgpJPZQ?e=bWsbIT
 
 [demo] Test unitaire en Java                              
 - Nom: Titouan Johanny
