@@ -15,8 +15,8 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation: https://docs.google.com/presentation/d/1tarseMlKMX0bsuxhz7dtCkiFp1T7D41qSlhRNZSjmyk/edit?usp=sharing
 
 [concept] Programmation pilotée par le comportement (BDD)
-- Nom:NOMENA ANDRE Willis
-- Présentation:
+- Nom:Willis NOMENA ANDRE
+- Présentation: https://docs.google.com/presentation/d/1nQqaF_W-1iWPcqWHVfJO_DivQZbVxXAe02VXcITSxsU/edit?usp=sharing
 
 [concept] Programmation pilotée par les tests (TDD) 
 - Nom: Thomas Bate
