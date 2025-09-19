@@ -19,7 +19,7 @@
 - Présentation:
   
 [concept] 
-- Nom: Fatou Ndao
+- Nom: 
 - Présentation:
   
 [demo] [gauge](https://github.com/getgauge/gauge) pour le test multi platformes
