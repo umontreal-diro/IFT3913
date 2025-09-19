@@ -8,7 +8,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 
 [concept] Arrange, Act and Assert    
 - Nom: Chaimaa Dannane
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1eSSU5QAzBoyyUe03GAgvdeaw-mhrni_FbuOYE2CDvq4/edit?usp=sharing
 
 [concept] Unit Test Smells           
 - Nom: Nelson Kamga Newa
