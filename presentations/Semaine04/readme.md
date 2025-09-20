@@ -32,7 +32,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [demo] Couverture de code pour Javascript  
 - Nom: Louis-Philippe Ostiguy
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1cHpzixoW15KvLTx-PAVMvVrSds70l0X0Goc7IQW5Eqc/edit?usp=sharing
 
 [demo] Couverture de code pour Rust 
 - Nom: Mounir Ammam 
