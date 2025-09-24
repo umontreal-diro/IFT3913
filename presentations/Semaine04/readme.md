@@ -24,7 +24,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [concept] Avantages et limites de la couverture de test 
 - Nom: Emmanuelle Pilon
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1qyC_KHhb_34pm7hqUg8heWBt_wGMQQsoAM_zmH0-kRc/edit?usp=sharing
 
 [demo] Couverture de code pour Java 
 - Nom: Hamza Ali Ousalah
