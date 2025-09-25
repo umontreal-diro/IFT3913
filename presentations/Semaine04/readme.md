@@ -28,7 +28,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [demo] Couverture de code pour Java 
 - Nom: Hamza Ali Ousalah
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1pxZuLGBmXMiOGcoIeBY_gHHvT27SKgEErRzU-py6Ta8/edit?usp=sharing
 
 [demo] Couverture de code pour Javascript  
 - Nom: Louis-Philippe Ostiguy
