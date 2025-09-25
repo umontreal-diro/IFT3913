@@ -40,7 +40,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [demo] Couverture pour les schémas de données
 - Nom: Tagmouti Mohamed Mehdi
-- Présentation:
+- Présentation:https://docs.google.com/presentation/d/1qninDVqSYULOC8s5gqSnCInUNEgFJygq/edit?usp=sharing
 
 [demo] Couverture de code pour Python
 - Nom: Jalal Fatouaki
