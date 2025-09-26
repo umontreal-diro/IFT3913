@@ -18,12 +18,12 @@
 - Nom: Yuxuan Yuan
 - Présentation:
   
-[concept] 
-- Nom:
+[concept] Test sur la compatibilité réseau
+- Nom: Marina Traore
 - Présentation:
   
 [demo] [gauge](https://github.com/getgauge/gauge) pour le test multi platformes
-- Nom:
+- Nom: Rémi-Antoine Joron
 - Présentation:
   
 [demo] [selenium](https://www.selenium.dev/) pour le test web
