@@ -20,7 +20,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [concept] Couverture pour les réseaux de neurones 
 - Nom: Dabo Tunwend-raabo Fahima Carmen
-- Présentation: https://docs.google.com/presentation/d/17f5d8L1suF0MRzqvO9-MWHUdHN797NV5P6u5s-DQxL4/edit?usp=sharing
+- Présentation:  https://docs.google.com/presentation/d/17f5d8L1suF0MRzqvO9-MWHUdHN797NV5P6u5s-DQxL4/edit?usp=sharing
 
 [concept] Avantages et limites de la couverture de test 
 - Nom: Emmanuelle Pilon
