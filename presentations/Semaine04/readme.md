@@ -4,7 +4,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [concept] Couverture des instructions et branches
 - Nom: Alessia Muresan
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1T1LOcaABSDLORdNbKTIaCDppPakALtswTHNnQlXe8XA/edit?usp=sharing
 
 [concept] Critère MC/DC 
 - Nom: Emmanuel Chicoine
