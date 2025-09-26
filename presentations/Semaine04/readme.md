@@ -8,7 +8,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [concept] Critère MC/DC 
 - Nom: Emmanuel Chicoine
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1qAPod19VE7cwPkmknaqTpCaF8zXa5mco4kghZemoOfY/edit?usp=sharing 
 
 [concept] Couverture des domaines d'entrée 
 - Nom: Zachary Bourgeois
