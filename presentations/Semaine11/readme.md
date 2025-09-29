@@ -12,7 +12,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Nom: Jonathan Beaulieu
 - Présentation:
 
-[] SUJET
+[] Les messages d’erreur absurdes et humoristiques
 - Nom: Bencheikh El Atmani Ayoub
 - Présentation:
 
