@@ -13,7 +13,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Présentation:
 
 [] SUJET
-- Nom: Bencheikh El Atmani Ayoub
+- Nom: Bencheikh El Atmani Ayoub ( Sujet : Les messages d’erreur absurdes et humoristiques)
 - Présentation:
 
 [Concept] Little bobby tables - SQL injection et humour
