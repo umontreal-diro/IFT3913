@@ -20,7 +20,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [demo] [Hypothesis](https://hypothesis.readthedocs.io/en/latest/) pour le test basé sur les propriétés en Python
 - Nom: Aissatou Ndiaye
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/19q9bhJLJRHZJRHAKtX5Jqh45EUm-J56itKNSk3ZQwOI/edit?usp=sharing
 
 [demo] [Mockito](https://site.mockito.org/) pour les mocks en Java
 - Nom: Sarah Heng
