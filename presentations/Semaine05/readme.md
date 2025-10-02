@@ -16,7 +16,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [concept] Mocks et stubs
 - Nom: Laurent POLZIN
-- Présentation:
+- Présentation: https://udemontreal-my.sharepoint.com/:p:/r/personal/laurent_polzin_umontreal_ca/Documents/Mocks%20%26%20Stubs%20-%20IFT%203913%20-%20Prez%2003%2010%202025.pptx?d=w4fb426b7b2a04dc29a60786486dda00b&csf=1&web=1&e=iBQ10L
 
 [demo] [Hypothesis](https://hypothesis.readthedocs.io/en/latest/) pour le test basé sur les propriétés en Python
 - Nom: Aissatou Ndiaye
