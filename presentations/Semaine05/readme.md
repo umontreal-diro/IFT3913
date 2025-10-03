@@ -12,7 +12,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [concept] Tests paramétrés
 - Nom: Jérémie Dupuis
-- Présentation:
+- Présentation: https://jeremiedupuis.com/ift3913/presentation.pdf
 
 [concept] Mocks et stubs
 - Nom: Laurent POLZIN
