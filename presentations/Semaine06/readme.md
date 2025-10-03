@@ -7,19 +7,19 @@ Pour faire une présentation sur la couverture de code avancée, choisissez un d
 - Présentation:
 
 [concept] [Test au-delà de la couverture](https://increment.com/reliability/testing-beyond-coverage/)
-- Nom:
+- Nom: Syrine Cherni
 - Présentation:
 
 [concept] Couverture des exigences
-- Nom:
+- Nom:meriem ghaoui
 - Présentation:
 
 [concept] LLM pour augmenter la couverture [à Meta](https://web.eecs.umich.edu/~movaghar/Automatic%20Test%20Generation%20Meta%202024.pdf)
-- Nom:
+- Nom:Snkar Mam
 - Présentation:
 
 [concept] [Le problème de l'oracle de test](http://discovery.ucl.ac.uk/1471263/1/06963470.pdf)
-- Nom:
+- Nom: Toumi Rachida
 - Présentation:
 
 [concept] Test combinatoire
@@ -27,21 +27,21 @@ Pour faire une présentation sur la couverture de code avancée, choisissez un d
 - Présentation:
 
 [concept] Test polymorphique pour la couverture des don
-- Nom:
+- Nom: Kady Danella Ingabire
 - Présentation:
 
 [demo] [jacoco-report](https://github.com/Madrapps/jacoco-report) couverture et GitHub action  
-- Nom:
+- Nom:Lallia Diakite
 - Présentation:
 
 [demo] [Pit](https://pitest.org/) pour le test par mutation en Java
-- Nom:
+- Nom: Ru Qian
 - Présentation:
 
 [demo] [Pitest-descartes](https://github.com/STAMP-project/pitest-descartes) pour le test par mutation extrême en Java
-- Nom:
+- Nom: Leonard Benamara
 - Présentation:
 
 [demo] [Stryker](https://stryker-mutator.io/) pour la mutation en Javascript
-- Nom:
+- Nom: Ilona Nougbode
 - Présentation:

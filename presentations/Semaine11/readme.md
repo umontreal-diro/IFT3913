@@ -8,28 +8,28 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Nom:
 - Présentation:
 
-[] SUJET
+[Concept] Easter eggs dans la programmation
 - Nom: Jonathan Beaulieu
 - Présentation:
 
 [] SUJET
-- Nom:
+- Nom: Bencheikh El Atmani Ayoub ( Sujet : Les messages d’erreur absurdes et humoristiques)
 - Présentation:
 
-[] SUJET
-- Nom:
+[Concept] Little bobby tables - SQL injection et humour
+- Nom: Fatou Ndao
 - Présentation:
 
-[] SUJET
-- Nom:
+[Concept] La loi de Murphy
+- Nom: Amir Hannache
 - Présentation:
 
-[] SUJET
-- Nom:
+[Concept] Comment les langages de programmation eux-mêmes sont testés
+- Nom: Mathis Laroche
 - Présentation:
 
-[] SUJET
-- Nom:
+[demo] TheFuck 
+- Nom: Guillaume Sabourin
 - Présentation:
 
 [] SUJET
