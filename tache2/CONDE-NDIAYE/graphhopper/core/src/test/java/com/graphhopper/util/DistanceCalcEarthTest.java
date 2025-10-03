@@ -331,4 +331,5 @@ public class DistanceCalcEarthTest {
         assertEquals(67.5, point.getLat(), 1e-1);
         assertEquals(90, point.getLon(), 1e-5);
     }
+ 
 }

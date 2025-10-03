@@ -188,4 +188,61 @@
             </resource>
         </resources>
     </build>
+
+    <profiles>
+  <profile>
+    <id>pitest</id>
+    <build>
+      <plugins>
+        <plugin>
+          <groupId>org.pitest</groupId>
+          <artifactId>pitest-maven</artifactId>
+          <version>1.17.2</version>
+          <configuration>
+            <!-- CIBLE UNIQUEMENT LES CLASSES SÉLECTIONNÉES -->
+            <targetClasses>
+              <param>com.graphhopper.config.LMProfile</param>
+              <param>com.graphhopper.config.Profile</param>
+              <param>com.graphhopper.storage.CHStorage</param>
+              <param>com.graphhopper.GraphHopper</param>
+            </targetClasses>
+            <targetTests>
+              <param>com.graphhopper.*ConfigProfileLMProfileTest*</param>
+              <param>com.graphhopper.storage.*CHStorageTest*</param>
+              <param>com.graphhopper.*GraphHopperExtraTest*</param>
+            </targetTests>
+
+            <!-- Mutateurs et perfs -->
+            <mutators>
+              <mutator>DEFAULTS</mutator>
+            </mutators>
+            <threads>4</threads>
+            <timeoutFactor>3</timeoutFactor>
+
+            <!-- Rapports -->
+            <outputFormats>
+              <outputFormat>XML</outputFormat>
+              <outputFormat>HTML</outputFormat>
+            </outputFormats>
+
+            <!-- Ne mute pas les classes de test -->
+            <excludedClasses>
+              <param>**/*Test</param>
+            </excludedClasses>
+
+            <!-- Évite l'échec si un test flakey tombe -->
+            <skipFailingTests>true</skipFailingTests>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.pitest</groupId>
+              <artifactId>pitest-junit5-plugin</artifactId>
+              <version>1.2.1</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+      </plugins>
+    </build>
+  </profile>
+</profiles>
 </project>

@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Données   : dossier temporaire avec 1 fichier area.geojson contenant 1 Feature (Polygon).
  * Oracle    : la liste retournée contient exactement 1 CustomArea.
  */
-class GraphHopperReadCustomAreasSimpleTest {
+class GraphHopperExtraTest {
 
     @Test
     void readsSingleGeoJsonFeature(@TempDir Path dir) throws Exception {
