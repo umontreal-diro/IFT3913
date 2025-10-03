@@ -8,7 +8,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [concept] Test basé sur les propriétés
 - Nom: Mohamed Atmani
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1OF0I-to3vDV2g2PVwN6eSoFEpA6ePSkm_GZX3FWQ6oM/edit?usp=sharing
 
 [concept] Tests paramétrés
 - Nom: Jérémie Dupuis
