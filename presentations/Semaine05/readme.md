@@ -28,7 +28,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [demo] [msw](https://github.com/mswjs/msw) pour les mocks avec graphQL
 - Nom: Simon Voglimacci Stéphanopoli
-- Présentation:
+- Présentation: https://github.com/svoglimacci/msw-graphql-demo
 
 [demo] [Cucumber](https://cucumber.io/) pour le test basé comportement en Java
 - Nom: Marcelo Amarilla
