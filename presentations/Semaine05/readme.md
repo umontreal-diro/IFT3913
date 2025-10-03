@@ -4,7 +4,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [concept] Test par fuzzing
 - Nom: Yamir Alejandro Poldo Silva
-- Présentation:
+- Présentation: https://github.com/Yamires/Presentation_Fuzzing_IFT3913
 
 [concept] Test basé sur les propriétés
 - Nom: Mohamed Atmani
