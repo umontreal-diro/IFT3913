@@ -40,7 +40,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [demo] [AutoParams](https://github.com/AutoParams/AutoParams) pour les tests paramétrés en Java
 - Nom: William Caron-Bastarache
-- Présentation:
+- Présentation: https://github.com/will13cb/autoparams-demo
 
 [demo] [afl++](https://github.com/AFLplusplus/AFLplusplus)
 - Nom:Emmanuel Paraison
