@@ -1,3 +1,3 @@
-# Auteurs
+# Auteur
 Atmani Mohamed
 Reabitchi Chiril
