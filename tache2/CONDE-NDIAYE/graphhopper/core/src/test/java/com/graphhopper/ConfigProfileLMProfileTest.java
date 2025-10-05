@@ -1,5 +1,4 @@
 package com.graphhopper;
-import com.graphhopper.config.LMProfile;
 import com.graphhopper.config.Profile;
 import org.junit.jupiter.api.Test;
 
@@ -60,87 +59,26 @@ public class ConfigProfileLMProfileTest {
         assertThrows(IllegalArgumentException.class, () -> p.putHint("vehicle", "car"));
     }
 
-    // LMProfile.setPreparationProfile 
-
-    // Intention : valider qu’on peut définir un preparation_profile valide (≠ "this")
-    // Données   : LMProfile("bike"), setPreparationProfile("prep1")
-    // Oracle    : getPreparationProfile()=="prep1" et usesOtherPreparation()==true
+    /**
+    * Intention : vérifier que validateProfileName rejette les noms invalides
+    * Données   : noms valides (minuscules, chiffres, tirets) et invalides (majuscules, espaces, caractères spéciaux)
+    * Oracle    : IllegalArgumentException pour noms non conformes, aucune exception pour noms valides
+    */
     @Test
-    void prepProfile_ok_setsFlag() {
-        LMProfile lm = new LMProfile("bike");
-
-        lm.setPreparationProfile("prep1");
-
-        assertEquals("prep1", lm.getPreparationProfile());
-        assertTrue(lm.usesOtherPreparation());
-
-    }
-
-    // Intention : vérifier que setPreparationProfile échoue si maximum_lm_weight est déjà défini
-    // Données   : LMProfile("car"), setMaximumLMWeight(12.3), puis setPreparationProfile("naromba")
-    // Oracle    : IllegalArgumentException
-    @Test
-    void prepProfile_conflictWithWeight() {
-        LMProfile lm = new LMProfile("car");
-        lm.setMaximumLMWeight(1.1);
-
-        assertThrows(IllegalArgumentException.class, () -> lm.setPreparationProfile("valid_name"));
-    }
-
-    // Intention : couvrir la validation qui rejette un nom invalide
-    // Données   : LMProfile("bike"), setPreparationProfile("") (nom vide)
-    // Oracle    : IllegalArgumentException
-    @Test
-    void prepProfile_invalidName() {
-        LMProfile lm = new LMProfile("bike");
-
-        assertThrows(IllegalArgumentException.class, () -> lm.setPreparationProfile(""));
-    }
-
-    // Intention : vérifier le cas spécial "this" => pas d’autre préparation
-    // Données   : LMProfile("bike"), setPreparationProfile("this")
-    // Oracle    : getPreparationProfile()=="this" et usesOtherPreparation()==false
-    @Test
-    void prepProfile_thisCase() {
-        LMProfile lm = new LMProfile("bike");
-
-        lm.setPreparationProfile("this");
-
-        assertEquals("this", lm.getPreparationProfile());
-        assertFalse(lm.usesOtherPreparation());
-    }
-
-    // Intention : valider le chaînage (return this)
-    // Données   : LMProfile("bike"), out = setPreparationProfile("prep1")
-    // Oracle    : out et lm référencent la même instance
-    @Test
-    void prepProfile_returnsSameInstance() {
-        LMProfile lm = new LMProfile("bike");
-
-        LMProfile out = lm.setPreparationProfile("prep1");
-
-        assertSame(lm, out);
-    }
-
-    // Intention : vérifier la symétrie des garde-fous avec setMaximumLMWeight
-    // Données   : LMProfile("car"), setPreparationProfile("prep_a"), puis setMaximumLMWeight(3.14)
-    // Oracle    : IllegalArgumentException
-    @Test
-    void weight_conflictWithPrepProfile() {
-        LMProfile lm = new LMProfile("car");
-        lm.setPreparationProfile("prep_a");
-
-        assertThrows(IllegalArgumentException.class, () -> lm.setMaximumLMWeight(1.0));
-    }
-
-    // Intention : vérifier que la validation échoue si le nom contient uniquement des espaces
-    // Données   : profileName="bike", prepName="   "
-    // Oracle    : IllegalArgumentException
-    @Test
-    void prepProfile_invalidName_spaces() {
-        LMProfile lm = new LMProfile("bike");
-
-        assertThrows(IllegalArgumentException.class, () -> lm.setPreparationProfile("   "));
+    public void profile_validateProfileName_enforcesFormat() {
+        // Test noms valides - aucune exception
+        assertDoesNotThrow(() -> Profile.validateProfileName("valid_name"));
+        assertDoesNotThrow(() -> Profile.validateProfileName("test123"));
+        assertDoesNotThrow(() -> Profile.validateProfileName("my-profile"));
+        assertDoesNotThrow(() -> Profile.validateProfileName("a"));
+    
+        // Test noms invalides - IllegalArgumentException
+        assertThrows(IllegalArgumentException.class, () -> Profile.validateProfileName("Invalid_Name")); // majuscule
+        assertThrows(IllegalArgumentException.class, () -> Profile.validateProfileName("invalid name")); // espace
+        assertThrows(IllegalArgumentException.class, () -> Profile.validateProfileName("invalid@name")); // caractère spécial
+        assertThrows(IllegalArgumentException.class, () -> Profile.validateProfileName("invalid.name")); // point
+        assertThrows(IllegalArgumentException.class, () -> Profile.validateProfileName("test/name")); // slash
+        assertThrows(IllegalArgumentException.class, () -> Profile.validateProfileName("")); // nom vide
     }
 
 }

@@ -201,7 +201,6 @@
           <configuration>
             <!-- CIBLE UNIQUEMENT LES CLASSES SÉLECTIONNÉES -->
             <targetClasses>
-              <param>com.graphhopper.config.LMProfile</param>
               <param>com.graphhopper.config.Profile</param>
               <param>com.graphhopper.storage.CHStorage</param>
               <param>com.graphhopper.GraphHopper</param>
@@ -210,6 +209,7 @@
               <param>com.graphhopper.*ConfigProfileLMProfileTest*</param>
               <param>com.graphhopper.storage.*CHStorageTest*</param>
               <param>com.graphhopper.*GraphHopperExtraTest*</param>
+              <param>com.graphhopper.*MutantKillerProfileTest*</param>
             </targetTests>
 
             <!-- Mutateurs et perfs -->

@@ -1,0 +1,6 @@
+# properties will be filled by git-commit-id-plugin during maven build
+83bf3068a85fe5a51b40f88c6aeb1f2de70dbd03
+2025-09-28T13:21:33-0400
+Convertit graphhopper en dossier normal (pas de sous-repo)
+2025
+true
