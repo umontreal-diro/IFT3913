@@ -1,1 +1,5 @@
-Lallia Diakite et Tunwend-raabo Fahîma Carmen Dabo
+# Auteurs:
+
+Lallia Diakite 
+
+Tunwend-raabo Fahîma Carmen Dabo
