@@ -15,12 +15,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
         <maven.compiler.target>17</maven.compiler.target>
-
-        <!-- We always had this disabled as it is disabled by default in debian JDK builds, but when we
-             switched to another JDK on travis it was enabled implicitly. Our javadocs are not ready for this
-             so we disable it explicitly now -->
         <doclint>none</doclint>
     </properties>
 
@@ -174,8 +169,8 @@
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
             <version>1.0.2</version>
-            </dependency>
-        </dependencies>
+        </dependency>
+    </dependencies>
     <build>
         <pluginManagement>
             <plugins>
@@ -184,25 +179,18 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.8.1</version>
                     <configuration>
-                        <!--
-                        <compilerArgument>-Xlint:unchecked</compilerArgument>
-                        <compilerArgument>-Xlint:deprecation</compilerArgument>
-                        -->
                         <fork>true</fork>
                         <release>17</release>
                     </configuration>
                 </plugin>
-
-                <!-- to run single tests -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.22.2</version>
                     <configuration>
-                        <argLine>-Xmx1024m -Xmx1024m -Duser.language=en</argLine>
+                        <argLine>@{argLine} -Xmx190m -Xms190m -Duser.language=en</argLine>
                     </configuration>
                 </plugin>
-
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
@@ -241,7 +229,6 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.1.1</version>
             </plugin>
-            <!-- example https://github.com/tananaev/traccar/blob/master/checkstyle.xml -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
@@ -253,26 +240,16 @@
                     <linkXRef>false</linkXRef>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>de.thetaphi</groupId>
                 <artifactId>forbiddenapis</artifactId>
                 <version>2.6</version>
                 <configuration>
-                    <!--
-                      if the used Java version is too new,
-                      don't fail, just do nothing:
-                    -->
                     <failOnUnsupportedJava>false</failOnUnsupportedJava>
                     <bundledSignatures>
-                        <!--
-                          This will automatically choose the right
-                          signatures based on 'maven.compiler.target':
-                        -->
                         <bundledSignature>jdk-deprecated</bundledSignature>
                     </bundledSignatures>
                     <excludes>
-                        <!-- Has a couple of issues with the FileWriter -->
                         <exclude>
                             com/graphhopper/tools/Measurement.class
                         </exclude>
@@ -292,16 +269,13 @@
                     </execution>
                     <execution>
                         <id>report</id>
-                        <phase>test</phase>
+                        <phase>verify</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
-
-            <!-- MODIFICATION: Added PIT plugin into the main build plugins so you can run mvn org.pitest:pitest-maven:mutationCoverage
-                 without activating a profile. Previously PIT was only defined inside the 'release' profile. -->
             <plugin>
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
@@ -366,7 +340,6 @@
                         <artifactId>maven-javadoc-plugin</artifactId>
                         <version>3.4.1</version>
                         <configuration>
-                            <!-- note that we disable doclint via properties globally, using <doclint>none</doclint> did not seem to work -->
                             <quiet>true</quiet>
                         </configuration>
                         <executions>
@@ -391,9 +364,19 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <!-- REMOVED: pitest-maven plugin was here originally in the release profile. It has been moved to the main build plugins
-                         so you can run PIT without -P release. -->
-
+                    <plugin>
+                        <groupId>org.pitest</groupId>
+                        <artifactId>pitest-maven</artifactId>
+                        <version>1.15.2</version>
+                        <configuration>
+                            <targetClasses>
+                                <param>com.graphhopper.routing.*</param>
+                            </targetClasses>
+                            <targetTests>
+                                <param>com.graphhopper.routing.*Test</param>
+                            </targetTests>
+                        </configuration>
+                    </plugin>
                 </plugins>
             </build>
         </profile>
