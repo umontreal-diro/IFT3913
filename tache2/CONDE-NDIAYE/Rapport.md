@@ -1,9 +1,10 @@
 # **RAPPORT POUR LA TACHE 1**
 **Projet :** GraphHopper Core  
 **Date :** 5 octobre 2025  
-**Auteurs :** 
+**Auteurs :**  
+Aissatou Ndiaye <br>
 Naromba Condé
-Aissatou Ndiaye 
+
 
 ## **1. Objectif **
 
@@ -205,11 +206,17 @@ Puis analyse manuelle du rapport HTML généré pour identifier les mutants surv
 
 **Tests créés :** MutantKillerProfileTest avec 2 tests spécifiques
 
-#### **[test_setName_mutant_killer_validateProfileName](https://github.com/Naromba/IFT3913/blob/2025/tache2/CONDE-NDIAYE/graphhopper/core/src/test/java/com/graphhopper/MutantKillerProfileTest.java#L28)**
+#### **[testSetNameValidation](https://github.com/Naromba/IFT3913/blob/2025/tache2/CONDE-NDIAYE/graphhopper/core/src/test/java/com/graphhopper/MutantKillerProfileTest.java#L28)**
 - **Fonction ciblée :** `Profile.setName(String name)`
 - **Mutant ciblé :** "removed call to validateProfileName"
 - **Stratégie :** Test avec nom invalide qui doit déclencher IllegalArgumentException
 - **Pourquoi ça tue le mutant :** Si validateProfileName() n'est pas appelée, aucune exception n'est levée et le test échoue
+
+#### **[testSetCustomModelChaining](https://github.com/Naromba/IFT3913/blob/2025/tache2/CONDE-NDIAYE/graphhopper/core/src/test/java/com/graphhopper/MutantKillerProfileTest.java#L37)**
+- **Fonction ciblée :** `Profile.setCustomModel(CustomModel customModel)`
+- **Mutant ciblé :** "replaced return value with null"
+- **Stratégie :** Test de chaînage de méthodes pour vérifier le retour de 'this'
+- **Pourquoi ça tue le mutant :** Si la méthode retourne null, le chaînage provoque une NullPointerException
 
 #### **[test_setCustomModel_mutant_killer_returnValue](https://github.com/Naromba/IFT3913/blob/2025/tache2/CONDE-NDIAYE/graphhopper/core/src/test/java/com/graphhopper/MutantKillerProfileTest.java#L52)**
 - **Fonction ciblée :** `Profile.setCustomModel(CustomModel customModel)`
@@ -218,8 +225,8 @@ Puis analyse manuelle du rapport HTML généré pour identifier les mutants surv
 - **Pourquoi ça tue le mutant :** Si la méthode retourne null, le chaînage provoque une NullPointerException
 
 **Mutants tués spécifiquement par nos 2 tests :**
-1. **Profile.setName()** - Appel à validateProfileName supprimé - TUÉ (par test_setName_mutant_killer_validateProfileName)
-2. **Profile.setCustomModel()** - Retourne null au lieu de this - TUÉ (par test_setCustomModel_mutant_killer_returnValue)
+1. **Profile.setName()** - Appel à validateProfileName supprimé - TUÉ (par testSetNameValidation)
+2. **Profile.setCustomModel()** - Retourne null au lieu de this - TUÉ (par testSetCustomModelChaining)
 3. **Profile.setCustomModel()** - Assignation supprimée dans setCustomModel - TUÉ (effet secondaire du test)
 4. **Profile.setName()** - Validation conditionnelle contournée - TUÉ (effet secondaire du test)
 
