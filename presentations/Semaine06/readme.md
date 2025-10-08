@@ -15,8 +15,8 @@ Pour faire une présentation sur la couverture de code avancée, choisissez un d
 - Présentation:
 
 [concept] LLM pour augmenter la couverture [à Meta](https://web.eecs.umich.edu/~movaghar/Automatic%20Test%20Generation%20Meta%202024.pdf)
-- Nom:Snkar Mam
-- Présentation:
+- Nom: Snkar Mam
+- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/snkar_mam_umontreal_ca/ERMDxO-WECBLg0XLRoZTBxUBpoJITd7VjicKCISGoh96JQ?e=hKZZMD
 
 [concept] [Le problème de l'oracle de test](http://discovery.ucl.ac.uk/1471263/1/06963470.pdf)
 - Nom: Toumi Rachida
