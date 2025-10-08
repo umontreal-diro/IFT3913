@@ -205,13 +205,13 @@ Puis analyse manuelle du rapport HTML généré pour identifier les mutants surv
 
 **Tests créés :** MutantKillerProfileTest avec 2 tests spécifiques
 
-#### **[test_setName_mutant_killer_validateProfileName](https://github.com/Naromba/IFT3913/blob/2025/tache2/CONDE-NDIAYE/graphhopper/core/src/test/java/com/graphhopper/MutantKillerProfileTest.java#L15)**
+#### **[test_setName_mutant_killer_validateProfileName](https://github.com/Naromba/IFT3913/blob/2025/tache2/CONDE-NDIAYE/graphhopper/core/src/test/java/com/graphhopper/MutantKillerProfileTest.java#L28)**
 - **Fonction ciblée :** `Profile.setName(String name)`
 - **Mutant ciblé :** "removed call to validateProfileName"
 - **Stratégie :** Test avec nom invalide qui doit déclencher IllegalArgumentException
 - **Pourquoi ça tue le mutant :** Si validateProfileName() n'est pas appelée, aucune exception n'est levée et le test échoue
 
-#### **[test_setCustomModel_mutant_killer_returnValue](https://github.com/Naromba/IFT3913/blob/2025/tache2/CONDE-NDIAYE/graphhopper/core/src/test/java/com/graphhopper/MutantKillerProfileTest.java#L28)**
+#### **[test_setCustomModel_mutant_killer_returnValue](https://github.com/Naromba/IFT3913/blob/2025/tache2/CONDE-NDIAYE/graphhopper/core/src/test/java/com/graphhopper/MutantKillerProfileTest.java#L52)**
 - **Fonction ciblée :** `Profile.setCustomModel(CustomModel customModel)`
 - **Mutant ciblé :** "replaced return value with null"
 - **Stratégie :** Test de chaînage de méthodes pour vérifier le retour de 'this'
