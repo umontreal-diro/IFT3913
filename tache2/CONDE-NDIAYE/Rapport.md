@@ -206,7 +206,7 @@ Puis analyse manuelle du rapport HTML généré pour identifier les mutants surv
 
 **Tests créés :** MutantKillerProfileTest avec 2 tests spécifiques
 
-#### **[testSetNameValidation](https://github.com/Naromba/IFT3913/blob/2025/tache2/CONDE-NDIAYE/graphhopper/core/src/test/java/com/graphhopper/MutantKillerProfileTest.java#L28)**
+#### **[testSetNameValidation](https://github.com/Naromba/IFT3913/blob/2025/tache2/CONDE-NDIAYE/graphhopper/core/src/test/java/com/graphhopper/MutantKillerProfileTest.java#L20)**
 - **Fonction ciblée :** `Profile.setName(String name)`
 - **Mutant ciblé :** "removed call to validateProfileName"
 - **Stratégie :** Test avec nom invalide qui doit déclencher IllegalArgumentException
@@ -218,11 +218,6 @@ Puis analyse manuelle du rapport HTML généré pour identifier les mutants surv
 - **Stratégie :** Test de chaînage de méthodes pour vérifier le retour de 'this'
 - **Pourquoi ça tue le mutant :** Si la méthode retourne null, le chaînage provoque une NullPointerException
 
-#### **[test_setCustomModel_mutant_killer_returnValue](https://github.com/Naromba/IFT3913/blob/2025/tache2/CONDE-NDIAYE/graphhopper/core/src/test/java/com/graphhopper/MutantKillerProfileTest.java#L52)**
-- **Fonction ciblée :** `Profile.setCustomModel(CustomModel customModel)`
-- **Mutant ciblé :** "replaced return value with null"
-- **Stratégie :** Test de chaînage de méthodes pour vérifier le retour de 'this'
-- **Pourquoi ça tue le mutant :** Si la méthode retourne null, le chaînage provoque une NullPointerException
 
 **Mutants tués spécifiquement par nos 2 tests :**
 1. **Profile.setName()** - Appel à validateProfileName supprimé - TUÉ (par testSetNameValidation)
