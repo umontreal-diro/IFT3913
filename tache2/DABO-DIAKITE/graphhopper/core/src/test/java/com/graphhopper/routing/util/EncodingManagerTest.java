@@ -26,17 +26,11 @@ import com.graphhopper.util.PMap;
 import org.junit.jupiter.api.Test;
 
 import java.io.UncheckedIOException;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Properties;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.graphhopper.jackson.Jackson;
-import com.graphhopper.util.Constants;
-import java.util.LinkedHashMap;
 
+import com.graphhopper.util.Constants;
 import com.graphhopper.storage.StorableProperties;
 import com.graphhopper.storage.Directory;
 import com.graphhopper.storage.RAMDirectory;
@@ -74,34 +68,7 @@ public class EncodingManagerTest {
         assertFalse(new FootAccessParser(manager, new PMap("block_fords=false")).isBlockFords());
     }
 
-    /**
-     * Test that verifies that adding a turn cost encoded value with a duplicate name throws an exception.
-     * This ensures that the EncodingManager.Builder correctly handles attempts to add encoded values
-     * with names that already exist, maintaining the integrity of the encoding system.
-     
-    @Test
-    void testFromProperties_invalidVersionAndDuplicate() throws Exception {
-        // simulate a property file
-    StorableProperties props = new StorableProperties();
-        props.put("graph.em.version", String.valueOf(Constants.VERSION_EM + 1)); // invalid version
-        props.put("graph.em.bytes_for_flags", "4");
-        props.put("graph.em.ints_for_turn_cost_flags", "1");
 
-        // create a fake encoded value list with a duplicate name
-        EncodedValue ev = new SimpleBooleanEncodedValue("car_access", true);
-        String serialized = "[\"" + EncodedValueSerializer.serializeEncodedValue(ev) + "\",\"" + EncodedValueSerializer.serializeEncodedValue(ev) + "\"]";
-
-        props.put("graph.encoded_values", serialized);
-        props.put("graph.turn_encoded_values", serialized);
-
-        // 1) expect incompatible version exception
-        IllegalStateException ex1 = assertThrows(IllegalStateException.class, () -> EncodingManager.fromProperties(props));
-        assertTrue(ex1.getMessage().contains("Incompatible encoding version"));
-
-        // 2) Now fix version and trigger duplicate exception
-        props.put("graph.em.version", String.valueOf(Constants.VERSION_EM));
-        assertThrows(IllegalStateException.class, () -> EncodingManager.fromProperties(props));
-    }*/
 
     @Test
     void testBuilder_addAndBuild() {
@@ -122,6 +89,7 @@ public class EncodingManagerTest {
         assertThrows(IllegalStateException.class, () -> builder.add(access));
     }
 
+
     @Test
     void testGetVehiclesAndToString() {
         EncodingManager.Builder builder = EncodingManager.start();
@@ -136,6 +104,7 @@ public class EncodingManagerTest {
         assertEquals("bike", manager.toString());
     }
 
+    
     @Test
     void testEncodedValueRetrievalAndExceptions() {
         EncodingManager.Builder builder = EncodingManager.start();
