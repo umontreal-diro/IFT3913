@@ -20,7 +20,6 @@ Le pourcentage de lignes couvertes de cette classe est de 60 %, soit 45 lignes q
 # Documentation des tests ajoutés
 Le test `testFromPropertiesAndEncodingsAdvanced()` utilise JavaFaker car ce test demande plusieurs valeurs comme les noms de véhicules que JavaFaker peut générer pour tester la robustesse du code. De plus, il génère des valeurs aléatoires pour les champs des données au format JSON, ce qui permet de traiter les données inattendues.
 
----
 
 ## Test 1 : testBuilder_addAndBuild()
 
@@ -185,6 +184,7 @@ Return une chaine de caractère vide.
 ### Test détecteur: testGetVehiclesAndToString
 ### Raison
 Le test vérifie que manager.toString() retourne "bike" après ajout de bike_access. Le mutant renvoie une chaîne vide, ce qui fait échouer assertEquals("bike", manager.toString()).
+
 ---
 
 ### Méthode: getVehicles()
@@ -193,6 +193,7 @@ anyMatch(...) retourne toujours false.
 ### Test détecteur: testGetVehiclesAndToString
 ### Raison
 Le test vérifie que "bike" est bien détecté comme véhicule. Si anyMatch retourne toujours false, aucun véhicule n’est détecté donc vehicles.contains("bike") échoue.
+
 ---
 
 ### Méthode: getVehicles()
@@ -201,6 +202,7 @@ replaceAll("_access", "") retourne une chaîne vide.
 ### Test détecteur: testGetVehiclesAndToString
 ### Raison
 Le nom "bike_access" devient "", donc getVehicles() retourne "" au lieu de "bike". Cela fait échouer assertEquals("bike", manager.toString()).
+
 ---
 
 ### Méthode: getVehicles()
@@ -209,6 +211,7 @@ anyMatch(...) retourne toujours false.
 ### Test détecteur: testGetVehiclesAndToString
 ### Raison
 Même logique que le 2eme mutant, donc cela fait échouer vehicles.contains(“bike”).
+
 ---
 
 ### Méthode: getVehicles()
@@ -217,6 +220,7 @@ contains(...) retourne toujours false
 ### Test détecteur: testGetVehiclesAndToString
 ### Raison
 Le test dépend de la détection correcte de bike_average_speed pour confirmer “bike” comme véhicule. Si contains(...) retourne false, le lien entre bike_access et bike_average_speed n’existe plus.
+
 ---
 
 
