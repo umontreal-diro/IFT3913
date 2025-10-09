@@ -243,32 +243,40 @@ Cette dépendance permet de créer des valeurs variées (noms, adresses, URLs, e
 
 ### **Test utilisant Java-Faker**
 
-DownloaderFakerTest – Classe Downloader
-Fonction testée : createConnection(String urlStr)
-Objectif : Vérifier la création correcte d'une connexion HTTP avec des URLs générées dynamiquement.
-Fichier : src/test/java/com/graphhopper/util/DownloaderFakerTest.java
+DClasse concernée : DistanceCalcEuclidean
+Méthode testée : intermediatePoint(double f, double lat1, double lon1, double lat2, double lon2)
+Nom du test : testIntermediatePointWithFaker
 
-Comportement observé :
-- faker.internet().url() génère une URL valide avec protocole (http ou https).
-- createConnection() établit correctement une connexion HTTP sans lever d’exception.
-- Les propriétés du header (User-Agent, Referrer, Accept-Encoding) sont bien définies.
+Données de test :
+Les latitudes et longitudes ont été générées à l’aide de la librairie Java-Faker, en configurant la locale anglaise (new Faker(new Locale("en-US"))) pour éviter les formats avec virgule décimale.
+
+Trois appels ont été faits :
+- deux paires de coordonnées aléatoires (lat1, lon1 et lat2, lon2) ;
+- un facteur f aléatoire compris entre 0 et 1 pour définir la position du point intermédiaire.
+
+Oracle de test :
+
+Le point intermédiaire retourné (GHPoint) doit avoir une latitude et une longitude comprises entre les bornes définies par les deux points d’entrée.
+Le test vérifie aussi les cas limites :
+- f = 0 :  le point correspond exactement à (lat1, lon1)
+- f = 1 : le point correspond exactement à (lat2, lon2)
+
+Aucune exception ne doit être levée.
 
 Résultat :
-- Test exécuté avec succès (BUILD SUCCESS).
-- Aucun échec ni exception.
-- Vérification que les URLs générées par Faker sont toujours valides et reconnues par java.net.URL
+Le test s’exécute avec succès.
+Il confirme que intermediatePoint() respecte la proportionnalité entre les deux coordonnées, même pour des valeurs aléatoires et variées fournies par Faker.
 
 ### **Justification de l'utilisation**
 
-L’utilisation de Java Faker se justifie par plusieurs points :
+Le choix d’utiliser java-faker s’explique par :
+- sa capacité à générer des coordonnées réalistes (latitude, longitude) issues de différentes régions du monde ;
 
-- Réalisme des données : Faker génère des URLs, adresses ou chaînes cohérentes imitant des données réelles (par ex. https://company-name.com/path).
+- la garantie que la méthode intermediatePoint() fonctionne pour des combinaisons de points très variées ;
 
-- Variabilité : Chaque exécution produit une URL différente, permettant de tester la robustesse du code face à la diversité des entrées.
+- la possibilité de tester la robustesse de l’algorithme face à des entrées non déterministes sans écrire manuellement des dizaines de cas de test.
 
-Fiabilité : Contrairement aux valeurs “hardcodées”, les données Faker couvrent des cas variés : sous-domaines, ports, chemins, etc.
-
-- Automatisation : Aucune maintenance manuelle de jeu de données n’est nécessaire, ce qui simplifie les tests à long terme.
+Ainsi, l’usage du Faker permet d’aller au-delà du simple test déterministe en vérifiant la stabilité et la cohérence du calcul sur un large ensemble de données aléatoires.
 
 ## **7. Conclusion**
 
