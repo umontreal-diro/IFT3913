@@ -23,8 +23,7 @@ Downloader configure correctement les en-têtes HTTP (User-Agent, Referrer) et l
  * Vérifier que la méthode createConnection() configure correctement la connexion
  * (user-agent, referrer, timeout, etc.) avec une URL générée de manière aléatoire.
  * 
- * Données de test :
- * Une URL réaliste générée par Java Faker (ex. https://example.com)
+ *
  * 
  * Oracle :
  * La connexion doit être bien formée et contenir les bons paramètres configurés
@@ -36,7 +35,7 @@ public class DownloaderFakerTest {
 public void testCreateConnectionWithFaker() throws IOException {
     Faker faker = new Faker();
 
-    // ✅ Génère une URL réaliste complète avec protocole
+    //  Génère une URL réaliste complète avec protocole
     String fakeUrl = String.format("https://%s/%s", faker.internet().domainName(), faker.lorem().word());
 
     Downloader downloader = new Downloader("GraphHopper-Test-Agent");

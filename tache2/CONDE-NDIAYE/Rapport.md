@@ -231,15 +231,44 @@ Puis analyse manuelle du rapport HTML généré pour identifier les mutants surv
 
 ### **Configuration de la dépendance**
 
-[À COMPLÉTER]
+Pour générer des données de test réalistes et aléatoires, nous avons intégré la librairie Java Faker.
+La dépendance a été ajoutée au fichier pom.xml du module graphhopper-core :
+<dependency>
+  <groupId>com.github.javafaker</groupId>
+  <artifactId>javafaker</artifactId>
+  <version>0.15</version>
+</dependency>
+Cette dépendance permet de créer des valeurs variées (noms, adresses, URLs, emails, etc.) afin de tester les méthodes sans dépendre de valeurs codées en dur.
+
 
 ### **Test utilisant Java-Faker**
 
-[À COMPLÉTER ]
+DownloaderFakerTest – Classe Downloader
+Fonction testée : createConnection(String urlStr)
+Objectif : Vérifier la création correcte d'une connexion HTTP avec des URLs générées dynamiquement.
+Fichier : src/test/java/com/graphhopper/util/DownloaderFakerTest.java
+
+Comportement observé :
+- faker.internet().url() génère une URL valide avec protocole (http ou https).
+- createConnection() établit correctement une connexion HTTP sans lever d’exception.
+- Les propriétés du header (User-Agent, Referrer, Accept-Encoding) sont bien définies.
+
+Résultat :
+- Test exécuté avec succès (BUILD SUCCESS).
+- Aucun échec ni exception.
+- Vérification que les URLs générées par Faker sont toujours valides et reconnues par java.net.URL
 
 ### **Justification de l'utilisation**
 
-[À COMPLÉTER]
+L’utilisation de Java Faker se justifie par plusieurs points :
+
+- Réalisme des données : Faker génère des URLs, adresses ou chaînes cohérentes imitant des données réelles (par ex. https://company-name.com/path).
+
+- Variabilité : Chaque exécution produit une URL différente, permettant de tester la robustesse du code face à la diversité des entrées.
+
+Fiabilité : Contrairement aux valeurs “hardcodées”, les données Faker couvrent des cas variés : sous-domaines, ports, chemins, etc.
+
+- Automatisation : Aucune maintenance manuelle de jeu de données n’est nécessaire, ce qui simplifie les tests à long terme.
 
 ## **7. Conclusion**
 
