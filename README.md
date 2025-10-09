@@ -126,7 +126,7 @@ La limite de temps est obligatoire. Tous les autres critères comptent pour un p
 | documentation GA   (25%)  | les modifications apportées à l'action ainsi que la validation des modifications sont documentées et justifiées;  |
 | mocks (20%) | 2 classes sont simulées avec des mockito et les tests sont adaptés pour utiliser les mocks |
 | documentation mocks (20%)   | le choix des classes, la définition des mocks, les changements dans les tests sont documentés et justifiés |
-| humour      (10%)  | Volkswagen est inclut dans le CI |
+| humour      (10%)  | rickroll dans le CI |
 
 ## Tâche #4: quizz
 
