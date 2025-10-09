@@ -7,6 +7,7 @@ Tunwend-raabo Fahîma Carmen Dabo
 # Méthodologie :
 # 1-Configuration du plugin PIT
 Le plugin pitest-maven a été ajouté au fichier pom.xml du module web-api, avec le plugin pitest-junit5 pour supporter les tests JUnit 5. Ces plugins ont aussi été ajoutés dans les fichiers pom.xml de graphhopper et du module core.
+
 # 2-Exécution de PIT
 La commande suivante a été utilisée :
 cd web-api
@@ -18,7 +19,7 @@ mvn org.pitest:pitest-maven:mutationCoverage \
 # Le rapport HTML est ensuite généré à l’emplacement :
 *dossier*/target/pit-reports/index.html
 
-Avec "dossier" remplacé par web-api pour la classe StatementDeserializer ou core pour EncodingManager.
+Avec "dossier" remplacé par *web-api* pour la classe StatementDeserializer ou *core* pour EncodingManager.
 
 
 
