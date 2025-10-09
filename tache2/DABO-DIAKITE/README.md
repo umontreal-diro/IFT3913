@@ -6,7 +6,7 @@ Tunwend-raabo Fahîma Carmen Dabo
 
 # Méthodologie :
 # 1-Configuration du plugin PIT
-Le plugin pitest-maven a été ajouté au fichier pom.xml du module web-api, avec le plugin pitest-junit5 pour supporter les tests JUnit 5.
+Le plugin pitest-maven a été ajouté au fichier pom.xml du module web-api, avec le plugin pitest-junit5 pour supporter les tests JUnit 5. Ces plugins ont aussi été ajoutés dans les fichiers pom.xml de graphhopper et du module core.
 # 2-Exécution de PIT
 La commande suivante a été utilisée :
 cd web-api
@@ -16,17 +16,18 @@ mvn org.pitest:pitest-maven:mutationCoverage \
   -DtestPlugin=junit5
 
 # Le rapport HTML est ensuite généré à l’emplacement :
-web-api/target/pit-reports/index.html
+*dossier*/target/pit-reports/index.html
+
+Avec "dossier" remplacé par web-api pour la classe StatementDeserializer ou core pour EncodingManager.
 
 
 
 # Choix des classes
 
-Pour la tâche 2, nous avons choisi les classes **EncodingManager** et **StatementDeserializer** qui se trouvent respectivement dans les chemins `graphhopper\routing\util` et 'graphhopper/web-api/src/main/java/com/graphhopper/jackson. 
+Pour la tâche 2, nous avons choisi les classes **EncodingManager** et **StatementDeserializer** qui se trouvent respectivement dans les chemins `graphhopper\routing\util` et `graphhopper/web-api/src/main/java/com/graphhopper/jackson`. 
 
-La Classe **StatementDeserializer** a été choisi car elle contient une logique conditionnelle complexe de désérialisation JSON vers les objets Statement, avec de nombreux cas d'erreurs possibles (valeurs nulles, opération inconnues, structure invalide).Cette complexité faisait qu'une grande partie de ses branches n'etait pas couverte par les tests initiaux, reduisant considerablement son taux de mutation coverage
+Ces classe ont été choisi car elles contiennent une logique conditionnelle complexe de désérialisation JSON vers les objets Statement, avec de nombreux cas d'erreurs possibles (valeurs nulles, opération inconnues, structure invalide).Cette complexité faisait qu'une grande partie de leurs branches n'etait pas couverte par les tests initiaux, reduisant considerablement son taux de mutation coverage.
 
-Le choix de ces classes est basé sur le fait qu'elles contenaient beaucoup de lignes non couvertes par les tests fournis, ce qui fait que leur score était bas.
 
 # Score de mutations avant les nouveaux tests
 Avant l'ajout de nos tests, le lancement de Pitest nous a donné les scores suivants :
@@ -157,7 +158,7 @@ Le code doit refuser ce type d'entrée et lancer une exception.
 {"limit_to": "5"}
 Cette structure ne contient aucun mot-clé de condition, ce qui déclenche la vérification de la ligne 69 dans *deserializeStatement()*
 ### Oracle
--assertThrows(IllegalArgumentException.class, () : mapper.readValue(...)) : confirme que le programme rejette correctement une entrée incomplète et lève l'erreur appropriée.
+- assertThrows(IllegalArgumentException.class, () : mapper.readValue(...)) : confirme que le programme rejette correctement une entrée incomplète et lève l'erreur appropriée.
 
 ## Test 6: error_whenIfWithoutOperation()
 
@@ -173,7 +174,7 @@ Ce test vérifie que la désérialisation échoue lorsqu'un mot-clé if est pré
 Ce JSON ne contient que la condition sans action, ce qui viole la structure minimale attendue.
 
 ### Oracle
--assertThrows(IllegalArgumentException.class,...) : valide que l'absence d'opération fait lever une exception et empêche toute création de Statement incohérent
+- assertThrows(IllegalArgumentException.class,...) : valide que l'absence d'opération fait lever une exception et empêche toute création de Statement incohérent
 
 ## Test 7: error_whenUnknownOperation()
 
@@ -190,7 +191,7 @@ Le but de ce test est de s'assurer que toute opération inconnue dans un bloc JS
 }
 Le champ "something_weird" ne correspond à aucune opération valide dans la classe Statement.Op.
 ### Oracle
--assertThrows(IllegalArgumentException.class, ...): vérifie que le désérialiseur détecte le champ illégal et lève une exception contenant le message attendu :
+- assertThrows(IllegalArgumentException.class, ...): vérifie que le désérialiseur détecte le champ illégal et lève une exception contenant le message attendu :
 « Must be one of: multiply_by, limit_to, do ».
 
 ## Test 8: doBlock_multipleStatements()
@@ -214,10 +215,10 @@ Cette structure teste à la fois un bloc if suivi d’un else et vérifie le tra
 
 
 ### Oracle
--assertEquals(Statement.Keyword.IF, outer.keyword())
--assertEquals(2, outer.doBlock().size())
--assertEquals(Statement.Op.LIMIT, s0.operation())
--assertTrue(s1.condition().isEmpty())
+- assertEquals(Statement.Keyword.IF, outer.keyword())
+- assertEquals(2, outer.doBlock().size())
+- assertEquals(Statement.Op.LIMIT, s0.operation())
+- assertTrue(s1.condition().isEmpty())
 Ces assertions garantissent que la désérialisation est complète et correcte pour les blocs composés.
 
 
@@ -246,7 +247,7 @@ Tous les mutants logiques sur les conditions if, elseif, else, ainsi que les exc
 L’ajout des nouveaux tests pour la classe EncodingManager détectent et tuent tous les mutants créés par les nouveaux tests.
 
 ### Méthode: toString()
-### Mutation
+### Mutation 1
 Return une chaine de caractère vide.
 ### Test détecteur: testGetVehiclesAndToString
 ### Raison
@@ -255,7 +256,7 @@ Le test vérifie que manager.toString() retourne "bike" après ajout de bike_acc
 ---
 
 ### Méthode: getVehicles()
-### Mutation
+### Mutation 2
 anyMatch(...) retourne toujours false.
 ### Test détecteur: testGetVehiclesAndToString
 ### Raison
@@ -264,7 +265,7 @@ Le test vérifie que "bike" est bien détecté comme véhicule. Si anyMatch reto
 ---
 
 ### Méthode: getVehicles()
-### Mutation
+### Mutation 3
 replaceAll("_access", "") retourne une chaîne vide.
 ### Test détecteur: testGetVehiclesAndToString
 ### Raison
@@ -273,7 +274,7 @@ Le nom "bike_access" devient "", donc getVehicles() retourne "" au lieu de "bike
 ---
 
 ### Méthode: getVehicles()
-### Mutation
+### Mutation 4
 anyMatch(...) retourne toujours false.
 ### Test détecteur: testGetVehiclesAndToString
 ### Raison
@@ -282,16 +283,18 @@ Même logique que le 2eme mutant, donc cela fait échouer vehicles.contains(“b
 ---
 
 ### Méthode: getVehicles()
-### Mutation
+### Mutation 5
 contains(...) retourne toujours false
 ### Test détecteur: testGetVehiclesAndToString
 ### Raison
 Le test dépend de la détection correcte de bike_average_speed pour confirmer “bike” comme véhicule. Si contains(...) retourne false, le lien entre bike_access et bike_average_speed n’existe plus.
 
+
+
 ## StatementDeserializer
 ### Methode : deserializeStatement()
 
-### Mutation1
+### Mutation 1
 Condition if (treeNode.size() != 2) inversée.
 ### Test détecteur : error_whenNoKeywordPresent()
 ### Raison : 
@@ -299,7 +302,7 @@ le test attend une exception lorsque la taille ≠ 2. Si la condition est invers
 
 ---
 
-### Mutation2
+### Mutation 2
 Condition if (jsonOp == null) inversée.
 ### Test détecteur : error_whenUnknownOperation()
 ### Raison : 
@@ -307,7 +310,7 @@ le test détecte que le désérialiseur ne trouve pas d’opération valide et d
 
 ---
 
-### Mutation3
+### Mutation 3
 Condition if (!doNode.isArray()) remplacée par if (doNode.isArray()).
 
 ### Test détecteur : doBlock_multipleStatements()
@@ -317,7 +320,7 @@ la méthode lèverait une exception à tort ; le test valide que la structure du
 
 ---
 
-### Mutation4
+### Mutation 4
 Condition if (treeNode.has(IF.getName())) inversée.
 
 ### Test détecteur : error_whenIfWithoutOperation()
@@ -326,9 +329,10 @@ Condition if (treeNode.has(IF.getName())) inversée.
 en inversant cette condition, le code ne traiterait plus le if principal, entraînant une exception inattendue.
 
 # Conclusion
-Grâce à ces nouveaux tests, la couverture de la classe StatementDeserializer est désormais complète, aussi bien sur les cas valides que sur les cas d’erreurs.
-L’ensemble des conditions critiques et des exceptions sont désormais vérifiées.
-Ces tests contribuent à améliorer la robustesse du parsing JSON dans GraphHopper et garantissent que toute entrée incorrecte est correctement rejetée.
+
+Ces tests renforcent à la fois la fiabilité de la classe EncodingManager et la complétude de la couverture de StatementDeserializer.
+Ils confirment le bon fonctionnement de la construction et de la récupération des encodages (accès, vitesses, turn costs, etc.), tout en vérifiant la gestion rigoureuse des erreurs (doublons, clés manquantes, versions invalides ou JSON corrompu).
+En testant aussi bien les cas valides que les cas d’échec, ils garantissent la cohérence interne du système et la robustesse du parsing JSON dans GraphHopper, assurant ainsi que toute entrée incorrecte est correctement détectée et rejetée.
 
 
 
