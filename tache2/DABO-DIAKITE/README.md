@@ -38,7 +38,7 @@ Le pourcentage de lignes couvertes de cette classe est de 60 %, soit 45 lignes q
 
 ## StatementDeserializer
 
-![Avant les tests](./images/SD_AVANT_Tests.jpeg)
+![Avant les tests](./images/SD_AVANT_Test.jpeg)
 Avant l'ajout des tests,la couverture de la classe **StatementDeserializer** était faible: plusieurs conditions n'etaient pas évaluées, et environ 40% des mutants créés par PIT demeuraient vivants. Les methodes les plus concernées etaient deserializerStatement() et ses multiples blocs conditionnels(if, else if,else), car les tests existants ne provoquaient pas les differentes branches d'erreur possibles.
 L'objectif a donc été d'écrire des tests unitaires ciblés pour forcer l'exécution de ces branches et vérifier les exceptions levées dans chaque cas d'entrée incorrect  
 
@@ -234,7 +234,7 @@ L’ajout de ces tests a permis d’atteindre une couverture presque complète d
 La plupart des mutants restants concernent des variations triviales (comme les retours nuls ou inversions de conditions logiques non atteignables sans casser le flux principal).
 
 
-![Après les tests](./images/SD_Apres_tests.jpeg)
+![Après les tests](./images/SD_Apres_test.jpeg)
 Le score de mutation est passé de 60 % à 100 %, avec une couverture des lignes supérieure à 95 %.
 Tous les mutants logiques sur les conditions if, elseif, else, ainsi que les exceptions associées, ont été tués.
 
