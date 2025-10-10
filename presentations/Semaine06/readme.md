@@ -12,7 +12,7 @@ Pour faire une présentation sur la couverture de code avancée, choisissez un d
 
 [concept] Couverture des exigences
 - Nom:meriem ghaoui
-- Présentation:
+- Présentation:https://docs.google.com/presentation/d/e/2PACX-1vRQ-tOnxHr1DthMFjkguR1lHQTgHWh2textq9Y3FtdRzNX3OOENsP_o_Ks6cIhBv66w5BHaTzZSKOhj/pub?start=false&loop=false&delayms=3000
 
 [concept] LLM pour augmenter la couverture [à Meta](https://web.eecs.umich.edu/~movaghar/Automatic%20Test%20Generation%20Meta%202024.pdf)
 - Nom: Snkar Mam
