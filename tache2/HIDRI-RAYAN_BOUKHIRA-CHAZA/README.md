@@ -3,14 +3,16 @@
 - **Chaza Boukhira**
 
 ---
-
-## Liens importants
-
 - **Fork du projet GraphHopper :**
-  [Cliquez ici pour consulter le repository forké](https://github.com/rayanhidri/graphhopper)
+  [Repository forké](https://github.com/rayanhidri/graphhopper)
+
+- **Branche de Rayan (OSMTollParser) :**
+  [rayan-tests](https://github.com/rayanhidri/graphhopper/tree/rayan-tests)
+
+- **Branche de Chaza (TranslationMap) :**
+  [chaza-tests](https://github.com/rayanhidri/graphhopper/tree/chaza-tests)
 
 ---
+## Rapport:
 
-## Rapport et documentation :
-
-[Cliquez ici pour consulter le rapport final](https://docs.google.com/document/d/19sVEN_vUPmIai8h75aeVeHmYYwq56MfV8_BUEF08iwE/edit?tab=t.0#heading=h.vxu235w2pi8l)
+[Rapport final](https://docs.google.com/document/d/19sVEN_vUPmIai8h75aeVeHmYYwq56MfV8_BUEF08iwE/edit?tab=t.0#heading=h.vxu235w2pi8l)
