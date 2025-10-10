@@ -4,7 +4,7 @@ Pour faire une présentation sur la couverture de code avancée, choisissez un d
 
 [concept] Analyse de mutation
 - Nom: Charlotte Locas
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1dRMc3EDHZG3gEHzIdrbscEXiCfXaoHiW4zuVW4DObW0/edit?usp=sharing
 
 [concept] [Test au-delà de la couverture](https://increment.com/reliability/testing-beyond-coverage/)
 - Nom: Syrine Cherni
