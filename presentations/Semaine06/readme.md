@@ -20,7 +20,7 @@ Pour faire une présentation sur la couverture de code avancée, choisissez un d
 
 [concept] [Le problème de l'oracle de test](http://discovery.ucl.ac.uk/1471263/1/06963470.pdf)
 - Nom: Toumi Rachida
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1KDc8V9GUAfvC-Jx0RpJgYvmDz2A002lWgcLUrkB07RU/edit?usp=sharing
 
 [concept] Test combinatoire
 - Nom: Nikolas Lévesque
