@@ -1,7 +1,7 @@
 # Équipe
 ## Membres
 - Mohamed Thameur Sassi
-- Youssef Ghaoui
+- Meriem Ghaoui
 
 # Lien du fork:
 - https://github.com/mohamedThameurSassi/graphhopper
