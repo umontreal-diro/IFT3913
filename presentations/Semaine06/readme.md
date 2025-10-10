@@ -40,7 +40,7 @@ Pour faire une présentation sur la couverture de code avancée, choisissez un d
 
 [demo] [Pitest-descartes](https://github.com/STAMP-project/pitest-descartes) pour le test par mutation extrême en Java
 - Nom: Leonard Benamara
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1Axkbr_FeBbntdI-1oQL_w8l3aDew3hAQvJFYQvrrLLE/edit?slide=id.g38aecdf05f5_0_22#slide=id.g38aecdf05f5_0_22
 
 [demo] [Stryker](https://stryker-mutator.io/) pour la mutation en Javascript
 - Nom: Ilona Nougbode
