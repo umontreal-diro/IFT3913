@@ -36,7 +36,7 @@ Pour faire une présentation sur la couverture de code avancée, choisissez un d
 
 [demo] [Pit](https://pitest.org/) pour le test par mutation en Java
 - Nom: Ru Qian
-- Présentation:
+- Présentation:https://docs.google.com/presentation/d/1LmvP9ktHbakDVvQ0TShqnizSqpOF3RFJpOut7qeBsXo/edit?usp=sharing
 
 [demo] [Pitest-descartes](https://github.com/STAMP-project/pitest-descartes) pour le test par mutation extrême en Java
 - Nom: Leonard Benamara
