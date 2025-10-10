@@ -1,5 +1,5 @@
 
-# Tâche 2 — Tests unitaires
+# Tâche 2
 
 ## Membre
 Karim Hozaien
