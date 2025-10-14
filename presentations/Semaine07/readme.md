@@ -4,7 +4,7 @@ Pour faire une présentation sur le test statique, choisissez un des sujets list
 
 [Concept] La revue de code
 - Nom: Dorensky Hérard
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1bAw06kfoKkY6Ta5UTXXsj3luQ-Y2sSZE-tcGrS3ZcSQ/edit?usp=sharing
 
 [Concept] Code lint
 - Nom: Rima Boujenane
