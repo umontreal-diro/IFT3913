@@ -24,7 +24,7 @@ Pour faire une présentation sur le test statique, choisissez un des sujets list
 
 [Concept] [Revue de code chez Google](https://www.ifi.uzh.ch/dam/jcr:d3de75f7-1464-4463-a539-dde7714f0035/icse2018seip.pdf)
 - Nom:Heyun Liu
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1DIJfjJplwJoIsOMv_NnnyPS3SlnpnBo3/edit?usp=sharing&ouid=111023285841276017616&rtpof=true&sd=true
 
 [demo] [findbugs](https://github.com/findbugsproject/findbugs) pour le test statique en Java
 - Nom:Ilyesse Bouzimmita
