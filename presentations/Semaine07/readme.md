@@ -44,4 +44,4 @@ Pour faire une présentation sur le test statique, choisissez un des sujets list
 
 [demo] [Poutine](https://github.com/boostsecurityio/poutine) pour le test statique de GitHub actions
 - Nom: Ines Amelia Chafai
-- Présentation:
+- Présentation:https://docs.google.com/presentation/d/1AgTMT8ZMYh6VMZ2j2bHyFqI5aydiZCBls6P-147Fgoc/edit?usp=sharing
