@@ -20,7 +20,7 @@
 
 [Concept] le build reproductible
 - Nom: Yan Shek
-- Présentation:
+- Présentation: https://1drv.ms/p/c/b6a9491b19e3f668/EdVpFPQ9dF5Ej5bjZEN9is4BFBMRGAMnsY1izdyoOS12EQ?e=DVsbOI
 
 [Concept] tree-skaing pour la réduction des dépendances
 - Nom: Luis Andres Eche Guzman
