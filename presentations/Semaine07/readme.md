@@ -8,7 +8,7 @@ Pour faire une présentation sur le test statique, choisissez un des sujets list
 
 [Concept] Code lint
 - Nom: Rima Boujenane
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1Kelwy44gfTQWt1wn5v13Khc0STkjcKJ670XCDaD5YGg/edit?usp=sharing
 
 [Concept] Revue de code assistée par les LLM
 - Nom: Fachtali Kamil
