@@ -20,7 +20,7 @@ Pour faire une présentation sur le test statique, choisissez un des sujets list
 
 [demo] Test statique pour la sécurité (SAST)
 - Nom: Arpad Botond Rigo
-- Présentation:
+- Présentation: https://github.com/Arpad05/Qualite_logiciel_et_metrique
 
 [Concept] [Revue de code chez Google](https://www.ifi.uzh.ch/dam/jcr:d3de75f7-1464-4463-a539-dde7714f0035/icse2018seip.pdf)
 - Nom:Heyun Liu
