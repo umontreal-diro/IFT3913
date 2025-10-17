@@ -32,7 +32,7 @@ Pour faire une présentation sur le test statique, choisissez un des sujets list
 
 [demo] [ruff](https://github.com/astral-sh/ruff) pour lint de code Python
 - Nom: Paul Gayout
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/16MAV93EDtPQb2aumKD66URcI8SbHOtufPcUOebc0ZnI/edit?usp=sharing
 
 [demo] [semgrep](https://github.com/semgrep/semgrep) pour l'analyse statique
 - Nom: Mahdi Tazerout
