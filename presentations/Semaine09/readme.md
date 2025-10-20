@@ -42,8 +42,8 @@
 - Nom: Hazem Ben Amor
 - Présentation:
   
-[] SUJET
-- Nom:
+[demo] Docker pour tester dans un environnement uniforme
+- Nom: Tarik Hireche
 - Présentation:
   
 [] SUJET
