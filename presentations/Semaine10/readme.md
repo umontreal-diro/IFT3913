@@ -44,6 +44,6 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Nom: David Shorten
 - Présentation:
 
-[] SUJET
+[concept] Tester les systèmes réseaux et les infrastructures de communication 
 - Nom: Maxime Belotti
 - Présentation:
