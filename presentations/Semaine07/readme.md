@@ -12,7 +12,7 @@ Pour faire une présentation sur le test statique, choisissez un des sujets list
 
 [Concept] Revue de code assistée par les LLM
 - Nom: Fachtali Kamil
-- Présentation:
+- Présentation: https://drive.google.com/file/d/1Q0YnnUbrYo9orrDUbJUw5XBIJWkxzUj3/view?usp=sharing
 
 [Concept] Mesure de complexité du code
 - Nom: Josué Saint-Martin Junior
