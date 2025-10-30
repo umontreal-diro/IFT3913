@@ -4,36 +4,33 @@ Pour faire une présentation sur l'humour pour le test logiciel,  proposez votre
 
 Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontreal.ca) le plus tôt possible pour valider le sujet.
 
-[] SUJET
-- Nom:
+
+[Concept] Easter eggs dans la programmation
+- Nom: Jonathan Beaulieu
 - Présentation:
 
-[] SUJET
-- Nom:
+[Concept] Les messages d’erreur absurdes et humoristiques
+- Nom: Bencheikh El Atmani Ayoub 
 - Présentation:
 
-[] SUJET
-- Nom:
+[Concept] Little bobby tables - SQL injection et humour
+- Nom: Fatou Ndao
 - Présentation:
 
-[] SUJET
-- Nom:
+[Concept] La loi de Murphy
+- Nom: Amir Hannache
 - Présentation:
 
-[] SUJET
-- Nom:
+[Concept] Comment les langages de programmation eux-mêmes sont testés
+- Nom: Mathis Laroche
 - Présentation:
 
-[] SUJET
-- Nom:
+[demo] TheFuck 
+- Nom: Guillaume Sabourin
 - Présentation:
 
-[] SUJET
-- Nom:
-- Présentation:
-
-[] SUJET
-- Nom:
+[Concept] Chaos Engineering humoristique – Netflix’s Chaos Monkey et ses amis.
+- Nom: Rayan Hidri
 - Présentation:
 
 [] SUJET
