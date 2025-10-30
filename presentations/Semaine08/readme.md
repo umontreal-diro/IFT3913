@@ -4,7 +4,7 @@
 
 [Concept] Gestionnaire de paquets
 - Nom: Cédric Guévremont
-- Présentation:
+- Présentation: https://pypi.org/project/baudream/
 
 [Concept] Bots pour la mise à jour des dépendances
 - Nom: Yuan Qing Ji
