@@ -36,7 +36,7 @@
 
 [demo] [poutine](https://github.com/boostsecurityio/poutine) pour l'analyse de GitHub actions
 - Nom: Bilal Vandenberge
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1XEg_74o4ql899tTpjVioK41grGiRwfRJ9TL8oGQfMVo/edit?usp=sharing
 
 [concept] Dependency hell
 - Nom: Mariam Elwa
