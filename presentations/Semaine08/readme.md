@@ -12,7 +12,7 @@
 
 [Concept] Mise à jour des dépendance qui brise le build (a.k.a breaking dependency update)
 - Nom: Esteban Maries
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1yZBCeV6zeEJfxOYHLh4MJ2GQS5DwczeTd-emw_WMz6U/edit?usp=sharing
 
 [Concept] le [lockfile](https://arxiv.org/pdf/2505.04834)
 - Nom: Yasmine Ben Youssef
