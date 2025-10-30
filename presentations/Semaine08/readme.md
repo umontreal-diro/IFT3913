@@ -24,7 +24,7 @@
 
 [Concept] tree-skaing pour la réduction des dépendances
 - Nom: Luis Andres Eche Guzman
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1qu4py1Ar31ejBFuTIbk9SDC5TbArhJXjHdiuHcEdf_U/edit?usp=sharing
 
 [demo] [cycloneDX](https://cyclonedx.org/) pour la génération de 'software bill of materials'
 - Nom: Yudi Ma
