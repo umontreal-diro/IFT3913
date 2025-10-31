@@ -32,7 +32,7 @@
 
 [demo] [Nix](https://nixos.org/), gestionnaire de paquets
 - Nom: mohamed thameur sassi
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1Zn7xmlXBioonZnofj5h12C4vQs0h4o7JTFOlpQK210o/edit?usp=sharing
 
 [demo] [poutine](https://github.com/boostsecurityio/poutine) pour l'analyse de GitHub actions
 - Nom: Bilal Vandenberge
