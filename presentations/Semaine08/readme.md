@@ -40,7 +40,7 @@
 
 [concept] Dependency hell
 - Nom: Mariam Elwa
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/110uDA4eBtqonSNBLvhk9rxWQpU8M3Lw-Cm8m7acYKGM/edit?usp=sharing
 
 [demo] Cache de dépendances dans CI/CD avec GitHub Actions
 - Nom: Walid Bouhazza
