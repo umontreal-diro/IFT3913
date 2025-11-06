@@ -31,13 +31,11 @@ jobs:
       - name: Build & unit tests
         run: ./mvnw -q -DskipTests=false -DfailIfNoTests=false test
 
-      # --- PIT mutation testing ---
       - name: Run PIT (XML output)
         run: |
           ./mvnw -q -DwithHistory -Dpitest.reportDir=target/pit-reports \
                  -Dpitest.outputFormats=XML \
                  org.pitest:pitest-maven:mutationCoverage
-          # calcule le score (100 * tués / total)
           total=$(grep -o "<mutation " target/pit-reports/*/mutations.xml | wc -l | tr -d ' ')
           killed=$(grep -o 'killed="true"' target/pit-reports/*/mutations.xml | wc -l | tr -d ' ')
           if [ "$total" = "0" ]; then
@@ -47,7 +45,6 @@ jobs:
           fi
           echo "Current mutation score: $(cat mutation_score.txt)%"
 
-      # --- Récupère le score précédent (dernier run réussi) via l'API GitHub ---
       - name: Install jq & unzip
         run: sudo apt-get update && sudo apt-get install -y jq unzip
 
@@ -58,7 +55,6 @@ jobs:
           set -e
           REPO="${{ github.repository }}"
           BR="${{ github.ref_name }}"
-          # id du dernier workflow réussi (push ou PR) sur la même branche
           RUN_ID=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
             "https://api.github.com/repos/$REPO/actions/runs?branch=$BR&status=success&per_page=1" \
             | jq -r '.workflow_runs[0].id // empty')
@@ -91,7 +87,6 @@ jobs:
           fi
           echo "Previous score: $(cat previous_score.txt)"
 
-      # --- Compare et échoue si baisse ---
       - name: Compare scores and fail on regression
         run: |
           CUR=$(cat mutation_score.txt)
@@ -101,12 +96,10 @@ jobs:
             exit 0
           fi
           echo "Previous: ${PREV}%  |  Current: ${CUR}%"
-          # tolérance de 0.01 pour éviter le bruit
           awk -v prev="$PREV" -v cur="$CUR" 'BEGIN {
             if (cur + 0.01 < prev) { exit 1 } else { exit 0 }
           }'
 
-      # --- Publie le score courant comme artefact pour la prochaine exécution ---
       - name: Upload mutation-score artifact
         uses: actions/upload-artifact@v4
         with:
@@ -114,7 +107,9 @@ jobs:
           path: mutation_score.txt
           retention-days: 30
 
-      # --- Rickroll si ça échoue  ---
-      - name: Rickroll 
+      - name: Rickroll humour
         if: failure()
-        uses: Kanga333/random-rickroll@v1
+        run: |
+          echo "Build failed... time for a break!"
+          echo "Never gonna give you up"
+          echo "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
