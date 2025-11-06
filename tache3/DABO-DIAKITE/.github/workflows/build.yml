@@ -117,4 +117,7 @@ jobs:
       # --- Rickroll si ça échoue  ---
       - name: Rickroll 
         if: failure()
-        uses: Kanga333/random-rickroll@v1
+        run: |
+          echo " Build failed... time for a break!"
+          echo " Never gonna give you up 🎵"
+          echo "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
