@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>ca.udem.ift3913</groupId>
+  <artifactId>tache3-graphhopper-tests</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>IFT3913 - Tâche3 - Tests & PIT</name>
+
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!-- Versions -->
+    <junit.version>5.10.2</junit.version>
+    <mockito.version>5.12.0</mockito.version>
+    <pitest.plugin.version>1.15.6</pitest.plugin.version>
+    <pitest.junit5.plugin.version>1.2.1</pitest.junit5.plugin.version>
+    <!-- Version GraphHopper à utiliser pour compiler les tests -->
+    <graphhopper.version>7.0</graphhopper.version>
+    <!-- Package(s) à muter: si vous n'avez pas de code de prod local,
+         PIT ne trouvera rien à muter et renverra 0% (OK pour la démo du guard). -->
+    <pit.target.classes>com.graphhopper.*</pit.target.classes>
+  </properties>
+
+  <dependencies>
+    <!-- JUnit 5 -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Mockito -->
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>${mockito.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-junit-jupiter</artifactId>
+      <version>${mockito.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- (Optionnel) logging simple en test -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>2.0.13</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- GraphHopper pour compiler/faire tourner les tests -->
+    <dependency>
+      <groupId>com.graphhopper</groupId>
+      <artifactId>graphhopper-core</artifactId>
+      <version>${graphhopper.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- JUnit 5 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <useSystemClassLoader>true</useSystemClassLoader>
+          <includes>
+            <include>**/*Test.java</include>
+            <include>**/*Tests.java</include>
+          </includes>
+        </configuration>
+      </plugin>
+
+      <!-- PIT Mutation Testing -->
+      <plugin>
+        <groupId>org.pitest</groupId>
+        <artifactId>pitest-maven</artifactId>
+        <version>${pitest.plugin.version}</version>
+        <configuration>
+          <targetClasses>
+            <param>${pit.target.classes}</param>
+          </targetClasses>
+          <targetTests>
+            <param>**.*Test</param>
+            <param>**.*Tests</param>
+          </targetTests>
+          <threads>2</threads>
+          <outputFormats>
+            <param>XML</param>
+            <param>HTML</param>
+          </outputFormats>
+          <timestampedReports>false</timestampedReports>
+          <junit5PluginVersion>${pitest.junit5.plugin.version}</junit5PluginVersion>
+          <failWhenNoMutations>false</failWhenNoMutations>
+          <mutators>
+            <mutator>STRONGER</mutator>
+          </mutators>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

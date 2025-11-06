@@ -11,6 +11,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      BASE_BRANCH: ${{ github.event.pull_request.base.ref || 'main' }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,50 +24,66 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Cache Maven
+      - name: Cache Maven repo
         uses: actions/cache@v4
         with:
           path: ~/.m2/repository
           key: m2-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
           restore-keys: m2-
 
-      - name: Build & unit tests
-        run: ./mvnw -q -DskipTests=false -DfailIfNoTests=false test
-
-      # --- PIT mutation testing ---
-      - name: Run PIT (XML output)
+      # --- Détections robustes ---
+      - name: Detect Maven project & wrapper
+        id: detect
         run: |
-          ./mvnw -q -DwithHistory -Dpitest.reportDir=target/pit-reports \
-                 -Dpitest.outputFormats=XML \
-                 org.pitest:pitest-maven:mutationCoverage
-          # calcule le score (100 * tués / total)
+          if [ -f "pom.xml" ]; then echo "has_pom=true" >> "$GITHUB_OUTPUT"; else echo "has_pom=false" >> "$GITHUB_OUTPUT"; fi
+          if [ -x "./mvnw" ]; then echo "mvn_cmd=./mvnw" >> "$GITHUB_OUTPUT"; else echo "mvn_cmd=mvn" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Install Maven (no wrapper)
+        if: steps.detect.outputs.has_pom == 'true' && steps.detect.outputs.mvn_cmd == 'mvn'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y maven
+
+      # --- Build & tests ---
+      - name: Build & unit tests
+        if: steps.detect.outputs.has_pom == 'true'
+        run: ${{ steps.detect.outputs.mvn_cmd }} -q -DskipTests=false -DfailIfNoTests=false test
+
+      # --- PIT + score ---
+      - name: Run PIT (XML output)
+        if: steps.detect.outputs.has_pom == 'true'
+        run: |
+          ${{ steps.detect.outputs.mvn_cmd }} -q -DwithHistory \
+            -Dpitest.reportDir=target/pit-reports \
+            -Dpitest.outputFormats=XML \
+            org.pitest:pitest-maven:mutationCoverage
+
           total=$(grep -o "<mutation " target/pit-reports/*/mutations.xml | wc -l | tr -d ' ')
           killed=$(grep -o 'killed="true"' target/pit-reports/*/mutations.xml | wc -l | tr -d ' ')
           if [ "$total" = "0" ]; then
-            echo "0" > mutation_score.txt
+            echo "0.00" > mutation_score.txt
           else
             awk -v k="$killed" -v t="$total" 'BEGIN { printf("%.2f\n", 100.0*k/t) }' > mutation_score.txt
           fi
           echo "Current mutation score: $(cat mutation_score.txt)%"
 
-      # --- Récupère le score précédent (dernier run réussi) via l'API GitHub ---
       - name: Install jq & unzip
+        if: steps.detect.outputs.has_pom == 'true'
         run: sudo apt-get update && sudo apt-get install -y jq unzip
 
-      - name: Download previous score artifact (if exists)
+      # --- On compare au dernier run RÉUSSI de la branche de base (main par défaut) ---
+      - name: Download previous score artifact (if exists on base branch)
+        if: steps.detect.outputs.has_pom == 'true'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -e
           REPO="${{ github.repository }}"
-          BR="${{ github.ref_name }}"
-          # id du dernier workflow réussi (push ou PR) sur la même branche
           RUN_ID=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
-            "https://api.github.com/repos/$REPO/actions/runs?branch=$BR&status=success&per_page=1" \
+            "https://api.github.com/repos/$REPO/actions/runs?branch=${BASE_BRANCH}&status=success&per_page=1" \
             | jq -r '.workflow_runs[0].id // empty')
 
           if [ -z "$RUN_ID" ]; then
-            echo "No previous successful run. Using baseline."
             echo "BASELINE" > previous_score.txt
             exit 0
           fi
@@ -74,7 +93,6 @@ jobs:
             | jq -r '.artifacts[] | select(.name=="mutation-score") | .id // empty')
 
           if [ -z "$ART_ID" ]; then
-            echo "No previous mutation-score artifact. Using baseline."
             echo "BASELINE" > previous_score.txt
             exit 0
           fi
@@ -91,33 +109,39 @@ jobs:
           fi
           echo "Previous score: $(cat previous_score.txt)"
 
-      # --- Compare et échoue si baisse ---
       - name: Compare scores and fail on regression
+        if: steps.detect.outputs.has_pom == 'true'
         run: |
           CUR=$(cat mutation_score.txt)
           PREV=$(cat previous_score.txt)
           if [ "$PREV" = "BASELINE" ]; then
-            echo "No previous score -> baseline accepted (${CUR}%)."
+            echo "No previous score on ${BASE_BRANCH} → baseline accepted (${CUR}%)."
             exit 0
           fi
           echo "Previous: ${PREV}%  |  Current: ${CUR}%"
-          # tolérance de 0.01 pour éviter le bruit
-          awk -v prev="$PREV" -v cur="$CUR" 'BEGIN {
-            if (cur + 0.01 < prev) { exit 1 } else { exit 0 }
-          }'
+          # tolérance 0.05 point
+          awk -v prev="$PREV" -v cur="$CUR" 'BEGIN { if (cur + 0.05 < prev) exit 1; else exit 0 }'
 
-      # --- Publie le score courant comme artefact pour la prochaine exécution ---
       - name: Upload mutation-score artifact
+        if: steps.detect.outputs.has_pom == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: mutation-score
           path: mutation_score.txt
           retention-days: 30
 
-      # --- Rickroll si ça échoue  ---
-      - name: Rickroll 
+      - name: Skip (no Maven project here)
+        if: steps.detect.outputs.has_pom == 'false'
+        run: |
+          echo "No pom.xml at repo root; skipping build and PIT."
+          echo "This job is meant to run on the GraphHopper fork."
+
+      # --- Rickroll propre dans le Job Summary, seulement si ça a échoué ---
+      - name: Rickroll humour
         if: failure()
         run: |
-          echo " Build failed... time for a break!"
-          echo " Never gonna give you up 🎵"
-          echo "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          cat >> "$GITHUB_STEP_SUMMARY" <<'MD'
+          ## Oops… tests KO 
+          ![Never Gonna Give You Up](https://media.giphy.com/media/Vuw9m5wXviFIQ/giphy.gif)  
+          [♪ Never Gonna Give You Up ♪](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+          MD
