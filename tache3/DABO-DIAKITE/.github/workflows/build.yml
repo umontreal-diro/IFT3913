@@ -1,0 +1,120 @@
+name: build-and-mutation-guard
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Cache Maven
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: m2-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
+          restore-keys: m2-
+
+      - name: Build & unit tests
+        run: ./mvnw -q -DskipTests=false -DfailIfNoTests=false test
+
+      # --- PIT mutation testing ---
+      - name: Run PIT (XML output)
+        run: |
+          ./mvnw -q -DwithHistory -Dpitest.reportDir=target/pit-reports \
+                 -Dpitest.outputFormats=XML \
+                 org.pitest:pitest-maven:mutationCoverage
+          # calcule le score (100 * tués / total)
+          total=$(grep -o "<mutation " target/pit-reports/*/mutations.xml | wc -l | tr -d ' ')
+          killed=$(grep -o 'killed="true"' target/pit-reports/*/mutations.xml | wc -l | tr -d ' ')
+          if [ "$total" = "0" ]; then
+            echo "0" > mutation_score.txt
+          else
+            awk -v k="$killed" -v t="$total" 'BEGIN { printf("%.2f\n", 100.0*k/t) }' > mutation_score.txt
+          fi
+          echo "Current mutation score: $(cat mutation_score.txt)%"
+
+      # --- Récupère le score précédent (dernier run réussi) via l'API GitHub ---
+      - name: Install jq & unzip
+        run: sudo apt-get update && sudo apt-get install -y jq unzip
+
+      - name: Download previous score artifact (if exists)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          REPO="${{ github.repository }}"
+          BR="${{ github.ref_name }}"
+          # id du dernier workflow réussi (push ou PR) sur la même branche
+          RUN_ID=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
+            "https://api.github.com/repos/$REPO/actions/runs?branch=$BR&status=success&per_page=1" \
+            | jq -r '.workflow_runs[0].id // empty')
+
+          if [ -z "$RUN_ID" ]; then
+            echo "No previous successful run. Using baseline."
+            echo "BASELINE" > previous_score.txt
+            exit 0
+          fi
+
+          ART_ID=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
+            "https://api.github.com/repos/$REPO/actions/runs/$RUN_ID/artifacts" \
+            | jq -r '.artifacts[] | select(.name=="mutation-score") | .id // empty')
+
+          if [ -z "$ART_ID" ]; then
+            echo "No previous mutation-score artifact. Using baseline."
+            echo "BASELINE" > previous_score.txt
+            exit 0
+          fi
+
+          curl -L -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/$REPO/actions/artifacts/$ART_ID/zip" -o prev.zip
+
+          unzip -o prev.zip -d prev >/dev/null 2>&1 || true
+          if [ -f prev/mutation_score.txt ]; then
+            mv prev/mutation_score.txt previous_score.txt
+          else
+            echo "BASELINE" > previous_score.txt
+          fi
+          echo "Previous score: $(cat previous_score.txt)"
+
+      # --- Compare et échoue si baisse ---
+      - name: Compare scores and fail on regression
+        run: |
+          CUR=$(cat mutation_score.txt)
+          PREV=$(cat previous_score.txt)
+          if [ "$PREV" = "BASELINE" ]; then
+            echo "No previous score -> baseline accepted (${CUR}%)."
+            exit 0
+          fi
+          echo "Previous: ${PREV}%  |  Current: ${CUR}%"
+          # tolérance de 0.01 pour éviter le bruit
+          awk -v prev="$PREV" -v cur="$CUR" 'BEGIN {
+            if (cur + 0.01 < prev) { exit 1 } else { exit 0 }
+          }'
+
+      # --- Publie le score courant comme artefact pour la prochaine exécution ---
+      - name: Upload mutation-score artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mutation-score
+          path: mutation_score.txt
+          retention-days: 30
+
+      # --- Rickroll si ça échoue  ---
+      - name: Rickroll 
+        if: failure()
+        uses: Kanga333/random-rickroll@v1
