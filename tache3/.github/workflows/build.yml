@@ -1,15 +1,21 @@
 name: build-and-mutation-guard
 on: [push, pull_request]
-permissions: { contents: read, actions: read }
+permissions:
+  contents: read
+  actions: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-java@v4
-        with: { distribution: temurin, java-version: '17' }
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
 
       - name: Install Maven
         run: |
@@ -21,10 +27,18 @@ jobs:
 
       - name: Run PIT
         run: |
-          mvn -q -DwithHistory -Dpitest.reportDir=target/pit-reports -Dpitest.outputFormats=XML org.pitest:pitest-maven:mutationCoverage || true
+          mvn -q -DwithHistory -Dpitest.reportDir=target/pit-reports \
+              -Dpitest.outputFormats=XML org.pitest:pitest-maven:mutationCoverage || true
+
           total=$(grep -o "<mutation " target/pit-reports/*/mutations.xml | wc -l 2>/dev/null || echo 0)
           killed=$(grep -o 'killed="true"' target/pit-reports/*/mutations.xml | wc -l 2>/dev/null || echo 0)
-          if [ "$total" -eq 0 ]; then echo "0.00" > mutation_score.txt; else awk -v k="$killed" -v t="$total" 'BEGIN{printf("%.2f\n",100.0*k/t)}' > mutation_score.txt; fi
+
+          if [ "$total" -eq 0 ]; then
+            echo "0.00" > mutation_score.txt
+          else
+            awk -v k="$killed" -v t="$total" 'BEGIN { printf("%.2f\n", 100.0*k/t) }' > mutation_score.txt
+          fi
+
           echo "Current mutation score: $(cat mutation_score.txt)%"
 
       - name: Fail if score < baseline
@@ -32,25 +46,30 @@ jobs:
           CUR=$(cat mutation_score.txt)
           BASE=$(cat ci/mutation_baseline.txt)
           echo "Baseline: ${BASE}% | Current: ${CUR}%"
-          awk -v b="$BASE" -v c="$CUR" 'BEGIN{ if (c+0.05<b) exit 1 }'
+          awk -v b="$BASE" -v c="$CUR" 'BEGIN { if (c+0.05<b) exit 1 }'
 
       - name: Update baseline on main (non-regression)
         if: github.ref == 'refs/heads/main'
         run: |
           CUR=$(cat mutation_score.txt)
           BASE=$(cat ci/mutation_baseline.txt)
-          awk -v b="$BASE" -v c="$CUR" 'BEGIN{ if (c+0.00>=b) exit 0; else exit 1 }' || exit 0
+          awk -v b="$BASE" -v c="$CUR" 'BEGIN { if (c>=b) exit 0; else exit 1 }' || exit 0
           echo "$CUR" > ci/mutation_baseline.txt
           git config user.name "gh-bot"
           git config user.email "bot@users.noreply.github.com"
           git add ci/mutation_baseline.txt
           git commit -m "ci: update mutation baseline to ${CUR}% [skip ci]" || true
 
-      - uses: actions/upload-artifact@v4
-        with: { name: mutation-score, path: mutation_score.txt, retention-days: 30 }
+      - name: Upload mutation score artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mutation-score
+          path: mutation_score.txt
+          retention-days: 30
 
-      - name: Rickroll (if failed)
+      - name: Rickroll humour
         if: failure()
         run: |
           echo "Build failed... time for a break!"
+          echo "Never gonna give you up"
           echo "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
