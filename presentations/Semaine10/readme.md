@@ -44,6 +44,12 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Nom: David Shorten
 - Présentation:
 
+[concept] ?
+- Nom: Félix Lacroix
+- Présentation:
+
 [] SUJET
 - Nom: Maxime Belotti
 - Présentation:
+
+
