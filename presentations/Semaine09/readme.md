@@ -36,7 +36,7 @@
   
 [Concept] Comment les langages de programmation eux-mêmes sont testés
 - Nom: Mathis Laroche
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1AOoqca6IajDX4FE6ajTDZJDciQ3xZYwxIa9FgitNhgo/edit?usp=sharing
   
 [concept] Cross-browser testing
 - Nom: Léa hemidj 
