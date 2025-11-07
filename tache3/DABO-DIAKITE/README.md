@@ -27,7 +27,7 @@ L’objectif de cette tâche est d’intégrer un **workflow GitHub Actions** ca
 - **Mockito** : simulation de dépendances  
 - **PIT Mutation Testing** : mesure de robustesse des tests  
 - **GitHub Actions** : intégration continue  
-- **Rickroll Action ** : note d’humour lors d’un échec
+- **Rickroll Action** : note d’humour lors d’un échec
 
 ---
 
