@@ -16,7 +16,7 @@
   
 [concept] Back to back testing
 - Nom: Yuxuan Yuan
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1gmJ8IskaLiOprOjxLPez3i_zRc1yDl3Qsg3zg6ryqqI/edit?usp=sharing
   
 [concept] Test sur la compatibilité réseau
 - Nom: Marina Traore
