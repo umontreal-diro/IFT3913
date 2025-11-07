@@ -1,7 +1,7 @@
 # Tâche 3 – Tests d’intégration (IFT3913)
 
 ## Équipe
-**Fahima Dabo** 
+**Tunwend-raabo Fahima Carmen Dabo** 
 **Lallia Diakité**
 
 ---
@@ -42,7 +42,7 @@ Le fichier [`build.yml`](.github/workflows/build.yml) définit les étapes suiva
 4. **Comparaison avec la baseline** (`ci/mutation_baseline.txt`) :
    - Le workflow échoue si le score baisse de plus de 0.05 %.
 5. **Mise à jour automatique de la baseline** sur `main`.  
-6. **Rickroll** en cas d’échec 🎶
+6. **Rickroll** en cas d’échec
 
 ---
 
