@@ -40,7 +40,7 @@
   
 [demo] [selenium](https://www.selenium.dev/) pour le test web
 - Nom: Hazem Ben Amor
-- Présentation:
+- Présentation: (https://www.canva.com/design/DAG3wawBnAk/aSb9OXh-Buey3cHCixqVlg/edit?utm_content=DAG3wawBnAk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
   
 [demo] Docker pour tester dans un environnement uniforme
 - Nom: Tarik Hireche
