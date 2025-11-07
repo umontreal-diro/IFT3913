@@ -24,7 +24,7 @@
 
 [concept] test de migration de données entre environnements
 - Nom: Chaza Boukhira
-- Présentation:
+- Présentation:(https://docs.google.com/presentation/d/1GfynypD4XHUXrVpVJyzOg2YUo-kRv9n2G3M8gXyVdnM/edit?usp=sharing)
 - 
 [concept] Cross-platform testing with Appium
 - Nom: Jad Essaifi
