@@ -20,7 +20,7 @@
   
 [concept] Test sur la compatibilité réseau
 - Nom: Marina Traore
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/19rx-xjJfHfbYSVm_URSkjPk3UQ_Lp8OlsXu1owo0FlQ/edit?usp=sharing
 
 [concept] test de migration de données entre environnements
 - Nom: Chaza Boukhira
