@@ -20,21 +20,6 @@ L’objectif de cette tâche est d’intégrer un **workflow GitHub Actions** ca
 ##  Structure du dépôt:
 ![alt text](image-1.png)
 
-tache3/
-└── DABO-DIAKITE/
-├── .github/
-│ └── workflows/
-│ └── build.yml : Workflow GitHub Actions
-├── ci/
-│ └── mutation_baseline.txt : Baseline du score de mutation (0.00)
-├── src/
-│ └── test/java/com/graphhopper/ift3913/mocks/
-│ ├── RoutingAlgorithmMockTest.java
-│ └── LocationIndexAndWeightingMockTest.java
-├── pom.xml ← Configuration Maven (JUnit + PIT + Mockito)
-├── DOC_GA.md ← Documentation de la GitHub Action
-├── DOC_MOCKS.md ← Documentation des mocks et des tests
-
 ## Outils utilisés
 
 - **Java 17**  

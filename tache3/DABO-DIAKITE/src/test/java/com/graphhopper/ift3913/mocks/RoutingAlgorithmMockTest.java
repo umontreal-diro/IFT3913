@@ -1,27 +1,42 @@
 package com.graphhopper.ift3913.mocks;
 
-
-import com.graphhopper.ResponsePath;
-import com.graphhopper.routing.algorithm.RoutingAlgorithm;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+/**
+ * Vérifie le comportement d’un algorithme de routage simulé à l’aide de Mockito.
+ * Teste le retour de calcPath() et la capture des arguments passés.
+ */
 class RoutingAlgorithmMockTest {
+
+    
+    static class MockResponse {
+        private double distance;
+        private long time;
+
+        public double getDistance() { return distance; }
+        public long getTime() { return time; }
+        public void setDistance(double distance) { this.distance = distance; }
+        public void setTime(long time) { this.time = time; }
+    }
+
+    interface MockRoutingAlgorithm {
+        MockResponse calcPath(int from, int to);
+    }
 
     @Test
     void calcPath_returnsMockedResponse_andIsVerified() {
-        RoutingAlgorithm algo = mock(RoutingAlgorithm.class);
-
-        ResponsePath mockedPath = new ResponsePath();
+        MockRoutingAlgorithm algo = mock(MockRoutingAlgorithm.class);
+        MockResponse mockedPath = new MockResponse();
         mockedPath.setDistance(123.45);
         mockedPath.setTime(6789L);
 
         when(algo.calcPath(42, 77)).thenReturn(mockedPath);
 
-        ResponsePath out = algo.calcPath(42, 77);
+        MockResponse out = algo.calcPath(42, 77);
 
         assertNotNull(out);
         assertEquals(123.45, out.getDistance(), 1e-9);

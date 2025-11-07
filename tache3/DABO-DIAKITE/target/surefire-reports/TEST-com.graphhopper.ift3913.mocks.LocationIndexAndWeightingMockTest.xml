@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.graphhopper.ift3913.mocks.LocationIndexAndWeightingMockTest" time="0.582" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="22"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/lalou/Documents/IFT3913/IFT3913/tache3/DABO-DIAKITE/target/test-classes:/Users/lalou/Documents/IFT3913/IFT3913/tache3/DABO-DIAKITE/target/classes:/Users/lalou/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/lalou/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/lalou/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/lalou/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/lalou/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/lalou/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/lalou/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/lalou/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/lalou/.m2/repository/org/mockito/mockito-core/5.12.0/mockito-core-5.12.0.jar:/Users/lalou/.m2/repository/net/bytebuddy/byte-buddy/1.14.15/byte-buddy-1.14.15.jar:/Users/lalou/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.15/byte-buddy-agent-1.14.15.jar:/Users/lalou/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/lalou/.m2/repository/org/mockito/mockito-junit-jupiter/5.12.0/mockito-junit-jupiter-5.12.0.jar:/Users/lalou/.m2/repository/org/slf4j/slf4j-simple/2.0.13/slf4j-simple-2.0.13.jar:/Users/lalou/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/lalou/.m2/repository/com/graphhopper/graphhopper-core/7.0/graphhopper-core-7.0.jar:/Users/lalou/.m2/repository/com/graphhopper/graphhopper-web-api/7.0/graphhopper-web-api-7.0.jar:/Users/lalou/.m2/repository/com/carrotsearch/hppc/0.8.1/hppc-0.8.1.jar:/Users/lalou/.m2/repository/org/codehaus/janino/janino/3.1.2/janino-3.1.2.jar:/Users/lalou/.m2/repository/org/codehaus/janino/commons-compiler/3.1.2/commons-compiler-3.1.2.jar:/Users/lalou/.m2/repository/org/locationtech/jts/jts-core/1.19.0/jts-core-1.19.0.jar:/Users/lalou/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.5/jackson-core-2.10.5.jar:/Users/lalou/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.5.1/jackson-databind-2.10.5.1.jar:/Users/lalou/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.5/jackson-annotations-2.10.5.jar:/Users/lalou/.m2/repository/com/graphhopper/external/jackson-datatype-jts/2.14/jackson-datatype-jts-2.14.jar:/Users/lalou/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.10.5/jackson-dataformat-xml-2.10.5.jar:/Users/lalou/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.10.5/jackson-module-jaxb-annotations-2.10.5.jar:/Users/lalou/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar:/Users/lalou/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar:/Users/lalou/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar:/Users/lalou/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.2.1/woodstox-core-6.2.1.jar:/Users/lalou/.m2/repository/org/apache/xmlgraphics/xmlgraphics-commons/2.7/xmlgraphics-commons-2.7.jar:/Users/lalou/.m2/repository/commons-io/commons-io/1.3.1/commons-io-1.3.1.jar:/Users/lalou/.m2/repository/org/openstreetmap/osmosis/osmosis-osm-binary/0.47.3/osmosis-osm-binary-0.47.3.jar:/Users/lalou/.m2/repository/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Toronto"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="22"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CA"/>
+    <property name="sun.boot.library.path" value="/Users/lalou/Library/Java/JavaVirtualMachines/openjdk-22.0.1/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/lalou/Documents/IFT3913/IFT3913/tache3/DABO-DIAKITE/target/surefire/surefirebooter-20251107001214265_3.jar /Users/lalou/Documents/IFT3913/IFT3913/tache3/DABO-DIAKITE/target/surefire 2025-11-07T00-12-14_211-jvmRun1 surefire-20251107001214265_1tmp surefire_0-20251107001214265_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/lalou/Documents/IFT3913/IFT3913/tache3/DABO-DIAKITE/target/test-classes:/Users/lalou/Documents/IFT3913/IFT3913/tache3/DABO-DIAKITE/target/classes:/Users/lalou/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/lalou/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/lalou/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/lalou/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/lalou/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/lalou/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/lalou/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/lalou/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:/Users/lalou/.m2/repository/org/mockito/mockito-core/5.12.0/mockito-core-5.12.0.jar:/Users/lalou/.m2/repository/net/bytebuddy/byte-buddy/1.14.15/byte-buddy-1.14.15.jar:/Users/lalou/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.15/byte-buddy-agent-1.14.15.jar:/Users/lalou/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/lalou/.m2/repository/org/mockito/mockito-junit-jupiter/5.12.0/mockito-junit-jupiter-5.12.0.jar:/Users/lalou/.m2/repository/org/slf4j/slf4j-simple/2.0.13/slf4j-simple-2.0.13.jar:/Users/lalou/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/lalou/.m2/repository/com/graphhopper/graphhopper-core/7.0/graphhopper-core-7.0.jar:/Users/lalou/.m2/repository/com/graphhopper/graphhopper-web-api/7.0/graphhopper-web-api-7.0.jar:/Users/lalou/.m2/repository/com/carrotsearch/hppc/0.8.1/hppc-0.8.1.jar:/Users/lalou/.m2/repository/org/codehaus/janino/janino/3.1.2/janino-3.1.2.jar:/Users/lalou/.m2/repository/org/codehaus/janino/commons-compiler/3.1.2/commons-compiler-3.1.2.jar:/Users/lalou/.m2/repository/org/locationtech/jts/jts-core/1.19.0/jts-core-1.19.0.jar:/Users/lalou/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.5/jackson-core-2.10.5.jar:/Users/lalou/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.5.1/jackson-databind-2.10.5.1.jar:/Users/lalou/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.5/jackson-annotations-2.10.5.jar:/Users/lalou/.m2/repository/com/graphhopper/external/jackson-datatype-jts/2.14/jackson-datatype-jts-2.14.jar:/Users/lalou/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-xml/2.10.5/jackson-dataformat-xml-2.10.5.jar:/Users/lalou/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.10.5/jackson-module-jaxb-annotations-2.10.5.jar:/Users/lalou/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar:/Users/lalou/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar:/Users/lalou/.m2/repository/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar:/Users/lalou/.m2/repository/com/fasterxml/woodstox/woodstox-core/6.2.1/woodstox-core-6.2.1.jar:/Users/lalou/.m2/repository/org/apache/xmlgraphics/xmlgraphics-commons/2.7/xmlgraphics-commons-2.7.jar:/Users/lalou/.m2/repository/commons-io/commons-io/1.3.1/commons-io-1.3.1.jar:/Users/lalou/.m2/repository/org/openstreetmap/osmosis/osmosis-osm-binary/0.47.3/osmosis-osm-binary-0.47.3.jar:/Users/lalou/.m2/repository/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/lalou"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="/Users/lalou/Library/Java/JavaVirtualMachines/openjdk-22.0.1/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/lalou/Documents/IFT3913/IFT3913/tache3/DABO-DIAKITE"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/lalou/Documents/IFT3913/IFT3913/tache3/DABO-DIAKITE/target/surefire/surefirebooter-20251107001214265_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="22.0.1+8-16"/>
+    <property name="user.name" value="lalou"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="26.0.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/lalou/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/2b/kkxz29s90vg1y25y520kx4r40000gn/T/"/>
+    <property name="java.version" value="22.0.1"/>
+    <property name="user.dir" value="/Users/lalou/Documents/IFT3913/IFT3913/tache3/DABO-DIAKITE"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/lalou/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="22.0.1+8-16"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="66.0"/>
+  </properties>
+  <testcase name="scoreBetween_validSnaps_usesBothMocks" classname="com.graphhopper.ift3913.mocks.LocationIndexAndWeightingMockTest" time="0.57">
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/lalou/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.15/byte-buddy-agent-1.14.15.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="scoreBetween_invalidSnap_returnsMinusOne_andSkipsWeighting" classname="com.graphhopper.ift3913.mocks.LocationIndexAndWeightingMockTest" time="0.002"/>
+</testsuite>
