@@ -32,7 +32,7 @@
   
 [concept] Tests de comptabilité dans les environnements virtualisés et conteneurisés (Docker, Kubernetes)
 - Nom: Célina Zhang
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1ui3-i2LDbjPid16fI3smGIFVQ4imygxMOh45-mUNG98/edit?usp=sharing 
   
 [demo] [gauge](https://github.com/getgauge/gauge) pour le test multi platformes
 - Nom: Rémi-Antoine Joron
