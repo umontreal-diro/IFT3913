@@ -36,7 +36,7 @@
   
 [demo] [gauge](https://github.com/getgauge/gauge) pour le test multi platformes
 - Nom: Rémi-Antoine Joron
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1AQeH9KDWmmnf6KGZhOBvMmxTJG8qUBFudmMYJ778rbs/edit?usp=sharing
   
 [demo] [selenium](https://www.selenium.dev/) pour le test web
 - Nom: Hazem Ben Amor
