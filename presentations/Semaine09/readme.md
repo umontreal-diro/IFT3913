@@ -4,7 +4,7 @@
 
 [concept] A/B testing
 - Nom: Peini Li 
-- Présentation:
+- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/peini_li_umontreal_ca/EQQYm8S37g9FiZKkzt7pqZEBAg2_WFhl2fhbgOHYFV7vtg?e=qcKGrK
   
 [concept] Cross-browser testing
 - Nom: Léa hemidj 
