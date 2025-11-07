@@ -20,7 +20,7 @@
 - 
 [concept] Cross-platform testing with Appium
 - Nom: Jad Essaifi
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1uLb0BE_po70e7PlC27sJIeLbHApsKSJt2RSpXyxJN-A/edit?usp=sharing
   
 [concept] Tests de comptabilité dans les environnements virtualisés et conteneurisés (Docker, Kubernetes)
 - Nom: Célina Zhang
