@@ -1,5 +1,5 @@
-com/graphhopper/ift3913/mocks/RoutingAlgorithmMockTest$MockRoutingAlgorithm.class
-com/graphhopper/ift3913/mocks/RoutingAlgorithmMockTest.class
-com/graphhopper/ift3913/mocks/LocationIndexAndWeightingMockTest.class
-com/graphhopper/ift3913/mocks/RoutingAlgorithmMockTest$MockResponse.class
-com/graphhopper/ift3913/mocks/LocationIndexAndWeightingMockTest$RouteOrchestrator.class
+com\graphhopper\ift3913\mocks\RoutingAlgorithmMockTest$MockRoutingAlgorithm.class
+com\graphhopper\ift3913\mocks\LocationIndexAndWeightingMockTest$RouteOrchestrator.class
+com\graphhopper\ift3913\mocks\RoutingAlgorithmMockTest.class
+com\graphhopper\ift3913\mocks\RoutingAlgorithmMockTest$MockResponse.class
+com\graphhopper\ift3913\mocks\LocationIndexAndWeightingMockTest.class
