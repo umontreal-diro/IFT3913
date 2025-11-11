@@ -2,6 +2,6 @@
 
 **Étudiant 2** : Nelson KAMGA NEWA
 
-**Référentiel** : 
+**Référentiel** : https://github.com/nelsonkam/graphhopper
 
-**Page de documentation** : 
+**Page de documentation** : https://github.com/nelsonkam/graphhopper/blob/master/rapport.md
