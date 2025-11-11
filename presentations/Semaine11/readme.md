@@ -32,8 +32,8 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Nom: Guillaume Sabourin
 - Présentation:
 
-[COncept] quand rire améliore la qualité
-- Nom: Amadou koné
+[]
+- Nom: Amadou koné (sujet : quand rire améliore la qualité)
 - Présentation:
 
 [] SUJET
