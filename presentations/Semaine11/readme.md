@@ -39,6 +39,6 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Nom: Amadou Koné (sujet : quand rire améliore la qualité)
 - Présentation:
 
-[] SUJET
+[Concept] L'humour dans les commentaires de code
 - Nom: Félix Lacroix
 - Présentation:
