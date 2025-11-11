@@ -44,14 +44,20 @@ jobs:
                  -Dpitest.outputFormats=XML \
                  org.pitest:pitest-maven:mutationCoverage
           REPORT=$(find target/pit-reports -name "mutations.xml" | head -n 1)
-          total=$(grep -o "<mutation " "$REPORT" | wc -l | tr -d ' ')
-          killed=$(grep -o 'killed="true"' "$REPORT" | wc -l | tr -d ' ')
-          if [ "$total" = "0" ]; then
+          if [ -z "$REPORT" ]; then
             echo "0" > mutation_score.txt
+            echo "No mutation report found."
           else
-            awk -v k="$killed" -v t="$total" 'BEGIN { printf("%.2f\n", 100.0*k/t) }' > mutation_score.txt
+            total=$(grep -o "<mutation " "$REPORT" | wc -l | tr -d ' ')
+            killed=$(grep -o 'status="KILLED"' "$REPORT" | wc -l | tr -d ' ')
+            if [ "$total" -eq 0 ]; then
+              echo "0" > mutation_score.txt
+              echo "No mutations generated."
+            else
+              awk -v k="$killed" -v t="$total" 'BEGIN { printf("%.2f\n", 100.0*k/t) }' > mutation_score.txt
+              echo "Mutation score: $(cat mutation_score.txt)%"
+            fi
           fi
-          echo "Current mutation score: $(cat mutation_score.txt)%"
 
       - name: Install jq & unzip
         run: sudo apt-get update && sudo apt-get install -y jq unzip
