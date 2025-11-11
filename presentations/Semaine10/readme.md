@@ -6,7 +6,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Qualité logicielle pour l'aéronautique
 - Nom: William Bisson
-- Présentation:  
+- Présentation:  https://1drv.ms/p/c/10affe6bc9753327/ESWpG4XHPl5DnxTGjdiAy2EBJM_U1AFLZfSYmDCyqwPI3A?e=OCgwbG
 
 [concept] Assurer la qualité des systèmes bancaires
 - Nom: Massimo Costarella-Serra
