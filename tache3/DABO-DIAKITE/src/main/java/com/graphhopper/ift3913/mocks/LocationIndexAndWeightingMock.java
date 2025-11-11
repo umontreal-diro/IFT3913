@@ -1,37 +1,36 @@
 package com.graphhopper.ift3913.mocks;
 
+import com.graphhopper.routing.weighting.Weighting;
+import com.graphhopper.storage.index.LocationIndex;
+
+/**
+ * Mock combinant LocationIndex et Weighting pour tests unitaires.
+ * Sert uniquement de conteneur pour vérifier leur interaction.
+ */
 public class LocationIndexAndWeightingMock {
 
-    private double latitude;
-    private double longitude;
-    private double weight;
+    private final LocationIndex locationIndex;
+    private final Weighting weighting;
 
-    public LocationIndexAndWeightingMock(double latitude, double longitude, double weight) {
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.weight = weight;
+    public LocationIndexAndWeightingMock(LocationIndex locationIndex, Weighting weighting) {
+        this.locationIndex = locationIndex;
+        this.weighting = weighting;
     }
 
-    public double getLatitude() {
-        return latitude;
+    public LocationIndex getLocationIndex() {
+        return locationIndex;
     }
 
-    public double getLongitude() {
-        return longitude;
+    public Weighting getWeighting() {
+        return weighting;
     }
 
-    public double getWeight() {
-        return weight;
+    public boolean isValid() {
+        return locationIndex != null && weighting != null;
     }
 
-    public boolean isHeavierThan(LocationIndexAndWeightingMock other) {
-        return this.weight > other.weight;
-    }
-
-    public double computeDistanceTo(LocationIndexAndWeightingMock other) {
-        double dx = this.latitude - other.latitude;
-        double dy = this.longitude - other.longitude;
-        return Math.sqrt(dx * dx + dy * dy);
+    public double computeWeight(double base, double factor) {
+        if (weighting == null) return Double.NaN;
+        return base * factor * weighting.getMinWeight(1);
     }
 }
-
