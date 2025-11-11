@@ -83,17 +83,17 @@
     </dependency>
   </dependencies>
   <configuration>
-    <!-- 🧩 Code à muter -->
+    <!-- Code à muter -->
     <targetClasses>
       <param>com.graphhopper.ift3913.mocks.*</param>
     </targetClasses>
 
-    <!-- 🧪 Tests associés -->
+    <!--  Tests associés -->
     <targetTests>
       <param>com.graphhopper.ift3913.mocks.*Test</param>
     </targetTests>
 
-    <!-- ⚙️ Configuration générale -->
+    <!--  Configuration générale -->
     <threads>2</threads>
     <outputFormats>
       <param>XML</param>
