@@ -1,58 +1,41 @@
 package com.graphhopper.ift3913.mocks;
 
-import com.graphhopper.routing.AlgorithmOptions;
 import com.graphhopper.routing.Path;
-import com.graphhopper.routing.util.FlagEncoder;
-import com.graphhopper.storage.GraphHopperStorage;
-import com.graphhopper.util.Parameters;
 import com.graphhopper.util.PMap;
+import com.graphhopper.util.Parameters;
 
 /**
- * Mock simplifié de RoutingAlgorithm pour les tests de mutation.
- * Il reproduit des comportements minimaux suffisants pour les tests unitaires.
+ * Mock simplifié de RoutingAlgorithm pour tests.
+ * Contient une petite logique interne pour PIT.
  */
 public class RoutingAlgorithmMock {
 
-    private final GraphHopperStorage graph;
-    private final FlagEncoder encoder;
-    private final AlgorithmOptions opts;
-    private boolean used;
+    private final boolean directed;
+    private final int speedLimit;
 
-    public RoutingAlgorithmMock(GraphHopperStorage graph, FlagEncoder encoder, AlgorithmOptions opts) {
-        this.graph = graph;
-        this.encoder = encoder;
-        this.opts = opts;
-        this.used = false;
+    public RoutingAlgorithmMock(boolean directed, int speedLimit) {
+        this.directed = directed;
+        this.speedLimit = speedLimit;
     }
 
-    public boolean wasUsed() {
-        return used;
+    public Path calcPath(int distance) {
+        // petite logique testable
+        double time = (speedLimit > 0) ? (double) distance / speedLimit : Double.POSITIVE_INFINITY;
+        boolean valid = time < 10.0 && directed;
+        return new Path(null).setFound(valid);
     }
 
-    public Path calcPath(int from, int to) {
-        used = true;
-        Path p = new Path(graph, encoder);
-        p.setFromNode(from);
-        p.setEndNode(to);
-        p.setWeight(Math.abs(to - from));
-        return p;
+    public boolean isDirected() {
+        return directed;
     }
 
-    public PMap getHints() {
+    public int getSpeedLimit() {
+        return speedLimit;
+    }
+
+    public PMap getRoutingHints() {
         PMap hints = new PMap();
-        hints.putObject(Parameters.Routing.EDGE_BASED, opts.getHints().getBool(Parameters.Routing.EDGE_BASED, false));
+        hints.putObject(Parameters.Routing.ALGORITHM, directed ? "astar" : "dijkstra");
         return hints;
-    }
-
-    public String getName() {
-        return "MockAlgo";
-    }
-
-    public FlagEncoder getEncoder() {
-        return encoder;
-    }
-
-    public AlgorithmOptions getOpts() {
-        return opts;
     }
 }
