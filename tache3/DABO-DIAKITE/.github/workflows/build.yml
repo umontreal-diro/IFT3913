@@ -38,7 +38,7 @@ jobs:
       - name: Build & unit tests
         run: mvn -q -DskipTests=false -DfailIfNoTests=false test
 
-      - name: Run PIT (XML output)
+        - name: Run PIT (XML output)
         run: |
           mvn -q -DwithHistory -Dpitest.reportDir=target/pit-reports \
                  -Dpitest.outputFormats=XML \
@@ -49,7 +49,7 @@ jobs:
             echo "No mutation report found."
           else
             total=$(grep -c "<mutation " "$REPORT" || echo 0)
-            killed=$(grep -c 'status="KILLED"' "$REPORT" || echo 0)
+            killed=$(grep -c "status='KILLED'" "$REPORT" || echo 0)
             echo "Total: $total  |  Killed: $killed"
             if [ "$total" -eq 0 ]; then
               echo "0" > mutation_score.txt
@@ -59,6 +59,7 @@ jobs:
               echo "Mutation score: $(cat mutation_score.txt)%"
             fi
           fi
+
 
 
       - name: Install jq & unzip
