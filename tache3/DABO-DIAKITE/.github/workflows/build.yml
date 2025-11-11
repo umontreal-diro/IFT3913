@@ -11,6 +11,10 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tache3/DABO-DIAKITE   
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,15 +25,15 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      - name: Install Maven
+        run: sudo apt-get update -y && sudo apt-get install -y maven
+
       - name: Cache Maven
         uses: actions/cache@v4
         with:
           path: ~/.m2/repository
           key: m2-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
           restore-keys: m2-
-
-      - name: Install Maven
-        run: sudo apt-get update -y && sudo apt-get install -y maven
 
       - name: Build & unit tests
         run: mvn -q -DskipTests=false -DfailIfNoTests=false test
@@ -39,14 +43,21 @@ jobs:
           mvn -q -DwithHistory -Dpitest.reportDir=target/pit-reports \
                  -Dpitest.outputFormats=XML \
                  org.pitest:pitest-maven:mutationCoverage
-          total=$(grep -o "<mutation " target/pit-reports/*/mutations.xml | wc -l | tr -d ' ')
-          killed=$(grep -o 'killed=\"true\"' target/pit-reports/*/mutations.xml | wc -l | tr -d ' ')
-          if [ "$total" = "0" ]; then
+          REPORT=$(find target/pit-reports -name "mutations.xml" | head -n 1)
+          if [ -z "$REPORT" ]; then
             echo "0" > mutation_score.txt
+            echo "No mutation report found."
           else
-            awk -v k="$killed" -v t="$total" 'BEGIN { printf("%.2f\n", 100.0*k/t) }' > mutation_score.txt
+            total=$(grep -o "<mutation " "$REPORT" | wc -l | tr -d ' ')
+            killed=$(grep -o 'status="KILLED"' "$REPORT" | wc -l | tr -d ' ')
+            if [ "$total" -eq 0 ]; then
+              echo "0" > mutation_score.txt
+              echo "No mutations generated."
+            else
+              awk -v k="$killed" -v t="$total" 'BEGIN { printf("%.2f\n", 100.0*k/t) }' > mutation_score.txt
+              echo "Mutation score: $(cat mutation_score.txt)%"
+            fi
           fi
-          echo "Current mutation score: $(cat mutation_score.txt)%"
 
       - name: Install jq & unzip
         run: sudo apt-get update && sudo apt-get install -y jq unzip
@@ -100,14 +111,20 @@ jobs:
           fi
           echo "Previous: ${PREV}%  |  Current: ${CUR}%"
           awk -v prev="$PREV" -v cur="$CUR" 'BEGIN {
-            if (cur + 0.01 < prev) { exit 1 } else { exit 0 }
+            if (cur + 0.01 < prev) { 
+              print "Mutation score dropped below previous run!";
+              exit 1 
+            } else { 
+              print "Mutation score OK.";
+              exit 0 
+            }
           }'
 
       - name: Upload mutation-score artifact
         uses: actions/upload-artifact@v4
         with:
           name: mutation-score
-          path: mutation_score.txt
+          path: tache3/DABO-DIAKITE/mutation_score.txt
           retention-days: 30
 
       - name: Rickroll humour
