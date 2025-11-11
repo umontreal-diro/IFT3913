@@ -1,8 +1,8 @@
 # Tâche 3 – Tests d’intégration (IFT3913)
 
 ## Équipe
-**Tunwend-raabo Fahima Carmen Dabo** 
-**Lallia Diakité**
+-**Tunwend-raabo Fahima Carmen Dabo** 
+-**Lallia Diakité**
 
 ---
 
@@ -18,7 +18,7 @@ L’objectif de cette tâche est d’intégrer un **workflow GitHub Actions** ca
 ---
 
 ##  Structure du dépôt:
-![alt text](image-1.png)
+![alt text](image.png)
 
 ## Outils utilisés
 
