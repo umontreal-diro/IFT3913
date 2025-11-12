@@ -30,7 +30,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Tester un chatbot
 - Nom: Ilyas Ally Musaphur
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1r33FE6d96-9S8k7zI_A3O9QMTFEGeT7fGhG12Jjy_o0/edit?usp=sharing
 
 [concept] Assurance qualité pour une plateforme de streaming
 - Nom: Chiril Reabitchi
