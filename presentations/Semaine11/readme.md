@@ -29,7 +29,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Nom: Rayan Hidri
 - Présentation:
 
-[] SUJET
+[Concept] Les easter eggs des testeurs
 - Nom: Karim Hozaien
 - Présentation:
 
