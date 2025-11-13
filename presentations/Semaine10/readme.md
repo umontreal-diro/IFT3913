@@ -10,7 +10,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Assurer la qualité des systèmes bancaires
 - Nom: Massimo Costarella-Serra
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/16g5osqRDejYxHeFTTgCfyYInezBG7TBvp_ueCHYWDTc/edit?slide=id.g3a13326fb6f_0_1353#slide=id.g3a13326fb6f_0_1353
 
 [concept] Test pour les véhicules autonomes
 - Nom: Naromba condé
