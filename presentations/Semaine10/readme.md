@@ -46,4 +46,4 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [Concept] Tester les systèmes réseaux et les infrastructures de communication
 - Nom: Maxime Belotti
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1rSRHziUgo04r4k9SJo1bJsHMsEhN7OJdyxHP77GzAtc/edit?usp=sharing
