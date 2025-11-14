@@ -26,7 +26,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Tester des bâtiments intelligents
 - Nom: Grace Lee
-- Présentation:
+- Présentation: https://www.canva.com/design/DAG4pJ1v3CU/KwzTHtGkr2UC7-O5JCxvbg/edit?utm_content=DAG4pJ1v3CU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 [concept] Tester un chatbot
 - Nom: Ilyas Ally Musaphur
