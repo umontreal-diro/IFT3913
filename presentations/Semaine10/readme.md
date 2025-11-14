@@ -42,7 +42,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Qualité et Conformité aux Standards dans le Domaine de la Santé
 - Nom: David Shorten
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1u4Y-26I1BioluhAaCAufK6Uiz2sueuudxlTuSYEt5to/edit?usp=sharing
 
 [Concept] Tester les systèmes réseaux et les infrastructures de communication
 - Nom: Maxime Belotti
