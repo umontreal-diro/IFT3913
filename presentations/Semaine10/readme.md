@@ -22,7 +22,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Assurance qualité pour les jeux vidéos
 - Nom: Flora Kang
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/10xwiIMyQMgirJrIO5BzqUlNbLhZD3EaOE0Y9hnNA__M/edit?usp=sharing
 
 [concept] Tester des bâtiments intelligents
 - Nom: Grace Lee
