@@ -38,7 +38,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Tester les systèmes financiers et boursiers (trading algorithmique et marchés à terme)
 - Nom: Bintou Touré
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1DVR0s4mhMYNWQCwmEYFnMkk7guJ77HsK-IFhuPIP_SM/edit?usp=sharing 
 
 [concept] Qualité et Conformité aux Standards dans le Domaine de la Santé
 - Nom: David Shorten
