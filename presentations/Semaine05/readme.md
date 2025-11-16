@@ -4,19 +4,19 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [concept] Test par fuzzing
 - Nom: Yamir Alejandro Poldo Silva
-- Présentation:
+- Présentation: https://github.com/Yamires/Presentation_Fuzzing_IFT3913
 
 [concept] Test basé sur les propriétés
 - Nom: Mohamed Atmani
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1OF0I-to3vDV2g2PVwN6eSoFEpA6ePSkm_GZX3FWQ6oM/edit?usp=sharing
 
 [concept] Tests paramétrés
 - Nom: Jérémie Dupuis
-- Présentation:
+- Présentation: https://jeremiedupuis.com/ift3913/presentation.pdf
 
 [concept] Mocks et stubs
 - Nom: Laurent POLZIN
-- Présentation: https://udemontreal-my.sharepoint.com/:p:/r/personal/laurent_polzin_umontreal_ca/Documents/Mocks%20%26%20Stubs%20-%20IFT%203913%20-%20Prez%2003%2010%202025.pptx?d=w4fb426b7b2a04dc29a60786486dda00b&csf=1&web=1&e=iBQ10L
+- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/laurent_polzin_umontreal_ca/EbcmtE-gssJNmmB4ZIbdoAsB-hTj24Sz9TBwoDW1_NOLdg?e=OAUssH
 
 [demo] [Hypothesis](https://hypothesis.readthedocs.io/en/latest/) pour le test basé sur les propriétés en Python
 - Nom: Aissatou Ndiaye
@@ -24,15 +24,15 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [demo] [Mockito](https://site.mockito.org/) pour les mocks en Java
 - Nom: Sarah Heng
-- Présentation:
+- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/sarah_heng_umontreal_ca/EWHKqQH-GE1CptxLagMx7ZUBUCOx9ps3TCvqlp-ncgaFRg?e=n6zngj
 
 [demo] [msw](https://github.com/mswjs/msw) pour les mocks avec graphQL
 - Nom: Simon Voglimacci Stéphanopoli
-- Présentation:
+- Présentation: https://github.com/svoglimacci/msw-graphql-demo
 
 [demo] [Cucumber](https://cucumber.io/) pour le test basé comportement en Java
 - Nom: Marcelo Amarilla
-- Présentation:
+- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/marcelo_david_amarilla-hernandez_umontreal_ca/EZk5QD8EhTBPsLPAaIhO420Bh3UpGjYCn1qti8PqraydOA?e=3zTffy
 
 [demo] [Java faker](https://github.com/DiUS/java-faker) pour l'isolation de tests en Java
 - Nom: Charlie Peng
@@ -40,7 +40,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [demo] [AutoParams](https://github.com/AutoParams/AutoParams) pour les tests paramétrés en Java
 - Nom: William Caron-Bastarache
-- Présentation:
+- Présentation: https://github.com/will13cb/autoparams-demo
 
 [demo] [afl++](https://github.com/AFLplusplus/AFLplusplus)
 - Nom:Emmanuel Paraison
