@@ -16,7 +16,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [concept] tester la performance
 - Nom: Arthur Paul
-- Présentation:
+- Présentation: https://testerlaperformanceenproduction.my.canva.site/tester-la-performance
 
 [concept] test de pénétration
 - Nom: Joaquim Sandler-Soussy
