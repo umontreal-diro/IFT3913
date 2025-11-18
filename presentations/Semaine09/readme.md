@@ -8,7 +8,7 @@
   
 [concept] Cross-browser testing
 - Nom: Léa hemidj 
-- Présentation:
+- Présentation: https://www.canva.com/design/DAG4-dR0wjY/vNfPEiAzQpNZSAmffUplHA/edit?utm_content=DAG4-dR0wjY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
   
 [concept] Test de compatibilité entre environnements
 - Nom: Ariane Laverrière
