@@ -40,7 +40,7 @@
   
 [concept] Cross-browser testing
 - Nom: Léa hemidj 
-- Présentation:
+- Présentation: https://presentationift3913.my.canva.site/cross-browser-testing
   
 [concept] Test de compatibilité entre environnements
 - Nom: Ariane Laverrière
