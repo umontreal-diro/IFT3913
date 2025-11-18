@@ -48,5 +48,5 @@
 
 [demo] Docker pour tester dans un environnement uniforme
 - Nom: Tarik Hireche
-- Présentation:
+- Présentation: https://app.presentations.ai/view/jvUsWK4bXR
   
