@@ -24,7 +24,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [concept] capture and replay
 - Nom: Oumayma Haddour
-- Présentation:
+- Présentation: https: https://test-en-production-capture-and-replay.my.canva.site/capture-replay
 
 [concept] Feature Flags (dark launching et progressive rollout)
 - Nom: Yassine Azmani
