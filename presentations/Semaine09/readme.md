@@ -44,7 +44,7 @@
   
 [concept] Test de compatibilité entre environnements
 - Nom: Ariane Laverrière
-- Présentation: https://udemontreal-my.sharepoint.com/:p:/r/personal/ariane_laverriere_umontreal_ca/Documents/Test%20de%20compatibilit%C3%A9%20entre%20environnements.pptx?d=wffcbd0706d3b43a0b6f879e60694edf8&csf=1&web=1&e=cGmqOC
+- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/ariane_laverriere_umontreal_ca/EXDQy_87baBDtvh55gaU7fgBwLJHT4jhhQkLmScxKRw-HQ?e=zFSyw6
 
 [demo] Docker pour tester dans un environnement uniforme
 - Nom: Tarik Hireche
