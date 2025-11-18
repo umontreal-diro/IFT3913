@@ -21,10 +21,6 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Nom: Amir Hannache
 - Présentation:
 
-[Concept] Comment les langages de programmation eux-mêmes sont testés
-- Nom: Mathis Laroche
-- Présentation:
-
 [demo] TheFuck 
 - Nom: Guillaume Sabourin
 - Présentation:
@@ -33,14 +29,18 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Nom: Rayan Hidri
 - Présentation:
 
-[] SUJET
-- Nom:
+[Concept] Stand-up Testing
+- Nom: Karim Hozaien
 - Présentation:
 
 [] SUJET
-- Nom:
+- Nom: Amadou Koné (sujet : quand rire améliore la qualité)
 - Présentation:
 
-[] SUJET
-- Nom:
+[concept] L’humour dans les commentaires de code
+- Nom: Félix Lacroix
+- Présentation: https://docs.google.com/presentation/d/10DGY8qGmrx2MClH8gq-51tXUDcN6Rbfk/edit?usp=sharing&ouid=102004190283598951957&rtpof=true&sd=true
+
+[Concept] Le commit : un geste technique, une parole humaine 
+- Nom: Samuel Michaud
 - Présentation:

@@ -124,7 +124,7 @@ La limite de temps est obligatoire. Tous les autres critères comptent pour un p
 |-------------------------------------------- | ----|
 | Github action (GA)  (25%)      | l'action échoue si le score de mutation est plus bas que sur la dernière exécution de l'action |
 | documentation GA   (25%)  | les modifications apportées à l'action ainsi que la validation des modifications sont documentées et justifiées;  |
-| mocks (20%) | 2 classes sont simulées avec des mockito et les tests sont adaptés pour utiliser les mocks |
+| mocks (20%) | 2 classes sont simulées avec des mocks et les tests sont adaptés pour utiliser ces mocks |
 | documentation mocks (20%)   | le choix des classes, la définition des mocks, les changements dans les tests sont documentés et justifiés |
 | humour      (10%)  | rickroll dans le CI |
 

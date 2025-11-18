@@ -16,7 +16,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [concept] tester la performance
 - Nom: Arthur Paul
-- Présentation:
+- Présentation: https://testerlaperformanceenproduction.my.canva.site/tester-la-performance
 
 [concept] test de pénétration
 - Nom: Joaquim Sandler-Soussy
@@ -24,7 +24,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [concept] capture and replay
 - Nom: Oumayma Haddour
-- Présentation:
+- Présentation: https: https://test-en-production-capture-and-replay.my.canva.site/capture-replay
 
 [concept] Feature Flags (dark launching et progressive rollout)
 - Nom: Yassine Azmani
@@ -42,6 +42,10 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Nom: Patrick Kelvin Episseyo 
 - Présentation:
 
-[démo] SUJET tests de performances avec K6 en javascript
+[démo]  tests de performances avec K6 en javascript
 - Nom: Papa Moussa Diabate 
+- Présentation:
+
+[démo]  Shadow Testing en production
+- Nom: Joseph Bombardier 
 - Présentation:
