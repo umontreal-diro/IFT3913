@@ -8,6 +8,6 @@ Emmanuel Paraison | Dorensky Hérard
 
 🔗 https://github.com/MufasaKhan/GraphHopper
 
-## Lien de ocumentation du travail
+## Lien de documentation du travail
 
 📄 https://docs.google.com/document/d/12ZjVsP7VwLP5ahs7wKpFZzMsxZUnuqgkeeMpp_rWHGI/edit?tab=t.0
