@@ -40,13 +40,13 @@
   
 [concept] Cross-browser testing
 - Nom: Léa hemidj 
-- Présentation:
+- Présentation: https://presentationift3913.my.canva.site/cross-browser-testing
   
 [concept] Test de compatibilité entre environnements
 - Nom: Ariane Laverrière
-- Présentation:
+- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/ariane_laverriere_umontreal_ca/EXDQy_87baBDtvh55gaU7fgBwLJHT4jhhQkLmScxKRw-HQ?e=zFSyw6
 
 [demo] Docker pour tester dans un environnement uniforme
 - Nom: Tarik Hireche
-- Présentation:
+- Présentation: https://app.presentations.ai/view/jvUsWK4bXR
   
