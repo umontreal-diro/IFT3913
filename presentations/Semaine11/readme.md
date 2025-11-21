@@ -15,7 +15,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [Concept] Little bobby tables - SQL injection et humour
 - Nom: Fatou Ndao
-- Présentation:
+- Présentation: https://udemontreal-my.sharepoint.com/personal/fatou_ndao_umontreal_ca/Documents/Presentation_Little%20Bobby%20Tables.pptx?web=1
 
 [Concept] La loi de Murphy
 - Nom: Amir Hannache
