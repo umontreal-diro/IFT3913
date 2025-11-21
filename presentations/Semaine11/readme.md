@@ -23,7 +23,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [demo] TheFuck 
 - Nom: Guillaume Sabourin
-- Présentation:
+- Présentation: https://1drv.ms/p/c/2742a05e8fe21e38/IQBCfTNEOM8nTJnDo8mm3ko9ARBHTqYgIKZC45FB-Pp7wC0?e=TrXnae
 
 [Concept] Chaos Engineering humoristique – Netflix’s Chaos Monkey et ses amis.
 - Nom: Rayan Hidri
