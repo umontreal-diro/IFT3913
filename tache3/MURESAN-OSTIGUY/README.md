@@ -5,5 +5,5 @@
 - **Ostiguy Louis-Philippe**
 
 ## Liens
--  [Lien vers référentiel Github](Lien à ajouter)  
--  [Documentation de la tâche](Lien à ajouter)
+-  https://github.com/lpostiguy/graphhopper
+-  https://docs.google.com/document/d/1SNxkM4der4ZbI6Q_fGL4WXaY8Xb25iQKDm2YQW2tiEE/edit?usp=sharing
