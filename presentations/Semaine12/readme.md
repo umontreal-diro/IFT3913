@@ -30,16 +30,16 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Nom: Yassine Azmani
 - Présentation: 
 
-[demo] [opentelemetry](https://opentelemetry.io/) pour l'observabilité en production
-- Nom: Adrian Briscaru
-- Présentation:
-
-[] SUJET [Agents IA]() autonomes pour la fiabilité en production 
+[] Agents IA autonomes pour la fiabilité en production 
 - Nom: Wayne Timmons
 - Présentation:
 
-[] SUJET [Test fantôme]() 
+[] Test fantôme
 - Nom: Patrick Kelvin Episseyo 
+- Présentation:
+
+[demo] [opentelemetry](https://opentelemetry.io/) pour l'observabilité en production
+- Nom: Adrian Briscaru
 - Présentation:
 
 [démo]  tests de performances avec K6 en javascript
