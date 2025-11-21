@@ -43,4 +43,4 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [Concept] Le commit : un geste technique, une parole humaine 
 - Nom: Samuel Michaud
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1LaIhgEtco3cj09mYZ4AlYzvsXrv47pvWqZ_jDeevb4w/edit?usp=sharing
