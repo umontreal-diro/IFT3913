@@ -8,6 +8,6 @@ Chaimaa Dannane
 
 ## Liens 
 
-[Lien vers le repo](ici)
+[Lien vers le repo](https://github.com/ChayMaDan/graphhopper)
 
-[Lien vers la documentation](ici)
+[Lien vers la documentation](https://github.com/ChayMaDan/graphhopper/blob/master/RAPPORT_TACHE3.md)
