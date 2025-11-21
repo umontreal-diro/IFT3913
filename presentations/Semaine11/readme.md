@@ -35,7 +35,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [Concept] Quand rire améliore la qualité
 - Nom: Amadou Koné 
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1B0o0hBXB25RTOdnmU2EyQXT4VbwKMNSeZotlND4kuX0/edit?usp=sharing
 
 [concept] L’humour dans les commentaires de code
 - Nom: Félix Lacroix
