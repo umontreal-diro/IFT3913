@@ -7,7 +7,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [Concept] Easter eggs dans la programmation
 - Nom: Jonathan Beaulieu
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1-VXl0bh6Ovp4zXDhKDEos5-_g54OD3IKHAi2YM3rOdQ/edit?slide=id.p#slide=id.p
 
 [Concept] Les messages d’erreur absurdes et humoristiques
 - Nom: Bencheikh El Atmani Ayoub 
