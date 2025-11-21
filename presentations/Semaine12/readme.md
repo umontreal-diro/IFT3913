@@ -24,24 +24,28 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [concept] capture and replay
 - Nom: Oumayma Haddour
-- Présentation:
+- Présentation: https: https://test-en-production-capture-and-replay.my.canva.site/capture-replay
 
 [concept] Feature Flags (dark launching et progressive rollout)
 - Nom: Yassine Azmani
 - Présentation: 
 
+[] Agents IA autonomes pour la fiabilité en production 
+- Nom: Wayne Timmons
+- Présentation:
+
+[] Test fantôme
+- Nom: Patrick Kelvin Episseyo 
+- Présentation:
+
 [demo] [opentelemetry](https://opentelemetry.io/) pour l'observabilité en production
 - Nom: Adrian Briscaru
 - Présentation:
 
-[] SUJET [Agents IA]() autonomes pour la fiabilité en production 
-- Nom: Wayne Timmons
-- Présentation:
-
-[] SUJET [Test fantôme]() 
-- Nom: Patrick Kelvin Episseyo 
-- Présentation:
-
-[démo] SUJET tests de performances avec K6 en javascript
+[démo]  tests de performances avec K6 en javascript
 - Nom: Papa Moussa Diabate 
+- Présentation:
+
+[démo]  Shadow Testing en production
+- Nom: Joseph Bombardier 
 - Présentation:

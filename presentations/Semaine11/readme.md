@@ -19,7 +19,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [Concept] La loi de Murphy
 - Nom: Amir Hannache
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1W3tgIUfq2RX34jn5_fZxSS0hGTMk4M1D5F6wct5e08U/edit?usp=sharing
 
 [demo] TheFuck 
 - Nom: Guillaume Sabourin
@@ -31,15 +31,15 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [Concept] Stand-up Testing
 - Nom: Karim Hozaien
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1edhegTqha0zH06hUA3h-L8u7R5KX5NOeyi93TgQaN6Q/edit?usp=sharing
 
-[] SUJET
-- Nom: Amadou Koné (sujet : quand rire améliore la qualité)
+[Concept] Quand rire améliore la qualité
+- Nom: Amadou Koné 
 - Présentation:
 
 [concept] L’humour dans les commentaires de code
 - Nom: Félix Lacroix
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/10DGY8qGmrx2MClH8gq-51tXUDcN6Rbfk/edit?usp=sharing&ouid=102004190283598951957&rtpof=true&sd=true
 
 [Concept] Le commit : un geste technique, une parole humaine 
 - Nom: Samuel Michaud

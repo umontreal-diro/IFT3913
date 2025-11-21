@@ -34,7 +34,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Assurance qualité pour une plateforme de streaming
 - Nom: Chiril Reabitchi
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1PIlHnKVn3BgKigow34fi9Vw-QK020oZCR_PxBXU8fK8/edit?usp=sharing
 
 [concept] Tester les systèmes financiers et boursiers (trading algorithmique et marchés à terme)
 - Nom: Bintou Touré
