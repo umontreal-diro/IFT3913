@@ -19,7 +19,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [Concept] La loi de Murphy
 - Nom: Amir Hannache
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1W3tgIUfq2RX34jn5_fZxSS0hGTMk4M1D5F6wct5e08U/edit?usp=sharing
 
 [demo] TheFuck 
 - Nom: Guillaume Sabourin
