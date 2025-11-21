@@ -11,7 +11,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [Concept] Les messages d’erreur absurdes et humoristiques
 - Nom: Bencheikh El Atmani Ayoub 
-- Présentation:
+- Présentation: https://udemontreal-my.sharepoint.com/:p:/r/personal/ayoub_bencheikh_el_atmani_umontreal_ca/Documents/IFT3913_Erreurs_Absurdes_CAE_finalito.pptx?d=w8f643535994e4d7a8cea66d3d711ba99&csf=1&web=1&e=woHX2O
 
 [Concept] Little bobby tables - SQL injection et humour
 - Nom: Fatou Ndao
