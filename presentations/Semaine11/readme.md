@@ -31,7 +31,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [Concept] Stand-up Testing
 - Nom: Karim Hozaien
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1edhegTqha0zH06hUA3h-L8u7R5KX5NOeyi93TgQaN6Q/edit?usp=sharing
 
 [Concept] Quand rire améliore la qualité
 - Nom: Amadou Koné 
