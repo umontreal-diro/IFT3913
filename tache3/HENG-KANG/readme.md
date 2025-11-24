@@ -1,6 +1,6 @@
 Sarah Heng et Flora Kang
 
 
-Lien vers fork: 
+Lien vers fork: https://github.com/SarahHCode/graphhopper
 
-Documentation: [README]
+Documentation: [Documentation.md](https://github.com/SarahHCode/graphhopper/blob/master/documentation.md)
