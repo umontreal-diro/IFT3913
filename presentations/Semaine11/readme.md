@@ -43,3 +43,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 [Concept] Le commit : un geste technique, une parole humaine 
 - Nom: Samuel Michaud
 - Présentation: https://docs.google.com/presentation/d/1LaIhgEtco3cj09mYZ4AlYzvsXrv47pvWqZ_jDeevb4w/edit?usp=sharing
+
+[Concept] Operational Excellence in April Fools’ Pranks 
+- Nom: Tai Le Foster-Knappe
+- Présentation: https://docs.google.com/presentation/d/1TAqxV3-s3bMiIcILL5ZuhlTUDVH0Qa371iMmzmXhG1o/edit?usp=sharing
