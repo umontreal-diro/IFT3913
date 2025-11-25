@@ -12,6 +12,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 [Concept] Les messages d’erreur absurdes et humoristiques
 - Nom: Bencheikh El Atmani Ayoub 
 - Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/ayoub_bencheikh_el_atmani_umontreal_ca/IQA1NWSPTpl6TYzqZtPXEbqZAR_nB5EppxstsGg_vj3yvWg?e=jUtusl
+
 [Concept] Little bobby tables - SQL injection et humour
 - Nom: Fatou Ndao
 - Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/fatou_ndao_umontreal_ca/IQC1Z2tA4QoLToJrEyqGT6xWAeooMLqUCMEgwRJs1J-jIfA?e=IgKfz8
@@ -27,6 +28,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 [Concept] Chaos Engineering humoristique – Netflix’s Chaos Monkey et ses amis.
 - Nom: Rayan Hidri
 - Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/rayan_hidri_umontreal_ca/IQBZc-XpSS19Tb2YC0BVvOirAXd0dh3LEVQkUWiiPoYv8i0?e=B1Ld7B
+
 [Concept] Stand-up Testing
 - Nom: Karim Hozaien
 - Présentation: https://docs.google.com/presentation/d/1edhegTqha0zH06hUA3h-L8u7R5KX5NOeyi93TgQaN6Q/edit?usp=sharing
