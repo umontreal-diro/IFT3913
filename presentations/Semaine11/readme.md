@@ -26,8 +26,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [Concept] Chaos Engineering humoristique – Netflix’s Chaos Monkey et ses amis.
 - Nom: Rayan Hidri
-- Présentation: https://udemontreal-my.sharepoint.com/:p:/r/personal/rayan_hidri_umontreal_ca/Documents/PresentationIFT3913.pptx?d=we9e573592d494d7dbd980b4055bce8ab&csf=1&web=1&e=Kl2cNU
-
+- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/rayan_hidri_umontreal_ca/IQBZc-XpSS19Tb2YC0BVvOirAXd0dh3LEVQkUWiiPoYv8i0?e=B1Ld7B
 [Concept] Stand-up Testing
 - Nom: Karim Hozaien
 - Présentation: https://docs.google.com/presentation/d/1edhegTqha0zH06hUA3h-L8u7R5KX5NOeyi93TgQaN6Q/edit?usp=sharing
