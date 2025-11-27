@@ -32,7 +32,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [] Agents IA autonomes pour la fiabilité en production 
 - Nom: Wayne Timmons
-- Présentation:
+- Présentation: https://udemontreal-my.sharepoint.com/:b:/r/personal/wayne_timmons_umontreal_ca/Documents/Wayne_Timmons_ift3913.pdf?csf=1&web=1&e=kje6NT
 
 [] Test fantôme
 - Nom: Patrick Kelvin Episseyo 
