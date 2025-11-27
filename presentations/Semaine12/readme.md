@@ -4,7 +4,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [concept] chaos engineering
 - Nom: Mandi Vigier
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1nD8Tkc1ozaNmw6L4yXbBXuPyVGRRdB8gvySSnFg6l4U/edit?usp=sharing
 
 [concept] injections de fautes
 - Nom: Islem Chokri
