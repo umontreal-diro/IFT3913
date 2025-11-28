@@ -26,9 +26,9 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Nom: Oumayma Haddour
 - Présentation: https: https://test-en-production-capture-and-replay.my.canva.site/capture-replay
 
-[concept] Feature Flags (dark launching et progressive rollout)
+[concept] Feature Flags 
 - Nom: Yassine Azmani
-- Présentation: 
+- Présentation: https://www.canva.com/design/DAG56FlSsXs/2IYAN60J6KW4g7TtiQ0-4g/edit
 
 [] Agents IA autonomes pour la fiabilité en production 
 - Nom: Wayne Timmons
