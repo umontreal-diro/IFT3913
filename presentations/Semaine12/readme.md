@@ -48,4 +48,4 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [démo]  Shadow Testing en production
 - Nom: Joseph Bombardier 
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1fJjAiGg9J081d5n4OST58KTX6OyM8VoTa2aUK7IN8LQ/edit?usp=sharing
