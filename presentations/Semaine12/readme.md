@@ -12,7 +12,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [concept] canary testing
 - Nom: Djuidje Christelle Phalonne
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1iSgFOjfdLuk0UMs1O_adZiTEPksDg2oS/edit?usp=sharing&ouid=107831554489071634803&rtpof=true&sd=true 
 
 [concept] tester la performance
 - Nom: Arthur Paul
