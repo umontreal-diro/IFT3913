@@ -40,7 +40,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [demo] [opentelemetry](https://opentelemetry.io/) pour l'observabilité en production
 - Nom: Adrian Briscaru
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1LC9d-AcKkyapbt_L_asar8Eqb-1wwNsN_xA6Qnl7WsQ/edit?usp=sharing
 
 [démo]  tests de performances avec K6 en javascript
 - Nom: Papa Moussa Diabate 
