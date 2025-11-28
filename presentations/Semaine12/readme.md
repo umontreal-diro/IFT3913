@@ -44,7 +44,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [démo]  tests de performances avec K6 en javascript
 - Nom: Papa Moussa Diabate 
-- Présentation:
+- Présentation: https://1drv.ms/p/c/fec23122736dd95d/ETi79gOdNB9JkHyQMAfmNYcBfbcZ_YFgpe1hggR97LFGJQ
 
 [démo]  Shadow Testing en production
 - Nom: Joseph Bombardier 
