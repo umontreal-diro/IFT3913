@@ -20,7 +20,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [concept] test de pénétration
 - Nom: Joaquim Sandler-Soussy
-- Présentation: https://1drv.ms/p/c/6cba8c24476f9c43/IQC8FIROMx1cT7dzY3YPdCLWAQ7W8QlK4vLIi0rUcwrZD5s?e=9fCt6Z
+- Présentation: https://1drv.ms/p/c/6cba8c24476f9c43/IQC8FIROMx1cT7dzY3YPdCLWAfVic8CMqAiAMB-ID22TqQ8?e=6Ryf5s
 
 [concept] capture and replay
 - Nom: Oumayma Haddour
