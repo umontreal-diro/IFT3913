@@ -36,7 +36,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [] Test fantôme
 - Nom: Patrick Kelvin Episseyo 
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1_vNYUoV-a7CL_f3Gt_faToosY3bbY66D9Uwy4NbEBMg/edit?usp=sharing
 
 [demo] [opentelemetry](https://opentelemetry.io/) pour l'observabilité en production
 - Nom: Adrian Briscaru
