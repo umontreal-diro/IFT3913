@@ -28,7 +28,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [concept] Feature Flags (dark launching et progressive rollout)
 - Nom: Yassine Azmani
-- Présentation: 
+- Présentation: https://www.canva.com/design/DAG56FlSsXs/2IYAN60J6KW4g7TtiQ0-4g/edit
 
 [] Agents IA autonomes pour la fiabilité en production 
 - Nom: Wayne Timmons
