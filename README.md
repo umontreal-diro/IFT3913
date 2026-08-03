@@ -76,13 +76,17 @@ Les étudiants sont évalués sur la base des 4 tâches décrites ci-dessous. Le
 - tâche #1: présentation individuelle (30%). Les étudiants choisissent un thème parmi tous ceux abordés chaque semaine et préparent une présentation technique de 7 minutes sur ce thème.
   - [instructions détaillés](./presentations/readme.md) 
   - date limite: jour du cours
+  - politique de retard: en cas d'absence au cours, il n'y a qu'une seule opportunité de reporter la présentation à un autre jour, à déterminer avec l'équipe enseignante
 - tâche #2: augmentation d'une suite de tests automatique (30%). Les étudiants travaillent en binôme. Chaque binôme augmente la suite de tests de [Graphhopper](https://github.com/umontreal-diro/graphhopper) sélectionnées pour le cours, ajoute, documente et automatise l'exécution de 10 nouveaux tests unitaires. Cf. les [instructions détaillées](./tache2/readme.md) et les [critères pour la tâche 2](#tâche-2-tests-unitaires-automatiques). 
   - [instructions détaillées](./tache2/readme.md)
   - date limite: vendredi 10 octobre, 17h EST 
+  - politique de retard: 10% retenus sur la note pour un rendu dans les 24 heures qui suivent la date limite; 50% retenus pour un rendu entre 24 et 48 heures en retard; pas de note pour un rendu plus de 48 heures en retard
 - tâche #3: automatisation des tests d'intégration (30%). Les étudiants travaillent en binôme, le même binôme que pour la tâche #2. Chaque binôme modifie [Graphhopper](https://github.com/umontreal-diro/graphhopper) pour le test d'intégration.  Cf. les [instructions détaillées](./tache3/readme.md) et les [critères pour la tâche 3](#tâche-3-tests-dintégration).
   - [instructions détaillées](./tache3/readme.md)
   - date limite: vendredi 21 novembre, 17h EST
+  - politique de retard: 10% retenus sur la note pour un rendu dans les 24 heures qui suivent la date limite; 50% retenus pour un rendu entre 24 et 48 heures en retard; pas de note pour un rendu plus de 48 heures en retard
 - tâche #4: répondre à 3 quizz (10%). Vous recevrez 3 quizz au cours du semestre qui aborderont des points abordés dans les différentes présentations du cours. Les 3 quizz seront répartis sur le semestre à des dates non déterminées (a.k.a quizz surprises). Les quizz seront distribués via Studium.
+  - politique de retard: les quizz sont ouverts pendant 48 heures, aucun quizz ne pourra être fait en-dehors de cette période.
 
 # Critères d'évaluation
 
