@@ -21,6 +21,6 @@ Pour la tâche 2, chaque binôme doit accomplir les étapes suivantes:
 
 Une fois la tâche accomplie, les étudiants font une nouvelle 'pull request' sur le sous-répertoire de leux binôme et ajoutent les informations suivantes dans le fichier readme:
 - un lien vers le référentiel (repository) Github qui inclut leur tâche
-- un lien vers la page qui documente la tâche
+- un lien vers la page README.md qui documente la tâche
 
 La date limite pour la seconde 'pull request' est indiquée sur la [page principale](../README.md/#evaluation-ift3913---a25) du cours.
