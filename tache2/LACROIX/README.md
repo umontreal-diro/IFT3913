@@ -1,1 +1,0 @@
-Félix Lacroix et ?
