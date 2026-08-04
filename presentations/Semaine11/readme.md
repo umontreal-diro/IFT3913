@@ -6,45 +6,45 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 
 [Concept] Easter eggs dans la programmation
-- Nom: Jonathan Beaulieu
-- Présentation: https://docs.google.com/presentation/d/1-VXl0bh6Ovp4zXDhKDEos5-_g54OD3IKHAi2YM3rOdQ/edit?slide=id.p#slide=id.p
+- Nom:
+- Présentation:
 
 [Concept] Les messages d’erreur absurdes et humoristiques
-- Nom: Bencheikh El Atmani Ayoub 
-- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/ayoub_bencheikh_el_atmani_umontreal_ca/IQA1NWSPTpl6TYzqZtPXEbqZAR_nB5EppxstsGg_vj3yvWg?e=jUtusl
+- Nom:
+- Présentation:
 
 [Concept] Little bobby tables - SQL injection et humour
-- Nom: Fatou Ndao
-- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/fatou_ndao_umontreal_ca/IQC1Z2tA4QoLToJrEyqGT6xWAeooMLqUCMEgwRJs1J-jIfA?e=IgKfz8
+- Nom:
+- Présentation:
 
 [Concept] La loi de Murphy
-- Nom: Amir Hannache
-- Présentation: https://docs.google.com/presentation/d/1W3tgIUfq2RX34jn5_fZxSS0hGTMk4M1D5F6wct5e08U/edit?usp=sharing
+- Nom:
+- Présentation:
 
 [demo] TheFuck 
-- Nom: Guillaume Sabourin
-- Présentation: https://1drv.ms/p/c/2742a05e8fe21e38/IQBCfTNEOM8nTJnDo8mm3ko9ARBHTqYgIKZC45FB-Pp7wC0?e=TrXnae
+- Nom:
+- Présentation:
 
 [Concept] Chaos Engineering humoristique – Netflix’s Chaos Monkey et ses amis.
-- Nom: Rayan Hidri
-- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/rayan_hidri_umontreal_ca/IQBZc-XpSS19Tb2YC0BVvOirAXd0dh3LEVQkUWiiPoYv8i0?e=B1Ld7B
+- Nom:
+- Présentation:
 
 [Concept] Stand-up Testing
-- Nom: Karim Hozaien
-- Présentation: https://docs.google.com/presentation/d/1edhegTqha0zH06hUA3h-L8u7R5KX5NOeyi93TgQaN6Q/edit?usp=sharing
+- Nom:
+- Présentation:
 
 [Concept] Quand rire améliore la qualité
-- Nom: Amadou Koné 
-- Présentation: https://docs.google.com/presentation/d/1B0o0hBXB25RTOdnmU2EyQXT4VbwKMNSeZotlND4kuX0/edit?usp=sharing
+- Nom:
+- Présentation:
 
 [concept] L’humour dans les commentaires de code
-- Nom: Félix Lacroix
-- Présentation: https://docs.google.com/presentation/d/10DGY8qGmrx2MClH8gq-51tXUDcN6Rbfk/edit?usp=sharing&ouid=102004190283598951957&rtpof=true&sd=true
+- Nom:
+- Présentation:
 
 [Concept] Le commit : un geste technique, une parole humaine 
-- Nom: Samuel Michaud
-- Présentation: https://docs.google.com/presentation/d/1LaIhgEtco3cj09mYZ4AlYzvsXrv47pvWqZ_jDeevb4w/edit?usp=sharing
+- Nom:
+- Présentation:
 
 [Concept] L’excellence opérationnelle dans les farces du poisson d’avril
-- Nom: Tai Foster-Knappe
-- Présentation: https://docs.google.com/presentation/d/1TAqxV3-s3bMiIcILL5ZuhlTUDVH0Qa371iMmzmXhG1o/edit?usp=sharing
+- Nom:
+- Présentation:

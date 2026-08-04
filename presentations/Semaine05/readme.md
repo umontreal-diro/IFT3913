@@ -3,49 +3,49 @@
 Pour faire une présentation sur le test unitaire avancé, choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
 
 [concept] Test par fuzzing
-- Nom: Yamir Alejandro Poldo Silva
-- Présentation: https://github.com/Yamires/Presentation_Fuzzing_IFT3913
+- Nom:
+- Présentation: 
 
 [concept] Test basé sur les propriétés
-- Nom: Mohamed Atmani
-- Présentation: https://docs.google.com/presentation/d/1OF0I-to3vDV2g2PVwN6eSoFEpA6ePSkm_GZX3FWQ6oM/edit?usp=sharing
+- Nom:
+- Présentation: 
 
 [concept] Tests paramétrés
-- Nom: Jérémie Dupuis
-- Présentation: https://jeremiedupuis.com/ift3913/presentation.pdf
+- Nom:
+- Présentation: 
 
 [concept] Mocks et stubs
-- Nom: Laurent POLZIN
-- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/laurent_polzin_umontreal_ca/EbcmtE-gssJNmmB4ZIbdoAsB-hTj24Sz9TBwoDW1_NOLdg?e=OAUssH
+- Nom:
+- Présentation: 
 
 [demo] [Hypothesis](https://hypothesis.readthedocs.io/en/latest/) pour le test basé sur les propriétés en Python
-- Nom: Aissatou Ndiaye
-- Présentation: https://docs.google.com/presentation/d/19q9bhJLJRHZJRHAKtX5Jqh45EUm-J56itKNSk3ZQwOI/edit?usp=sharing
+- Nom:
+- Présentation: 
 
 [demo] [Mockito](https://site.mockito.org/) pour les mocks en Java
-- Nom: Sarah Heng
-- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/sarah_heng_umontreal_ca/EWHKqQH-GE1CptxLagMx7ZUBUCOx9ps3TCvqlp-ncgaFRg?e=n6zngj
+- Nom:
+- Présentation: 
 
 [demo] [msw](https://github.com/mswjs/msw) pour les mocks avec graphQL
-- Nom: Simon Voglimacci Stéphanopoli
-- Présentation: https://github.com/svoglimacci/msw-graphql-demo
+- Nom:
+- Présentation: 
 
 [demo] [Cucumber](https://cucumber.io/) pour le test basé comportement en Java
-- Nom: Marcelo Amarilla
-- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/marcelo_david_amarilla-hernandez_umontreal_ca/EZk5QD8EhTBPsLPAaIhO420Bh3UpGjYCn1qti8PqraydOA?e=3zTffy
+- Nom:
+- Présentation: 
 
 [demo] [Java faker](https://github.com/DiUS/java-faker) pour l'isolation de tests en Java
-- Nom: Charlie Peng
-- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/charlie_peng_umontreal_ca/EdYfHDlDCXRMih4QtzJbFTcBhpL-yo8Krk9qLR18A5fNyQ?e=tml1qv
+- Nom:
+- Présentation: 
 
 [demo] [AutoParams](https://github.com/AutoParams/AutoParams) pour les tests paramétrés en Java
-- Nom: William Caron-Bastarache
-- Présentation: https://github.com/will13cb/autoparams-demo
+- Nom:
+- Présentation: 
 
 [demo] [afl++](https://github.com/AFLplusplus/AFLplusplus)
-- Nom:Emmanuel Paraison
-- Présentation: https://docs.google.com/presentation/d/16JTUXJTkwS-xUi3lI86ozgNiIGEMLgc2I8HO2HCf7qs/edit?slide=id.g388b4f86af9_0_0#slide=id.g388b4f86af9_0_0
+- Nom:
+- Présentation: 
 
 [demo] [XCUITest](https://developer.apple.com/documentation/xctest?utm_source=chatgpt.com)  pour l’automatisation des tests UI en Swift
-- Nom: Mathias La Rochelle 
-- Présentation: https://github.com/mrquaternion/DemoXCUIAutomation
+- Nom:
+- Présentation: 
