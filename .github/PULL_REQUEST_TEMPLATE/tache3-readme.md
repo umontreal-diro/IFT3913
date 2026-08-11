@@ -1,9 +1,9 @@
 # Tâche 3
 
-## Binome
-- Nom 1
-- Nom 2
+| | Nom complet | Matricule |
+|---|---|---|
+| Membre 1 | NOM Prénom | 00000000 |
+| Membre 2 | NOM Prénom | 00000000 |
 
-## Liens 
-- [Lien vers le répertoire GitHub](https://github.com/.../...)
-- [Documentation vers la documentation](https://github.com/.../readme)
+- Lien vers le répertoire GitHub :
+- Lien vers le README du répertoire :
