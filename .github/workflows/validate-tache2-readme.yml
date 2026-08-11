@@ -14,44 +14,13 @@ jobs:
       contents: write
 
     steps:
-      - name: Vérifier si la PR est trop tôt
-        id: check-early
-        env:
-          GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        run: |
-          PR_CREATED="${{ github.event.pull_request.created_at }}"
-          CREATED_EPOCH=$(date -d "$PR_CREATED" +%s)
-          # 4 days before Oct 06 = Oct 02 00:00 EDT = Oct 02 04:00 UTC
-          EARLIEST_EPOCH=$(date -d "2026-10-02T04:00:00Z" +%s)
-
-          if [ "$CREATED_EPOCH" -lt "$EARLIEST_EPOCH" ]; then
-            echo "too_early=true" >> $GITHUB_OUTPUT
-          else
-            echo "too_early=false" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Fermer la PR trop tôt
-        if: steps.check-early.outputs.too_early == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        run: |
-          gh pr comment ${{ github.event.pull_request.number }} --body "⏰ Cette PR a été soumise trop tôt.
-
-          Les soumissions pour la tâche 2 sont acceptées à partir du **2 octobre 2026**.
-
-          La PR est automatiquement fermée. Veuillez soumettre à nouveau après cette date."
-
-          gh pr close ${{ github.event.pull_request.number }}
-
       - name: Checkout
-        if: steps.check-early.outputs.too_early == 'false'
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
 
       - name: Obtenir les fichiers modifiés
-        if: steps.check-early.outputs.too_early == 'false'
         id: changed-files
         uses: tj-actions/changed-files@v40
         with:
@@ -62,7 +31,6 @@ jobs:
           sha: ${{ github.event.pull_request.head.sha }}
 
       - name: Valider les changements
-        if: steps.check-early.outputs.too_early == 'false'
         id: validate
         run: |
           set -e
@@ -165,9 +133,21 @@ jobs:
           fi
 
           # For NEW files: links are optional (values can be empty)
-          # For MODIFIED files (updates): only the links section should change
+          # For MODIFIED files (updates): this is a links-only PR — apply time restriction and validate links
           if [ "$is_new" = false ]; then
-            # This is an update — only the links section should change
+            # Links PR must be within 4 days of deadline (Oct 02 onwards)
+            PR_CREATED="${{ github.event.pull_request.created_at }}"
+            CREATED_EPOCH=$(date -d "$PR_CREATED" +%s)
+            # 4 days before Oct 06 = Oct 02 00:00 EDT = Oct 02 04:00 UTC
+            EARLIEST_EPOCH=$(date -d "2026-10-02T04:00:00Z" +%s)
+
+            if [ "$CREATED_EPOCH" -lt "$EARLIEST_EPOCH" ]; then
+              echo "error=Les liens ne peuvent être soumis qu'à partir du 2 octobre 2026 (4 jours avant la date limite)." >> $GITHUB_OUTPUT
+              echo "valid=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+
+            # Only the links section should change
             diff_output=$(git diff "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}" -- "$file")
 
             added_lines=$(echo "$diff_output" | grep "^+" | grep -v "^+++" | sed 's/^+//')
@@ -200,7 +180,7 @@ jobs:
               exit 0
             fi
 
-            # If links are present, validate they are GitHub URLs
+            # Validate links are GitHub URLs (non-GitHub URLs are rejected)
             repo_link=$(echo "$content" | grep -E '^- Lien vers le répertoire GitHub :' | sed 's/^- Lien vers le répertoire GitHub :[[:space:]]*//')
             readme_link=$(echo "$content" | grep -E '^- Lien vers le README du répertoire :' | sed 's/^- Lien vers le README du répertoire :[[:space:]]*//')
 
@@ -224,7 +204,7 @@ jobs:
           echo "valid=true" >> $GITHUB_OUTPUT
 
       - name: Approuver et fusionner
-        if: steps.check-early.outputs.too_early == 'false' && steps.validate.outputs.valid == 'true'
+        if: steps.validate.outputs.valid == 'true'
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
@@ -232,7 +212,7 @@ jobs:
           gh pr merge ${{ github.event.pull_request.number }} --squash
 
       - name: Commenter et fermer la PR invalide
-        if: steps.check-early.outputs.too_early == 'false' && steps.validate.outputs.valid == 'false'
+        if: steps.validate.outputs.valid == 'false'
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
