@@ -12,7 +12,7 @@ Les étudiant(e)s sont évalué(e)s sur la base de 4 [tâches](#evaluation-ift39
 
 Prérequis: programmation Java, [git et github](https://github.com/umontreal-diro/IFT3913/issues/13).
 
-Le cours a lieu en personne les mardi de 12.30 à 15.30. Les séances de travaux pratique ont lieu les jeudis de 8.30 à 10.30, en salle Z-317 au [Pavillon Claire-McNicoll](https://plancampus.umontreal.ca/montreal/?tx_udemplancampus_pi1%5Bbuilding%5D=384&tx_udemplancampus_pi1%5Baction%5D=show&tx_udemplancampus_pi1%5Bcontroller%5D=Building&cHash=21d285a99ff9b02e3952d15b1a39ab0f).
+Le cours a lieu en personne les mardis de 12.30 à 15.30 en salle 3110_563A au [Pavillon de la Faculté d'Aménagement]. Les séances de travaux pratique ont lieu les jeudis de 8.30 à 10.30, en salle Z-317 au [Pavillon Claire-McNicoll](https://plancampus.umontreal.ca/montreal/?tx_udemplancampus_pi1%5Bbuilding%5D=384&tx_udemplancampus_pi1%5Baction%5D=show&tx_udemplancampus_pi1%5Bcontroller%5D=Building&cHash=21d285a99ff9b02e3952d15b1a39ab0f).
 
 Vous pouvez contacter les assistants de cours, Meriem, Yogya et Imen, à cette adresse: dift3913@iro.umontreal.ca
 
@@ -79,11 +79,11 @@ Les étudiants sont évalués sur la base des 4 tâches décrites ci-dessous. Le
   - politique de retard: en cas d'absence au cours, il n'y a qu'une seule opportunité de reporter la présentation à un autre jour, à déterminer avec l'équipe enseignante
 - tâche #2: augmentation d'une suite de tests automatique (30%). Les étudiants travaillent en binôme. Chaque binôme augmente la suite de tests de [Graphhopper](https://github.com/umontreal-diro/graphhopper) sélectionnées pour le cours, ajoute, documente et automatise l'exécution de 10 nouveaux tests unitaires. Cf. les [instructions détaillées](./tache2/readme.md) et les [critères pour la tâche 2](#tâche-2-tests-unitaires-automatiques). 
   - [instructions détaillées](./tache2/readme.md)
-  - date limite: vendredi 10 octobre, 17h EST 
+  - date limite: mardi 13 octobre, 17h EDT 
   - politique de retard: 10% retenus sur la note pour un rendu dans les 24 heures qui suivent la date limite; 50% retenus pour un rendu entre 24 et 48 heures en retard; pas de note pour un rendu plus de 48 heures en retard
 - tâche #3: automatisation des tests d'intégration (30%). Les étudiants travaillent en binôme, le même binôme que pour la tâche #2. Chaque binôme modifie [Graphhopper](https://github.com/umontreal-diro/graphhopper) pour le test d'intégration.  Cf. les [instructions détaillées](./tache3/readme.md) et les [critères pour la tâche 3](#tâche-3-tests-dintégration).
   - [instructions détaillées](./tache3/readme.md)
-  - date limite: vendredi 21 novembre, 17h EST
+  - date limite: mardi 17 novembre, 17h EST
   - politique de retard: 10% retenus sur la note pour un rendu dans les 24 heures qui suivent la date limite; 50% retenus pour un rendu entre 24 et 48 heures en retard; pas de note pour un rendu plus de 48 heures en retard
 - tâche #4: répondre à 3 quizz (10%). Vous recevrez 3 quizz au cours du semestre qui aborderont des points abordés dans les différentes présentations du cours. Les 3 quizz seront répartis sur le semestre à des dates non déterminées (a.k.a quizz surprises). Les quizz seront distribués via Studium.
   - politique de retard: les quizz sont ouverts pendant 48 heures, aucun quizz ne pourra être fait en-dehors de cette période.
