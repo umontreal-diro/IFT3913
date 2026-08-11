@@ -126,9 +126,18 @@ jobs:
           # ── Collect all submissions ──
           declare -A mat_to_folder
           declare -A mat_to_name
-          declare -A mat_has_links
+          declare -A mat_link_status
           declare -A mat_readme_date
           declare -A mat_links_date
+
+          # Helper: check if a link is a real URL (not empty, not a placeholder with ...)
+          is_real_link() {
+            local link="$1"
+            [ -z "$link" ] && return 1
+            echo "$link" | grep -qE '\.\.\.' && return 1
+            echo "$link" | grep -qE '^https://github\.com/' && return 0
+            return 1
+          }
 
           for dir in "$TASK_DIR"/*/; do
             [ -d "$dir" ] || continue
@@ -147,6 +156,25 @@ jobs:
             first_commit_date=$(git log --follow --diff-filter=A --format="%aI" -- "$readme" | tail -1)
             last_commit_date=$(git log --format="%aI" -1 -- "$readme")
 
+            # Extract links
+            repo_link=$(grep -E '^- Lien vers le répertoire GitHub :' "$readme" | sed 's/^- Lien vers le répertoire GitHub :[[:space:]]*//' || true)
+            readme_link=$(grep -E '^- Lien vers le README du répertoire :' "$readme" | sed 's/^- Lien vers le README du répertoire :[[:space:]]*//' || true)
+
+            # Determine link status: real / placeholder / none
+            link_status="none"
+            if is_real_link "$repo_link" && is_real_link "$readme_link"; then
+              link_status="real"
+            elif [ -n "$repo_link" ] || [ -n "$readme_link" ]; then
+              # At least one link field has content but it's not a real link
+              if echo "$repo_link" | grep -qE '\.\.\.' || echo "$readme_link" | grep -qE '\.\.\.'; then
+                link_status="placeholder"
+              elif [ -z "$repo_link" ] && [ -z "$readme_link" ]; then
+                link_status="none"
+              else
+                link_status="partial"
+              fi
+            fi
+
             # Extract matricules from table
             while IFS= read -r line; do
               mat=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $4); print $4}')
@@ -155,16 +183,9 @@ jobs:
                 mat_to_folder["$mat"]="$folder_name"
                 mat_to_name["$mat"]="$name_val"
                 mat_readme_date["$mat"]="$first_commit_date"
-
-                # Check if links are filled in
-                repo_link=$(grep -E '^- Lien vers le répertoire GitHub :' "$readme" | sed 's/^- Lien vers le répertoire GitHub :[[:space:]]*//' || true)
-                readme_link=$(grep -E '^- Lien vers le README du répertoire :' "$readme" | sed 's/^- Lien vers le README du répertoire :[[:space:]]*//' || true)
-
-                if [ -n "$repo_link" ] && [ -n "$readme_link" ]; then
-                  mat_has_links["$mat"]="true"
+                mat_link_status["$mat"]="$link_status"
+                if [ "$link_status" = "real" ]; then
                   mat_links_date["$mat"]="$last_commit_date"
-                else
-                  mat_has_links["$mat"]="false"
                 fi
               fi
             done < <(grep -E '^\|[[:space:]]*Membre [12]' "$readme" 2>/dev/null || true)
@@ -181,8 +202,10 @@ jobs:
           # Categories
           not_submitted=""
           not_submitted_count=0
-          submitted_no_links=""
-          submitted_no_links_count=0
+          submitted_names_only=""
+          submitted_names_only_count=0
+          submitted_placeholder=""
+          submitted_placeholder_count=0
           submitted_complete=""
           submitted_complete_count=0
           late_submissions=""
@@ -198,18 +221,16 @@ jobs:
             total_students=$((total_students + 1))
 
             if [ -z "${mat_to_folder[$matricule]+x}" ]; then
-              # Not submitted at all
               not_submitted="${not_submitted}| ${name} | ${matricule} |\n"
               not_submitted_count=$((not_submitted_count + 1))
             else
-              # Submitted — check timing and links
               submit_date="${mat_readme_date[$matricule]}"
               submit_epoch=0
               if [ -n "$submit_date" ]; then
                 submit_epoch=$(date -d "$submit_date" +%s 2>/dev/null || echo "0")
               fi
 
-              has_links="${mat_has_links[$matricule]}"
+              link_status="${mat_link_status[$matricule]}"
               folder="${mat_to_folder[$matricule]}"
 
               # Categorize by submission time
@@ -221,13 +242,21 @@ jobs:
                 late_count=$((late_count + 1))
               fi
 
-              if [ "$has_links" = "true" ]; then
-                submitted_complete="${submitted_complete}| ${name} | ${matricule} | ${folder} |\n"
-                submitted_complete_count=$((submitted_complete_count + 1))
-              else
-                submitted_no_links="${submitted_no_links}| ${name} | ${matricule} | ${folder} |\n"
-                submitted_no_links_count=$((submitted_no_links_count + 1))
-              fi
+              # Categorize by link status
+              case "$link_status" in
+                real)
+                  submitted_complete="${submitted_complete}| ${name} | ${matricule} | ${folder} |\n"
+                  submitted_complete_count=$((submitted_complete_count + 1))
+                  ;;
+                placeholder|partial)
+                  submitted_placeholder="${submitted_placeholder}| ${name} | ${matricule} | ${folder} |\n"
+                  submitted_placeholder_count=$((submitted_placeholder_count + 1))
+                  ;;
+                none|*)
+                  submitted_names_only="${submitted_names_only}| ${name} | ${matricule} | ${folder} |\n"
+                  submitted_names_only_count=$((submitted_names_only_count + 1))
+                  ;;
+              esac
             fi
           done < <(tail -n +2 "$CSV_FILE")
 
@@ -237,16 +266,17 @@ jobs:
           echo "| Catégorie | Nombre |" >> "$REPORT"
           echo "|-----------|--------|" >> "$REPORT"
           echo "| Étudiants inscrits | **${total_students}** |" >> "$REPORT"
-          echo "| Soumissions complètes (readme + liens) | **${submitted_complete_count}** |" >> "$REPORT"
-          echo "| Soumissions sans liens | **${submitted_no_links_count}** |" >> "$REPORT"
-          echo "| Pas de soumission | **${not_submitted_count}** |" >> "$REPORT"
+          echo "| Soumissions complètes (readme + vrais liens) | **${submitted_complete_count}** |" >> "$REPORT"
+          echo "| Liens placeholder (non remplacés) | **${submitted_placeholder_count}** |" >> "$REPORT"
+          echo "| Noms seulement (pas de liens) | **${submitted_names_only_count}** |" >> "$REPORT"
+          echo "| Pas de soumission (aucune PR) | **${not_submitted_count}** |" >> "$REPORT"
           echo "| Soumissions en retard (après minuit jour 1) | **${late_count}** |" >> "$REPORT"
           echo "| Soumissions très en retard (après minuit jour 2+) | **${very_late_count}** |" >> "$REPORT"
           echo "" >> "$REPORT"
 
           # ── Not submitted ──
           if [ -n "$not_submitted" ]; then
-            echo "### Étudiants sans soumission" >> "$REPORT"
+            echo "### Étudiants sans soumission (aucune PR)" >> "$REPORT"
             echo "" >> "$REPORT"
             echo "| Nom | Matricule |" >> "$REPORT"
             echo "|-----|-----------|" >> "$REPORT"
@@ -254,15 +284,27 @@ jobs:
             echo "" >> "$REPORT"
           fi
 
-          # ── Submitted without links ──
-          if [ -n "$submitted_no_links" ]; then
-            echo "### Soumissions sans liens" >> "$REPORT"
+          # ── Submitted with placeholder links ──
+          if [ -n "$submitted_placeholder" ]; then
+            echo "### Liens placeholder (non remplacés)" >> "$REPORT"
             echo "" >> "$REPORT"
-            echo "Ces étudiants ont soumis leur readme mais n'ont pas encore ajouté les liens." >> "$REPORT"
+            echo "Ces étudiants ont soumis leur readme mais les liens contiennent encore les valeurs du modèle (ex: \`https://github.com/.../...\`)." >> "$REPORT"
             echo "" >> "$REPORT"
             echo "| Nom | Matricule | Dossier |" >> "$REPORT"
             echo "|-----|-----------|---------|" >> "$REPORT"
-            echo -e "$submitted_no_links" >> "$REPORT"
+            echo -e "$submitted_placeholder" >> "$REPORT"
+            echo "" >> "$REPORT"
+          fi
+
+          # ── Submitted names only (no links at all) ──
+          if [ -n "$submitted_names_only" ]; then
+            echo "### Noms seulement (pas de liens)" >> "$REPORT"
+            echo "" >> "$REPORT"
+            echo "Ces étudiants ont soumis leur readme avec noms et matricules mais n'ont pas encore ajouté de liens." >> "$REPORT"
+            echo "" >> "$REPORT"
+            echo "| Nom | Matricule | Dossier |" >> "$REPORT"
+            echo "|-----|-----------|---------|" >> "$REPORT"
+            echo -e "$submitted_names_only" >> "$REPORT"
             echo "" >> "$REPORT"
           fi
 
@@ -288,7 +330,7 @@ jobs:
 
           # ── Complete submissions ──
           if [ -n "$submitted_complete" ]; then
-            echo "### Soumissions complètes" >> "$REPORT"
+            echo "### Soumissions complètes (readme + vrais liens)" >> "$REPORT"
             echo "" >> "$REPORT"
             echo "| Nom | Matricule | Dossier |" >> "$REPORT"
             echo "|-----|-----------|---------|" >> "$REPORT"
