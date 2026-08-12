@@ -1,6 +1,6 @@
 # IFT3913 - Qualité du logiciel 
 
-Ce cours est offert à l'automne 2025. Il est organisé suivant le calendrier ci-dessous.
+Ce cours est offert à l'automne 2026. Il est organisé suivant le calendrier ci-dessous.
 
 Avec ce cours, les étudiant(e)s auront acquis les compétences suivantes: 
 * évaluation automatique de la qualité logicielle
@@ -12,7 +12,7 @@ Les étudiant(e)s sont évalué(e)s sur la base de 4 [tâches](#evaluation-ift39
 
 Prérequis: programmation Java, [git et github](https://github.com/umontreal-diro/IFT3913/issues/13).
 
-Le cours a lieu en personne les mardis de 12.30 à 15.30 en salle 3110_563A au [Pavillon de la Faculté d'Aménagement]. Les séances de travaux pratique ont lieu les jeudis de 8.30 à 10.30, en salle Z-317 au [Pavillon Claire-McNicoll](https://plancampus.umontreal.ca/montreal/?tx_udemplancampus_pi1%5Bbuilding%5D=384&tx_udemplancampus_pi1%5Baction%5D=show&tx_udemplancampus_pi1%5Bcontroller%5D=Building&cHash=21d285a99ff9b02e3952d15b1a39ab0f).
+Le cours a lieu en personne les mardis de 12.30 à 15.30 dans l'amphitéâtre 3110 au [Pavillon de la Faculté d'Aménagement](https://plancampus.umontreal.ca/montreal/#iw|342). Les séances de travaux pratique ont lieu les jeudis de 8.30 à 10.30, en salle Z-317 au [Pavillon Claire-McNicoll](https://plancampus.umontreal.ca/montreal/?tx_udemplancampus_pi1%5Bbuilding%5D=384&tx_udemplancampus_pi1%5Baction%5D=show&tx_udemplancampus_pi1%5Bcontroller%5D=Building&cHash=21d285a99ff9b02e3952d15b1a39ab0f).
 
 Vous pouvez contacter les assistants de cours, Meriem, Yogya et Imen, à cette adresse: dift3913@iro.umontreal.ca
 
