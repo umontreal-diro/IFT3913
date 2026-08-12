@@ -13,8 +13,10 @@ Pour la tâche 3, chaque binôme doit accomplir les étapes suivantes:
 
 ## Instructions pour rendre la tâche 3
 
-Une fois la tâche accomplie, les étudiants font une 'pull request' sur ce répertoire avec un répertoire de la forme 'NOM1-NOM2/', qui inclut un fichier readme.md indiquant 
+Une fois la tâche accomplie, les étudiants font une 'pull request' sur ce répertoire avec un répertoire de la forme 'NOM1_NOM2/', qui inclut un fichier readme.md indiquant 
 - le référentiel (repository) Github qui inclut la github action qui a été modifiée
 - un lien vers la page README.md qui documente votre travail pour la tâche 3
+
+Le format pour la PR est documenté ici: [.github/PULL_REQUEST_TEMPLATE/tache2-readme.md](.github/PULL_REQUEST_TEMPLATE/tache2-readme.md).
 
 La date limite pour cette 'pull request' est indiquée sur la [page principale](../README.md/#evaluation-ift3913---a25) du cours.

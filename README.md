@@ -8,13 +8,13 @@ Avec ce cours, les étudiant(e)s auront acquis les compétences suivantes:
 * apprentissage par diverses sources de connaissances
 * curiosité et humour pour le logiciel
 
-Les étudiant(e)s sont évalué(e)s sur la base de 4 [tâches](#evaluation-ift3913---a25).
+Les étudiant(e)s sont évalué(e)s sur la base de 4 [tâches](#evaluation-ift3913-a26).
 
 Prérequis: programmation Java, [git et github](https://github.com/umontreal-diro/IFT3913/issues/13).
 
 Le cours a lieu en personne les mardis de 12.30 à 15.30 dans l'amphitéâtre 3110 au [Pavillon de la Faculté d'Aménagement](https://plancampus.umontreal.ca/montreal/#iw|342). Les séances de travaux pratique ont lieu les jeudis de 8.30 à 10.30, en salle Z-317 au [Pavillon Claire-McNicoll](https://plancampus.umontreal.ca/montreal/?tx_udemplancampus_pi1%5Bbuilding%5D=384&tx_udemplancampus_pi1%5Baction%5D=show&tx_udemplancampus_pi1%5Bcontroller%5D=Building&cHash=21d285a99ff9b02e3952d15b1a39ab0f).
 
-Vous pouvez contacter les assistants de cours, Meriem, Yogya et Imen, à cette adresse: dift3913@iro.umontreal.ca
+Vous pouvez contacter les assistantes de cours, Meriem, Yogya et Madjda, à cette adresse: dift3913@iro.umontreal.ca
 
 ## Semaine #1 mardi 1er septembre: Introduction
 - présentation du cours et des modalités
@@ -69,20 +69,17 @@ Vous pouvez contacter les assistants de cours, Meriem, Yogya et Imen, à cette a
 - Discussion ouverte sur la qualité logicielle et le déroulé d'IFT3915-A25
 - matériel préparatoire: [On the Costs and Benefits of Adopting Lifelong Learning for Software Analytics](https://dl.acm.org/doi/pdf/10.1145/3639477.3639717)
 
-# Evaluation IFT3913 - A26
+# Evaluation IFT3913 A26
 
-Les étudiants sont évalués sur la base des 4 tâches décrites ci-dessous. Les tâches #1 et #4 sont individuelles, les tâches #2 et #3 se font en binôme. Le poids respectif de chaque tâche est indiqué ci-dessous. La correspondance entre les notes de chaque tâche et la note litérale est dynamique.
+L'évaluation se fait sur la base des 4 tâches décrites ci-dessous. Les tâches #1 et #4 sont individuelles, les tâches #2 et #3 se font en binôme. Le poids respectif de chaque tâche est indiqué ci-dessous. La correspondance entre les notes de chaque tâche et la note litérale est dynamique.
 
-- tâche #1: présentation individuelle (30%). Les étudiants choisissent un thème parmi tous ceux abordés chaque semaine et préparent une présentation technique de 7 minutes sur ce thème.
-  - [instructions détaillés](./presentations/readme.md) 
+- tâche #1: présentation individuelle (30%). Les étudiant(e)s choisissent un thème parmi tous ceux abordés chaque semaine et préparent une présentation technique de 7 minutes sur ce thème. Cf.les [instructions détaillées](./presentations/readme.md) et les [critères d'évaluation pour la tâche 1](#tâche-1).
   - date limite: jour du cours
   - politique de retard: en cas d'absence au cours, il n'y a qu'une seule opportunité de reporter la présentation à un autre jour, à déterminer avec l'équipe enseignante
-- tâche #2: augmentation d'une suite de tests automatique (30%). Les étudiants travaillent en binôme. Chaque binôme augmente la suite de tests de [Graphhopper](https://github.com/umontreal-diro/graphhopper) sélectionnées pour le cours, ajoute, documente et automatise l'exécution de 10 nouveaux tests unitaires. Cf. les [instructions détaillées](./tache2/readme.md) et les [critères pour la tâche 2](#tâche-2-tests-unitaires-automatiques). 
-  - [instructions détaillées](./tache2/readme.md)
+- tâche #2: augmentation d'une suite de tests automatique (30%). Les étudiants travaillent en binôme. Chaque binôme augmente la suite de tests de [Graphhopper](https://github.com/umontreal-diro/graphhopper). Cf. les [instructions détaillées](./tache2/readme.md) et les [critères pour la tâche 2](#tâche-2). 
   - date limite: mardi 13 octobre, 17h EDT 
   - politique de retard: 10% retenus sur la note pour un rendu dans les 24 heures qui suivent la date limite; 50% retenus pour un rendu entre 24 et 48 heures en retard; pas de note pour un rendu plus de 48 heures en retard
-- tâche #3: automatisation des tests de sécurité (30%). Les étudiants travaillent en binôme, le même binôme que pour la tâche #2. Chaque binôme modifie [Graphhopper](https://github.com/umontreal-diro/graphhopper) pour le test d'intégration.  Cf. les [instructions détaillées](./tache3/readme.md) et les [critères pour la tâche 3](#tâche-3-tests-dintégration).
-  - [instructions détaillées](./tache3/readme.md)
+- tâche #3: automatisation des tests de sécurité (30%). Les étudiants travaillent en binôme, le même binôme que pour la tâche #2. Chaque binôme modifie [Graphhopper](https://github.com/umontreal-diro/graphhopper) pour le test d'intégration.  Cf. les [instructions détaillées](./tache3/readme.md) et les [critères pour la tâche 3](#tâche-3).
   - date limite: mardi 17 novembre, 17h EST
   - politique de retard: 10% retenus sur la note pour un rendu dans les 24 heures qui suivent la date limite; 50% retenus pour un rendu entre 24 et 48 heures en retard; pas de note pour un rendu plus de 48 heures en retard
 - tâche #4: répondre à 3 quizz (10%). Vous recevrez 3 quizz au cours du semestre qui aborderont des points abordés dans les différentes présentations du cours. Les 3 quizz seront répartis sur le semestre à des dates non déterminées (a.k.a quizz surprises). Les quizz seront distribués en classe.
@@ -90,7 +87,7 @@ Les étudiants sont évalués sur la base des 4 tâches décrites ci-dessous. Le
 
 # Critères d'évaluation
 
-## Tâche #1: présentation
+## Tâche #1
 
 | critère | description |
 |-------------------------------------------- | ----|
@@ -109,7 +106,7 @@ Les étudiants sont évalués sur la base des 4 tâches décrites ci-dessous. Le
 
 La limite de temps est obligatoire. Tous les autres critères comptent pour un point. Le 2 derniers critères sont exclusifs, en fonction du type de présentation que vous choisissez de faire.
 
-## Tâche #2: tests unitaires automatiques
+## Tâche #2
 
 | critère | description |
 |-------------------------------------------- | ----|
@@ -122,7 +119,7 @@ La limite de temps est obligatoire. Tous les autres critères comptent pour un p
 | exécution (10%)	| tous les nouveaux tests s'exécutent avec succès dans la Github action| 
 
 
-## Tâche #3: tests d'intégration
+## Tâche #3
 
 | critère | description |
 |-------------------------------------------- | ----|
