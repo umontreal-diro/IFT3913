@@ -1,47 +1,47 @@
-## Semaine #6 vendredi 10 octobre: [Couverture de code avancée](https://github.com/umontreal-diro/IFT3913/issues/5)
+## Semaine #6 mardi - octobre: [Test et IA](https://github.com/umontreal-diro/IFT3913/issues/975)
 
-Pour faire une présentation sur la couverture de code avancée, choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
+Pour faire une présentation sur test et IA choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
 
-[concept] Analyse de mutation
-- Nom:
-- Présentation:
+[concept] Génération automatique de test avec un algorithme génétique    
+- Nom: 
+- Présentation: 
 
-[concept] [Test au-delà de la couverture](https://increment.com/reliability/testing-beyond-coverage/)
-- Nom:
-- Présentation:
+[concept] Génération automatique de données de test avec l'IA      
+- Nom: 
+- Présentation: 
 
-[concept] Couverture des exigences
-- Nom:
-- Présentation:
+[concept] Génération automatique de mocks et configurations avec l'IA
+- Nom: 
+- Présentation: 
 
-[concept] LLM pour augmenter la couverture [à Meta](https://web.eecs.umich.edu/~movaghar/Automatic%20Test%20Generation%20Meta%202024.pdf)
-- Nom:
-- Présentation:
+[concept] Génération automatique de tests paramétrés avec l'IA
+- Nom: 
+- Présentation: 
 
-[concept] [Le problème de l'oracle de test](http://discovery.ucl.ac.uk/1471263/1/06963470.pdf)
-- Nom:
-- Présentation:
+[concept] Maintenance des tests avec l'IA
+- Nom: 
+- Présentation: 
 
-[concept] Test combinatoire
-- Nom:
-- Présentation:
+[concept] Revue de code assistée par les LLM
+- Nom: 
+- Présentation: 
 
-[concept] Test polymorphique pour la couverture des don
-- Nom:
-- Présentation:
+[concept] Qualité des tests générés avec l'IA
+- Nom: 
+- Présentation: 
 
-[demo] [jacoco-report](https://github.com/Madrapps/jacoco-report) couverture et GitHub action  
-- Nom:
-- Présentation:
+[concept] Bugs dans le code généré par l'IA
+- Nom: 
+- Présentation: 
 
-[demo] [Pit](https://pitest.org/) pour le test par mutation en Java
-- Nom:
-- Présentation:
+[demo] [Evosuite](https://github.com/EvoSuite/evosuite)
+- Nom: 
+- Présentation: 
 
-[demo] [Pitest-descartes](https://github.com/STAMP-project/pitest-descartes) pour le test par mutation extrême en Java
-- Nom:
-- Présentation:
+[demo] [TestSpark](https://github.com/JetBrains-Research/TestSpark)
+- Nom: 
+- Présentation: 
 
-[demo] [Stryker](https://stryker-mutator.io/) pour la mutation en Javascript
-- Nom:
-- Présentation:
+[demo] [Guardrails](https://github.com/guardrails-ai/guardrails)
+- Nom: 
+- Présentation: 

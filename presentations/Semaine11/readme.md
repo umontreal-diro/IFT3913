@@ -1,50 +1,49 @@
-## Semaine #11 vendredi 21 novembre: [Test et humour](https://github.com/umontreal-diro/IFT3913/issues/9)
+## Semaine #11 mardi 17 novembre: [Test et humour](https://github.com/umontreal-diro/IFT3913/issues/9)
 
 Pour faire une présentation sur l'humour pour le test logiciel,  proposez votre propre sujet. C'est un vaste sujet, important, peu abordé dans les curriculum classiques de test logiciel et pourtant essentiel pour la qualité logicielle et vos futures carrières.
 
 Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontreal.ca) le plus tôt possible pour valider le sujet.
 
-
-[Concept] Easter eggs dans la programmation
+[concept] Easter eggs dans la programmation
 - Nom:
 - Présentation:
 
-[Concept] Les messages d’erreur absurdes et humoristiques
+[concept] Les messages d’erreur absurdes et humoristiques
 - Nom:
 - Présentation:
 
-[Concept] Little bobby tables - SQL injection et humour
+[concept] Humour dans les bibliothèques de test
 - Nom:
 - Présentation:
 
-[Concept] La loi de Murphy
+[concept] Humour dans la documentation logicielle
 - Nom:
 - Présentation:
 
-[demo] TheFuck 
+[concept] Humour pour la gestion de projets logiciels
 - Nom:
 - Présentation:
 
-[Concept] Chaos Engineering humoristique – Netflix’s Chaos Monkey et ses amis.
+[concept] Humour en ligne de commande
 - Nom:
 - Présentation:
 
-[Concept] Stand-up Testing
+[concept] Qualité logicielle pour les easter eggs 
 - Nom:
 - Présentation:
 
-[Concept] Quand rire améliore la qualité
+[concept] Humour dans les cours de génie logiciel
 - Nom:
 - Présentation:
 
-[concept] L’humour dans les commentaires de code
+[demo] [volkswagen](https://github.com/auchenberg/volkswagen)
 - Nom:
 - Présentation:
 
-[Concept] Le commit : un geste technique, une parole humaine 
+[demo] [thefuck](https://github.com/nvbn/thefuck) 
 - Nom:
 - Présentation:
 
-[Concept] L’excellence opérationnelle dans les farces du poisson d’avril
+[demo] [lolcommits](https://github.com/lolcommits)
 - Nom:
 - Présentation:

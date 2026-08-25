@@ -30,11 +30,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Nom:
 - Présentation:
 
-[] Agents IA autonomes pour la fiabilité en production 
-- Nom:
-- Présentation:
-
-[] Test fantôme
+[concept] Agents IA autonomes pour la fiabilité en production 
 - Nom:
 - Présentation:
 

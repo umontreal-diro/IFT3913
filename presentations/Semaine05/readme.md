@@ -1,51 +1,45 @@
-## Semaine #5 vendredi 3 octobre: [Test unitaire avancé](https://github.com/umontreal-diro/IFT3913/issues/4) 
+## Semaine #5 mardi 29 septembre: [Test unitaire avancé](https://github.com/umontreal-diro/IFT3913/issues/4) 
 
 Pour faire une présentation sur le test unitaire avancé, choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
 
-[concept] Test par fuzzing
-- Nom:
+[concept] Mocks et stubs
+- Nom: 
+- Présentation: 
+
+[concept] Analyse de mutation
+- Nom: 
 - Présentation: 
 
 [concept] Test basé sur les propriétés
-- Nom:
+- Nom: 
 - Présentation: 
 
-[concept] Tests paramétrés
-- Nom:
+[concept] Test combinatoire
+- Nom: 
 - Présentation: 
 
-[concept] Mocks et stubs
-- Nom:
-- Présentation: 
+[concept] Test polymorphique pour la couverture des données
 
 [demo] [Hypothesis](https://hypothesis.readthedocs.io/en/latest/) pour le test basé sur les propriétés en Python
-- Nom:
+- Nom: 
 - Présentation: 
 
 [demo] [Mockito](https://site.mockito.org/) pour les mocks en Java
-- Nom:
-- Présentation: 
-
-[demo] [msw](https://github.com/mswjs/msw) pour les mocks avec graphQL
-- Nom:
+- Nom: 
 - Présentation: 
 
 [demo] [Cucumber](https://cucumber.io/) pour le test basé comportement en Java
-- Nom:
+- Nom: 
 - Présentation: 
 
 [demo] [Java faker](https://github.com/DiUS/java-faker) pour l'isolation de tests en Java
-- Nom:
+- Nom: 
 - Présentation: 
 
 [demo] [AutoParams](https://github.com/AutoParams/AutoParams) pour les tests paramétrés en Java
-- Nom:
+- Nom: 
 - Présentation: 
 
 [demo] [afl++](https://github.com/AFLplusplus/AFLplusplus)
-- Nom:
-- Présentation: 
-
-[demo] [XCUITest](https://developer.apple.com/documentation/xctest?utm_source=chatgpt.com)  pour l’automatisation des tests UI en Swift
-- Nom:
+- Nom: 
 - Présentation: 

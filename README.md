@@ -85,6 +85,10 @@ L'évaluation se fait sur la base des 4 tâches décrites ci-dessous. Les tâche
 - tâche #4: répondre à 3 quizz (10%). Vous recevrez 3 quizz au cours du semestre qui aborderont des points abordés dans les différentes présentations du cours. Les 3 quizz seront répartis sur le semestre à des dates non déterminées (a.k.a quizz surprises). Les quizz seront distribués en classe.
   - politique de retard: les quizz sont ouverts pendant 15 minutes, en classe. Aucun quizz ne pourra être fait en-dehors de cette période.
 
+# Usage de l'intelligence artificielle
+
+Vous êtes autorisés à utiliser l'IA. Si vous l'utilisez, vous devez le documenter en suivant les instructions de l'Université: [Intelligence artificielle générative: Citer, signaler, déclarer et documenter](https://boite-outils.bib.umontreal.ca/c.php?g=743753&p=5377614)
+
 # Critères d'évaluation
 
 ## Tâche #1

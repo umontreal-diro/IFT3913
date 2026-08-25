@@ -1,47 +1,49 @@
-## Semaine #7 vendredi 17 octobre: [Test statique](https://github.com/umontreal-diro/IFT3913/issues/6)
+## Semaine #7 mardi 13 octobre: [Test et sécurité](https://github.com/umontreal-diro/IFT3913/issues/976)
 
-Pour faire une présentation sur le test statique, choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
+Pour faire une présentation sur le test et sécurité, choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
 
-[Concept] La revue de code
-- Nom:
-- Présentation:
 
-[Concept] Code lint
-- Nom:
-- Présentation:
+[concept] Test par fuzzing
+- Nom: 
+- Présentation: 
 
-[Concept] Revue de code assistée par les LLM
-- Nom:
-- Présentation:
+[concept] Code lint
+- Nom: 
+- Présentation: 
 
-[Concept] Mesure de complexité du code
-- Nom:
-- Présentation:
+[concept] la revue de code
+- Nom: 
+- Présentation: 
 
-[demo] Test statique pour la sécurité (SAST)
-- Nom:
-- Présentation:
+[concept] Mesure de complexité du code
+- Nom: 
+- Présentation: 
 
-[Concept] [Revue de code chez Google](https://www.ifi.uzh.ch/dam/jcr:d3de75f7-1464-4463-a539-dde7714f0035/icse2018seip.pdf)
-- Nom:
-- Présentation:
+[concept] Test statique pour la sécurité (SAST)
+- Nom: 
+- Présentation: 
+
+[concept] Test dynamique pour la sécurité (DAST)
+- Nom: 
+- Présentation: 
+
+[demo] [AFL](https://github.com/AFLplusplus/AFLplusplus)
+- Nom: 
+- Présentation: 
 
 [demo] [findbugs](https://github.com/findbugsproject/findbugs) pour le test statique en Java
-- Nom:
-- Présentation:
-
-[demo] [ruff](https://github.com/astral-sh/ruff) pour lint de code Python
-- Nom:
-- Présentation:
+- Nom: 
+- Présentation: 
 
 [demo] [semgrep](https://github.com/semgrep/semgrep) pour l'analyse statique
-- Nom:
-- Présentation:
+- Nom: 
+- Présentation: 
 
 [demo] [Frama-C](https://frama-c.com/) pour l'analyse statique en C
-- Nom:
-- Présentation:
+- Nom: 
+- Présentation: 
 
 [demo] [Poutine](https://github.com/boostsecurityio/poutine) pour le test statique de GitHub actions
-- Nom:
-- Présentation:
+- Nom: 
+- Présentation: 
+
