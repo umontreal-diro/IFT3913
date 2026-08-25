@@ -37,11 +37,11 @@ Vous pouvez contacter les assistantes de cours, Meriem, Yogya et Madjda, à cett
 - Introduction + [présentations d'étudiants](presentations/Semaine05/readme.md)
 - matériel préparatoire: [Handling Flaky Unit Tests in Java](https://www.uber.com/en-CA/blog/handling-flaky-tests-java/)
  
-## Semaine #6 mardi 6 octobre: [Couverture de code avancée](https://github.com/umontreal-diro/IFT3913/issues/5)
+## Semaine #6 mardi 6 octobre: [Test et IA](https://github.com/umontreal-diro/IFT3913/issues/975)
 - Introduction + [présentations d'étudiants](presentations/Semaine06/readme.md)
 - matériel préparatoire: [Testing beyond coverage](https://increment.com/reliability/testing-beyond-coverage/)
 
-## Semaine #7 mardi 13 octobre: [Test statique](https://github.com/umontreal-diro/IFT3913/issues/6)
+## Semaine #7 mardi 13 octobre: [Test et sécurité](https://github.com/umontreal-diro/IFT3913/issues/976)
 - Introduction + [présentations d'étudiants](presentations/Semaine07/readme.md)
 - matériel préparatoire: [What is Clean Code?](https://www.sonarsource.com/blog/what-is-clean-code/)
 

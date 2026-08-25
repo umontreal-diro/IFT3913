@@ -1,4 +1,4 @@
-## Semaine #6 mardi - octobre: [Test et IA](https://github.com/umontreal-diro/IFT3913/issues/975)
+## Semaine #6 mardi 6 octobre: [Test et IA](https://github.com/umontreal-diro/IFT3913/issues/975)
 
 Pour faire une présentation sur test et IA choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
 
