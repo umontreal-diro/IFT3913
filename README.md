@@ -127,9 +127,9 @@ La limite de temps est obligatoire. Tous les autres critères comptent pour un p
 
 | critère | description |
 |-------------------------------------------- | ----|
-| Github action (GA)  (20%)      | l'action échoue si le un commit instroduit une nouvelle vunlérabilité détectée par semgrep|
+| Github action (GA)  (20%)      | l'action échoue si le un commit introduit une nouvelle vulnérabilité détectée par semgrep|
 | documentation GA   (20%)  | les modifications apportées à l'action ainsi que la validation des modifications sont documentées et justifiées;  |
-| vulnérabilités (30%) | modifier le code pour insérer 7 vulnérabiités de différents types  |
+| vulnérabilités (30%) | modifier le code pour insérer 7 vulnérabilités de différents types  |
 | documentation vulnérabilités (20%)   | documenter, justifier, expliquer chaque vulnérabilité insérée |
 | humour      (10%)  | rickroll dans le CI |
 
