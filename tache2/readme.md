@@ -6,7 +6,7 @@ La tâche 2 se fait en binômes. Quand un binôme est formé, il fait une 'pull 
 
 Pour la tâche 2, chaque binôme doit accomplir les étapes suivantes:
 
-- sélectionner entre une et 3 classes de [graphhopper](https://github.com/umontreal-diro/graphhopper) qui ont déjà des tests, mais qui ne couvrent pas 100% du code
+- sélectionner entre une et 3 classes de [Tika](https://github.com/umontreal-diro/tika)  qui ont déjà des tests, mais qui ne couvrent pas 100% du code
 - ajouter 7 cas pour les classes sélectionnées
 - documenter précisément chaque cas de test: nom du test, intention du test (quel comportement est testé), motivation des données de test choisies, explication de l'oracle (comment déterminer le comportement attendu)
 - ajouter [pitest](https://pitest.org/) au projet
