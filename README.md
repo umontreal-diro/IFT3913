@@ -100,16 +100,18 @@ Vous êtes autorisés à utiliser l'IA. Si vous l'utilisez, vous devez le docume
 |-------------------------------------------- | ----|
 |temps | la présentation dure entre 6.30 min et 7.30 min (limite stricte)|
 |structure | la présentation est bien structurée et la structure est annoncée et visible |
-|introduction | la présentation inclut une introduction qui motive l'importance du sujet pour la qualité logicielle|
-|contenu | la présentation inclut une partie technique avec des extraits de code, lisibles|
+|introduction | la présentation inclut une introduction qui motive l'importance du sujet pour la qualité logicielle |
+|contenu | la présentation inclut une partie technique avec des extraits de code, lisibles |
 |défnition | le concept présenté est explicitement défini |
 |originalité | la présentation inclut 2 exemples originaux pour illustrer le concept |
-|réflection | la présentation inclut une partie réflection / recul sur le sujet|
-|conclusion | le dernier slide inclut un message clair et pratique pour l'audience|
+|réflection | la présentation inclut une partie réflection / recul sur le sujet |
+|conclusion | le dernier slide inclut un message clair et pratique pour l'audience |
 |compréhension | l'orat(rice.eur) montre une maitrise et compréhension claire du sujet et peut répondre aux questions de l'audience |
-|sources | la présentation s'appuie sur au moins 3 sources extérieures qui sont citées en bas de page et sont publiquement accessibles|
-|[demo]| la présentation inclut une démo interactive de l'outil présenté|
-|[concept]| le présentation inclut une définition claire du concept abordé ainsi que des exemples concrets du concept abordé|
+|sources | la présentation s'appuie sur au moins 3 sources extérieures qui sont citées en bas de page et sont publiquement accessibles |
+|question | pose au moins une question pour une présentation du même jour |
+
+[demo]: la présentation inclut une démo interactive de l'outil présenté|
+[concept]: le présentation inclut une définition claire du concept abordé ainsi que des exemples concrets du concept abordé|
 
 La limite de temps est obligatoire. Tous les autres critères comptent pour un point. Le 2 derniers critères sont exclusifs, en fonction du type de présentation que vous choisissez de faire.
 
