@@ -28,6 +28,7 @@ Pour la tâche 2, chaque binôme doit accomplir les étapes suivantes:
 | documentation mutants (15%) 	| les mutants détectés par les tests générés sont documentés et la raison pour la détection est expliquée| 
 | test supplémentaires  (10%) | les tests écrits à la main sont clairement documentés   |
 | exécution (10%)	| tous les nouveaux tests s'exécutent avec succès dans la Github action| 
+| Format de documentation | toute la documentation doit être dans un fichier readme.md unique, à la racine du référentiel Github de votre tâche |
 
 
 
@@ -35,7 +36,7 @@ Pour la tâche 2, chaque binôme doit accomplir les étapes suivantes:
 
 Une fois la tâche accomplie, les étudiants font une nouvelle 'pull request' sur le sous-répertoire de leur binôme et ajoutent les informations suivantes dans le fichier readme:
 - un lien vers le référentiel (repository) Github qui inclut leur tâche
-- un lien vers la page README.md qui documente la tâche
+- un lien vers la page README.md qui documente la tâche (readme uniquement, pas de docx, google docs ou autre)
 
 Le format pour la PR est documenté ici: [.github/PULL_REQUEST_TEMPLATE/tache2-readme.md](../.github/PULL_REQUEST_TEMPLATE/tache2-readme.md).
 
