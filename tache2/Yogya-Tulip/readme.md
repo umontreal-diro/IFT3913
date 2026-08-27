@@ -3,7 +3,7 @@
 | Nom complet | Identifiant GitHub |
 |---|---|
 | Jerry Cantrell | jerrycantrell |
-| Nom Prénom | github-username |
+| Amy Lee | amylee |
 
 - Lien vers le répertoire GitHub :
 - Lien vers le README du répertoire :
