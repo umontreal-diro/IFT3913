@@ -133,10 +133,33 @@ jobs:
             exit 0
           fi
 
-          # For NEW files: links are optional (values can be empty)
-          # For MODIFIED files (updates): this is a links-only PR — apply time restriction and validate links
-          if [ "$is_new" = false ]; then
-            # Links PR must be within 4 days of deadline (Oct 09 onwards)
+          # Extract links (applies to both new and updated files)
+          repo_link=$(echo "$content" | grep -E '^- Lien vers le répertoire GitHub :' | sed 's/^- Lien vers le répertoire GitHub :[[:space:]]*//')
+          readme_link=$(echo "$content" | grep -E '^- Lien vers le README du répertoire :' | sed 's/^- Lien vers le README du répertoire :[[:space:]]*//')
+          has_links=false
+          if [ -n "$repo_link" ] || [ -n "$readme_link" ]; then
+            has_links=true
+          fi
+
+          # Validate links are GitHub URLs whenever present (new or update)
+          if [ -n "$repo_link" ]; then
+            if ! echo "$repo_link" | grep -qE '^https://github\.com/'; then
+              echo "error=Le lien du répertoire doit être un lien GitHub (https://github.com/...)." >> $GITHUB_OUTPUT
+              echo "valid=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          fi
+
+          if [ -n "$readme_link" ]; then
+            if ! echo "$readme_link" | grep -qE '^https://github\.com/'; then
+              echo "error=Le lien du README doit être un lien GitHub (https://github.com/...)." >> $GITHUB_OUTPUT
+              echo "valid=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          fi
+
+          # Time restriction: links can only be submitted within 4 days of deadline
+          if [ "$has_links" = true ]; then
             PR_CREATED="${{ github.event.pull_request.created_at }}"
             CREATED_EPOCH=$(date -d "$PR_CREATED" +%s)
             # 4 days before Oct 13 = Oct 09 00:00 EDT = Oct 09 04:00 UTC
@@ -147,8 +170,10 @@ jobs:
               echo "valid=false" >> $GITHUB_OUTPUT
               exit 0
             fi
+          fi
 
-            # Only the links section should change
+          # For updates: only the links section should change
+          if [ "$is_new" = false ]; then
             diff_output=$(git diff "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}" -- "$file")
 
             added_lines=$(echo "$diff_output" | grep "^+" | grep -v "^+++" | sed 's/^+//')
@@ -179,26 +204,6 @@ jobs:
               echo "error=Pour une mise à jour, seuls les liens peuvent être modifiés. Les noms et identifiants GitHub ne doivent pas changer." >> $GITHUB_OUTPUT
               echo "valid=false" >> $GITHUB_OUTPUT
               exit 0
-            fi
-
-            # Validate links are GitHub URLs (non-GitHub URLs are rejected)
-            repo_link=$(echo "$content" | grep -E '^- Lien vers le répertoire GitHub :' | sed 's/^- Lien vers le répertoire GitHub :[[:space:]]*//')
-            readme_link=$(echo "$content" | grep -E '^- Lien vers le README du répertoire :' | sed 's/^- Lien vers le README du répertoire :[[:space:]]*//')
-
-            if [ -n "$repo_link" ]; then
-              if ! echo "$repo_link" | grep -qE '^https://github\.com/'; then
-                echo "error=Le lien du répertoire doit être un lien GitHub (https://github.com/...)." >> $GITHUB_OUTPUT
-                echo "valid=false" >> $GITHUB_OUTPUT
-                exit 0
-              fi
-            fi
-
-            if [ -n "$readme_link" ]; then
-              if ! echo "$readme_link" | grep -qE '^https://github\.com/'; then
-                echo "error=Le lien du README doit être un lien GitHub (https://github.com/...)." >> $GITHUB_OUTPUT
-                echo "valid=false" >> $GITHUB_OUTPUT
-                exit 0
-              fi
             fi
           fi
 
