@@ -79,7 +79,7 @@ L'évaluation se fait sur la base des 4 tâches décrites ci-dessous. Les tâche
 - tâche #1: présentation individuelle (30%). Les étudiant(e)s choisissent un thème parmi tous ceux abordés chaque semaine et préparent une présentation technique de 7 minutes sur ce thème. Cf.les [instructions détaillées](./presentations/readme.md) et les [critères d'évaluation pour la tâche 1](#tâche-1).
   - date limite: jour du cours
   - politique de retard: en cas d'absence au cours, il n'y a qu'une seule opportunité de reporter la présentation à un autre jour, à déterminer avec l'équipe enseignante
-- tâche #2: augmentation d'une suite de tests automatique [Tika](https://github.com/umontreal-diro/tika) (30%). Les étudiants travaillent en binôme. Chaque binôme augmente la suite de tests de [er](https://github.com/umontreal-diro/er). Cf. les [instructions détaillées](./tache2/readme.md) et les [critères pour la tâche 2](#tâche-2). 
+- tâche #2: augmentation d'une suite de tests automatique [Tika](https://github.com/umontreal-diro/tika) (30%). Les étudiants travaillent en binôme. Chaque binôme augmente la suite de tests de [Tika](https://github.com/umontreal-diro/tika). Cf. les [instructions détaillées et les critères de notation](./tache2/readme.md). 
   - date limite: mardi 13 octobre, 17h EDT 
   - politique de retard: 10% retenus sur la note pour un rendu dans les 24 heures qui suivent la date limite; 50% retenus pour un rendu entre 24 et 48 heures en retard; pas de note pour un rendu plus de 48 heures en retard
 - tâche #3: automatisation des tests de sécurité (30%). Les étudiants travaillent en binôme, le même binôme que pour la tâche #2. Chaque binôme modifie [Tika](https://github.com/umontreal-diro/tika) pour le test d'intégration.  Cf. les [instructions détaillées](./tache3/readme.md) et les [critères pour la tâche 3](#tâche-3).
@@ -115,17 +115,6 @@ Vous êtes autorisés à utiliser l'IA. Si vous l'utilisez, vous devez le docume
 [concept]: le présentation inclut une définition claire du concept abordé ainsi que des exemples concrets du concept abordé
 
 La limite de temps est obligatoire. Tous les autres critères comptent pour un point. Le 2 derniers critères sont exclusifs, en fonction du type de présentation que vous choisissez de faire.
-
-## Tâche #2
-
-| critère | description |
-|-------------------------------------------- | ----|
-| classes à tester (15%) | justifier que les classes et méthodes choisies pour la génération de test ne sont pas déjà couvertes |
-| tests générés (14%)	| une IA générative produit 7 nouveaux tests, incluant un oracle,  qui augmentent le score de mutation | 
-| documentation tests	(26%)	| le processus de génération et la qualité des tests produits est précisément documentée| 
-| mutation 	(15%) | exécuté pitest les classes testées, avec tests originaux puis avec nouveaux tests| 
-| documentation mutants (20%) 	| les mutants détectés par les nouveaux tests sont documentés et la raison pour la détection est expliquée| 
-| exécution (10%)	| tous les nouveaux tests s'exécutent avec succès dans la Github action| 
 
 
 ## Tâche #3
