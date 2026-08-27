@@ -120,12 +120,11 @@ La limite de temps est obligatoire. Tous les autres critères comptent pour un p
 
 | critère | description |
 |-------------------------------------------- | ----|
-| tests (25%)	| 7 nouveaux tests, incluant un oracle,  qui augmentent le score de mutation | 
-| documentation tests	(15%)	| chaque test est documenté: intention, données de test et oracle sont expliqués et justifiés| 
+| classes à tester (15%) | justifier que les classes et méthodes choisies pour la génération de test ne sont pas déjà couvertes |
+| tests générés (15%)	| une IA générative produit 7 nouveaux tests, incluant un oracle,  qui augmentent le score de mutation | 
+| documentation tests	(25%)	| le processus de génération et la qualité des tests produits est précisément documentée| 
 | mutation 	(15%) | exécuté pitest les classes testées, avec tests originaux puis avec nouveaux tests| 
-| documentation mutants (15%) 	| les mutants détectés par les nouveaux tests sont documentés et la raison pour la détection est expliquée| 
-| faker (10%) | un nouveau cas de test qui utilise java-faker| 
-| documentation faker (10%) | le choix du faker est justifié et son usage est documenté| 
+| documentation mutants (20%) 	| les mutants détectés par les nouveaux tests sont documentés et la raison pour la détection est expliquée| 
 | exécution (10%)	| tous les nouveaux tests s'exécutent avec succès dans la Github action| 
 
 
