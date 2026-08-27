@@ -38,6 +38,7 @@ Vous pouvez contacter les assistantes de cours, Meriem, Yogya et Madjda, à cett
 - matériel préparatoire: [Handling Flaky Unit Tests in Java](https://www.uber.com/en-CA/blog/handling-flaky-tests-java/)
  
 ## Semaine #6 mardi 6 octobre: [Test et IA](https://github.com/umontreal-diro/IFT3913/issues/975)
+- Quizz
 - Introduction + [présentations d'étudiants](presentations/Semaine06/readme.md)
 - matériel préparatoire: [Testing beyond coverage](https://increment.com/reliability/testing-beyond-coverage/)
 
@@ -50,6 +51,7 @@ Vous pouvez contacter les assistantes de cours, Meriem, Yogya et Madjda, à cett
 - matériel préparatoire: [Surviving software dependencies](https://dl.acm.org/doi/pdf/10.1145/3347446)
  
 ## Semaine #9 mardi 3 novembre: [Tester la diversité d'environnements](https://github.com/umontreal-diro/IFT3913/issues/8)
+- Quizz
 - Introduction + [présentations d'étudiants](presentations/Semaine09/readme.md)
 - matériel préparatoire: [Cross Browser Testing Overview](https://www.datadoghq.com/knowledge-center/cross-browser-testing/)
  
@@ -62,6 +64,7 @@ Vous pouvez contacter les assistantes de cours, Meriem, Yogya et Madjda, à cett
 - matériel préparatoire: [With Great Humor Comes Great Developer Engagement](https://arxiv.org/pdf/2312.01680)
  
 ## Semaine #12 mardi 24 novembre novembre: [Test en production](https://github.com/umontreal-diro/IFT3913/issues/11)
+- Quizz
 - Introduction + [présentations d'étudiants](presentations/Semaine12/readme.md)
 - matériel préparatoire: [I test in prod](https://increment.com/testing/i-test-in-production/)
  
