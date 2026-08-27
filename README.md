@@ -108,7 +108,7 @@ Vous êtes autorisés à utiliser l'IA. Si vous l'utilisez, vous devez le docume
 |conclusion | le dernier slide inclut un message clair et pratique pour l'audience |
 |compréhension | l'orat(rice.eur) montre une maitrise et compréhension claire du sujet et peut répondre aux questions de l'audience |
 |sources | la présentation s'appuie sur au moins 3 sources extérieures qui sont citées en bas de page et sont publiquement accessibles |
-|question | pose au moins une question pour une présentation du même jour |
+|question | la dernière slide inclut une question à propos de la présentation (sans la réponse)  |
 
 [demo]: la présentation inclut une démo interactive de l'outil présenté 
 
