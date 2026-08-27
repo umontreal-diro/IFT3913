@@ -19,6 +19,6 @@ Une fois la tâche accomplie, les étudiants font une 'pull request' sur ce rép
 - le référentiel (repository) Github qui inclut la github action qui a été modifiée
 - un lien vers la page README.md qui documente votre travail pour la tâche 3
 
-Le format pour la PR est documenté ici: [.github/PULL_REQUEST_TEMPLATE/tache2-readme.md](.github/PULL_REQUEST_TEMPLATE/tache2-readme.md).
+Le format pour la PR est documenté ici: [github/PULL_REQUEST_TEMPLATE/tache3-readme.md](../.github/PULL_REQUEST_TEMPLATE/tache3-readme.md)
 
 La date limite pour cette 'pull request' est indiquée sur la [page principale](../README.md/#evaluation-ift3913---a25) du cours.
