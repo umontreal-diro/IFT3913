@@ -2,22 +2,22 @@ name: Vérifier les soumissions (tâche 2 & 3)
 
 on:
   schedule:
-    # ── Tâche 2 (deadline Oct 06, 2026) ──
+    # -- Tâche 2 (deadline Oct 13, 2026) --
     # EDT (UTC-4) applies in October
-    # Oct 06 5pm EDT = 21:00 UTC → first check: who hasn't submitted readme/links
-    - cron: '0 21 6 10 *'
-    # Oct 07 00:00 EDT = 04:00 UTC → record late submissions (after deadline midnight)
-    - cron: '0 4 7 10 *'
-    # Oct 08 00:00 EDT = 04:00 UTC → record very late submissions (after Oct 07 midnight)
-    - cron: '0 4 8 10 *'
+    # Oct 13 5pm EDT = 21:00 UTC
+    - cron: '0 21 13 10 *'
+    # Oct 14 00:00 EDT = 04:00 UTC
+    - cron: '0 4 14 10 *'
+    # Oct 15 00:00 EDT = 04:00 UTC
+    - cron: '0 4 15 10 *'
 
-    # ── Tâche 3 (deadline Nov 17, 2026) ──
+    # -- Tâche 3 (deadline Nov 17, 2026) --
     # EST (UTC-5) applies in November (DST ends Nov 1)
-    # Nov 17 5pm EST = 22:00 UTC → first check: who hasn't submitted readme/links
+    # Nov 17 5pm EST = 22:00 UTC
     - cron: '0 22 17 11 *'
-    # Nov 18 00:00 EST = 05:00 UTC → record late submissions
+    # Nov 18 00:00 EST = 05:00 UTC
     - cron: '0 5 18 11 *'
-    # Nov 19 00:00 EST = 05:00 UTC → record very late submissions
+    # Nov 19 00:00 EST = 05:00 UTC
     - cron: '0 5 19 11 *'
 
   workflow_dispatch:
@@ -67,12 +67,12 @@ jobs:
 
           # Set deadlines based on task (all in UTC)
           if [ "$TASK" = "tache2" ]; then
-            # Oct 06 5pm EDT = Oct 06 21:00 UTC
-            echo "deadline=2026-10-06T21:00:00Z" >> $GITHUB_OUTPUT
-            # Oct 06 midnight EDT = Oct 07 04:00 UTC
-            echo "late_start=2026-10-07T04:00:00Z" >> $GITHUB_OUTPUT
-            # Oct 07 midnight EDT = Oct 08 04:00 UTC
-            echo "very_late_start=2026-10-08T04:00:00Z" >> $GITHUB_OUTPUT
+            # Oct 13 5pm EDT = Oct 13 21:00 UTC
+            echo "deadline=2026-10-13T21:00:00Z" >> $GITHUB_OUTPUT
+            # Oct 13 midnight EDT = Oct 14 04:00 UTC
+            echo "late_start=2026-10-14T04:00:00Z" >> $GITHUB_OUTPUT
+            # Oct 14 midnight EDT = Oct 15 04:00 UTC
+            echo "very_late_start=2026-10-15T04:00:00Z" >> $GITHUB_OUTPUT
             echo "task_label=Tâche 2" >> $GITHUB_OUTPUT
           elif [ "$TASK" = "tache3" ]; then
             # Nov 17 5pm EST = Nov 17 22:00 UTC
@@ -114,7 +114,7 @@ jobs:
             PERIOD_LABEL="Avant la date limite"
           elif [ "$NOW_EPOCH" -lt "$LATE_EPOCH" ]; then
             PERIOD="deadline_passed"
-            PERIOD_LABEL="Date limite passée (6 oct 17h - minuit)"
+            PERIOD_LABEL="Date limite passée (13 oct 17h - minuit)"
           elif [ "$NOW_EPOCH" -lt "$VERY_LATE_EPOCH" ]; then
             PERIOD="late"
             PERIOD_LABEL="Période de retard (après minuit, jour 1)"
@@ -123,12 +123,12 @@ jobs:
             PERIOD_LABEL="Période de retard avancé (après minuit, jour 2+)"
           fi
 
-          # ── Collect all submissions ──
-          declare -A mat_to_folder
-          declare -A mat_to_name
-          declare -A mat_link_status
-          declare -A mat_readme_date
-          declare -A mat_links_date
+          # -- Collect all submissions --
+          declare -A gh_to_folder
+          declare -A gh_to_name
+          declare -A gh_link_status
+          declare -A gh_readme_date
+          declare -A gh_links_date
 
           # Helper: check if a link is a real URL (not empty, not a placeholder with ...)
           is_real_link() {
@@ -165,7 +165,6 @@ jobs:
             if is_real_link "$repo_link" && is_real_link "$readme_link"; then
               link_status="real"
             elif [ -n "$repo_link" ] || [ -n "$readme_link" ]; then
-              # At least one link field has content but it's not a real link
               if echo "$repo_link" | grep -qE '\.\.\.' || echo "$readme_link" | grep -qE '\.\.\.'; then
                 link_status="placeholder"
               elif [ -z "$repo_link" ] && [ -z "$readme_link" ]; then
@@ -175,23 +174,23 @@ jobs:
               fi
             fi
 
-            # Extract matricules from table
+            # Extract GitHub userids from table (data rows only)
             while IFS= read -r line; do
-              mat=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $4); print $4}')
-              name_val=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $3); print $3}')
-              if echo "$mat" | grep -qE '^[0-9]+$'; then
-                mat_to_folder["$mat"]="$folder_name"
-                mat_to_name["$mat"]="$name_val"
-                mat_readme_date["$mat"]="$first_commit_date"
-                mat_link_status["$mat"]="$link_status"
+              gh_userid=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $3); print $3}')
+              name_val=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2); print $2}')
+              if echo "$gh_userid" | grep -qE '^[a-zA-Z0-9][a-zA-Z0-9-]*$'; then
+                gh_to_folder["$gh_userid"]="$folder_name"
+                gh_to_name["$gh_userid"]="$name_val"
+                gh_readme_date["$gh_userid"]="$first_commit_date"
+                gh_link_status["$gh_userid"]="$link_status"
                 if [ "$link_status" = "real" ]; then
-                  mat_links_date["$mat"]="$last_commit_date"
+                  gh_links_date["$gh_userid"]="$last_commit_date"
                 fi
               fi
-            done < <(grep -E '^\|[[:space:]]*Membre [12]' "$readme" 2>/dev/null || true)
+            done < <(grep -E '^\|' "$readme" | grep -vE '^\|[[:space:]]*Nom complet' | grep -vE '^\|[-[:space:]:]+\|[-[:space:]:]+\|$' 2>/dev/null || true)
           done
 
-          # ── Build report ──
+          # -- Build report --
           REPORT="report.md"
           echo "## Rapport de soumission - ${TASK_LABEL}" > "$REPORT"
           echo "" >> "$REPORT"
@@ -214,53 +213,53 @@ jobs:
           very_late_count=0
           total_students=0
 
-          while IFS=',' read -r matricule name; do
-            matricule=$(echo "$matricule" | xargs)
+          while IFS=',' read -r gh_userid name; do
+            gh_userid=$(echo "$gh_userid" | xargs)
             name=$(echo "$name" | xargs)
-            [ -z "$matricule" ] && continue
+            [ -z "$gh_userid" ] && continue
             total_students=$((total_students + 1))
 
-            if [ -z "${mat_to_folder[$matricule]+x}" ]; then
-              not_submitted="${not_submitted}| ${name} | ${matricule} |\n"
+            if [ -z "${gh_to_folder[$gh_userid]+x}" ]; then
+              not_submitted="${not_submitted}| ${name} | ${gh_userid} |\n"
               not_submitted_count=$((not_submitted_count + 1))
             else
-              submit_date="${mat_readme_date[$matricule]}"
+              submit_date="${gh_readme_date[$gh_userid]}"
               submit_epoch=0
               if [ -n "$submit_date" ]; then
                 submit_epoch=$(date -d "$submit_date" +%s 2>/dev/null || echo "0")
               fi
 
-              link_status="${mat_link_status[$matricule]}"
-              folder="${mat_to_folder[$matricule]}"
+              link_status="${gh_link_status[$gh_userid]}"
+              folder="${gh_to_folder[$gh_userid]}"
 
               # Categorize by submission time
               if [ "$submit_epoch" -gt "$VERY_LATE_EPOCH" ]; then
-                very_late_submissions="${very_late_submissions}| ${name} | ${matricule} | ${folder} | ${submit_date} |\n"
+                very_late_submissions="${very_late_submissions}| ${name} | ${gh_userid} | ${folder} | ${submit_date} |\n"
                 very_late_count=$((very_late_count + 1))
               elif [ "$submit_epoch" -gt "$LATE_EPOCH" ]; then
-                late_submissions="${late_submissions}| ${name} | ${matricule} | ${folder} | ${submit_date} |\n"
+                late_submissions="${late_submissions}| ${name} | ${gh_userid} | ${folder} | ${submit_date} |\n"
                 late_count=$((late_count + 1))
               fi
 
               # Categorize by link status
               case "$link_status" in
                 real)
-                  submitted_complete="${submitted_complete}| ${name} | ${matricule} | ${folder} |\n"
+                  submitted_complete="${submitted_complete}| ${name} | ${gh_userid} | ${folder} |\n"
                   submitted_complete_count=$((submitted_complete_count + 1))
                   ;;
                 placeholder|partial)
-                  submitted_placeholder="${submitted_placeholder}| ${name} | ${matricule} | ${folder} |\n"
+                  submitted_placeholder="${submitted_placeholder}| ${name} | ${gh_userid} | ${folder} |\n"
                   submitted_placeholder_count=$((submitted_placeholder_count + 1))
                   ;;
                 none|*)
-                  submitted_names_only="${submitted_names_only}| ${name} | ${matricule} | ${folder} |\n"
+                  submitted_names_only="${submitted_names_only}| ${name} | ${gh_userid} | ${folder} |\n"
                   submitted_names_only_count=$((submitted_names_only_count + 1))
                   ;;
               esac
             fi
           done < <(tail -n +2 "$CSV_FILE")
 
-          # ── Summary ──
+          # -- Summary --
           echo "### Résumé" >> "$REPORT"
           echo "" >> "$REPORT"
           echo "| Catégorie | Nombre |" >> "$REPORT"
@@ -274,71 +273,71 @@ jobs:
           echo "| Soumissions très en retard (après minuit jour 2+) | **${very_late_count}** |" >> "$REPORT"
           echo "" >> "$REPORT"
 
-          # ── Not submitted ──
+          # -- Not submitted --
           if [ -n "$not_submitted" ]; then
             echo "### Étudiants sans soumission (aucune PR)" >> "$REPORT"
             echo "" >> "$REPORT"
-            echo "| Nom | Matricule |" >> "$REPORT"
-            echo "|-----|-----------|" >> "$REPORT"
+            echo "| Nom | Identifiant GitHub |" >> "$REPORT"
+            echo "|-----|-------------------|" >> "$REPORT"
             echo -e "$not_submitted" >> "$REPORT"
             echo "" >> "$REPORT"
           fi
 
-          # ── Submitted with placeholder links ──
+          # -- Submitted with placeholder links --
           if [ -n "$submitted_placeholder" ]; then
             echo "### Liens placeholder (non remplacés)" >> "$REPORT"
             echo "" >> "$REPORT"
             echo "Ces étudiants ont soumis leur readme mais les liens contiennent encore les valeurs du modèle (ex: \`https://github.com/.../...\`)." >> "$REPORT"
             echo "" >> "$REPORT"
-            echo "| Nom | Matricule | Dossier |" >> "$REPORT"
-            echo "|-----|-----------|---------|" >> "$REPORT"
+            echo "| Nom | Identifiant GitHub | Dossier |" >> "$REPORT"
+            echo "|-----|-------------------|---------|" >> "$REPORT"
             echo -e "$submitted_placeholder" >> "$REPORT"
             echo "" >> "$REPORT"
           fi
 
-          # ── Submitted names only (no links at all) ──
+          # -- Submitted names only (no links at all) --
           if [ -n "$submitted_names_only" ]; then
             echo "### Noms seulement (pas de liens)" >> "$REPORT"
             echo "" >> "$REPORT"
-            echo "Ces étudiants ont soumis leur readme avec noms et matricules mais n'ont pas encore ajouté de liens." >> "$REPORT"
+            echo "Ces étudiants ont soumis leur readme avec noms et identifiants GitHub mais n'ont pas encore ajouté de liens." >> "$REPORT"
             echo "" >> "$REPORT"
-            echo "| Nom | Matricule | Dossier |" >> "$REPORT"
-            echo "|-----|-----------|---------|" >> "$REPORT"
+            echo "| Nom | Identifiant GitHub | Dossier |" >> "$REPORT"
+            echo "|-----|-------------------|---------|" >> "$REPORT"
             echo -e "$submitted_names_only" >> "$REPORT"
             echo "" >> "$REPORT"
           fi
 
-          # ── Late submissions ──
+          # -- Late submissions --
           if [ -n "$late_submissions" ]; then
             echo "### Soumissions en retard (après minuit, jour 1)" >> "$REPORT"
             echo "" >> "$REPORT"
-            echo "| Nom | Matricule | Dossier | Date de soumission |" >> "$REPORT"
-            echo "|-----|-----------|---------|-------------------|" >> "$REPORT"
+            echo "| Nom | Identifiant GitHub | Dossier | Date de soumission |" >> "$REPORT"
+            echo "|-----|-------------------|---------|-------------------|" >> "$REPORT"
             echo -e "$late_submissions" >> "$REPORT"
             echo "" >> "$REPORT"
           fi
 
-          # ── Very late submissions ──
+          # -- Very late submissions --
           if [ -n "$very_late_submissions" ]; then
             echo "### Soumissions très en retard (après minuit, jour 2+)" >> "$REPORT"
             echo "" >> "$REPORT"
-            echo "| Nom | Matricule | Dossier | Date de soumission |" >> "$REPORT"
-            echo "|-----|-----------|---------|-------------------|" >> "$REPORT"
+            echo "| Nom | Identifiant GitHub | Dossier | Date de soumission |" >> "$REPORT"
+            echo "|-----|-------------------|---------|-------------------|" >> "$REPORT"
             echo -e "$very_late_submissions" >> "$REPORT"
             echo "" >> "$REPORT"
           fi
 
-          # ── Complete submissions ──
+          # -- Complete submissions --
           if [ -n "$submitted_complete" ]; then
             echo "### Soumissions complètes (readme + vrais liens)" >> "$REPORT"
             echo "" >> "$REPORT"
-            echo "| Nom | Matricule | Dossier |" >> "$REPORT"
-            echo "|-----|-----------|---------|" >> "$REPORT"
+            echo "| Nom | Identifiant GitHub | Dossier |" >> "$REPORT"
+            echo "|-----|-------------------|---------|" >> "$REPORT"
             echo -e "$submitted_complete" >> "$REPORT"
             echo "" >> "$REPORT"
           fi
 
-          # ── Folders without matching student ──
+          # -- Folders without matching student --
           echo "### Dossiers sans correspondance dans le CSV" >> "$REPORT"
           echo "" >> "$REPORT"
           unmatched=""

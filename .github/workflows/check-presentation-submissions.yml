@@ -1,0 +1,238 @@
+name: Vérifier les soumissions de présentations
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  verifier-presentations:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Vérifier les présentations
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+
+          CSV_FILE="scripts/students.csv"
+
+          if [ ! -f "$CSV_FILE" ]; then
+            echo "::error::Le fichier $CSV_FILE est introuvable."
+            exit 1
+          fi
+
+          # -- Resolve commit SHA to GitHub login (cached) --
+          declare -A sha_to_login
+
+          resolve_login() {
+            local sha="$1"
+            if [ -z "${sha_to_login[$sha]+x}" ]; then
+              local login
+              login=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}" --jq '.author.login // empty' 2>/dev/null || true)
+              sha_to_login["$sha"]="$login"
+            fi
+            echo "${sha_to_login[$sha]}"
+          }
+
+          # -- Scan presentation readmes using git blame --
+          # For each filled "- Nom:" or "- Présentation:" line, resolve the
+          # commit author to a GitHub login via the API.
+
+          declare -A user_nom_semaine
+          declare -A user_nom_topic
+          declare -A user_nom_name
+          declare -A user_has_link
+
+          for readme in presentations/Semaine*/readme.md; do
+            [ -f "$readme" ] || continue
+            semaine=$(basename "$(dirname "$readme")")
+
+            current_sha=""
+            current_topic=""
+            last_nom_login=""
+
+            while IFS= read -r line; do
+              # Porcelain header: SHA followed by line numbers
+              if [[ "$line" =~ ^([0-9a-f]{40})[[:space:]] ]]; then
+                current_sha="${BASH_REMATCH[1]}"
+              fi
+
+              # Content line (starts with a tab)
+              if [[ "${line:0:1}" == $'\t' ]]; then
+                content="${line:1}"
+
+                # Track topic headings
+                if echo "$content" | grep -qE '^\[(concept|demo)\]'; then
+                  current_topic=$(echo "$content" | sed 's/^\[.*\][[:space:]]*//')
+                  last_nom_login=""
+                fi
+
+                # Filled Nom line
+                if echo "$content" | grep -qE '^-[[:space:]]*Nom:[[:space:]]*\S'; then
+                  nom_val=$(echo "$content" | sed 's/^-[[:space:]]*Nom:[[:space:]]*//')
+                  login=$(resolve_login "$current_sha")
+                  if [ -n "$login" ]; then
+                    user_nom_semaine["$login"]="$semaine"
+                    user_nom_topic["$login"]="$current_topic"
+                    user_nom_name["$login"]="$nom_val"
+                    last_nom_login="$login"
+                  fi
+                fi
+
+                # Filled Présentation line — attribute to the same login
+                # that owns the preceding Nom, or resolve from blame
+                if echo "$content" | grep -qE '^-[[:space:]]*Présentation:[[:space:]]*\S'; then
+                  login=$(resolve_login "$current_sha")
+                  if [ -n "$login" ]; then
+                    user_has_link["$login"]="true"
+                  elif [ -n "$last_nom_login" ]; then
+                    user_has_link["$last_nom_login"]="true"
+                  fi
+                fi
+
+                # Empty Nom resets last_nom_login
+                if echo "$content" | grep -qE '^-[[:space:]]*Nom:[[:space:]]*$'; then
+                  last_nom_login=""
+                fi
+              fi
+            done < <(git blame --porcelain "$readme")
+          done
+
+          # -- Cross-reference with CSV --
+          REPORT="report-presentations.md"
+          echo "## Rapport des présentations" > "$REPORT"
+          echo "" >> "$REPORT"
+          echo "**Date :** $(TZ='America/Montreal' date '+%Y-%m-%d %H:%M %Z')" >> "$REPORT"
+          echo "" >> "$REPORT"
+
+          registered_with_link=""
+          registered_with_link_count=0
+          registered_no_link=""
+          registered_no_link_count=0
+          not_registered=""
+          not_registered_count=0
+          total_students=0
+
+          while IFS=',' read -r github_id name; do
+            github_id=$(echo "$github_id" | xargs)
+            name=$(echo "$name" | xargs)
+            [ -z "$github_id" ] && continue
+            total_students=$((total_students + 1))
+
+            if [ -n "${user_nom_semaine[$github_id]+x}" ]; then
+              semaine="${user_nom_semaine[$github_id]}"
+              topic="${user_nom_topic[$github_id]}"
+              display_name="${user_nom_name[$github_id]:-$name}"
+              if [ -n "${user_has_link[$github_id]+x}" ]; then
+                registered_with_link="${registered_with_link}| ${display_name} | ${github_id} | ${semaine} | ${topic} |\n"
+                registered_with_link_count=$((registered_with_link_count + 1))
+              else
+                registered_no_link="${registered_no_link}| ${display_name} | ${github_id} | ${semaine} | ${topic} |\n"
+                registered_no_link_count=$((registered_no_link_count + 1))
+              fi
+            else
+              not_registered="${not_registered}| ${name} | ${github_id} |\n"
+              not_registered_count=$((not_registered_count + 1))
+            fi
+          done < <(tail -n +2 "$CSV_FILE")
+
+          # -- Find logins in readmes that don't match any CSV entry --
+          unmatched=""
+          unmatched_count=0
+          for login in "${!user_nom_semaine[@]}"; do
+            found=false
+            while IFS=',' read -r github_id name; do
+              github_id=$(echo "$github_id" | xargs)
+              if [ "$github_id" = "$login" ]; then
+                found=true
+                break
+              fi
+            done < <(tail -n +2 "$CSV_FILE")
+            if [ "$found" = false ]; then
+              semaine="${user_nom_semaine[$login]}"
+              topic="${user_nom_topic[$login]}"
+              display_name="${user_nom_name[$login]:-$login}"
+              unmatched="${unmatched}| ${display_name} | ${login} | ${semaine} | ${topic} |\n"
+              unmatched_count=$((unmatched_count + 1))
+            fi
+          done
+
+          # -- Summary --
+          echo "### Résumé" >> "$REPORT"
+          echo "" >> "$REPORT"
+          echo "| Catégorie | Nombre |" >> "$REPORT"
+          echo "|-----------|--------|" >> "$REPORT"
+          echo "| Étudiants inscrits (CSV) | **${total_students}** |" >> "$REPORT"
+          echo "| Inscrits avec lien de présentation | **${registered_with_link_count}** |" >> "$REPORT"
+          echo "| Inscrits sans lien de présentation | **${registered_no_link_count}** |" >> "$REPORT"
+          echo "| Pas encore inscrits | **${not_registered_count}** |" >> "$REPORT"
+          echo "| GitHub IDs dans les readmes sans correspondance CSV | **${unmatched_count}** |" >> "$REPORT"
+          echo "" >> "$REPORT"
+
+          # -- Not registered --
+          if [ -n "$not_registered" ]; then
+            echo "### Étudiants pas encore inscrits" >> "$REPORT"
+            echo "" >> "$REPORT"
+            echo "| Nom | Identifiant GitHub |" >> "$REPORT"
+            echo "|-----|-------------------|" >> "$REPORT"
+            echo -e "$not_registered" >> "$REPORT"
+            echo "" >> "$REPORT"
+          fi
+
+          # -- Registered without link --
+          if [ -n "$registered_no_link" ]; then
+            echo "### Inscrits sans lien de présentation" >> "$REPORT"
+            echo "" >> "$REPORT"
+            echo "| Nom | Identifiant GitHub | Semaine | Sujet |" >> "$REPORT"
+            echo "|-----|-------------------|---------|-------|" >> "$REPORT"
+            echo -e "$registered_no_link" >> "$REPORT"
+            echo "" >> "$REPORT"
+          fi
+
+          # -- Registered with link --
+          if [ -n "$registered_with_link" ]; then
+            echo "### Inscrits avec lien de présentation" >> "$REPORT"
+            echo "" >> "$REPORT"
+            echo "| Nom | Identifiant GitHub | Semaine | Sujet |" >> "$REPORT"
+            echo "|-----|-------------------|---------|-------|" >> "$REPORT"
+            echo -e "$registered_with_link" >> "$REPORT"
+            echo "" >> "$REPORT"
+          fi
+
+          # -- Unmatched GitHub IDs --
+          if [ -n "$unmatched" ]; then
+            echo "### GitHub IDs dans les readmes sans correspondance dans le CSV" >> "$REPORT"
+            echo "" >> "$REPORT"
+            echo "Ces utilisateurs ont soumis des PRs de présentation mais ne correspondent à aucun étudiant dans le CSV." >> "$REPORT"
+            echo "" >> "$REPORT"
+            echo "| Nom | Identifiant GitHub | Semaine | Sujet |" >> "$REPORT"
+            echo "|-----|-------------------|---------|-------|" >> "$REPORT"
+            echo -e "$unmatched" >> "$REPORT"
+            echo "" >> "$REPORT"
+          fi
+
+          # -- Per-semaine summary --
+          echo "### Inscriptions par semaine" >> "$REPORT"
+          echo "" >> "$REPORT"
+          echo "| Semaine | Inscrits | Liens soumis |" >> "$REPORT"
+          echo "|---------|----------|-------------|" >> "$REPORT"
+
+          for readme in presentations/Semaine*/readme.md; do
+            [ -f "$readme" ] || continue
+            semaine=$(basename "$(dirname "$readme")")
+            registered=$(grep -cE '^-[[:space:]]*Nom:[[:space:]]+\S' "$readme" 2>/dev/null || echo "0")
+            with_links=$(grep -cE '^-[[:space:]]*Présentation:[[:space:]]+\S' "$readme" 2>/dev/null || echo "0")
+            echo "| ${semaine} | ${registered} | ${with_links} |" >> "$REPORT"
+          done
+
+          echo "" >> "$REPORT"
+          cat "$REPORT"
+          echo "## Rapport" >> $GITHUB_STEP_SUMMARY
+          cat "$REPORT" >> $GITHUB_STEP_SUMMARY

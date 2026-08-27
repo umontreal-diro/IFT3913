@@ -69,47 +69,47 @@ jobs:
           # --- Validate the strict template format ---
 
           # Check for the table header
-          if ! echo "$content" | grep -qE '^\|[[:space:]]*\|[[:space:]]*Nom complet[[:space:]]*\|[[:space:]]*Matricule[[:space:]]*\|'; then
-            echo "error=Le format du tableau n'est pas respecté. Veuillez suivre le TEMPLATE.md." >> $GITHUB_OUTPUT
+          if ! echo "$content" | grep -qE '^\|[[:space:]]*Nom complet[[:space:]]*\|[[:space:]]*Identifiant GitHub[[:space:]]*\|'; then
+            echo "error=Le format de la table n'est pas respecté. Veuillez suivre le TEMPLATE.md." >> $GITHUB_OUTPUT
             echo "valid=false" >> $GITHUB_OUTPUT
             exit 0
           fi
 
-          # Extract member rows (lines starting with | Membre)
-          member_lines=$(echo "$content" | grep -E '^\|[[:space:]]*Membre [12]')
+          # Extract member rows (data rows, excluding header and separator)
+          member_lines=$(echo "$content" | grep -E '^\|' | grep -vE '^\|[[:space:]]*Nom complet' | grep -vE '^\|[-[:space:]:]+\|[-[:space:]:]+\|$')
           member_count=$(echo "$member_lines" | grep -c '.' || true)
 
           if [ "$member_count" -lt 1 ]; then
-            echo "error=Au moins un membre doit être renseigné dans le tableau." >> $GITHUB_OUTPUT
+            echo "error=Au moins un membre doit être renseigné dans la table." >> $GITHUB_OUTPUT
             echo "valid=false" >> $GITHUB_OUTPUT
             exit 0
           fi
 
-          # Validate each member row has non-placeholder name and matricule
+          # Validate each member row has non-placeholder name and GitHub userid
           valid_members=true
           error_detail=""
           while IFS= read -r line; do
-            # Extract name (2nd column) and matricule (3rd column)
-            name_val=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $3); print $3}')
-            mat_val=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $4); print $4}')
+            # Extract name (1st data column) and GitHub userid (2nd data column)
+            name_val=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2); print $2}')
+            gh_val=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $3); print $3}')
 
             # Check name is not empty or placeholder
-            if [ -z "$name_val" ] || [ "$name_val" = "NOM Prénom" ]; then
+            if [ -z "$name_val" ] || [ "$name_val" = "Nom Prénom" ]; then
               valid_members=false
               error_detail="Le nom complet doit être renseigné pour chaque membre (pas de valeur vide ou placeholder)."
               break
             fi
 
-            # Check matricule is not empty or placeholder and is numeric
-            if [ -z "$mat_val" ] || [ "$mat_val" = "00000000" ]; then
+            # Check GitHub userid is not empty or placeholder
+            if [ -z "$gh_val" ] || [ "$gh_val" = "github-username" ]; then
               valid_members=false
-              error_detail="Le matricule doit être renseigné pour chaque membre (pas de valeur vide ou placeholder)."
+              error_detail="L'identifiant GitHub doit être renseigné pour chaque membre (pas de valeur vide ou placeholder)."
               break
             fi
 
-            if ! echo "$mat_val" | grep -qE '^[0-9]+$'; then
+            if ! echo "$gh_val" | grep -qE '^[a-zA-Z0-9][a-zA-Z0-9-]*$'; then
               valid_members=false
-              error_detail="Le matricule doit être numérique."
+              error_detail="L'identifiant GitHub doit contenir uniquement des caractères alphanumériques et des tirets."
               break
             fi
           done <<< "$member_lines"
@@ -136,14 +136,14 @@ jobs:
           # For NEW files: links are optional (values can be empty)
           # For MODIFIED files (updates): this is a links-only PR — apply time restriction and validate links
           if [ "$is_new" = false ]; then
-            # Links PR must be within 4 days of deadline (Oct 02 onwards)
+            # Links PR must be within 4 days of deadline (Oct 09 onwards)
             PR_CREATED="${{ github.event.pull_request.created_at }}"
             CREATED_EPOCH=$(date -d "$PR_CREATED" +%s)
-            # 4 days before Oct 06 = Oct 02 00:00 EDT = Oct 02 04:00 UTC
-            EARLIEST_EPOCH=$(date -d "2026-10-02T04:00:00Z" +%s)
+            # 4 days before Oct 13 = Oct 09 00:00 EDT = Oct 09 04:00 UTC
+            EARLIEST_EPOCH=$(date -d "2026-10-09T04:00:00Z" +%s)
 
             if [ "$CREATED_EPOCH" -lt "$EARLIEST_EPOCH" ]; then
-              echo "error=Les liens ne peuvent être soumis qu'à partir du 2 octobre 2026 (4 jours avant la date limite)." >> $GITHUB_OUTPUT
+              echo "error=Les liens ne peuvent être soumis qu'à partir du 9 octobre 2026 (4 jours avant la date limite)." >> $GITHUB_OUTPUT
               echo "valid=false" >> $GITHUB_OUTPUT
               exit 0
             fi
@@ -176,7 +176,7 @@ jobs:
             fi
 
             if [ "$links_only" = false ]; then
-              echo "error=Pour une mise à jour, seuls les liens peuvent être modifiés. Les noms et matricules ne doivent pas changer." >> $GITHUB_OUTPUT
+              echo "error=Pour une mise à jour, seuls les liens peuvent être modifiés. Les noms et identifiants GitHub ne doivent pas changer." >> $GITHUB_OUTPUT
               echo "valid=false" >> $GITHUB_OUTPUT
               exit 0
             fi
@@ -209,7 +209,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
-          gh pr review ${{ github.event.pull_request.number }} --approve --body "Auto-approuvé ✅. Le format du readme est valide."
+          gh pr review ${{ github.event.pull_request.number }} --approve --body "Auto-approuvé. Le format du readme est valide."
           gh pr merge ${{ github.event.pull_request.number }} --squash
 
       - name: Commenter et fermer la PR invalide
@@ -217,15 +217,17 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
-          gh pr comment ${{ github.event.pull_request.number }} --body "❌ Cette PR ne peut pas être auto-approuvée.
+          gh pr comment ${{ github.event.pull_request.number }} --body "Cette PR ne peut pas être auto-approuvée.
 
           **Raison :** ${{ steps.validate.outputs.error }}
 
           **Format attendu :** veuillez suivre exactement le modèle dans [\`tache2/TEMPLATE.md\`](../blob/main/tache2/TEMPLATE.md).
 
+          Consultez les [instructions pour les PRs](https://github.com/umontreal-diro/IFT3913/blob/2026/instructions-PR.md).
+
           **Règles :**
           1. Le fichier doit être dans \`tache2/NOM1-NOM2/readme.md\`
-          2. Le format du tableau avec noms complets et matricules doit être respecté
+          2. Le format de la table avec noms complets et identifiants GitHub doit être respecté
           3. Les liens peuvent être ajoutés dans une PR séparée
 
           La PR est automatiquement fermée. Veuillez corriger et soumettre une nouvelle PR."
