@@ -110,8 +110,9 @@ Vous êtes autorisés à utiliser l'IA. Si vous l'utilisez, vous devez le docume
 |sources | la présentation s'appuie sur au moins 3 sources extérieures qui sont citées en bas de page et sont publiquement accessibles |
 |question | pose au moins une question pour une présentation du même jour |
 
-[demo]: la présentation inclut une démo interactive de l'outil présenté|
-[concept]: le présentation inclut une définition claire du concept abordé ainsi que des exemples concrets du concept abordé|
+[demo]: la présentation inclut une démo interactive de l'outil présenté 
+
+[concept]: le présentation inclut une définition claire du concept abordé ainsi que des exemples concrets du concept abordé
 
 La limite de temps est obligatoire. Tous les autres critères comptent pour un point. Le 2 derniers critères sont exclusifs, en fonction du type de présentation que vous choisissez de faire.
 
