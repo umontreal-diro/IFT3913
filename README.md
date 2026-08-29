@@ -79,57 +79,15 @@ L'évaluation se fait sur la base des 4 tâches décrites ci-dessous. Les tâche
 - tâche #1: présentation individuelle (30%). Les étudiant(e)s choisissent un thème parmi tous ceux abordés chaque semaine et préparent une présentation technique de 7 minutes sur ce thème. Cf.les [instructions détaillées](./presentations/readme.md) et les [critères d'évaluation pour la tâche 1](#tâche-1).
   - date limite: jour du cours
   - politique de retard: en cas d'absence au cours, il n'y a qu'une seule opportunité de reporter la présentation à un autre jour, à déterminer avec l'équipe enseignante
-- tâche #2: augmentation d'une suite de tests automatique [Tika](https://github.com/umontreal-diro/tika) (30%). Les étudiants travaillent en binôme. Chaque binôme augmente la suite de tests de [Tika](https://github.com/umontreal-diro/tika). Cf. les [instructions détaillées et les critères de notation](./tache2/readme.md). 
+- tâche #2: augmentation d'une suite de tests automatique [Tika](https://github.com/umontreal-diro/tika) (30%). Les étudiants travaillent en binôme. Chaque binôme augmente la suite de tests de [Tika](https://github.com/umontreal-diro/tika). Cf. les [instructions détaillées et les critères d'évaluation](./tache2/readme.md). 
   - date limite: mardi 13 octobre, 17h EDT 
   - politique de retard: 10% retenus sur la note pour un rendu dans les 24 heures qui suivent la date limite; 50% retenus pour un rendu entre 24 et 48 heures en retard; pas de note pour un rendu plus de 48 heures en retard
-- tâche #3: automatisation des tests de sécurité (30%). Les étudiants travaillent en binôme, le même binôme que pour la tâche #2. Chaque binôme modifie [Tika](https://github.com/umontreal-diro/tika) pour le test d'intégration.  Cf. les [instructions détaillées](./tache3/readme.md) et les [critères pour la tâche 3](#tâche-3).
+- tâche #3: automatisation des tests de sécurité (30%). Les étudiants travaillent en binôme, le même binôme que pour la tâche #2. Chaque binôme modifie [Tika](https://github.com/umontreal-diro/tika) pour le test d'intégration.  Cf. les [instructions détaillées et les critères d'évaluation](./tache3/readme.md).
   - date limite: mardi 17 novembre, 17h EST
   - politique de retard: 10% retenus sur la note pour un rendu dans les 24 heures qui suivent la date limite; 50% retenus pour un rendu entre 24 et 48 heures en retard; pas de note pour un rendu plus de 48 heures en retard
-- tâche #4: répondre à 3 quizz (10%). Vous recevrez 3 quizz au cours du semestre qui aborderont des points abordés dans les différentes présentations du cours. Les 3 quizz seront répartis sur le semestre à des dates non déterminées (a.k.a quizz surprises). Les quizz seront distribués en classe.
+- tâche #4: répondre à 3 quizz (10%). Vous recevrez 3 quizz au cours du semestre qui aborderont des points abordés dans les différentes présentations du cours. Les 3 quizz sont distribués en classe aux dates indiquées plus haut.
   - politique de retard: les quizz sont ouverts pendant 15 minutes, en classe. Aucun quizz ne pourra être fait en-dehors de cette période.
 
 # Usage de l'intelligence artificielle
 
-Vous êtes autorisés à utiliser l'IA. Si vous l'utilisez, vous devez le documenter en suivant les instructions de l'Université: [Intelligence artificielle générative: Citer, signaler, déclarer et documenter](https://boite-outils.bib.umontreal.ca/c.php?g=743753&p=5377614)
-
-# Critères d'évaluation
-
-## Tâche #1
-
-| critère | description |
-|-------------------------------------------- | ----|
-|temps | la présentation dure entre 6.30 min et 7.30 min (limite stricte)|
-|structure | la présentation est bien structurée et la structure est annoncée et visible |
-|introduction | la présentation inclut une introduction qui motive l'importance du sujet pour la qualité logicielle |
-|contenu | la présentation inclut une partie technique avec des extraits de code, lisibles |
-|défnition | le concept présenté est explicitement défini |
-|originalité | la présentation inclut 2 exemples originaux pour illustrer le concept |
-|réflection | la présentation inclut une partie réflection / recul sur le sujet |
-|conclusion | le dernier slide inclut un message clair et pratique pour l'audience |
-|compréhension | l'orat(rice.eur) montre une maitrise et compréhension claire du sujet et peut répondre aux questions de l'audience |
-|sources | la présentation s'appuie sur au moins 3 sources extérieures qui sont citées en bas de page et sont publiquement accessibles |
-|question | la dernière slide inclut une question à propos de la présentation (sans la réponse)  |
-
-[demo]: la présentation inclut une démo interactive de l'outil présenté 
-
-[concept]: le présentation inclut une définition claire du concept abordé ainsi que des exemples concrets du concept abordé
-
-La limite de temps est obligatoire. Tous les autres critères comptent pour un point. Le 2 derniers critères sont exclusifs, en fonction du type de présentation que vous choisissez de faire.
-
-
-## Tâche #3
-
-| critère | description |
-|-------------------------------------------- | ----|
-| Github action (GA)  (20%)      | l'action échoue si le un commit introduit une nouvelle vulnérabilité détectée par semgrep|
-| documentation GA   (20%)  | les modifications apportées à l'action ainsi que la validation des modifications sont documentées et justifiées;  |
-| vulnérabilités (30%) | modifier le code pour insérer 7 vulnérabilités de différents types  |
-| documentation vulnérabilités (20%)   | documenter, justifier, expliquer chaque vulnérabilité insérée |
-| humour      (10%)  | rickroll dans le CI |
-
-## Tâche #4: quizz
-
-Trois quizz surprises au cours du semestre
-- 10 questions par quizz
-- les quizz sont distribués en classe
-- la note globale des quizz compte 10% de la note générale du cours 
+Vous êtes autorisés à utiliser l'IA. Si vous l'utilisez, vous devez le documenter en suivant les instructions de l'Université: [Intelligence artificielle générative: Citer, signaler, déclarer et documenter](https://boite-outils.bib.umontreal.ca/c.php?g=743753&p=5377614).

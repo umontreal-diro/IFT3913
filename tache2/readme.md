@@ -16,7 +16,7 @@ Pour la tâche 2, chaque binôme doit accomplir les étapes suivantes:
 - calculer le score de mutation avec les nouveaux tests et déterminer si les tests générés détectent tous les mutants. Expliquez quels mutants sont détectés et pourquoi. 
 - s’il y a des mutants non détectés, ajouter manuellement des tests. Documenter précisément chaque cas de test: nom du test, intention du test (quel comportement est testé), motivation des données de test choisies, explication de l'oracle (comment déterminer le comportement attendu)
 
-## Critères pour la notation de la tâche 2
+## Critères d'évaluation de la tâche 2
 
 | critère | description |
 |-------------------------------------------- | ----|
