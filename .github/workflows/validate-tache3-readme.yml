@@ -1,0 +1,240 @@
+name: Validation des soumissions tâche 3
+
+on:
+  pull_request_target:
+    paths:
+      - 'tache3/*/readme.md'
+      - 'tache3/*/README.md'
+
+jobs:
+  valider-et-approuver:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+          allow-unsafe-pr-checkout: true
+
+      - name: Obtenir les fichiers modifiés
+        id: changed-files
+        uses: tj-actions/changed-files@v47
+        with:
+          files: |
+            tache3/*/readme.md
+            tache3/*/README.md
+          base_sha: ${{ github.event.pull_request.base.sha }}
+          sha: ${{ github.event.pull_request.head.sha }}
+
+      - name: Valider les changements
+        id: validate
+        run: |
+          set -e
+
+          all_changed="${{ steps.changed-files.outputs.all_changed_files }}"
+          all_added="${{ steps.changed-files.outputs.added_files }}"
+          all_modified="${{ steps.changed-files.outputs.modified_files }}"
+
+          IFS=' ' read -ra changed_files <<< "$all_changed"
+
+          # Must change exactly one file
+          if [ ${#changed_files[@]} -ne 1 ]; then
+            echo "error=Un seul fichier readme doit être modifié par PR." >> $GITHUB_OUTPUT
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          file="${changed_files[0]}"
+
+          # Must be inside tache3/SUBFOLDER/readme.md (case-insensitive)
+          if [[ ! "$file" =~ ^tache3/[^/]+/[Rr][Ee][Aa][Dd][Mm][Ee]\.[Mm][Dd]$ ]]; then
+            echo "error=Le fichier doit être dans un sous-dossier de tache3/ (ex: tache3/NOM1-NOM2/readme.md)." >> $GITHUB_OUTPUT
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Determine if this is a new file or an update to an existing one
+          is_new=false
+          if echo "$all_added" | grep -q "$file"; then
+            is_new=true
+          fi
+
+          content=$(cat "$file")
+
+          # --- Validate the strict template format ---
+
+          # Check for the table header
+          if ! echo "$content" | grep -qE '^\|[[:space:]]*Nom complet[[:space:]]*\|[[:space:]]*Identifiant GitHub[[:space:]]*\|'; then
+            echo "error=Le format de la table n'est pas respecté. Veuillez suivre le TEMPLATE." >> $GITHUB_OUTPUT
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Extract member rows (data rows, excluding header and separator)
+          member_lines=$(echo "$content" | grep -E '^\|' | grep -vE '^\|[[:space:]]*Nom complet' | grep -vE '^\|[-[:space:]:]+\|[-[:space:]:]+\|$')
+          member_count=$(echo "$member_lines" | grep -c '.' || true)
+
+          if [ "$member_count" -lt 1 ]; then
+            echo "error=Au moins un membre doit être renseigné dans la table." >> $GITHUB_OUTPUT
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Validate each member row has non-placeholder name and GitHub userid
+          valid_members=true
+          error_detail=""
+          while IFS= read -r line; do
+            # Extract name (1st data column) and GitHub userid (2nd data column)
+            name_val=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2); print $2}')
+            gh_val=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $3); print $3}')
+
+            # Check name is not empty or placeholder
+            if [ -z "$name_val" ] || [ "$name_val" = "Nom Prénom" ]; then
+              valid_members=false
+              error_detail="Le nom complet doit être renseigné pour chaque membre (pas de valeur vide ou placeholder)."
+              break
+            fi
+
+            # Check GitHub userid is not empty or placeholder
+            if [ -z "$gh_val" ] || [ "$gh_val" = "github-username" ]; then
+              valid_members=false
+              error_detail="L'identifiant GitHub doit être renseigné pour chaque membre (pas de valeur vide ou placeholder)."
+              break
+            fi
+
+            if ! echo "$gh_val" | grep -qE '^[a-zA-Z0-9][a-zA-Z0-9-]*$'; then
+              valid_members=false
+              error_detail="L'identifiant GitHub doit contenir uniquement des caractères alphanumériques et des tirets."
+              break
+            fi
+          done <<< "$member_lines"
+
+          if [ "$valid_members" = false ]; then
+            echo "error=$error_detail" >> $GITHUB_OUTPUT
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Check links section exists (the labels must be present even if values are empty)
+          if ! echo "$content" | grep -qE '^- Lien vers le répertoire GitHub :'; then
+            echo "error=La section 'Lien vers le répertoire GitHub :' est manquante." >> $GITHUB_OUTPUT
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          if ! echo "$content" | grep -qE '^- Lien vers le README du répertoire :'; then
+            echo "error=La section 'Lien vers le README du répertoire :' est manquante." >> $GITHUB_OUTPUT
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Extract links (applies to both new and updated files)
+          repo_link=$(echo "$content" | grep -E '^- Lien vers le répertoire GitHub :' | sed 's/^- Lien vers le répertoire GitHub :[[:space:]]*//')
+          readme_link=$(echo "$content" | grep -E '^- Lien vers le README du répertoire :' | sed 's/^- Lien vers le README du répertoire :[[:space:]]*//')
+          has_links=false
+          if [ -n "$repo_link" ] || [ -n "$readme_link" ]; then
+            has_links=true
+          fi
+
+          # Validate links are GitHub URLs whenever present (new or update)
+          if [ -n "$repo_link" ]; then
+            if ! echo "$repo_link" | grep -qE '^https://github\.com/'; then
+              echo "error=Le lien du répertoire doit être un lien GitHub (https://github.com/...)." >> $GITHUB_OUTPUT
+              echo "valid=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          fi
+
+          if [ -n "$readme_link" ]; then
+            if ! echo "$readme_link" | grep -qE '^https://github\.com/'; then
+              echo "error=Le lien du README doit être un lien GitHub (https://github.com/...)." >> $GITHUB_OUTPUT
+              echo "valid=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          fi
+
+          # Time restriction: links can only be submitted within 4 days of deadline
+          if [ "$has_links" = true ]; then
+            PR_CREATED="${{ github.event.pull_request.created_at }}"
+            CREATED_EPOCH=$(date -d "$PR_CREATED" +%s)
+            # 4 days before Nov 17 = Nov 13 00:00 EST = Nov 13 05:00 UTC
+            EARLIEST_EPOCH=$(date -d "2026-11-13T05:00:00Z" +%s)
+
+            if [ "$CREATED_EPOCH" -lt "$EARLIEST_EPOCH" ]; then
+              echo "error=Les liens ne peuvent être soumis qu'à partir du 13 novembre 2026 (4 jours avant la date limite)." >> $GITHUB_OUTPUT
+              echo "valid=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          fi
+
+          # For updates: only the links section should change
+          if [ "$is_new" = false ]; then
+            diff_output=$(git diff "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}" -- "$file")
+
+            added_lines=$(echo "$diff_output" | grep "^+" | grep -v "^+++" | sed 's/^+//')
+            removed_lines=$(echo "$diff_output" | grep "^-" | grep -v "^---" | sed 's/^-//')
+
+            links_only=true
+            while IFS= read -r line; do
+              if [ -n "$line" ]; then
+                if ! echo "$line" | grep -qE '^- Lien vers le (répertoire GitHub|README du répertoire) :'; then
+                  links_only=false
+                  break
+                fi
+              fi
+            done <<< "$added_lines"
+
+            if [ "$links_only" = true ]; then
+              while IFS= read -r line; do
+                if [ -n "$line" ]; then
+                  if ! echo "$line" | grep -qE '^- Lien vers le (répertoire GitHub|README du répertoire) :'; then
+                    links_only=false
+                    break
+                  fi
+                fi
+              done <<< "$removed_lines"
+            fi
+
+            if [ "$links_only" = false ]; then
+              echo "error=Pour une mise à jour, seuls les liens peuvent être modifiés. Les noms et identifiants GitHub ne doivent pas changer." >> $GITHUB_OUTPUT
+              echo "valid=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          fi
+
+          echo "valid=true" >> $GITHUB_OUTPUT
+
+      - name: Approuver et fusionner
+        if: steps.validate.outputs.valid == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        run: |
+          gh pr review ${{ github.event.pull_request.number }} --approve --body "Auto-approuvé. Le format du readme est valide."
+          gh pr merge ${{ github.event.pull_request.number }} --squash
+
+      - name: Commenter et fermer la PR invalide
+        if: steps.validate.outputs.valid == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} --body "Cette PR ne peut pas être auto-approuvée.
+
+          **Raison :** ${{ steps.validate.outputs.error }}
+
+          **Format attendu :** veuillez suivre exactement le modèle dans [\`tache3-readme.md\`](../blob/main/.github/PULL_REQUEST_TEMPLATE/tache3-readme.md).
+
+          Consultez les [instructions pour les PRs](https://github.com/umontreal-diro/IFT3913/blob/2026/instructions-PR.md).
+
+          **Règles :**
+          1. Le fichier doit être dans \`tache3/NOM1-NOM2/readme.md\`
+          2. Le format de la table avec noms complets et identifiants GitHub doit être respecté
+          3. Les liens peuvent être ajoutés dans une PR séparée
+
+          La PR est automatiquement fermée. Veuillez corriger et soumettre une nouvelle PR."
+
+          gh pr close ${{ github.event.pull_request.number }}
