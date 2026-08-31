@@ -17,15 +17,15 @@ Le format de la PR est automatiquement vérifié par un [workflow Github](.githu
 
 Lorsque vous êtes prêt à rendre la tâche 2, en binôme, veuillez créer un répertoire ```NOM1_NOM2``` dans le répertoire [tache2](./tache2/) puis préparer une pull request en suivant le format documenté ici: [.github/PULL_REQUEST_TEMPLATE/tache2-readme.md](.github/PULL_REQUEST_TEMPLATE/tache2-readme.md).
 
-Aucune PR pour la tâche 2 ne sera acceptée avant 9 octobre 2026.
+Vous pouvez soumettre une PR pour créer le répertoire à tout moment, mais vous ne pouvez pas soumettre le lien vers votre référentiel Github avant le 9 octobre 2026.
 
-Le format de la PR est vérifié par un [workflow Github](.github/workflows/validate-tache2-readme.yml), la validité de la date de rendu est vérifié par un autre [workflow Github](.github/workflows/check-tache2-submissions.yml).
+Le format de la PR et la validité de la date de rendu sont vérifiés par un [workflow Github](.github/workflows/validate-tache2-readme.yml).
 
 ## Tâche 3
 
 Lorsque vous êtes prêt à rendre la tâche 3, en binôme, veuillez créer un répertoire ```NOM1_NOM2``` dans le répertoire [tache3](./tache3/) puis préparer une pull request en suivant le format documenté ici: [.github/PULL_REQUEST_TEMPLATE/tache2-readme.md](.github/PULL_REQUEST_TEMPLATE/tache3-readme.md).
 
-Aucune PR pour la tâche 3 ne sera acceptée avant 13 novembre 2026.
+Vous pouvez soumettre une PR pour créer le répertoire à tout moment, mais vous ne pouvez pas soumettre le lien vers votre référentiel Github avant le  13 novembre 2026.
 
-Le format de la PR est vérifié par un [workflow Github](.github/workflows/validate-tache3-readme.yml), la validité de la date de rendu est vérifié par un autre [workflow Github](.github/workflows/check-tache3-submissions.yml).
+Le format de la PR et la validité de la date de rendu sont vérifiés par un [workflow Github](.github/workflows/validate-tache3-readme.yml)
 
