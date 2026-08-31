@@ -23,7 +23,7 @@ Le format de la PR et la validité de la date de rendu sont vérifiés par un [w
 
 ## Tâche 3
 
-Lorsque vous êtes prêt à rendre la tâche 3, en binôme, veuillez créer un répertoire ```NOM1_NOM2``` dans le répertoire [tache3](./tache3/) puis préparer une pull request en suivant le format documenté ici: [.github/PULL_REQUEST_TEMPLATE/tache2-readme.md](.github/PULL_REQUEST_TEMPLATE/tache3-readme.md).
+Lorsque vous êtes prêt à rendre la tâche 3, en binôme, veuillez créer un répertoire ```NOM1_NOM2``` dans le répertoire [tache3](./tache3/) puis préparer une pull request en suivant le format documenté ici: [.github/PULL_REQUEST_TEMPLATE/tache3-readme.md](.github/PULL_REQUEST_TEMPLATE/tache3-readme.md).
 
 Vous pouvez soumettre une PR pour créer le répertoire à tout moment, mais vous ne pouvez pas soumettre le lien vers votre référentiel Github avant le  13 novembre 2026.
 
