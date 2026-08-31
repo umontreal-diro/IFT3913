@@ -158,6 +158,20 @@ jobs:
             fi
           fi
 
+          # Time restriction: links can only be submitted within 4 days of deadline
+          if [ "$has_links" = true ]; then
+            PR_CREATED="${{ github.event.pull_request.created_at }}"
+            CREATED_EPOCH=$(date -d "$PR_CREATED" +%s)
+            # 4 days before Nov 17 = Nov 13 00:00 EST = Nov 13 05:00 UTC
+            EARLIEST_EPOCH=$(date -d "2026-11-13T05:00:00Z" +%s)
+
+            if [ "$CREATED_EPOCH" -lt "$EARLIEST_EPOCH" ]; then
+              echo "error=Les liens ne peuvent être soumis qu'à partir du 13 novembre 2026 (4 jours avant la date limite)." >> $GITHUB_OUTPUT
+              echo "valid=false" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          fi
+
           # For updates: only the links section should change
           if [ "$is_new" = false ]; then
             diff_output=$(git diff "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}" -- "$file")
