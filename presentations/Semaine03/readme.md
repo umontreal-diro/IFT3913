@@ -7,7 +7,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation: 
 
 [concept] Oracle de test             
-- Nom: 
+- Nom: Isabelle Guillard
 - Présentation: 
 
 [concept] Arrange, Act and Assert
