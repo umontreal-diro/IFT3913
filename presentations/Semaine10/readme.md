@@ -25,7 +25,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Tester des systèmes à base d'IA
-- Nom:
+- Nom: Rayyan Oumlil
 - Présentation:
 
 [concept] Tester un chatbot
