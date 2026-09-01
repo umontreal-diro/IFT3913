@@ -25,7 +25,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 - Présentation: 
 
 [demo] [Mockito](https://site.mockito.org/) pour les mocks en Java
-- Nom: 
+- Nom: Stephen Thangathurai
 - Présentation: 
 
 [demo] [Cucumber](https://cucumber.io/) pour le test basé comportement en Java
