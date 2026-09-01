@@ -95,7 +95,17 @@ jobs:
               valid=true
             fi
           fi
-          
+
+          # Check that at most one Nom and one Présentation field are changed
+          if [ "$valid" = true ]; then
+            nom_added=$(echo "$added_content" | grep -cE "^[[:space:]]*-[[:space:]]*Nom:" || true)
+            pres_added=$(echo "$added_content" | grep -cE "^[[:space:]]*-[[:space:]]*Présentation:" || true)
+            if [ "$nom_added" -gt 1 ] || [ "$pres_added" -gt 1 ]; then
+              valid=false
+              echo "Erreur: Un seul champ Nom et/ou un seul champ Présentation peut être modifié par PR"
+            fi
+          fi
+
           if [ "$valid" = true ]; then
             echo "valid=true" >> $GITHUB_OUTPUT
           else
