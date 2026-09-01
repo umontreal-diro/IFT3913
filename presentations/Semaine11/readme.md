@@ -9,11 +9,11 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Présentation:
 
 [concept] Les messages d’erreur absurdes et humoristiques
-- Nom:
+- Nom: 
 - Présentation:
 
 [concept] Humour dans les bibliothèques de test
-- Nom:
+- Nom: 
 - Présentation:
 
 [concept] Humour dans la documentation logicielle
@@ -25,7 +25,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Présentation:
 
 [concept] Humour en ligne de commande
-- Nom:
+- Nom: 
 - Présentation:
 
 [concept] Qualité logicielle pour les easter eggs 
