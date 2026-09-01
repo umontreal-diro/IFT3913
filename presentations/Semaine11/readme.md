@@ -9,7 +9,11 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Présentation:
 
 [concept] Les messages d’erreur absurdes et humoristiques
-- Nom: Benoit Baudry
+- Nom:
+- Présentation:
+
+[concept] Humour dans les bibliothèques de test
+- Nom:
 - Présentation:
 
 [concept] Humour dans la documentation logicielle
