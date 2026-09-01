@@ -31,7 +31,7 @@
 - Présentation:
   
 [demo] [selenium](https://www.selenium.dev/) pour le test web
-- Nom:
+- Nom: Enric Soldevila
 - Présentation:
   
 [Concept] Comment les langages de programmation eux-mêmes sont testés

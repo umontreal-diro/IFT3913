@@ -6,7 +6,7 @@ La tâche 2 se fait en binômes. Quand un binôme est formé, il fait une 'pull 
 
 Pour la tâche 2, chaque binôme doit accomplir les étapes suivantes:
 
-- sélectionner entre une et 3 classes de [Tika](https://github.com/umontreal-diro/tika)  qui ont déjà des tests, mais qui ne couvrent pas 100% du code
+- sélectionner entre une et 3 classes du [cas d'étude](../README.md/#cas-détude)  qui ont déjà des tests, mais qui ne couvrent pas 100% du code
 - installer et utiliser [ChatUniTest](https://github.com/ZJU-ACES-ISE/ChatUniTest) avec un modèle de langage ouvert exécuté localement (ex. via Ollama) pour générer automatiquement des tests supplémentaires sur les classes sélectionnées.
 - Documenter le résultat de cette génération : où sont les tests générés ? les tests générés compilent-ils et s'exécutent-ils sans intervention manuelle ? sinon, combien de corrections ont été nécessaires ?  
 - Comparer qualitativement les oracles produits par l'IA à ceux écrits à la main (pertinence, spécificité, ou au contraire vérifications triviales). 
