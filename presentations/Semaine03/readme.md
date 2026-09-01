@@ -15,7 +15,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation: 
 
 [concept] Les différents niveaux de test logiciel   
-- Nom: 
+- Nom: Udeme-Obong Samuel
 - Présentation: 
 
 [concept] Tests paramétrés
