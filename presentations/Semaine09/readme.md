@@ -23,7 +23,7 @@
 - Présentation:
   
 [concept] Tests de comptabilité dans les environnements virtualisés et conteneurisés (Docker, Kubernetes)
-- Nom:
+- Nom: Moussa Adama Sogoba
 - Présentation:
   
 [demo] [gauge](https://github.com/getgauge/gauge) pour le test multi platformes
