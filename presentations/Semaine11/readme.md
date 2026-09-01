@@ -5,7 +5,7 @@ Pour faire une présentation sur l'humour pour le test logiciel,  proposez votre
 Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontreal.ca) le plus tôt possible pour valider le sujet.
 
 [concept] Easter eggs dans la programmation
-- Nom:
+- Nom: Étienne Poliquin Daher
 - Présentation:
 
 [concept] Les messages d’erreur absurdes et humoristiques
