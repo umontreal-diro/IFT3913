@@ -17,7 +17,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Test d'applications mobiles
-- Nom:
+- Nom:Jominia Ahouandjinou
 - Présentation:
 
 [concept] Test pour les jeux vidéos
