@@ -45,5 +45,5 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Test de systèmes de cinéma numérique
-- Nom:
+- Nom: Melila Benmakhlouf
 - Présentation:
