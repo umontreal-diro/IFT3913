@@ -24,7 +24,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Nom:
 - Présentation:
 
-[concept] Humour en ligne de commande
+[concept] Humour dans le binaire
 - Nom: 
 - Présentation:
 
