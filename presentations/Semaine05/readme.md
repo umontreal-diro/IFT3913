@@ -3,7 +3,7 @@
 Pour faire une présentation sur le test unitaire avancé, choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
 
 [concept] Mocks et stubs
-- Nom: 
+- Nom: Layla Elshahawy
 - Présentation: 
 
 [concept] Analyse de mutation
