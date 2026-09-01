@@ -90,7 +90,7 @@ L'évaluation se fait sur la base des 4 tâches décrites ci-dessous. Les tâche
 
 # Cas d'étude
 
-Pour les tâches 2 et 3, vous choisirez des classes à tester et à analyser parmi les modules suivants du projets [Tika](https://github.com/umontreal-diro/tika): [tika-parser-ocr-module](https://github.com/umontreal-diro/tika/tree/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-ocr-module), [tika-core](https://github.com/umontreal-diro/tika/tree/main/tika-core), [tika-serialization](https://github.com/umontreal-diro/tika/tree/main/tika-serialization) et [tika-parser-microsoft-module](https://github.com/umontreal-diro/tika/tree/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-microsoft-module )
+Pour les tâches 2 et 3, vous choisirez des classes à tester et à analyser parmi les modules suivants du projets [Tika](https://github.com/umontreal-diro/tika): [tika-parser-ocr-module](https://github.com/umontreal-diro/tika/tree/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-ocr-module), [tika-parser-pdf-module](https://github.com/umontreal-diro/tika/tree/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-pdf-module), [tika-core](https://github.com/umontreal-diro/tika/tree/main/tika-core), [tika-serialization](https://github.com/umontreal-diro/tika/tree/main/tika-serialization) et [tika-parser-microsoft-module](https://github.com/umontreal-diro/tika/tree/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-microsoft-module )
 
 # Usage de l'intelligence artificielle
 
