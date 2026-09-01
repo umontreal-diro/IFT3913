@@ -29,7 +29,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Tester un chatbot
-- Nom:
+- Nom: Jean-Nicolas Beaulieu
 - Présentation:
 
 [concept] Tester une plateforme de streaming
