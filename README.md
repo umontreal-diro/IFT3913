@@ -79,14 +79,18 @@ L'évaluation se fait sur la base des 4 tâches décrites ci-dessous. Les tâche
 - tâche #1: présentation individuelle (30%). Les étudiant(e)s choisissent un thème parmi tous ceux abordés chaque semaine et préparent une présentation technique de 7 minutes sur ce thème. Cf.les [instructions détaillées](./presentations/readme.md) et les [critères d'évaluation pour la tâche 1](#tâche-1).
   - date limite: jour du cours
   - politique de retard: en cas d'absence au cours, il n'y a qu'une seule opportunité de reporter la présentation à un autre jour, à déterminer avec l'équipe enseignante
-- tâche #2: augmentation d'une suite de tests automatique [Tika](https://github.com/umontreal-diro/tika) (30%). Les étudiants travaillent en binôme. Chaque binôme augmente la suite de tests de [Tika](https://github.com/umontreal-diro/tika). Cf. les [instructions détaillées et les critères d'évaluation](./tache2/readme.md). 
+- tâche #2: augmentation d'une suite de tests automatique (30%). Les étudiants travaillent en binôme. Chaque binôme augmente la suite de tests de [cas d'étude](#cas-détude). Cf. les [instructions détaillées et les critères d'évaluation](./tache2/readme.md). 
   - date limite: mardi 13 octobre, 17h EDT 
   - politique de retard: 10% retenus sur la note pour un rendu dans les 24 heures qui suivent la date limite; 50% retenus pour un rendu entre 24 et 48 heures en retard; pas de note pour un rendu plus de 48 heures en retard
-- tâche #3: automatisation des tests de sécurité (30%). Les étudiants travaillent en binôme, le même binôme que pour la tâche #2. Chaque binôme modifie [Tika](https://github.com/umontreal-diro/tika) pour le test d'intégration.  Cf. les [instructions détaillées et les critères d'évaluation](./tache3/readme.md).
+- tâche #3: automatisation des tests de sécurité (30%). Les étudiants travaillent en binôme, le même binôme que pour la tâche #2. Chaque binôme modifie le [cas d'étude](#cas-détude) pour le test d'intégration.  Cf. les [instructions détaillées et les critères d'évaluation](./tache3/readme.md).
   - date limite: mardi 17 novembre, 17h EST
   - politique de retard: 10% retenus sur la note pour un rendu dans les 24 heures qui suivent la date limite; 50% retenus pour un rendu entre 24 et 48 heures en retard; pas de note pour un rendu plus de 48 heures en retard
 - tâche #4: répondre à 3 quizz (10%). Vous recevrez 3 quizz au cours du semestre qui aborderont des points abordés dans les différentes présentations du cours. Les 3 quizz sont distribués en classe aux dates indiquées plus haut.
   - politique de retard: les quizz sont ouverts pendant 15 minutes, en classe. Aucun quizz ne pourra être fait en-dehors de cette période.
+
+# Cas d'étude
+
+Pour les tâches 2 et 3, vous choisirez des classes à tester et à analyser parmi les modules suivants du projets [Tika](https://github.com/umontreal-diro/tika): [tika-parser-ocr-module](https://github.com/umontreal-diro/tika/tree/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-ocr-module), [tika-core](https://github.com/umontreal-diro/tika/tree/main/tika-core), [tika-serialization](https://github.com/umontreal-diro/tika/tree/main/tika-serialization) et [tika-parser-microsoft-module](https://github.com/umontreal-diro/tika/tree/main/tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-microsoft-module )
 
 # Usage de l'intelligence artificielle
 

@@ -6,7 +6,7 @@ La tâche 3 se fait avec les mêmes binômes que pour la tâche 2.
 
 Pour la tâche 3, chaque binôme doit accomplir les étapes suivantes:
 
-- modifier le workflow GitHub Actions de Tika de telle sorte que le processus de build échoue si un commit introduit une nouvelle vulnérabilité détectée par Semgrep;
+- modifier le workflow GitHub Actions du [cas d'étude](../README.md/#cas-détude) de telle sorte que le processus de build échoue si un commit introduit une nouvelle vulnérabilité détectée par Semgrep;
 - documenter et expliquer les choix de conception et d’implémentation pour cette modification de workflow, ainsi que la manière dont cette modification a été validée;
 - modifier le code de Tika afin d’introduire 7 vulnérabilités de types différents détectables par Semgrep;
 - documenter et justifier chaque vulnérabilité introduite: le choix du fichier modifié, le type de vulnérabilité, la raison pour laquelle le code introduit est vulnérable, et le résultat obtenu avec Semgrep;
