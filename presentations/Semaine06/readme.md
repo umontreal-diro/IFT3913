@@ -23,7 +23,7 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 - Présentation: 
 
 [concept] Revue de code assistée par les LLM
-- Nom: 
+- Nom: Dina Andolsi
 - Présentation: 
 
 [concept] Qualité des tests générés avec l'IA
