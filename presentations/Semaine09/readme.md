@@ -15,7 +15,7 @@
 - Présentation:
 
 [concept] test de migration de données entre environnements
-- Nom:
+- Nom: David Serafini
 - Présentation:
  
 [concept] Cross-platform testing with Appium
