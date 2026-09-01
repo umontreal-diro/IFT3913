@@ -25,7 +25,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Présentation:
 
 [concept] Humour en ligne de commande
-- Nom:
+- Nom: benoit
 - Présentation:
 
 [concept] Qualité logicielle pour les easter eggs 
