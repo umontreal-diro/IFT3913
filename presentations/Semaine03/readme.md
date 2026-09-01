@@ -23,11 +23,11 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation: 
 
 [concept] Anti patrons pour les test unitaires          
-- Nom: 
+- Nom: Olivier Larue
 - Présentation: 
 
 [concept] Programmation pilotée par le comportement (BDD)
-- Nom: 
+- Nom: Paul Litré
 - Présentation: 
 
 [demo] Test unitaire en Java                              
