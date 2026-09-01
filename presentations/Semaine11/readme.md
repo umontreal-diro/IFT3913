@@ -12,10 +12,6 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Nom: Benoit Baudry
 - Présentation:
 
-[concept] Humour dans les bibliothèques de test
-- Nom: Tim Toady
-- Présentation:
-
 [concept] Humour dans la documentation logicielle
 - Nom:
 - Présentation:
