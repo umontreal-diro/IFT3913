@@ -237,8 +237,8 @@ jobs:
           for readme in presentations/Semaine*/readme.md; do
             [ -f "$readme" ] || continue
             semaine=$(basename "$(dirname "$readme")")
-            registered=$(grep -cE '^-[[:space:]]*Nom:[[:space:]]+\S' "$readme" 2>/dev/null || echo "0")
-            with_links=$(grep -cE '^-[[:space:]]*Présentation:[[:space:]]+\S' "$readme" 2>/dev/null || echo "0")
+            registered=$(grep -cE '^-[[:space:]]*Nom:[[:space:]]+\S' "$readme" 2>/dev/null || true)
+            with_links=$(grep -cE '^-[[:space:]]*Présentation:[[:space:]]+\S' "$readme" 2>/dev/null || true)
             echo "| ${semaine} | ${registered} | ${with_links} |" >> "$REPORT"
           done
 
