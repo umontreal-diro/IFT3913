@@ -25,7 +25,6 @@ jobs:
   rappeler:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
       pull-requests: write
 
     steps:
@@ -257,17 +256,3 @@ jobs:
           cat "$RECORD"
           echo "## Rapport" >> $GITHUB_STEP_SUMMARY
           cat "$RECORD" >> $GITHUB_STEP_SUMMARY
-
-      - name: Sauvegarder le rapport dans records/
-        run: |
-          TIMESTAMP=$(TZ='America/Montreal' date '+%Y-%m-%d-%Hh%M-%Z')
-          mkdir -p records
-          cp report-reminders.md "records/reminders-${TIMESTAMP}.md"
-
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "records/reminders-${TIMESTAMP}.md"
-          git diff --cached --quiet && echo "No changes to commit" || {
-            git commit -m "Add reminder report ${TIMESTAMP}"
-            git push
-          }
