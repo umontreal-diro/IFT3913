@@ -15,7 +15,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 - Présentation: 
 
 [concept] Test combinatoire
-- Nom: 
+- Nom: Timothey chaput
 - Présentation: 
 
 [concept] Test polymorphique pour la couverture des données
