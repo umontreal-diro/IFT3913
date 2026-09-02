@@ -1,0 +1,273 @@
+name: Rappeler les PRs rejetees
+
+on:
+  schedule:
+    # Regular: every 2 hours
+    - cron: '0 */2 * * *'
+    # Pre-deadline tache2: Oct 13 4:50 PM EDT = 20:50 UTC
+    - cron: '50 20 13 10 *'
+    # Pre-deadline tache3: Nov 17 4:50 PM EST = 21:50 UTC
+    - cron: '50 21 17 11 *'
+
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Mode d execution'
+        required: true
+        default: 'regular'
+        type: choice
+        options:
+          - regular
+          - pre-deadline-tache2
+          - pre-deadline-tache3
+
+jobs:
+  rappeler:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Determiner le mode
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "mode=${{ inputs.mode }}" >> $GITHUB_OUTPUT
+          else
+            # Distinguish pre-deadline crons (minute 50) from regular (minute 0)
+            MIN=$(date -u '+%M')
+            MONTH=$(date -u '+%m')
+            DAY=$(date -u '+%d')
+
+            if [ "$MIN" -ge "45" ] && [ "$MONTH" = "10" ] && [ "$DAY" = "13" ]; then
+              echo "mode=pre-deadline-tache2" >> $GITHUB_OUTPUT
+            elif [ "$MIN" -ge "45" ] && [ "$MONTH" = "11" ] && [ "$DAY" = "17" ]; then
+              echo "mode=pre-deadline-tache3" >> $GITHUB_OUTPUT
+            else
+              echo "mode=regular" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Envoyer les rappels
+        env:
+          GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        run: |
+          set -e
+
+          MODE="${{ steps.mode.outputs.mode }}"
+          NOW_EPOCH=$(date -u +%s)
+          ONE_HOUR_AGO=$((NOW_EPOCH - 3600))
+
+          echo "Mode: $MODE"
+
+          # -- Helpers --
+
+          # Determine task type from PR changed files
+          get_task_from_files() {
+            local pr_num="$1"
+            local files
+            files=$(gh api "repos/${GITHUB_REPOSITORY}/pulls/${pr_num}/files" --jq '.[].filename' 2>/dev/null || true)
+
+            if echo "$files" | grep -qiE '^presentations/Semaine[0-9]+/readme\.md$'; then
+              echo "presentations"
+            elif echo "$files" | grep -qiE '^tache2/[^/]+/readme\.md$'; then
+              echo "tache2"
+            elif echo "$files" | grep -qiE '^tache3/[^/]+/readme\.md$'; then
+              echo "tache3"
+            else
+              echo ""
+            fi
+          }
+
+          # Check if a reminder was already posted on a PR
+          has_reminder() {
+            local pr_num="$1"
+            gh api --paginate "repos/${GITHUB_REPOSITORY}/issues/${pr_num}/comments" \
+              --jq '.[].body' 2>/dev/null | grep -q '<!-- reminder-failed-pr -->'
+          }
+
+          # Check if author has a merged PR for a given task
+          author_has_merged() {
+            local author="$1"
+            local task="$2"
+            local merged_numbers
+            merged_numbers=$(gh pr list --author "$author" --state merged --json number --jq '.[].number' --limit 100 2>/dev/null || true)
+
+            for num in $merged_numbers; do
+              local pr_task
+              pr_task=$(get_task_from_files "$num")
+              if [ "$pr_task" = "$task" ]; then
+                return 0
+              fi
+            done
+            return 1
+          }
+
+          # -- Collect closed, unmerged PRs --
+
+          echo "Collecting closed, unmerged PRs..."
+
+          CLOSED_PRS=$(gh api --paginate "repos/${GITHUB_REPOSITORY}/pulls?state=closed&per_page=100" \
+            --jq '.[] | select(.merged_at == null) | "\(.number) \(.user.login) \(.closed_at)"' 2>/dev/null || true)
+
+          # -- Process each PR --
+
+          sent_rows=""
+          sent_count=0
+          already_reminded_count=0
+          has_merged_count=0
+          failed_rows=""
+          failed_count=0
+
+          # Cache: track authors already checked for merged PRs per task
+          declare -A merged_cache
+
+          while IFS=' ' read -r pr_num author closed_at; do
+            [ -z "$pr_num" ] && continue
+
+            # Determine task
+            task=$(get_task_from_files "$pr_num")
+            [ -z "$task" ] && continue
+
+            # Filter by mode
+            case "$MODE" in
+              pre-deadline-tache2)
+                [ "$task" != "tache2" ] && continue
+                ;;
+              pre-deadline-tache3)
+                [ "$task" != "tache3" ] && continue
+                ;;
+              regular)
+                # Skip PRs closed less than 1 hour ago
+                closed_epoch=$(date -d "$closed_at" +%s 2>/dev/null || echo "0")
+                if [ "$closed_epoch" -gt "$ONE_HOUR_AGO" ]; then
+                  continue
+                fi
+                ;;
+            esac
+
+            # Check merged cache for this (author, task)
+            cache_key="${author}:${task}"
+            if [ -z "${merged_cache[$cache_key]+x}" ]; then
+              if author_has_merged "$author" "$task"; then
+                merged_cache["$cache_key"]="yes"
+              else
+                merged_cache["$cache_key"]="no"
+              fi
+            fi
+
+            if [ "${merged_cache[$cache_key]}" = "yes" ]; then
+              has_merged_count=$((has_merged_count + 1))
+              continue
+            fi
+
+            # Check for existing reminder
+            if has_reminder "$pr_num"; then
+              already_reminded_count=$((already_reminded_count + 1))
+              continue
+            fi
+
+            # Build task label for templates
+            case "$task" in
+              presentations) task_label="Tache 1 (presentations)" ;;
+              tache2) task_label="Tache 2" ;;
+              tache3) task_label="Tache 3" ;;
+            esac
+
+            pr_url="https://github.com/${GITHUB_REPOSITORY}/pull/${pr_num}"
+
+            # Load and fill template
+            if [ "$task" = "presentations" ]; then
+              body=$(cat scripts/email-templates/reminder-presentation.md)
+              body="${body//\{\{PR_URL\}\}/$pr_url}"
+            else
+              body=$(cat scripts/email-templates/reminder-tache.md)
+              body="${body//\{\{PR_URL\}\}/$pr_url}"
+              body="${body//\{\{TASK_LABEL\}\}/$task_label}"
+              body="${body//\{\{TASK_DIR\}\}/$task}"
+            fi
+
+            # Post the reminder comment
+            echo "Sending reminder to $author on PR #${pr_num} ($task)..."
+            if gh pr comment "$pr_num" --body "$body" 2>/tmp/reminder_err; then
+              sent_rows="${sent_rows}| ${author} | [#${pr_num}](${pr_url}) | ${task_label} |\n"
+              sent_count=$((sent_count + 1))
+            else
+              err_msg=$(cat /tmp/reminder_err | head -1)
+              failed_rows="${failed_rows}| ${author} | [#${pr_num}](${pr_url}) | ${task_label} | ${err_msg} |\n"
+              failed_count=$((failed_count + 1))
+            fi
+
+          done <<< "$CLOSED_PRS"
+
+          # -- Build record --
+
+          case "$MODE" in
+            regular) mode_label="Regular (cron 2h)" ;;
+            pre-deadline-tache2) mode_label="Pre-deadline Tache 2" ;;
+            pre-deadline-tache3) mode_label="Pre-deadline Tache 3" ;;
+          esac
+
+          RECORD="report-reminders.md"
+          DATE_DISPLAY=$(TZ='America/Montreal' date '+%Y-%m-%d %H:%M %Z')
+
+          {
+            echo "## Rapport de rappels"
+            echo ""
+            echo "**Date :** ${DATE_DISPLAY}"
+            echo "**Mode :** ${mode_label}"
+            echo ""
+            echo "### Resume"
+            echo ""
+            echo "| Categorie | Nombre |"
+            echo "|-----------|--------|"
+            echo "| Rappels envoyes | **${sent_count}** |"
+            echo "| Deja rappeles (ignores) | **${already_reminded_count}** |"
+            echo "| Soumission reussie existante (ignores) | **${has_merged_count}** |"
+            echo "| Echec d'envoi | **${failed_count}** |"
+            echo ""
+          } > "$RECORD"
+
+          if [ -n "$sent_rows" ]; then
+            {
+              echo "### Rappels envoyes"
+              echo ""
+              echo "| Auteur | PR | Tache |"
+              echo "|--------|----|-------|"
+              echo -e "$sent_rows"
+            } >> "$RECORD"
+          fi
+
+          if [ -n "$failed_rows" ]; then
+            {
+              echo "### Echecs d'envoi"
+              echo ""
+              echo "| Auteur | PR | Tache | Erreur |"
+              echo "|--------|----|-------|--------|"
+              echo -e "$failed_rows"
+            } >> "$RECORD"
+          fi
+
+          cat "$RECORD"
+          echo "## Rapport" >> $GITHUB_STEP_SUMMARY
+          cat "$RECORD" >> $GITHUB_STEP_SUMMARY
+
+      - name: Sauvegarder le rapport dans records/
+        run: |
+          TIMESTAMP=$(TZ='America/Montreal' date '+%Y-%m-%d-%Hh%M-%Z')
+          mkdir -p records
+          cp report-reminders.md "records/reminders-${TIMESTAMP}.md"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "records/reminders-${TIMESTAMP}.md"
+          git diff --cached --quiet && echo "No changes to commit" || {
+            git commit -m "Add reminder report ${TIMESTAMP}"
+            git push
+          }
