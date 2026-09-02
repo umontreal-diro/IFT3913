@@ -41,7 +41,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Tests d'interopérabilité dans le domaine de la santé
-- Nom:
+- Nom: Radiah Mohamed Assowe
 - Présentation:
 
 [concept] Test de systèmes de cinéma numérique
