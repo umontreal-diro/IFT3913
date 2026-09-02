@@ -119,6 +119,7 @@ jobs:
 
           sent_rows=""
           sent_count=0
+          already_reminded_rows=""
           already_reminded_count=0
           has_merged_count=0
           failed_rows=""
@@ -168,6 +169,13 @@ jobs:
 
             # Check for existing reminder
             if has_reminder "$pr_num"; then
+              case "$task" in
+                presentations) task_label="Tache 1 (presentations)" ;;
+                tache2) task_label="Tache 2" ;;
+                tache3) task_label="Tache 3" ;;
+              esac
+              pr_url="https://github.com/${GITHUB_REPOSITORY}/pull/${pr_num}"
+              already_reminded_rows="${already_reminded_rows}| ${author} | [#${pr_num}](${pr_url}) | ${task_label} |\n"
               already_reminded_count=$((already_reminded_count + 1))
               continue
             fi
@@ -227,11 +235,21 @@ jobs:
             echo "| Categorie | Nombre |"
             echo "|-----------|--------|"
             echo "| Rappels envoyes | **${sent_count}** |"
-            echo "| Deja rappeles (ignores) | **${already_reminded_count}** |"
+            echo "| Deja rappeles, pas encore corrige | **${already_reminded_count}** |"
             echo "| Soumission reussie existante (ignores) | **${has_merged_count}** |"
             echo "| Echec d'envoi | **${failed_count}** |"
             echo ""
           } > "$RECORD"
+
+          if [ -n "$already_reminded_rows" ]; then
+            {
+              echo "### Deja rappeles, pas encore corrige"
+              echo ""
+              echo "| Auteur | PR | Tache |"
+              echo "|--------|----|-------|"
+              echo -e "$already_reminded_rows"
+            } >> "$RECORD"
+          fi
 
           if [ -n "$sent_rows" ]; then
             {
