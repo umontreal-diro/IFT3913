@@ -35,7 +35,7 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 - Présentation: 
 
 [demo] [Evosuite](https://github.com/EvoSuite/evosuite)
-- Nom: 
+- Nom: Maria Alitouche
 - Présentation: 
 
 [demo] [TestSpark](https://github.com/JetBrains-Research/TestSpark)
