@@ -43,5 +43,5 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation: 
 
 [demo] Test unitaire pour Node.js 
-- Nom: 
+- Nom: Thierno Diallo
 - Présentation: 
