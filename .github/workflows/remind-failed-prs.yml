@@ -96,7 +96,7 @@ jobs:
             local author="$1"
             local task="$2"
             local merged_numbers
-            merged_numbers=$(gh pr list --author "$author" --state merged --json number --jq '.[].number' --limit 100 2>/dev/null || true)
+            merged_numbers=$(gh pr list --author "$author" --state merged --base 2026 --json number --jq '.[].number' --limit 100 2>/dev/null || true)
 
             for num in $merged_numbers; do
               local pr_task
@@ -112,7 +112,7 @@ jobs:
 
           echo "Collecting closed, unmerged PRs..."
 
-          CLOSED_PRS=$(gh api --paginate "repos/${GITHUB_REPOSITORY}/pulls?state=closed&per_page=100" \
+          CLOSED_PRS=$(gh api --paginate "repos/${GITHUB_REPOSITORY}/pulls?state=closed&base=2026&per_page=100" \
             --jq '.[] | select(.merged_at == null) | "\(.number) \(.user.login) \(.closed_at)"' 2>/dev/null || true)
 
           # -- Process each PR --
