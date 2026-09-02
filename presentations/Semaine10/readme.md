@@ -9,7 +9,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Test des systèmes bancaires
-- Nom:
+- Nom:Georges Cacko
 - Présentation:
 
 [concept] Test pour les véhicules autonomes
