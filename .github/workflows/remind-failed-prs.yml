@@ -2,8 +2,8 @@ name: Rappeler les PRs rejetees
 
 on:
   schedule:
-    # Regular: every 2 hours
-    - cron: '0 */2 * * *'
+    # Regular: every 12 hours
+    - cron: '0 */12 * * *'
     # Pre-deadline tache2: Oct 13 4:50 PM EDT = 20:50 UTC
     - cron: '50 20 13 10 *'
     # Pre-deadline tache3: Nov 17 4:50 PM EST = 21:50 UTC
@@ -216,7 +216,7 @@ jobs:
           # -- Build record --
 
           case "$MODE" in
-            regular) mode_label="Regular (cron 2h)" ;;
+            regular) mode_label="Regular (cron 12h)" ;;
             pre-deadline-tache2) mode_label="Pre-deadline Tache 2" ;;
             pre-deadline-tache3) mode_label="Pre-deadline Tache 3" ;;
           esac
