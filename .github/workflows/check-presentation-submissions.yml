@@ -7,7 +7,7 @@ jobs:
   verifier-presentations:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
 
     steps:
       - name: Checkout
@@ -49,6 +49,7 @@ jobs:
           declare -A user_nom_topic
           declare -A user_nom_name
           declare -A user_has_link
+          declare -A user_nom_sha
 
           for readme in presentations/Semaine*/readme.md; do
             [ -f "$readme" ] || continue
@@ -82,6 +83,7 @@ jobs:
                     user_nom_semaine["$login"]="$semaine"
                     user_nom_topic["$login"]="$current_topic"
                     user_nom_name["$login"]="$nom_val"
+                    user_nom_sha["$login"]="$current_sha"
                     last_nom_login="$login"
                   fi
                 fi
@@ -156,10 +158,18 @@ jobs:
               fi
             done < <(tail -n +2 "$CSV_FILE")
             if [ "$found" = false ]; then
-              semaine="${user_nom_semaine[$login]}"
-              topic="${user_nom_topic[$login]}"
               display_name="${user_nom_name[$login]:-$login}"
-              unmatched="${unmatched}| ${display_name} | ${login} | ${semaine} | ${topic} |\n"
+              sha="${user_nom_sha[$login]}"
+              pr_url=""
+              if [ -n "$sha" ]; then
+                pr_url=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}/pulls" --jq '.[0].html_url // empty' 2>/dev/null || true)
+              fi
+              if [ -n "$pr_url" ]; then
+                pr_display="[PR](${pr_url})"
+              else
+                pr_display="N/A"
+              fi
+              unmatched="${unmatched}| ${display_name} | ${login} | ${pr_display} |\n"
               unmatched_count=$((unmatched_count + 1))
             fi
           done
@@ -212,8 +222,8 @@ jobs:
             echo "" >> "$REPORT"
             echo "Ces utilisateurs ont soumis des PRs de présentation mais ne correspondent à aucun étudiant dans le CSV." >> "$REPORT"
             echo "" >> "$REPORT"
-            echo "| Nom | Identifiant GitHub | Semaine | Sujet |" >> "$REPORT"
-            echo "|-----|-------------------|---------|-------|" >> "$REPORT"
+            echo "| Nom | Identifiant GitHub | PR |" >> "$REPORT"
+            echo "|-----|-------------------|----|" >> "$REPORT"
             echo -e "$unmatched" >> "$REPORT"
             echo "" >> "$REPORT"
           fi
@@ -236,3 +246,25 @@ jobs:
           cat "$REPORT"
           echo "## Rapport" >> $GITHUB_STEP_SUMMARY
           cat "$REPORT" >> $GITHUB_STEP_SUMMARY
+
+          # Create record file without the unmatched section
+          RECORD="report-presentations-record.md"
+          awk '
+            /^### GitHub IDs dans les readmes sans correspondance/ { skip=1; next }
+            /^### / && skip { skip=0 }
+            skip { next }
+            !skip { print }
+          ' "$REPORT" > "$RECORD"
+          sed -i '/GitHub IDs dans les readmes sans correspondance CSV/d' "$RECORD"
+
+      - name: Sauvegarder le rapport dans records/
+        run: |
+          TIMESTAMP=$(TZ='America/Montreal' date '+%Y-%m-%d-%Hh%M-%Z')
+          mkdir -p records
+          cp report-presentations-record.md "records/presentations-${TIMESTAMP}.md"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "records/presentations-${TIMESTAMP}.md"
+          git commit -m "Add presentation report ${TIMESTAMP}"
+          git push
