@@ -35,7 +35,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation: 
 
 [demo] Test unitaire en Python   
-- Nom: 
+- Nom: Tarek Zerroug 
 - Présentation: 
 
 [demo] Test unitaire en Rust     
