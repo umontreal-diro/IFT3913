@@ -39,7 +39,7 @@
 - Présentation:
   
 [concept] Cross-browser testing
-- Nom:
+- Nom: Alexandre Soglo Booh Louha
 - Présentation:
   
 [concept] Test de compatibilité entre environnements
