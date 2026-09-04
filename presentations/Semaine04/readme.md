@@ -35,7 +35,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 - Présentation: 
 
 [demo] Couverture de code pour Rust 
-- Nom: 
+- Nom: Fabien Juteau Desjardins
 - Présentation: 
 
 [demo] Couverture pour les schémas de données
