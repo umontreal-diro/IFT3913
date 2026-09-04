@@ -7,7 +7,7 @@
 - Présentation:
    
 [concept] Back to back testing
-- Nom:
+- Nom:Simon Guy
 - Présentation:
   
 [concept] Test sur la compatibilité réseau

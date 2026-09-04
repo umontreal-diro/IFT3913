@@ -8,7 +8,7 @@ Pour faire une présentation sur le test et sécurité, choisissez un des sujets
 - Présentation: 
 
 [concept] Code lint
-- Nom: 
+- Nom: Zhexin Guo
 - Présentation: 
 
 [concept] la revue de code
