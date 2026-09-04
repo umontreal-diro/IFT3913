@@ -3,7 +3,7 @@
  Pour faire une présentation sur la gestion de dépendances, choisissez un des sujets listés ci-dessous et indiquez votre nom, ou proposez votre propre sujet. Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontreal.ca) le plus tôt possible pour valider le sujet.
 
 [concept] Gestionnaire de paquets
-- Nom: 
+- Nom: Joseph Soufsaf
 - Présentation: 
 
 [concept] Bots pour la mise à jour des dépendances
