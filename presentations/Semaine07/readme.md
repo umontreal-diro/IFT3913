@@ -12,7 +12,7 @@ Pour faire une présentation sur le test et sécurité, choisissez un des sujets
 - Présentation: 
 
 [concept] la revue de code
-- Nom: 
+- Nom: Maysaa Khanfoudi
 - Présentation: 
 
 [concept] Mesure de complexité du code
