@@ -11,7 +11,7 @@
 - Présentation: 
 
 [concept] Mise à jour des dépendances qui brisent le build (a.k.a breaking dependency update)
-- Nom: 
+- Nom: Rafi Dahoui
 - Présentation: 
 
 [concept] le [lockfile](https://arxiv.org/pdf/2505.04834)
