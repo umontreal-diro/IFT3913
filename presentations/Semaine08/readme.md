@@ -15,7 +15,7 @@
 - Présentation: 
 
 [concept] le [lockfile](https://arxiv.org/pdf/2505.04834)
-- Nom: 
+- Nom: Adem-Abdelkrim Ghaoui
 - Présentation: 
 
 [concept] le build reproductible
