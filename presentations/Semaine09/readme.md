@@ -43,7 +43,7 @@
 - Présentation:
   
 [concept] Test de compatibilité entre environnements
-- Nom:
+- Nom: Rayen Rizk
 - Présentation:
 
 [demo] Docker pour tester dans un environnement uniforme
