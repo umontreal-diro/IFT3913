@@ -27,7 +27,7 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 - Présentation: 
 
 [concept] Qualité des tests générés avec l'IA
-- Nom: 
+- Nom: Yohan Zytoon
 - Présentation: 
 
 [concept] Bugs dans le code généré par l'IA
