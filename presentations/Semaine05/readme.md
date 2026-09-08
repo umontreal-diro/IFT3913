@@ -29,7 +29,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 - Présentation: 
 
 [demo] [Cucumber](https://cucumber.io/) pour le test basé comportement en Java
-- Nom: 
+- Nom: Anas Mrani Alaoui
 - Présentation: 
 
 [demo] [Java faker](https://github.com/DiUS/java-faker) pour l'isolation de tests en Java
