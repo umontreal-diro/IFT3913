@@ -21,7 +21,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 [concept] Test polymorphique pour la couverture des données
 
 [demo] [Hypothesis](https://hypothesis.readthedocs.io/en/latest/) pour le test basé sur les propriétés en Python
-- Nom: 
+- Nom: Alison Deblois 
 - Présentation: 
 
 [demo] [Mockito](https://site.mockito.org/) pour les mocks en Java
