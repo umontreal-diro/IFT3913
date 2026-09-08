@@ -23,7 +23,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Présentation:
 
 [concept] capture and replay
-- Nom:
+- Nom: Aness Lakhdar Azzouz
 - Présentation:
 
 [concept] Feature Flags (dark launching et progressive rollout)
