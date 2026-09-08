@@ -33,7 +33,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Tester une plateforme de streaming
-- Nom:
+- Nom: Cyreanne Candy Andrianefa
 - Présentation:
 
 [concept] Tester un système d'intégration continue
