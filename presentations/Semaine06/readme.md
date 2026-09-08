@@ -15,7 +15,7 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 - Présentation: 
 
 [concept] Génération automatique de tests paramétrés avec l'IA
-- Nom: 
+- Nom: BRICE BAKOUP WAFO
 - Présentation: 
 
 [concept] Maintenance des tests avec l'IA
