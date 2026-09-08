@@ -19,7 +19,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 - Présentation: 
 
 [concept] Couverture pour les réseaux de neurones 
-- Nom: Cyreanne Candy Andrianefa
+- Nom: 
 - Présentation: 
 
 [concept] Avantages et limites de la couverture de test 
