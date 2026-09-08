@@ -47,6 +47,6 @@
 - Présentation:
 
 [demo] Docker pour tester dans un environnement uniforme
-- Nom:
+- Nom: Marc-Julius Nadeau
 - Présentation:
   
