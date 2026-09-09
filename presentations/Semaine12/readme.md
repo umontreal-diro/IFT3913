@@ -27,7 +27,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Présentation:
 
 [concept] Feature Flags (dark launching et progressive rollout)
-- Nom:
+- Nom: Phuong Anh Tran
 - Présentation:
 
 [concept] Agents IA autonomes pour la fiabilité en production 
