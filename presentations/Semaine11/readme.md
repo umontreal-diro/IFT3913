@@ -9,7 +9,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Présentation:
 
 [concept] Les messages d’erreur absurdes et humoristiques
-- Nom: 
+- Nom: Taoudi Bensouda
 - Présentation:
 
 [concept] Humour dans les bibliothèques de test
