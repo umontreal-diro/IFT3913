@@ -11,7 +11,7 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 - Présentation: 
 
 [concept] Génération automatique de mocks et configurations avec l'IA
-- Nom: 
+- Nom: Alexis Gouault
 - Présentation: 
 
 [concept] Génération automatique de tests paramétrés avec l'IA
