@@ -16,7 +16,7 @@ Pour faire une présentation sur le test et sécurité, choisissez un des sujets
 - Présentation: 
 
 [concept] Mesure de complexité du code
-- Nom: 
+- Nom: Aymane Rachidi
 - Présentation: 
 
 [concept] Test statique pour la sécurité (SAST)
