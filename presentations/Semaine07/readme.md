@@ -4,7 +4,7 @@ Pour faire une présentation sur le test et sécurité, choisissez un des sujets
 
 
 [concept] Test par fuzzing
-- Nom: 
+- Nom: Thomas Côté
 - Présentation: 
 
 [concept] Code lint
