@@ -20,7 +20,7 @@ Pour faire une présentation sur le test et sécurité, choisissez un des sujets
 - Présentation: 
 
 [concept] Test statique pour la sécurité (SAST)
-- Nom: 
+- Nom: Yassine benbouabid
 - Présentation: 
 
 [concept] Test dynamique pour la sécurité (DAST)
