@@ -20,7 +20,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 
 [concept] Tests paramétrés
 - Nom: Ayman Kaissi 
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1nijE8A2XIU15dbzc7t-RJjvXz1S42bE-z3vlGL7s5Q0/edit?usp=sharing
 
 [concept] Anti patrons pour les test unitaires          
 - Nom: Olivier Larue
