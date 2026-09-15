@@ -24,7 +24,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 
 [concept] Anti patrons pour les test unitaires          
 - Nom: Olivier Larue
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1jIilASbQqJHY9ezX7DNgphy0QLMjv3IviA4Oqpt-3v4/edit?usp=sharing
 
 [concept] Programmation pilotée par le comportement (BDD)
 - Nom: Paul Litré
