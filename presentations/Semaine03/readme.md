@@ -28,7 +28,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 
 [concept] Programmation pilotée par le comportement (BDD)
 - Nom: Paul Litré
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1uPYGNW4iNoQ_zyfzbhp-CeQh2rOlzu8f8hvZJvp4hCw/edit?usp=sharing
 
 [demo] Test unitaire en Java                              
 - Nom: Aguibou Fofana
