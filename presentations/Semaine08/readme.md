@@ -19,7 +19,7 @@
 - Présentation: 
 
 [concept] le build reproductible
-- Nom: 
+- Nom: Laurent-Philippe Roy-Lemaire
 - Présentation: 
 
 [concept] analyse statique pour la réduction des dépendances
