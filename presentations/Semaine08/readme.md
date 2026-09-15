@@ -23,7 +23,7 @@
 - Présentation: 
 
 [concept] analyse statique pour la réduction des dépendances
-- Nom: 
+- Nom: Toky Erick Rabenantoandro
 - Présentation: 
 
 [concept] Dependency hell
