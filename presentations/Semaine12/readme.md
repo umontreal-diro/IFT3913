@@ -31,7 +31,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Présentation:
 
 [concept] Agents IA autonomes pour la fiabilité en production 
-- Nom:
+- Nom: Maha Amhaouch
 - Présentation:
 
 [demo] [opentelemetry](https://opentelemetry.io/) pour l'observabilité en production
