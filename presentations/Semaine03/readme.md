@@ -36,7 +36,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 
 [demo] Test unitaire en Python   
 - Nom: Tarek Zerroug 
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1Iarn15sYqC1Q2-Xpid7I-jqQMf_sghs6FQwflKSb5vc/edit?usp=sharing
 
 [demo] Test unitaire en Rust     
 - Nom: Pax Wa Bulalu Kazadi
