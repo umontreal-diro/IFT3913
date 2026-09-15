@@ -43,5 +43,5 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 - Présentation: 
 
 [demo] [Guardrails](https://github.com/guardrails-ai/guardrails)
-- Nom: 
+- Nom: Andy Nguema Luemba
 - Présentation: 
