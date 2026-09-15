@@ -12,7 +12,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 
 [concept] Arrange, Act and Assert
 - Nom: Sarah Rajab
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1FYUkRDck8SqjAXH9pqYP_Q9TP4S6AkVMn2k-Vjps5ik/edit?usp=sharing
 
 [concept] Les différents niveaux de test logiciel   
 - Nom: Udeme-Obong Samuel
