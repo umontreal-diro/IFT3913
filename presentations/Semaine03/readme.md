@@ -4,7 +4,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 
 [concept] Les bugs logiciels
 - Nom: Abdelmouhcine Messaad
-- Présentation: https://canva.link/0rwrl0j8xagyiih
+- Présentation: https://docs.google.com/presentation/d/15i-sx91aMV_vlZu8S4WhX3Pubxbc3_oU/edit?usp=sharing&ouid=111175454797284805771&rtpof=true&sd=true
 
 [concept] Oracle de test             
 - Nom: Isabelle Guillard
