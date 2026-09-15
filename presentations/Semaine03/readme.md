@@ -32,7 +32,7 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 
 [demo] Test unitaire en Java                              
 - Nom: Aguibou Fofana
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1d4u0Ps_gbafgRnjVqYR6UXKDqEB7r-jzKIPxPlJNbQE/edit?usp=sharing
 
 [demo] Test unitaire en Python   
 - Nom: Tarek Zerroug 
