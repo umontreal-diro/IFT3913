@@ -39,8 +39,8 @@ Pour faire une présentation sur le test unitaire, choisissez un des sujets list
 - Présentation: 
 
 [demo] Test unitaire en Rust     
-- Nom: 
-- Présentation: 
+- Nom: Pax Wa Bulalu Kazadi
+- Présentation: https://docs.google.com/presentation/d/1gqkD9vLZO0A6apZdaHlsyo0eSAMgxKE2YXXHpQx00pE/edit?usp=sharing
 
 [demo] Test unitaire pour Node.js 
 - Nom: Thierno Diallo
