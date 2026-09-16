@@ -15,7 +15,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Présentation:
 
 [concept] tester la performance
-- Nom:
+- Nom: chris alex belanov ndabihawenimana
 - Présentation:
 
 [concept] test de pénétration
