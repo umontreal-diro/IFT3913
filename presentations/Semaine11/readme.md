@@ -29,7 +29,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Présentation:
 
 [concept] Qualité logicielle pour les easter eggs 
-- Nom:
+- Nom: Ali Awada
 - Présentation:
 
 [concept] Humour dans les cours de génie logiciel
