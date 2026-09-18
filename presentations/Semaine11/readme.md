@@ -41,7 +41,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Présentation:
 
 [demo] [thefuck](https://github.com/nvbn/thefuck) 
-- Nom:
+- Nom: Olivier Simard
 - Présentation:
 
 [demo] [lolcommits](https://github.com/lolcommits)
