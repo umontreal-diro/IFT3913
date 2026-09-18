@@ -2,8 +2,8 @@
 
 | Nom complet | Identifiant GitHub |
 |---|---|
-| Adama Sogoba Moussa | musa223-ui|
-| Tionohoue Lucas | lucastionohoue_glitch|
+| Nom Prénom | musa223-ui |
+| Nom Prénom | lucastionohoue-glitch |
 
 - Lien vers le répertoire GitHub :
 - Lien vers le README du répertoire :
