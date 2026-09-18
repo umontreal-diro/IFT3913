@@ -2,7 +2,7 @@
 
 | Nom complet | Identifiant GitHub |
 |---|---|
-| Adama Sogoba Moussa | github-username |
+| Adama Sogoba Moussa | musa223-ui |
 | Tionohoue Lucas | lucastionohoue_glitch  |
 
 - Lien vers le répertoire GitHub :
