@@ -20,19 +20,19 @@ Pour faire une présentation sur le test et sécurité, choisissez un des sujets
 - Présentation: 
 
 [concept] Test statique pour la sécurité (SAST)
-- Nom: 
+- Nom: Yassine benbouabid
 - Présentation: 
 
 [concept] Test dynamique pour la sécurité (DAST)
-- Nom: 
+- Nom: Yaovi Florient Gadedjro Abagha
 - Présentation: 
 
 [demo] [AFL](https://github.com/AFLplusplus/AFLplusplus)
-- Nom: 
+- Nom: Émerick Poulin
 - Présentation: 
 
 [demo] [findbugs](https://github.com/findbugsproject/findbugs) pour le test statique en Java
-- Nom: 
+- Nom: Taha Azami
 - Présentation: 
 
 [demo] [semgrep](https://github.com/semgrep/semgrep) pour l'analyse statique
