@@ -28,7 +28,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [demo] Couverture de code pour Java 
 - Nom: Tong Xu
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1Htcgi5Of-aaoib6FrxiYSrdXZT1ZmNJVCD8HDFTyyrY/edit?slide=id.p#slide=id.p
 
 [demo] Couverture de code pour Javascript  
 - Nom: Matthew Hurley
@@ -36,7 +36,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [demo] Couverture de code pour Rust 
 - Nom: Fabien Juteau Desjardins
-- Présentation: 
+- Présentation: [https://docs.google.com/presentation/d/1uDn921h7EIWF6velXemVKdAXZX1Cv8UzprUkSDZq1WU/edit?usp=sharing](https://docs.google.com/presentation/d/1uDn921h7EIWF6velXemVKdAXZX1Cv8UzprUkSDZq1WU/edit?usp=sharing)
 
 [demo] Couverture pour les schémas de données
 - Nom: Alae Aloui
