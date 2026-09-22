@@ -32,7 +32,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [demo] Couverture de code pour Javascript  
 - Nom: Matthew Hurley
-- Présentation: 
+- Présentation: [https://docs.google.com/presentation/d/1bcPCc2Ej8KFHoL1TF_8fHjG__-Y1TBlgJoHm4UubodQ/edit?slide=id.p9#slide=id.p9](https://docs.google.com/presentation/d/1bcPCc2Ej8KFHoL1TF_8fHjG__-Y1TBlgJoHm4UubodQ/edit?slide=id.p9#slide=id.p9)
 
 [demo] Couverture de code pour Rust 
 - Nom: Fabien Juteau Desjardins
