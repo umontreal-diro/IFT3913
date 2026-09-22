@@ -44,4 +44,4 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [demo] Couverture de code pour Python
 - Nom: Samah Tanisha Islam
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1LUI3sNJyR7Fmp-npVCXY6GGXOQqv4VLWTkW7lRzT2z4/edit?usp=sharing
