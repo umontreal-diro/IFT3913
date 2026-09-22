@@ -97,10 +97,10 @@ jobs:
             done < <(git blame --porcelain "$readme")
           done
 
-          # Save registered GitHub IDs
+          # Save registered GitHub IDs (lowercased for consistent matching)
           : > tache1_registered.txt
           for id in "${!registered[@]}"; do
-            echo "$id" >> tache1_registered.txt
+            echo "$id" | tr '[:upper:]' '[:lower:]' >> tache1_registered.txt
           done
           sort -fo tache1_registered.txt tache1_registered.txt
           echo "Tâche 1 inscrits : $(wc -l < tache1_registered.txt)"
@@ -153,7 +153,7 @@ jobs:
           done
 
           for id in "${!registered[@]}"; do
-            echo "$id" >> tache2_registered.txt
+            echo "$id" | tr '[:upper:]' '[:lower:]' >> tache2_registered.txt
           done
           sort -fo tache2_registered.txt tache2_registered.txt
           echo "Tâche 2 inscrits : $(wc -l < tache2_registered.txt)"
@@ -191,7 +191,7 @@ jobs:
           done
 
           for id in "${!registered[@]}"; do
-            echo "$id" >> tache3_registered.txt
+            echo "$id" | tr '[:upper:]' '[:lower:]' >> tache3_registered.txt
           done
           sort -fo tache3_registered.txt tache3_registered.txt
           echo "Tâche 3 inscrits : $(wc -l < tache3_registered.txt)"
@@ -211,11 +211,11 @@ jobs:
             enrolled["$key"]="$gh_id"
           done < students.tsv
 
-          # Load each task's results (lowercased for comparison)
+          # Load each task's results (already lowercased in the registered files)
           declare -A t1 t2 t3
-          while IFS= read -r id; do [[ -n "$id" ]] && t1["$(echo "$id" | tr '[:upper:]' '[:lower:]')"]=1; done < tache1_registered.txt
-          while IFS= read -r id; do [[ -n "$id" ]] && t2["$(echo "$id" | tr '[:upper:]' '[:lower:]')"]=1; done < tache2_registered.txt
-          while IFS= read -r id; do [[ -n "$id" ]] && t3["$(echo "$id" | tr '[:upper:]' '[:lower:]')"]=1; done < tache3_registered.txt
+          while IFS= read -r id; do [[ -n "$id" ]] && t1["$id"]=1; done < tache1_registered.txt
+          while IFS= read -r id; do [[ -n "$id" ]] && t2["$id"]=1; done < tache2_registered.txt
+          while IFS= read -r id; do [[ -n "$id" ]] && t3["$id"]=1; done < tache3_registered.txt
 
           # Log GitHub IDs found in readmes that don't match any enrolled student
           find_unmatched() {
