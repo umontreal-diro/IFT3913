@@ -4,19 +4,19 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [concept] Couverture des instructions et branches
 - Nom: Marguerite Rouleau
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1tk9SiFOUAvvRg-4Q-smui1T7PO5if3OX5FHNk77GYKc/edit?usp=sharing
 
 [concept] Critère MC/DC 
 - Nom: Damia Boudjema
 - Présentation: 
 
 [concept] Couverture des domaines d'entrée 
-- Nom: farah romdhane
-- Présentation: 
+- Nom: Farah Romdhane
+- Présentation: https://docs.google.com/presentation/d/1-AuYcCK_WReIvDjYSyLiWJXtCbAGYnJgmtkzYeuo3ac/edit?usp=sharing
 
 [concept] Couverture de code à Google 
 - Nom: Nassim Barhoumi
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1mHUM7UUdW_nYL7hzbfDOn2zhgmaDDn2xQqvS1o9iMWk/edit?usp=sharing 
 
 [concept] Couverture pour les réseaux de neurones 
 - Nom: 
@@ -28,7 +28,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [demo] Couverture de code pour Java 
 - Nom: Tong Xu
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1Htcgi5Of-aaoib6FrxiYSrdXZT1ZmNJVCD8HDFTyyrY/edit?slide=id.p#slide=id.p
 
 [demo] Couverture de code pour Javascript  
 - Nom: Matthew Hurley
@@ -36,7 +36,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [demo] Couverture de code pour Rust 
 - Nom: Fabien Juteau Desjardins
-- Présentation: 
+- Présentation: [https://docs.google.com/presentation/d/1uDn921h7EIWF6velXemVKdAXZX1Cv8UzprUkSDZq1WU/edit?usp=sharing](https://docs.google.com/presentation/d/1uDn921h7EIWF6velXemVKdAXZX1Cv8UzprUkSDZq1WU/edit?usp=sharing)
 
 [demo] Couverture pour les schémas de données
 - Nom: Alae Aloui

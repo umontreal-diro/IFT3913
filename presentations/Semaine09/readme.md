@@ -19,7 +19,7 @@
 - Présentation:
  
 [concept] Cross-platform testing with Appium
-- Nom:
+- Nom: Nader Ghaddar
 - Présentation:
   
 [concept] Tests de comptabilité dans les environnements virtualisés et conteneurisés (Docker, Kubernetes)
