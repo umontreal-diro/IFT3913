@@ -37,7 +37,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 - Présentation: 
 
 [demo] [AutoParams](https://github.com/AutoParams/AutoParams) pour les tests paramétrés en Java
-- Nom: 
+- Nom: Mahdi Slimani
 - Présentation: 
 
 [demo] [afl++](https://github.com/AFLplusplus/AFLplusplus)
