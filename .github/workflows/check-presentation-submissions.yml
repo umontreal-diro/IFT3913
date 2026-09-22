@@ -110,8 +110,8 @@ jobs:
           for readme in presentations/Semaine*/readme.md; do
             [[ -f "$readme" ]] || continue
             sem=$(basename "$(dirname "$readme")")
-            reg=$(grep -cE '^-[[:space:]]*Nom:[[:space:]]+\S' "$readme" 2>/dev/null || echo 0)
-            links=$(grep -cE '^-[[:space:]]*Présentation:[[:space:]]+\S' "$readme" 2>/dev/null || echo 0)
+            reg=$(grep -cE '^-[[:space:]]*Nom:[[:space:]]+\S' "$readme") || true
+            links=$(grep -cE '^-[[:space:]]*Présentation:[[:space:]]+\S' "$readme") || true
             echo "${sem},${reg},${links}" >> tache1_weekly.csv
           done
 
