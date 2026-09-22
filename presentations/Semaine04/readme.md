@@ -24,7 +24,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [concept] Avantages et limites de la couverture de test 
 - Nom: Carlos Daniel Zelaya
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1x_eAxtHDKiaA9-jfQgiR8W6ZoeT2J0WXf64x1JZrx6k/edit?usp=drivesdk
 
 [demo] Couverture de code pour Java 
 - Nom: Tong Xu
