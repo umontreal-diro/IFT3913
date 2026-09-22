@@ -21,7 +21,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Présentation:
 
 [concept] Humour pour la gestion de projets logiciels
-- Nom:
+- Nom: El Fakir Fatimazahrae
 - Présentation:
 
 [concept] Humour en ligne de commande
@@ -33,7 +33,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Présentation:
 
 [concept] Humour dans les cours de génie logiciel
-- Nom:
+- Nom: Houmayed Marwa
 - Présentation:
 
 [demo] [volkswagen](https://github.com/auchenberg/volkswagen)
