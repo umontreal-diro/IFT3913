@@ -8,7 +8,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [concept] Critère MC/DC 
 - Nom: Damia Boudjema
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/11cMd0cq0w-bgMJSvXL8u0NYue3q7Av9AoCELTTNfu4Y/edit?usp=sharing
 
 [concept] Couverture des domaines d'entrée 
 - Nom: Farah Romdhane
