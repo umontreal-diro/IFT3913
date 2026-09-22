@@ -8,21 +8,13 @@ mise à jour: 26.09.22
 | Semaine03 | 11 | 11 |
 | Semaine04 | 10 | 9 |
 | Semaine05 | 8 | 0 |
-| 0 |  |  |
 | Semaine06 | 11 | 0 |
-| 0 |  |  |
 | Semaine07 | 8 | 0 |
-| 0 |  |  |
 | Semaine08 | 7 | 0 |
-| 0 |  |  |
 | Semaine09 | 9 | 0 |
-| 0 |  |  |
 | Semaine10 | 9 | 0 |
-| 0 |  |  |
 | Semaine11 | 7 | 0 |
-| 0 |  |  |
 | Semaine12 | 9 | 0 |
-| 0 |  |  |
 
 inscrits : adam-msr; adawaila; AguibouF; Alaealoui; anasys0x; anddina; ans1008; ayaelb8; AZAT0THT; bbroux; CarlosDanielZQ; Chrisamy; chrismadara45; cyreanne0; David-LeGOAT; doctor277; emnagarna; EnzoT454; farah-romdhane; FaustGzx; fauverick; FlyingCanoe; gt674; IsabelleGuillard; islamsamahtanisha; jeannicbeaulieu; jessielam-j; JHK01; landry000; laylaelshahawy; lucastionohoue-glitch; luluunityy; Mad-Barry; mah0504; mango825; mariaalitouche; Mastalp; Maysaa29; mollyfleuur; MoSk3; Murfew; musa223-ui; naderghaddar; nass1379; Ost98; Overengined; Perzivalle; PhuongAnh-Tran; radiahteur; Rayyan-Oumlil; shems00; Soglo3006; stephen-jt; TalaDhaiby; tarekzerroug; Tim8059; Toky5; TomCt998; Tong3410976; udeme-sml; vizard24; YD0304; yohanzytoon; Zouhair-36
 
