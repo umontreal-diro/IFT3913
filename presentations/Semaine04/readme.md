@@ -4,7 +4,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [concept] Couverture des instructions et branches
 - Nom: Marguerite Rouleau
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1tk9SiFOUAvvRg-4Q-smui1T7PO5if3OX5FHNk77GYKc/edit?usp=sharing
 
 [concept] Critère MC/DC 
 - Nom: Damia Boudjema
