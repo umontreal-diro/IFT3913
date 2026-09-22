@@ -1,401 +1,178 @@
-name: Vérifier les soumissions (tâche 2 & 3)
+name: Créer des issues après les deadlines
 
 on:
   schedule:
-    # -- Tâche 2 (deadline Oct 13, 2026) --
-    # EDT (UTC-4) applies in October
-    # Oct 13 5pm EDT = 21:00 UTC
-    - cron: '0 21 13 10 *'
-    # Oct 14 00:00 EDT = 04:00 UTC
-    - cron: '0 4 14 10 *'
-    # Oct 15 00:00 EDT = 04:00 UTC
-    - cron: '0 4 15 10 *'
+    # Task 2 — deadline Oct 13 2026, 5pm EDT (UTC-4)
+    - cron: '0 21 13 10 *'  # at deadline
+    - cron: '0 21 14 10 *'  # deadline + 24h
+    - cron: '0 21 15 10 *'  # deadline + 48h
 
-    # -- Tâche 3 (deadline Nov 17, 2026) --
-    # EST (UTC-5) applies in November (DST ends Nov 1)
-    # Nov 17 5pm EST = 22:00 UTC
-    - cron: '0 22 17 11 *'
-    # Nov 18 00:00 EST = 05:00 UTC
-    - cron: '0 5 18 11 *'
-    # Nov 19 00:00 EST = 05:00 UTC
-    - cron: '0 5 19 11 *'
+    # Task 3 — deadline Nov 17 2026, 5pm EST (UTC-5)
+    - cron: '0 22 17 11 *'  # at deadline
+    - cron: '0 22 18 11 *'  # deadline + 24h
+    - cron: '0 22 19 11 *'  # deadline + 48h
 
   workflow_dispatch:
     inputs:
       task:
         description: 'Tâche à vérifier'
         required: true
-        default: 'tache2'
         type: choice
         options:
           - tache2
           - tache3
 
 jobs:
-  verifier-soumissions:
+  creer-issue:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
+      issues: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v5
         with:
-          fetch-depth: 0
+          fetch-depth: 1
 
-      - name: Déterminer la tâche et la période
+      # Determine which task and which period (deadline / +24h / +48h)
+      - name: Déterminer le contexte
         id: context
         run: |
-          YEAR=$(date -u '+%Y')
+          set -euo pipefail
 
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
             TASK="${{ inputs.task }}"
+            LABEL="vérification manuelle"
           else
-            # Scheduled: determine task from current month
             MONTH=$(date -u '+%m')
-            if [ "$MONTH" = "10" ]; then
+            DAY=$(date -u '+%d')
+            TASK=""
+            LABEL=""
+
+            if [[ "$MONTH" == "10" ]]; then
               TASK="tache2"
-            elif [ "$MONTH" = "11" ]; then
+              case "$DAY" in
+                13) LABEL="deadline" ;;
+                14) LABEL="deadline + 24h" ;;
+                15) LABEL="deadline + 48h" ;;
+              esac
+            elif [[ "$MONTH" == "11" ]]; then
               TASK="tache3"
-            else
-              echo "No scheduled task for this month."
-              TASK="none"
+              case "$DAY" in
+                17) LABEL="deadline" ;;
+                18) LABEL="deadline + 24h" ;;
+                19) LABEL="deadline + 48h" ;;
+              esac
+            fi
+
+            if [[ -z "$TASK" || -z "$LABEL" ]]; then
+              echo "Aucune tâche prévue pour cette date."
+              echo "skip=true" >> "$GITHUB_OUTPUT"
+              exit 0
             fi
           fi
 
-          echo "task=$TASK" >> $GITHUB_OUTPUT
+          echo "task=$TASK" >> "$GITHUB_OUTPUT"
+          echo "label=$LABEL" >> "$GITHUB_OUTPUT"
+          echo "skip=false" >> "$GITHUB_OUTPUT"
 
-          # Set deadlines based on task (all in UTC)
-          if [ "$TASK" = "tache2" ]; then
-            # Oct 13 5pm EDT = Oct 13 21:00 UTC
-            echo "deadline=2026-10-13T21:00:00Z" >> $GITHUB_OUTPUT
-            # Oct 13 midnight EDT = Oct 14 04:00 UTC
-            echo "late_start=2026-10-14T04:00:00Z" >> $GITHUB_OUTPUT
-            # Oct 14 midnight EDT = Oct 15 04:00 UTC
-            echo "very_late_start=2026-10-15T04:00:00Z" >> $GITHUB_OUTPUT
-            echo "task_label=Tâche 2" >> $GITHUB_OUTPUT
-          elif [ "$TASK" = "tache3" ]; then
-            # Nov 17 5pm EST = Nov 17 22:00 UTC
-            echo "deadline=2026-11-17T22:00:00Z" >> $GITHUB_OUTPUT
-            # Nov 17 midnight EST = Nov 18 05:00 UTC
-            echo "late_start=2026-11-18T05:00:00Z" >> $GITHUB_OUTPUT
-            # Nov 18 midnight EST = Nov 19 05:00 UTC
-            echo "very_late_start=2026-11-19T05:00:00Z" >> $GITHUB_OUTPUT
-            echo "task_label=Tâche 3" >> $GITHUB_OUTPUT
-          fi
+          TASK_NUM="${TASK#tache}"
+          echo "task_num=$TASK_NUM" >> "$GITHUB_OUTPUT"
 
-      - name: Vérifier les soumissions
-        if: steps.context.outputs.task != 'none'
+      # Fetch students enrolled in the course
+      - name: Récupérer les étudiants inscrits
+        if: steps.context.outputs.skip != 'true'
+        env:
+          STUDIUM_TOKEN: ${{ secrets.STUDIUM_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          curl -sf -X POST "https://studium-uat.umontreal.ca/webservice/rest/server.php" \
+            --data-urlencode "wstoken=$STUDIUM_TOKEN" \
+            --data-urlencode "wsfunction=core_enrol_get_enrolled_users" \
+            --data-urlencode "moodlewsrestformat=json" \
+            --data-urlencode "courseid=349530" \
+            --data-urlencode "options[0][name]=userfields" \
+            --data-urlencode "options[0][value]=firstname,lastname,email,customfields" \
+            -o enrolled.json
+
+          jq -r '.[] |
+            ((.customfields // [])[] | select(.shortname == "github") | .value) as $gh |
+            select($gh != null and $gh != "") |
+            $gh
+          ' enrolled.json > enrolled_ids.txt
+
+          echo "Étudiants avec GitHub ID : $(wc -l < enrolled_ids.txt)"
+
+      # Check submissions and find missing students
+      - name: Trouver les soumissions manquantes
+        if: steps.context.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+
+          TASK="${{ steps.context.outputs.task }}"
+
+          # Collect GitHub IDs that have submitted (folder + real links, both members)
+          declare -A submitted
+
+          for dir in "$TASK"/*/; do
+            [[ -d "$dir" ]] || continue
+
+            readme=""
+            [[ -f "$dir/readme.md" ]] && readme="$dir/readme.md"
+            [[ -f "$dir/README.md" ]] && readme="$dir/README.md"
+            [[ -n "$readme" ]] || continue
+
+            # Check that both GitHub links are real
+            repo_link=$(sed -n 's/^- Lien vers le répertoire GitHub : *//p' "$readme")
+            readme_link=$(sed -n 's/^- Lien vers le README du répertoire : *//p' "$readme")
+
+            if ! echo "$repo_link" | grep -qE '^https://github\.com/.+/.+'; then continue; fi
+            if ! echo "$readme_link" | grep -qE '^https://github\.com/.+/.+'; then continue; fi
+
+            # Extract both team members' GitHub IDs from the table
+            while IFS= read -r row; do
+              gh_id=$(echo "$row" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $3); print $3}')
+              if echo "$gh_id" | grep -qE '^[a-zA-Z0-9][a-zA-Z0-9._-]*$'; then
+                submitted["$(echo "$gh_id" | tr '[:upper:]' '[:lower:]')"]=1
+              fi
+            done < <(grep -E '^\|' "$readme" \
+              | grep -vE '^\|[[:space:]]*Nom' \
+              | grep -vE '^\|[-[:space:]:]*\|[-[:space:]:]*\|$')
+          done
+
+          # Compare with the enrolled students list
+          : > missing.txt
+          while IFS= read -r gh_id; do
+            key=$(echo "$gh_id" | tr '[:upper:]' '[:lower:]')
+            if [[ -z "${submitted[$key]+x}" ]]; then
+              echo "$gh_id" >> missing.txt
+            fi
+          done < enrolled_ids.txt
+
+          sort -fo missing.txt missing.txt
+          echo "Soumissions manquantes : $(wc -l < missing.txt)"
+
+      # Create GitHub issue with the list of missing students
+      - name: Créer l'issue
+        if: steps.context.outputs.skip != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -e
+          set -euo pipefail
 
-          TASK="${{ steps.context.outputs.task }}"
-          TASK_LABEL="${{ steps.context.outputs.task_label }}"
-          DEADLINE="${{ steps.context.outputs.deadline }}"
-          LATE_START="${{ steps.context.outputs.late_start }}"
-          VERY_LATE_START="${{ steps.context.outputs.very_late_start }}"
+          TASK_NUM="${{ steps.context.outputs.task_num }}"
+          LABEL="${{ steps.context.outputs.label }}"
+          COUNT=$(wc -l < missing.txt | tr -d ' ')
 
-          DEADLINE_EPOCH=$(date -d "$DEADLINE" +%s)
-          LATE_EPOCH=$(date -d "$LATE_START" +%s)
-          VERY_LATE_EPOCH=$(date -d "$VERY_LATE_START" +%s)
-          NOW_EPOCH=$(date -u +%s)
+          TITLE="Tâche ${TASK_NUM} — soumissions manquantes (${LABEL})"
 
-          CSV_FILE="scripts/students.csv"
-          TASK_DIR="$TASK"
-
-          if [ ! -f "$CSV_FILE" ]; then
-            echo "::error::Le fichier $CSV_FILE est introuvable."
-            exit 1
+          if [[ "$COUNT" -eq 0 ]]; then
+            echo "Tous les étudiants ont soumis. Aucune issue créée."
+            exit 0
           fi
 
-          # Determine current period
-          if [ "$NOW_EPOCH" -lt "$DEADLINE_EPOCH" ]; then
-            PERIOD="before_deadline"
-            PERIOD_LABEL="Avant la date limite"
-          elif [ "$NOW_EPOCH" -lt "$LATE_EPOCH" ]; then
-            PERIOD="deadline_passed"
-            PERIOD_LABEL="Date limite passée (13 oct 17h - minuit)"
-          elif [ "$NOW_EPOCH" -lt "$VERY_LATE_EPOCH" ]; then
-            PERIOD="late"
-            PERIOD_LABEL="Période de retard (après minuit, jour 1)"
-          else
-            PERIOD="very_late"
-            PERIOD_LABEL="Période de retard avancé (après minuit, jour 2+)"
-          fi
-
-          # -- Collect all submissions --
-          declare -A gh_to_folder
-          declare -A gh_to_name
-          declare -A gh_link_status
-          declare -A gh_readme_date
-          declare -A gh_links_date
-
-          # Helper: check if a link is a real URL (not empty, not a placeholder with ...)
-          is_real_link() {
-            local link="$1"
-            [ -z "$link" ] && return 1
-            echo "$link" | grep -qE '\.\.\.' && return 1
-            echo "$link" | grep -qE '^https://github\.com/' && return 0
-            return 1
-          }
-
-          for dir in "$TASK_DIR"/*/; do
-            [ -d "$dir" ] || continue
-            folder_name=$(basename "$dir")
-
-            readme=""
-            if [ -f "$dir/readme.md" ]; then
-              readme="$dir/readme.md"
-            elif [ -f "$dir/README.md" ]; then
-              readme="$dir/README.md"
-            else
-              continue
-            fi
-
-            # Get the commit date when readme was first added
-            first_commit_date=$(git log --follow --diff-filter=A --format="%aI" -- "$readme" | tail -1)
-            last_commit_date=$(git log --format="%aI" -1 -- "$readme")
-
-            # Extract links
-            repo_link=$(grep -E '^- Lien vers le répertoire GitHub :' "$readme" | sed 's/^- Lien vers le répertoire GitHub :[[:space:]]*//' || true)
-            readme_link=$(grep -E '^- Lien vers le README du répertoire :' "$readme" | sed 's/^- Lien vers le README du répertoire :[[:space:]]*//' || true)
-
-            # Determine link status: real / placeholder / none
-            link_status="none"
-            if is_real_link "$repo_link" && is_real_link "$readme_link"; then
-              link_status="real"
-            elif [ -n "$repo_link" ] || [ -n "$readme_link" ]; then
-              if echo "$repo_link" | grep -qE '\.\.\.' || echo "$readme_link" | grep -qE '\.\.\.'; then
-                link_status="placeholder"
-              elif [ -z "$repo_link" ] && [ -z "$readme_link" ]; then
-                link_status="none"
-              else
-                link_status="partial"
-              fi
-            fi
-
-            # Extract GitHub userids from table (data rows only)
-            while IFS= read -r line; do
-              gh_userid=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $3); print $3}')
-              name_val=$(echo "$line" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2); print $2}')
-              if echo "$gh_userid" | grep -qE '^[a-zA-Z0-9][a-zA-Z0-9-]*$'; then
-                gh_to_folder["$gh_userid"]="$folder_name"
-                gh_to_name["$gh_userid"]="$name_val"
-                gh_readme_date["$gh_userid"]="$first_commit_date"
-                gh_link_status["$gh_userid"]="$link_status"
-                if [ "$link_status" = "real" ]; then
-                  gh_links_date["$gh_userid"]="$last_commit_date"
-                fi
-              fi
-            done < <(grep -E '^\|' "$readme" | grep -vE '^\|[[:space:]]*Nom complet' | grep -vE '^\|[-[:space:]:]+\|[-[:space:]:]+\|$' 2>/dev/null || true)
-          done
-
-          # -- Build report --
-          REPORT="report.md"
-          echo "## Rapport de soumission - ${TASK_LABEL}" > "$REPORT"
-          echo "" >> "$REPORT"
-          echo "**Date :** $(TZ='America/Montreal' date '+%Y-%m-%d %H:%M %Z')" >> "$REPORT"
-          echo "**Période :** ${PERIOD_LABEL}" >> "$REPORT"
-          echo "" >> "$REPORT"
-
-          # Categories
-          not_submitted=""
-          not_submitted_count=0
-          submitted_names_only=""
-          submitted_names_only_count=0
-          submitted_placeholder=""
-          submitted_placeholder_count=0
-          submitted_complete=""
-          submitted_complete_count=0
-          late_submissions=""
-          late_count=0
-          very_late_submissions=""
-          very_late_count=0
-          total_students=0
-
-          while IFS=',' read -r gh_userid name; do
-            gh_userid=$(echo "$gh_userid" | xargs)
-            name=$(echo "$name" | xargs)
-            [ -z "$gh_userid" ] && continue
-            total_students=$((total_students + 1))
-
-            if [ -z "${gh_to_folder[$gh_userid]+x}" ]; then
-              not_submitted="${not_submitted}| ${name} | ${gh_userid} |\n"
-              not_submitted_count=$((not_submitted_count + 1))
-            else
-              submit_date="${gh_readme_date[$gh_userid]}"
-              submit_epoch=0
-              if [ -n "$submit_date" ]; then
-                submit_epoch=$(date -d "$submit_date" +%s 2>/dev/null || echo "0")
-              fi
-
-              link_status="${gh_link_status[$gh_userid]}"
-              folder="${gh_to_folder[$gh_userid]}"
-
-              # Categorize by submission time
-              if [ "$submit_epoch" -gt "$VERY_LATE_EPOCH" ]; then
-                very_late_submissions="${very_late_submissions}| ${name} | ${gh_userid} | ${folder} | ${submit_date} |\n"
-                very_late_count=$((very_late_count + 1))
-              elif [ "$submit_epoch" -gt "$LATE_EPOCH" ]; then
-                late_submissions="${late_submissions}| ${name} | ${gh_userid} | ${folder} | ${submit_date} |\n"
-                late_count=$((late_count + 1))
-              fi
-
-              # Categorize by link status
-              case "$link_status" in
-                real)
-                  submitted_complete="${submitted_complete}| ${name} | ${gh_userid} | ${folder} |\n"
-                  submitted_complete_count=$((submitted_complete_count + 1))
-                  ;;
-                placeholder|partial)
-                  submitted_placeholder="${submitted_placeholder}| ${name} | ${gh_userid} | ${folder} |\n"
-                  submitted_placeholder_count=$((submitted_placeholder_count + 1))
-                  ;;
-                none|*)
-                  submitted_names_only="${submitted_names_only}| ${name} | ${gh_userid} | ${folder} |\n"
-                  submitted_names_only_count=$((submitted_names_only_count + 1))
-                  ;;
-              esac
-            fi
-          done < <(tail -n +2 "$CSV_FILE")
-
-          # -- Summary --
-          echo "### Résumé" >> "$REPORT"
-          echo "" >> "$REPORT"
-          echo "| Catégorie | Nombre |" >> "$REPORT"
-          echo "|-----------|--------|" >> "$REPORT"
-          echo "| Étudiants inscrits | **${total_students}** |" >> "$REPORT"
-          echo "| Soumissions complètes (readme + vrais liens) | **${submitted_complete_count}** |" >> "$REPORT"
-          echo "| Liens placeholder (non remplacés) | **${submitted_placeholder_count}** |" >> "$REPORT"
-          echo "| Noms seulement (pas de liens) | **${submitted_names_only_count}** |" >> "$REPORT"
-          echo "| Pas de soumission (aucune PR) | **${not_submitted_count}** |" >> "$REPORT"
-          echo "| Soumissions en retard (après minuit jour 1) | **${late_count}** |" >> "$REPORT"
-          echo "| Soumissions très en retard (après minuit jour 2+) | **${very_late_count}** |" >> "$REPORT"
-          echo "" >> "$REPORT"
-
-          # -- Not submitted --
-          if [ -n "$not_submitted" ]; then
-            echo "### Étudiants sans soumission (aucune PR)" >> "$REPORT"
-            echo "" >> "$REPORT"
-            echo "| Nom | Identifiant GitHub |" >> "$REPORT"
-            echo "|-----|-------------------|" >> "$REPORT"
-            echo -e "$not_submitted" >> "$REPORT"
-            echo "" >> "$REPORT"
-          fi
-
-          # -- Submitted with placeholder links --
-          if [ -n "$submitted_placeholder" ]; then
-            echo "### Liens placeholder (non remplacés)" >> "$REPORT"
-            echo "" >> "$REPORT"
-            echo "Ces étudiants ont soumis leur readme mais les liens contiennent encore les valeurs du modèle (ex: \`https://github.com/.../...\`)." >> "$REPORT"
-            echo "" >> "$REPORT"
-            echo "| Nom | Identifiant GitHub | Dossier |" >> "$REPORT"
-            echo "|-----|-------------------|---------|" >> "$REPORT"
-            echo -e "$submitted_placeholder" >> "$REPORT"
-            echo "" >> "$REPORT"
-          fi
-
-          # -- Submitted names only (no links at all) --
-          if [ -n "$submitted_names_only" ]; then
-            echo "### Noms seulement (pas de liens)" >> "$REPORT"
-            echo "" >> "$REPORT"
-            echo "Ces étudiants ont soumis leur readme avec noms et identifiants GitHub mais n'ont pas encore ajouté de liens." >> "$REPORT"
-            echo "" >> "$REPORT"
-            echo "| Nom | Identifiant GitHub | Dossier |" >> "$REPORT"
-            echo "|-----|-------------------|---------|" >> "$REPORT"
-            echo -e "$submitted_names_only" >> "$REPORT"
-            echo "" >> "$REPORT"
-          fi
-
-          # -- Late submissions --
-          if [ -n "$late_submissions" ]; then
-            echo "### Soumissions en retard (après minuit, jour 1)" >> "$REPORT"
-            echo "" >> "$REPORT"
-            echo "| Nom | Identifiant GitHub | Dossier | Date de soumission |" >> "$REPORT"
-            echo "|-----|-------------------|---------|-------------------|" >> "$REPORT"
-            echo -e "$late_submissions" >> "$REPORT"
-            echo "" >> "$REPORT"
-          fi
-
-          # -- Very late submissions --
-          if [ -n "$very_late_submissions" ]; then
-            echo "### Soumissions très en retard (après minuit, jour 2+)" >> "$REPORT"
-            echo "" >> "$REPORT"
-            echo "| Nom | Identifiant GitHub | Dossier | Date de soumission |" >> "$REPORT"
-            echo "|-----|-------------------|---------|-------------------|" >> "$REPORT"
-            echo -e "$very_late_submissions" >> "$REPORT"
-            echo "" >> "$REPORT"
-          fi
-
-          # -- Complete submissions --
-          if [ -n "$submitted_complete" ]; then
-            echo "### Soumissions complètes (readme + vrais liens)" >> "$REPORT"
-            echo "" >> "$REPORT"
-            echo "| Nom | Identifiant GitHub | Dossier |" >> "$REPORT"
-            echo "|-----|-------------------|---------|" >> "$REPORT"
-            echo -e "$submitted_complete" >> "$REPORT"
-            echo "" >> "$REPORT"
-          fi
-
-          # -- Folders without matching student --
-          echo "### Dossiers sans correspondance dans le CSV" >> "$REPORT"
-          echo "" >> "$REPORT"
-          unmatched=""
-          for dir in "$TASK_DIR"/*/; do
-            [ -d "$dir" ] || continue
-            folder_name=$(basename "$dir")
-
-            readme=""
-            if [ -f "$dir/readme.md" ]; then
-              readme="$dir/readme.md"
-            elif [ -f "$dir/README.md" ]; then
-              readme="$dir/README.md"
-            fi
-
-            if [ -z "$readme" ]; then
-              sha=$(git log --diff-filter=A --format="%H" -- "$dir" | tail -1)
-              pr_url=""
-              if [ -n "$sha" ]; then
-                pr_url=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}/pulls" --jq '.[0].html_url // empty' 2>/dev/null || true)
-              fi
-              if [ -n "$pr_url" ]; then
-                pr_display="[PR](${pr_url})"
-              else
-                pr_display="N/A"
-              fi
-              unmatched="${unmatched}| ${folder_name} | Pas de readme trouvé | ${pr_display} |\n"
-            fi
-          done
-
-          if [ -n "$unmatched" ]; then
-            echo "| Dossier | Problème | PR |" >> "$REPORT"
-            echo "|---------|----------|----|" >> "$REPORT"
-            echo -e "$unmatched" >> "$REPORT"
-          else
-            echo "Aucun problème détecté." >> "$REPORT"
-          fi
-
-          echo "" >> "$REPORT"
-          cat "$REPORT"
-          echo "## Rapport" >> $GITHUB_STEP_SUMMARY
-          cat "$REPORT" >> $GITHUB_STEP_SUMMARY
-
-          # Create record file without the unmatched section
-          RECORD="report-record.md"
-          awk '/^### Dossiers sans correspondance/ { skip=1; next } /^### / && skip { skip=0 } skip { next } !skip { print }' "$REPORT" > "$RECORD"
-
-      - name: Sauvegarder le rapport dans records/
-        if: steps.context.outputs.task != 'none'
-        run: |
-          TASK="${{ steps.context.outputs.task }}"
-          TIMESTAMP=$(TZ='America/Montreal' date '+%Y-%m-%d-%Hh%M-%Z')
-          mkdir -p records
-          cp report-record.md "records/${TASK}-${TIMESTAMP}.md"
-
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "records/${TASK}-${TIMESTAMP}.md"
-          git commit -m "Add ${TASK} report ${TIMESTAMP}"
-          git push
+          gh issue create \
+            --title "$TITLE" \
+            --body-file missing.txt

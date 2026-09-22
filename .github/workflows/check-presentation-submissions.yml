@@ -1,10 +1,14 @@
-name: Vérifier les soumissions de présentations
+name: Vérifier les inscriptions
 
 on:
+  schedule:
+    # noon Montreal time
+    - cron: '0 16 * 9-10 *' 
+    - cron: '0 17 * 11-12 *'
   workflow_dispatch: {}
 
 jobs:
-  verifier-presentations:
+  verifier:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -15,256 +19,276 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Vérifier les présentations
+      # fetch the list of students enrolled in the course
+      - name: Récupérer les étudiants inscrits au cours
+        env:
+          STUDIUM_TOKEN: ${{ secrets.STUDIUM_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          curl -sf -X POST "https://studium-uat.umontreal.ca/webservice/rest/server.php" \
+            --data-urlencode "wstoken=$STUDIUM_TOKEN" \
+            --data-urlencode "wsfunction=core_enrol_get_enrolled_users" \
+            --data-urlencode "moodlewsrestformat=json" \
+            --data-urlencode "courseid=349530" \
+            --data-urlencode "options[0][name]=userfields" \
+            --data-urlencode "options[0][value]=firstname,lastname,email,customfields" \
+            -o enrolled.json
+
+          # Extract github_id and fullname (one line per student with a GitHub ID)
+          jq -r '.[] |
+            ((.customfields // [])[] | select(.shortname == "github") | .value) as $gh |
+            select($gh != null and $gh != "") |
+            "\($gh)\t\(.fullname)"
+          ' enrolled.json > students.tsv
+
+          echo "Étudiants avec GitHub ID : $(wc -l < students.tsv)"
+
+      # task 1 — presentations
+      # We use git blame to find the SHA of the commit that filled each
+      # "- Nom:" line, then look up the PR to get the PR author
+      # (not the merge author).
+      - name: Vérifier tâche 1 (présentations)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          set -e
+          set -euo pipefail
 
-          CSV_FILE="scripts/students.csv"
+          # Cache SHA → PR author, to avoid repeated API calls
+          declare -A sha_cache
 
-          if [ ! -f "$CSV_FILE" ]; then
-            echo "::error::Le fichier $CSV_FILE est introuvable."
-            exit 1
-          fi
-
-          # -- Resolve commit SHA to GitHub login (cached) --
-          declare -A sha_to_login
-
-          resolve_login() {
+          resolve_author() {
             local sha="$1"
-            if [ -z "${sha_to_login[$sha]+x}" ]; then
-              local login
-              login=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}" --jq '.author.login // empty' 2>/dev/null || true)
-              sha_to_login["$sha"]="$login"
+            if [[ -z "${sha_cache[$sha]+x}" ]]; then
+              # First, look for the PR associated with the commit
+              local author
+              author=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}/pulls" \
+                --jq '.[0].user.login // empty' 2>/dev/null || true)
+              # If no PR found (direct push), fall back to commit author
+              if [[ -z "$author" ]]; then
+                author=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}" \
+                  --jq '.author.login // empty' 2>/dev/null || true)
+              fi
+              sha_cache["$sha"]="$author"
             fi
-            echo "${sha_to_login[$sha]}"
+            echo "${sha_cache[$sha]}"
           }
 
-          # -- Scan presentation readmes using git blame --
-          # For each filled "- Nom:" or "- Présentation:" line, resolve the
-          # commit author to a GitHub login via the API.
-
-          declare -A user_nom_semaine
-          declare -A user_nom_topic
-          declare -A user_nom_name
-          declare -A user_has_link
-          declare -A user_nom_sha
+          declare -A registered
 
           for readme in presentations/Semaine*/readme.md; do
-            [ -f "$readme" ] || continue
-            semaine=$(basename "$(dirname "$readme")")
-
+            [[ -f "$readme" ]] || continue
             current_sha=""
-            current_topic=""
-            last_nom_login=""
 
             while IFS= read -r line; do
               # Porcelain header: SHA followed by line numbers
               if [[ "$line" =~ ^([0-9a-f]{40})[[:space:]] ]]; then
                 current_sha="${BASH_REMATCH[1]}"
               fi
-
               # Content line (starts with a tab)
               if [[ "${line:0:1}" == $'\t' ]]; then
                 content="${line:1}"
-
-                # Track topic headings
-                if echo "$content" | grep -qE '^\[(concept|demo)\]'; then
-                  current_topic=$(echo "$content" | sed 's/^\[.*\][[:space:]]*//')
-                  last_nom_login=""
-                fi
-
-                # Filled Nom line
-                if echo "$content" | grep -qE '^-[[:space:]]*Nom:[[:space:]]*\S'; then
-                  nom_val=$(echo "$content" | sed 's/^-[[:space:]]*Nom:[[:space:]]*//')
-                  login=$(resolve_login "$current_sha")
-                  if [ -n "$login" ]; then
-                    user_nom_semaine["$login"]="$semaine"
-                    user_nom_topic["$login"]="$current_topic"
-                    user_nom_name["$login"]="$nom_val"
-                    user_nom_sha["$login"]="$current_sha"
-                    last_nom_login="$login"
-                  fi
-                fi
-
-                # Filled Présentation line — attribute to the same login
-                # that owns the preceding Nom, or resolve from blame
-                if echo "$content" | grep -qE '^-[[:space:]]*Présentation:[[:space:]]*\S'; then
-                  login=$(resolve_login "$current_sha")
-                  if [ -n "$login" ]; then
-                    user_has_link["$login"]="true"
-                  elif [ -n "$last_nom_login" ]; then
-                    user_has_link["$last_nom_login"]="true"
-                  fi
-                fi
-
-                # Empty Nom resets last_nom_login
-                if echo "$content" | grep -qE '^-[[:space:]]*Nom:[[:space:]]*$'; then
-                  last_nom_login=""
+                # Filled "- Nom:" line (not empty)
+                if echo "$content" | grep -qE '^-[[:space:]]*Nom:[[:space:]]+\S'; then
+                  author=$(resolve_author "$current_sha")
+                  [[ -n "$author" ]] && registered["$author"]=1
                 fi
               fi
             done < <(git blame --porcelain "$readme")
           done
 
-          # -- Cross-reference with CSV --
-          REPORT="report-presentations.md"
-          echo "## Rapport des présentations" > "$REPORT"
-          echo "" >> "$REPORT"
-          echo "**Date :** $(TZ='America/Montreal' date '+%Y-%m-%d %H:%M %Z')" >> "$REPORT"
-          echo "" >> "$REPORT"
-
-          registered_with_link=""
-          registered_with_link_count=0
-          registered_no_link=""
-          registered_no_link_count=0
-          not_registered=""
-          not_registered_count=0
-          total_students=0
-
-          while IFS=',' read -r github_id name; do
-            github_id=$(echo "$github_id" | xargs)
-            name=$(echo "$name" | xargs)
-            [ -z "$github_id" ] && continue
-            total_students=$((total_students + 1))
-
-            if [ -n "${user_nom_semaine[$github_id]+x}" ]; then
-              semaine="${user_nom_semaine[$github_id]}"
-              topic="${user_nom_topic[$github_id]}"
-              display_name="${user_nom_name[$github_id]:-$name}"
-              if [ -n "${user_has_link[$github_id]+x}" ]; then
-                registered_with_link="${registered_with_link}| ${display_name} | ${github_id} | ${semaine} | ${topic} |\n"
-                registered_with_link_count=$((registered_with_link_count + 1))
-              else
-                registered_no_link="${registered_no_link}| ${display_name} | ${github_id} | ${semaine} | ${topic} |\n"
-                registered_no_link_count=$((registered_no_link_count + 1))
-              fi
-            else
-              not_registered="${not_registered}| ${name} | ${github_id} |\n"
-              not_registered_count=$((not_registered_count + 1))
-            fi
-          done < <(tail -n +2 "$CSV_FILE")
-
-          # -- Find logins in readmes that don't match any CSV entry --
-          unmatched=""
-          unmatched_count=0
-          for login in "${!user_nom_semaine[@]}"; do
-            found=false
-            while IFS=',' read -r github_id name; do
-              github_id=$(echo "$github_id" | xargs)
-              if [ "$github_id" = "$login" ]; then
-                found=true
-                break
-              fi
-            done < <(tail -n +2 "$CSV_FILE")
-            if [ "$found" = false ]; then
-              display_name="${user_nom_name[$login]:-$login}"
-              sha="${user_nom_sha[$login]}"
-              pr_url=""
-              if [ -n "$sha" ]; then
-                pr_url=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}/pulls" --jq '.[0].html_url // empty' 2>/dev/null || true)
-              fi
-              if [ -n "$pr_url" ]; then
-                pr_display="[PR](${pr_url})"
-              else
-                pr_display="N/A"
-              fi
-              unmatched="${unmatched}| ${display_name} | ${login} | ${pr_display} |\n"
-              unmatched_count=$((unmatched_count + 1))
-            fi
+          # Save registered GitHub IDs
+          : > tache1_registered.txt
+          for id in "${!registered[@]}"; do
+            echo "$id" >> tache1_registered.txt
           done
+          sort -fo tache1_registered.txt tache1_registered.txt
+          echo "Tâche 1 inscrits : $(wc -l < tache1_registered.txt)"
 
-          # -- Summary --
-          echo "### Résumé" >> "$REPORT"
-          echo "" >> "$REPORT"
-          echo "| Catégorie | Nombre |" >> "$REPORT"
-          echo "|-----------|--------|" >> "$REPORT"
-          echo "| Étudiants inscrits (CSV) | **${total_students}** |" >> "$REPORT"
-          echo "| Inscrits avec lien de présentation | **${registered_with_link_count}** |" >> "$REPORT"
-          echo "| Inscrits sans lien de présentation | **${registered_no_link_count}** |" >> "$REPORT"
-          echo "| Pas encore inscrits | **${not_registered_count}** |" >> "$REPORT"
-          echo "| GitHub IDs dans les readmes sans correspondance CSV | **${unmatched_count}** |" >> "$REPORT"
-          echo "" >> "$REPORT"
-
-          # -- Not registered --
-          if [ -n "$not_registered" ]; then
-            echo "### Étudiants pas encore inscrits" >> "$REPORT"
-            echo "" >> "$REPORT"
-            echo "| Nom | Identifiant GitHub |" >> "$REPORT"
-            echo "|-----|-------------------|" >> "$REPORT"
-            echo -e "$not_registered" >> "$REPORT"
-            echo "" >> "$REPORT"
-          fi
-
-          # -- Registered without link --
-          if [ -n "$registered_no_link" ]; then
-            echo "### Inscrits sans lien de présentation" >> "$REPORT"
-            echo "" >> "$REPORT"
-            echo "| Nom | Identifiant GitHub | Semaine | Sujet |" >> "$REPORT"
-            echo "|-----|-------------------|---------|-------|" >> "$REPORT"
-            echo -e "$registered_no_link" >> "$REPORT"
-            echo "" >> "$REPORT"
-          fi
-
-          # -- Registered with link --
-          if [ -n "$registered_with_link" ]; then
-            echo "### Inscrits avec lien de présentation" >> "$REPORT"
-            echo "" >> "$REPORT"
-            echo "| Nom | Identifiant GitHub | Semaine | Sujet |" >> "$REPORT"
-            echo "|-----|-------------------|---------|-------|" >> "$REPORT"
-            echo -e "$registered_with_link" >> "$REPORT"
-            echo "" >> "$REPORT"
-          fi
-
-          # -- Unmatched GitHub IDs --
-          if [ -n "$unmatched" ]; then
-            echo "### GitHub IDs dans les readmes sans correspondance dans le CSV" >> "$REPORT"
-            echo "" >> "$REPORT"
-            echo "Ces utilisateurs ont soumis des PRs de présentation mais ne correspondent à aucun étudiant dans le CSV." >> "$REPORT"
-            echo "" >> "$REPORT"
-            echo "| Nom | Identifiant GitHub | PR |" >> "$REPORT"
-            echo "|-----|-------------------|----|" >> "$REPORT"
-            echo -e "$unmatched" >> "$REPORT"
-            echo "" >> "$REPORT"
-          fi
-
-          # -- Per-semaine summary --
-          echo "### Inscriptions par semaine" >> "$REPORT"
-          echo "" >> "$REPORT"
-          echo "| Semaine | Inscrits | Liens soumis |" >> "$REPORT"
-          echo "|---------|----------|-------------|" >> "$REPORT"
-
+          # Per-week table (simple grep)
+          echo "semaine,inscrits,liens" > tache1_weekly.csv
           for readme in presentations/Semaine*/readme.md; do
-            [ -f "$readme" ] || continue
-            semaine=$(basename "$(dirname "$readme")")
-            registered=$(grep -cE '^-[[:space:]]*Nom:[[:space:]]+\S' "$readme" 2>/dev/null || true)
-            with_links=$(grep -cE '^-[[:space:]]*Présentation:[[:space:]]+\S' "$readme" 2>/dev/null || true)
-            echo "| ${semaine} | ${registered} | ${with_links} |" >> "$REPORT"
+            [[ -f "$readme" ]] || continue
+            sem=$(basename "$(dirname "$readme")")
+            reg=$(grep -cE '^-[[:space:]]*Nom:[[:space:]]+\S' "$readme" 2>/dev/null || echo 0)
+            links=$(grep -cE '^-[[:space:]]*Présentation:[[:space:]]+\S' "$readme" 2>/dev/null || echo 0)
+            echo "${sem},${reg},${links}" >> tache1_weekly.csv
           done
 
-          echo "" >> "$REPORT"
-          cat "$REPORT"
-          echo "## Rapport" >> $GITHUB_STEP_SUMMARY
-          cat "$REPORT" >> $GITHUB_STEP_SUMMARY
-
-          # Create record file without the unmatched section
-          RECORD="report-presentations-record.md"
-          awk '
-            /^### GitHub IDs dans les readmes sans correspondance/ { skip=1; next }
-            /^### / && skip { skip=0 }
-            skip { next }
-            !skip { print }
-          ' "$REPORT" > "$RECORD"
-          sed -i '/GitHub IDs dans les readmes sans correspondance CSV/d' "$RECORD"
-
-      - name: Sauvegarder le rapport dans records/
+      # task 2
+      # A pair is "registered" when their folder contains a readme with
+      # both real GitHub links.
+      # We collect the GitHub IDs of both members.
+      - name: Vérifier tâche 2
         run: |
-          TIMESTAMP=$(TZ='America/Montreal' date '+%Y-%m-%d-%Hh%M-%Z')
-          mkdir -p records
-          cp report-presentations-record.md "records/presentations-${TIMESTAMP}.md"
+          set -euo pipefail
 
+          declare -A registered
+          : > tache2_registered.txt
+
+          for dir in tache2/*/; do
+            [[ -d "$dir" ]] || continue
+
+            readme=""
+            [[ -f "$dir/readme.md" ]] && readme="$dir/readme.md"
+            [[ -f "$dir/README.md" ]] && readme="$dir/README.md"
+            [[ -n "$readme" ]] || continue
+
+            # Check that both GitHub links are present and real
+            repo_link=$(sed -n 's/^- Lien vers le répertoire GitHub : *//p' "$readme")
+            readme_link=$(sed -n 's/^- Lien vers le README du répertoire : *//p' "$readme")
+
+            if ! echo "$repo_link" | grep -qE '^https://github\.com/.+/.+'; then continue; fi
+            if ! echo "$readme_link" | grep -qE '^https://github\.com/.+/.+'; then continue; fi
+
+            # Extract both team members' GitHub IDs from the table
+            while IFS= read -r row; do
+              gh_id=$(echo "$row" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $3); print $3}')
+              if echo "$gh_id" | grep -qE '^[a-zA-Z0-9][a-zA-Z0-9._-]*$'; then
+                registered["$gh_id"]=1
+              fi
+            done < <(grep -E '^\|' "$readme" \
+              | grep -vE '^\|[[:space:]]*Nom' \
+              | grep -vE '^\|[-[:space:]:]*\|[-[:space:]:]*\|$')
+          done
+
+          for id in "${!registered[@]}"; do
+            echo "$id" >> tache2_registered.txt
+          done
+          sort -fo tache2_registered.txt tache2_registered.txt
+          echo "Tâche 2 inscrits : $(wc -l < tache2_registered.txt)"
+
+      # task 3 (same as task 2)
+      - name: Vérifier tâche 3
+        run: |
+          set -euo pipefail
+
+          declare -A registered
+          : > tache3_registered.txt
+
+          for dir in tache3/*/; do
+            [[ -d "$dir" ]] || continue
+
+            readme=""
+            [[ -f "$dir/readme.md" ]] && readme="$dir/readme.md"
+            [[ -f "$dir/README.md" ]] && readme="$dir/README.md"
+            [[ -n "$readme" ]] || continue
+
+            repo_link=$(sed -n 's/^- Lien vers le répertoire GitHub : *//p' "$readme")
+            readme_link=$(sed -n 's/^- Lien vers le README du répertoire : *//p' "$readme")
+
+            if ! echo "$repo_link" | grep -qE '^https://github\.com/.+/.+'; then continue; fi
+            if ! echo "$readme_link" | grep -qE '^https://github\.com/.+/.+'; then continue; fi
+
+            while IFS= read -r row; do
+              gh_id=$(echo "$row" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $3); print $3}')
+              if echo "$gh_id" | grep -qE '^[a-zA-Z0-9][a-zA-Z0-9._-]*$'; then
+                registered["$gh_id"]=1
+              fi
+            done < <(grep -E '^\|' "$readme" \
+              | grep -vE '^\|[[:space:]]*Nom' \
+              | grep -vE '^\|[-[:space:]:]*\|[-[:space:]:]*\|$')
+          done
+
+          for id in "${!registered[@]}"; do
+            echo "$id" >> tache3_registered.txt
+          done
+          sort -fo tache3_registered.txt tache3_registered.txt
+          echo "Tâche 3 inscrits : $(wc -l < tache3_registered.txt)"
+
+      # generate submissions.md
+      - name: Générer submissions.md
+        run: |
+          set -euo pipefail
+
+          DATE=$(TZ='America/Montreal' date '+%y.%m.%d')
+
+          # Load enrolled students
+          # Compare in lowercase but display original case
+          declare -A enrolled  # lowercase → original
+          while IFS=$'\t' read -r gh_id fullname; do
+            key=$(echo "$gh_id" | tr '[:upper:]' '[:lower:]')
+            enrolled["$key"]="$gh_id"
+          done < students.tsv
+
+          # Load each task's results (lowercased for comparison)
+          declare -A t1 t2 t3
+          while IFS= read -r id; do [[ -n "$id" ]] && t1["$(echo "$id" | tr '[:upper:]' '[:lower:]')"]=1; done < tache1_registered.txt
+          while IFS= read -r id; do [[ -n "$id" ]] && t2["$(echo "$id" | tr '[:upper:]' '[:lower:]')"]=1; done < tache2_registered.txt
+          while IFS= read -r id; do [[ -n "$id" ]] && t3["$(echo "$id" | tr '[:upper:]' '[:lower:]')"]=1; done < tache3_registered.txt
+
+          # Build registered / not-registered lists for a given task
+          build_lists() {
+            local -n reg_map=$1
+            local inscrits="" non_inscrits=""
+            for key in $(printf '%s\n' "${!enrolled[@]}" | sort); do
+              local orig="${enrolled[$key]}"
+              if [[ -n "${reg_map[$key]+x}" ]]; then
+                inscrits="${inscrits:+$inscrits; }$orig"
+              else
+                non_inscrits="${non_inscrits:+$non_inscrits; }$orig"
+              fi
+            done
+            # Two lines: registered then not-registered
+            echo "$inscrits"
+            echo "$non_inscrits"
+          }
+
+          OUT="submissions.md"
+
+          {
+            echo "mise à jour: ${DATE}"
+            echo ""
+            echo ""
+            echo "# Inscriptions tâche 1:"
+            echo ""
+
+            # Per-week table
+            echo "| Semaine | Inscrits | Liens soumis |"
+            echo "|---------|----------|-------------|"
+            tail -n +2 tache1_weekly.csv | while IFS=',' read -r sem reg links; do
+              echo "| ${sem} | ${reg} | ${links} |"
+            done
+            echo ""
+
+            readarray -t lists < <(build_lists t1)
+            echo "inscrits : ${lists[0]}"
+            echo ""
+            echo "non-inscrits : ${lists[1]}"
+            echo ""
+            echo ""
+            echo "# Inscriptions tâche 2:"
+            echo ""
+            echo "nombre: $(wc -l < tache2_registered.txt | tr -d ' ')"
+            echo ""
+
+            readarray -t lists < <(build_lists t2)
+            echo "inscrits : ${lists[0]}"
+            echo ""
+            echo "non-inscrits : ${lists[1]}"
+            echo ""
+            echo ""
+            echo "# Inscriptions tâche 3:"
+            echo ""
+            echo "nombre: $(wc -l < tache3_registered.txt | tr -d ' ')"
+            echo ""
+
+            readarray -t lists < <(build_lists t3)
+            echo "inscrits : ${lists[0]}"
+            echo ""
+            echo "non-inscrits : ${lists[1]}"
+          } > "$OUT"
+
+          echo "--- submissions.md ---"
+          cat "$OUT"
+          cat "$OUT" >> "$GITHUB_STEP_SUMMARY"
+
+      # commit and push
+      - name: Commit submissions.md
+        run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "records/presentations-${TIMESTAMP}.md"
-          git commit -m "Add presentation report ${TIMESTAMP}"
+          git add submissions.md
+          git diff --cached --quiet && echo "Aucun changement à commit" && exit 0
+          git commit -m "mise à jour submissions.md"
           git push
