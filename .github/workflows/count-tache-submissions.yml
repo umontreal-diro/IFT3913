@@ -217,6 +217,24 @@ jobs:
           while IFS= read -r id; do [[ -n "$id" ]] && t2["$(echo "$id" | tr '[:upper:]' '[:lower:]')"]=1; done < tache2_registered.txt
           while IFS= read -r id; do [[ -n "$id" ]] && t3["$(echo "$id" | tr '[:upper:]' '[:lower:]')"]=1; done < tache3_registered.txt
 
+          # Log GitHub IDs found in readmes that don't match any enrolled student
+          find_unmatched() {
+            local task_name=$1
+            local -n reg=$2
+            local unmatched=""
+            for key in "${!reg[@]}"; do
+              if [[ -z "${enrolled[$key]+x}" ]]; then
+                unmatched="${unmatched:+$unmatched, }$key"
+              fi
+            done
+            if [[ -n "$unmatched" ]]; then
+              echo "::warning::${task_name}: GitHub IDs in readmes but not in enrolled students: ${unmatched}"
+            fi
+          }
+          find_unmatched "tâche 1" t1
+          find_unmatched "tâche 2" t2
+          find_unmatched "tâche 3" t3
+
           # Build registered / not-registered lists for a given task
           build_lists() {
             local -n reg_map=$1
@@ -249,6 +267,9 @@ jobs:
             tail -n +2 tache1_weekly.csv | while IFS=',' read -r sem reg links; do
               echo "| ${sem} | ${reg} | ${links} |"
             done
+            total_reg=$(awk -F',' 'NR>1{s+=$2}END{print s+0}' tache1_weekly.csv)
+            total_links=$(awk -F',' 'NR>1{s+=$3}END{print s+0}' tache1_weekly.csv)
+            echo "| **Total** | **${total_reg}** | **${total_links}** |"
             echo ""
 
             readarray -t lists < <(build_lists t1)
