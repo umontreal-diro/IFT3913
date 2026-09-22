@@ -11,8 +11,8 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 - Présentation: 
 
 [concept] Couverture des domaines d'entrée 
-- Nom: farah romdhane
-- Présentation: 
+- Nom: Farah Romdhane
+- Présentation: https://docs.google.com/presentation/d/1-AuYcCK_WReIvDjYSyLiWJXtCbAGYnJgmtkzYeuo3ac/edit?usp=sharing
 
 [concept] Couverture de code à Google 
 - Nom: Nassim Barhoumi
