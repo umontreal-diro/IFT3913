@@ -43,5 +43,5 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Présentation:
 
 [démo]  Shadow Testing en production
-- Nom:
+- Nom: Souha Cherihane Wahbi
 - Présentation:
