@@ -36,7 +36,7 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 
 [demo] [Evosuite](https://github.com/EvoSuite/evosuite)
 - Nom: Maria Alitouche
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1_tVsAQ1TSjEA3PGaEZpbnnrxGoX_h48CkSHFSrYAIRg/edit?usp=sharing
 
 [demo] [TestSpark](https://github.com/JetBrains-Research/TestSpark)
 - Nom: Andrei Bituleanu
