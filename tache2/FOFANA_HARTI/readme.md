@@ -2,8 +2,8 @@
 
 | Nom complet | Identifiant GitHub |
 |---|---|
-| Nom Prénom | github-username |
-| Nom Prénom | github-username |
+| FOFANA Aguibou | AguibouF |
+| HARTI Anas | axh23399 |
 
 - Lien vers le répertoire GitHub :
 - Lien vers le README du répertoire :
