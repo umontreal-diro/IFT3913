@@ -9,7 +9,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Présentation:
 
 [concept] Les messages d’erreur absurdes et humoristiques
-- Nom: 
+- Nom: Taoudi Bensouda
 - Présentation:
 
 [concept] Humour dans les bibliothèques de test
@@ -17,31 +17,31 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 - Présentation:
 
 [concept] Humour dans la documentation logicielle
-- Nom:
+- Nom: Abdourahman Saleh
 - Présentation:
 
 [concept] Humour pour la gestion de projets logiciels
-- Nom:
+- Nom: Fatima Zahrae El fakir
 - Présentation:
 
 [concept] Humour en ligne de commande
-- Nom: 
+- Nom: Anas El Farkh
 - Présentation:
 
 [concept] Qualité logicielle pour les easter eggs 
-- Nom:
+- Nom: Ali Awada
 - Présentation:
 
 [concept] Humour dans les cours de génie logiciel
-- Nom:
+- Nom: Houmayed Marwa
 - Présentation:
 
 [demo] [volkswagen](https://github.com/auchenberg/volkswagen)
-- Nom:
+- Nom: shems kaghat
 - Présentation:
 
 [demo] [thefuck](https://github.com/nvbn/thefuck) 
-- Nom:
+- Nom: Olivier Simard
 - Présentation:
 
 [demo] [lolcommits](https://github.com/lolcommits)

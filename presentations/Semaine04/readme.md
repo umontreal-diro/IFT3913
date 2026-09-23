@@ -4,19 +4,19 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [concept] Couverture des instructions et branches
 - Nom: Marguerite Rouleau
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1tk9SiFOUAvvRg-4Q-smui1T7PO5if3OX5FHNk77GYKc/edit?usp=sharing
 
 [concept] Critère MC/DC 
-- Nom: 
-- Présentation: 
+- Nom: Damia Boudjema
+- Présentation: https://docs.google.com/presentation/d/11cMd0cq0w-bgMJSvXL8u0NYue3q7Av9AoCELTTNfu4Y/edit?usp=sharing
 
 [concept] Couverture des domaines d'entrée 
-- Nom: farah romdhane
-- Présentation: 
+- Nom: Farah Romdhane
+- Présentation: https://docs.google.com/presentation/d/1-AuYcCK_WReIvDjYSyLiWJXtCbAGYnJgmtkzYeuo3ac/edit?usp=sharing
 
 [concept] Couverture de code à Google 
-- Nom: 
-- Présentation: 
+- Nom: Nassim Barhoumi
+- Présentation: https://docs.google.com/presentation/d/1mHUM7UUdW_nYL7hzbfDOn2zhgmaDDn2xQqvS1o9iMWk/edit?usp=sharing 
 
 [concept] Couverture pour les réseaux de neurones 
 - Nom: 
@@ -24,24 +24,24 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 
 [concept] Avantages et limites de la couverture de test 
 - Nom: Carlos Daniel Zelaya
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1x_eAxtHDKiaA9-jfQgiR8W6ZoeT2J0WXf64x1JZrx6k/edit?usp=drivesdk
 
 [demo] Couverture de code pour Java 
-- Nom: 
-- Présentation: 
+- Nom: Tong Xu
+- Présentation: https://docs.google.com/presentation/d/1Htcgi5Of-aaoib6FrxiYSrdXZT1ZmNJVCD8HDFTyyrY/edit?slide=id.p#slide=id.p
 
 [demo] Couverture de code pour Javascript  
-- Nom: 
-- Présentation: 
+- Nom: Matthew Hurley
+- Présentation: [https://docs.google.com/presentation/d/1bcPCc2Ej8KFHoL1TF_8fHjG__-Y1TBlgJoHm4UubodQ/edit?slide=id.p9#slide=id.p9](https://docs.google.com/presentation/d/1bcPCc2Ej8KFHoL1TF_8fHjG__-Y1TBlgJoHm4UubodQ/edit?slide=id.p9#slide=id.p9)
 
 [demo] Couverture de code pour Rust 
-- Nom: 
-- Présentation: 
+- Nom: Fabien Juteau Desjardins
+- Présentation: [https://docs.google.com/presentation/d/1uDn921h7EIWF6velXemVKdAXZX1Cv8UzprUkSDZq1WU/edit?usp=sharing](https://docs.google.com/presentation/d/1uDn921h7EIWF6velXemVKdAXZX1Cv8UzprUkSDZq1WU/edit?usp=sharing)
 
 [demo] Couverture pour les schémas de données
-- Nom: 
+- Nom: Alae Aloui
 - Présentation: 
 
 [demo] Couverture de code pour Python
-- Nom: 
-- Présentation: 
+- Nom: Samah Tanisha Islam
+- Présentation: https://docs.google.com/presentation/d/1LUI3sNJyR7Fmp-npVCXY6GGXOQqv4VLWTkW7lRzT2z4/edit?usp=sharing

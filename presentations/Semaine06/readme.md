@@ -3,23 +3,23 @@
 Pour faire une présentation sur test et IA choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
 
 [concept] Génération automatique de test avec un algorithme génétique    
-- Nom: 
+- Nom: Oceane Molly-Fleur Ndong 
 - Présentation: 
 
 [concept] Génération automatique de données de test avec l'IA      
-- Nom: 
+- Nom: Yohan Zytoon
 - Présentation: 
 
 [concept] Génération automatique de mocks et configurations avec l'IA
-- Nom: 
+- Nom: Alexis Gouault
 - Présentation: 
 
 [concept] Génération automatique de tests paramétrés avec l'IA
-- Nom: 
+- Nom: BRICE BAKOUP WAFO
 - Présentation: 
 
 [concept] Maintenance des tests avec l'IA
-- Nom: 
+- Nom: Jessie Lam
 - Présentation: 
 
 [concept] Revue de code assistée par les LLM
@@ -27,21 +27,21 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 - Présentation: 
 
 [concept] Qualité des tests générés avec l'IA
-- Nom: 
+- Nom: Cherir Roustom Abdeldjalel
 - Présentation: 
 
 [concept] Bugs dans le code généré par l'IA
-- Nom: 
+- Nom: Timothey chaput
 - Présentation: 
 
 [demo] [Evosuite](https://github.com/EvoSuite/evosuite)
-- Nom: 
-- Présentation: 
+- Nom: Maria Alitouche
+- Présentation: https://docs.google.com/presentation/d/1_tVsAQ1TSjEA3PGaEZpbnnrxGoX_h48CkSHFSrYAIRg/edit?usp=sharing
 
 [demo] [TestSpark](https://github.com/JetBrains-Research/TestSpark)
-- Nom: 
+- Nom: Andrei Bituleanu
 - Présentation: 
 
 [demo] [Guardrails](https://github.com/guardrails-ai/guardrails)
-- Nom: 
+- Nom: Andy Nguema Luemba
 - Présentation: 

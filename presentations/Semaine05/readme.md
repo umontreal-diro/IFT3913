@@ -11,17 +11,17 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 - Présentation: 
 
 [concept] Test basé sur les propriétés
-- Nom: 
+- Nom: Landry Ntebou
 - Présentation: 
 
 [concept] Test combinatoire
-- Nom: 
+- Nom:Sami sabil
 - Présentation: 
 
 [concept] Test polymorphique pour la couverture des données
 
 [demo] [Hypothesis](https://hypothesis.readthedocs.io/en/latest/) pour le test basé sur les propriétés en Python
-- Nom: 
+- Nom: Alison Deblois 
 - Présentation: 
 
 [demo] [Mockito](https://site.mockito.org/) pour les mocks en Java
@@ -29,15 +29,15 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 - Présentation: 
 
 [demo] [Cucumber](https://cucumber.io/) pour le test basé comportement en Java
-- Nom: 
+- Nom: Anas Mrani Alaoui
 - Présentation: 
 
 [demo] [Java faker](https://github.com/DiUS/java-faker) pour l'isolation de tests en Java
-- Nom: 
+- Nom: Youwei Dong
 - Présentation: 
 
 [demo] [AutoParams](https://github.com/AutoParams/AutoParams) pour les tests paramétrés en Java
-- Nom: 
+- Nom: Mahdi Slimani
 - Présentation: 
 
 [demo] [afl++](https://github.com/AFLplusplus/AFLplusplus)

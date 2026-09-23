@@ -3,39 +3,39 @@
 Pour faire une présentation sur le test en production, choisissez un des sujets listés ci-dessous et indiquez votre nom, ou proposez votre propre sujet. Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontreal.ca) le plus tôt possible pour valider le sujet.
 
 [concept] chaos engineering
-- Nom:
+- Nom: Luc Brennan
 - Présentation:
 
 [concept] injections de fautes
-- Nom:
+- Nom: Aya Elbroumi
 - Présentation:
 
 [concept] canary testing
-- Nom:
+- Nom: Zouhair El Yani
 - Présentation:
 
 [concept] tester la performance
-- Nom:
+- Nom: chris alex belanov ndabihawenimana
 - Présentation:
 
 [concept] test de pénétration
-- Nom:
+- Nom: Tionohoue Lucas
 - Présentation:
 
 [concept] capture and replay
-- Nom:
+- Nom: Aness Lakhdar Azzouz
 - Présentation:
 
 [concept] Feature Flags (dark launching et progressive rollout)
-- Nom:
+- Nom: Phuong Anh Tran
 - Présentation:
 
 [concept] Agents IA autonomes pour la fiabilité en production 
-- Nom:
+- Nom: Maha Amhaouch
 - Présentation:
 
 [demo] [opentelemetry](https://opentelemetry.io/) pour l'observabilité en production
-- Nom:
+- Nom: Hung Nguyen
 - Présentation:
 
 [démo]  tests de performances avec K6 en javascript
@@ -43,5 +43,5 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Présentation:
 
 [démo]  Shadow Testing en production
-- Nom:
+- Nom: Souha Cherihane Wahbi
 - Présentation:

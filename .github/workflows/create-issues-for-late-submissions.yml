@@ -1,0 +1,178 @@
+name: Créer des issues après les deadlines
+
+on:
+  schedule:
+    # Task 2 — deadline Oct 13 2026, 5pm EDT (UTC-4)
+    - cron: '0 21 13 10 *'  # at deadline
+    - cron: '0 21 14 10 *'  # deadline + 24h
+    - cron: '0 21 15 10 *'  # deadline + 48h
+
+    # Task 3 — deadline Nov 17 2026, 5pm EST (UTC-5)
+    - cron: '0 22 17 11 *'  # at deadline
+    - cron: '0 22 18 11 *'  # deadline + 24h
+    - cron: '0 22 19 11 *'  # deadline + 48h
+
+  workflow_dispatch:
+    inputs:
+      task:
+        description: 'Tâche à vérifier'
+        required: true
+        type: choice
+        options:
+          - tache2
+          - tache3
+
+jobs:
+  creer-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
+      # Determine which task and which period (deadline / +24h / +48h)
+      - name: Déterminer le contexte
+        id: context
+        run: |
+          set -euo pipefail
+
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            TASK="${{ inputs.task }}"
+            LABEL="vérification manuelle"
+          else
+            MONTH=$(date -u '+%m')
+            DAY=$(date -u '+%d')
+            TASK=""
+            LABEL=""
+
+            if [[ "$MONTH" == "10" ]]; then
+              TASK="tache2"
+              case "$DAY" in
+                13) LABEL="deadline" ;;
+                14) LABEL="deadline + 24h" ;;
+                15) LABEL="deadline + 48h" ;;
+              esac
+            elif [[ "$MONTH" == "11" ]]; then
+              TASK="tache3"
+              case "$DAY" in
+                17) LABEL="deadline" ;;
+                18) LABEL="deadline + 24h" ;;
+                19) LABEL="deadline + 48h" ;;
+              esac
+            fi
+
+            if [[ -z "$TASK" || -z "$LABEL" ]]; then
+              echo "Aucune tâche prévue pour cette date."
+              echo "skip=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          fi
+
+          echo "task=$TASK" >> "$GITHUB_OUTPUT"
+          echo "label=$LABEL" >> "$GITHUB_OUTPUT"
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
+          TASK_NUM="${TASK#tache}"
+          echo "task_num=$TASK_NUM" >> "$GITHUB_OUTPUT"
+
+      # Fetch students enrolled in the course
+      - name: Récupérer les étudiants inscrits
+        if: steps.context.outputs.skip != 'true'
+        env:
+          STUDIUM_TOKEN: ${{ secrets.STUDIUM_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          curl -sf -X POST "https://studium-uat.umontreal.ca/webservice/rest/server.php" \
+            --data-urlencode "wstoken=$STUDIUM_TOKEN" \
+            --data-urlencode "wsfunction=core_enrol_get_enrolled_users" \
+            --data-urlencode "moodlewsrestformat=json" \
+            --data-urlencode "courseid=349530" \
+            --data-urlencode "options[0][name]=userfields" \
+            --data-urlencode "options[0][value]=firstname,lastname,email,customfields" \
+            -o enrolled.json
+
+          jq -r '.[] |
+            ((.customfields // [])[] | select(.shortname == "github") | .value) as $gh |
+            select($gh != null and $gh != "") |
+            $gh
+          ' enrolled.json > enrolled_ids.txt
+
+          echo "Étudiants avec GitHub ID : $(wc -l < enrolled_ids.txt)"
+
+      # Check submissions and find missing students
+      - name: Trouver les soumissions manquantes
+        if: steps.context.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+
+          TASK="${{ steps.context.outputs.task }}"
+
+          # Collect GitHub IDs that have submitted (folder + real links, both members)
+          declare -A submitted
+
+          for dir in "$TASK"/*/; do
+            [[ -d "$dir" ]] || continue
+
+            readme=""
+            [[ -f "$dir/readme.md" ]] && readme="$dir/readme.md"
+            [[ -f "$dir/README.md" ]] && readme="$dir/README.md"
+            [[ -n "$readme" ]] || continue
+
+            # Check that both GitHub links are real
+            repo_link=$(sed -n 's/^- Lien vers le répertoire GitHub : *//p' "$readme")
+            readme_link=$(sed -n 's/^- Lien vers le README du répertoire : *//p' "$readme")
+
+            if ! echo "$repo_link" | grep -qE '^https://github\.com/.+/.+'; then continue; fi
+            if ! echo "$readme_link" | grep -qE '^https://github\.com/.+/.+'; then continue; fi
+
+            # Extract both team members' GitHub IDs from the table
+            while IFS= read -r row; do
+              gh_id=$(echo "$row" | awk -F'|' '{gsub(/^[[:space:]]+|[[:space:]]+$/, "", $3); print $3}')
+              if echo "$gh_id" | grep -qE '^[a-zA-Z0-9][a-zA-Z0-9._-]*$'; then
+                submitted["$(echo "$gh_id" | tr '[:upper:]' '[:lower:]')"]=1
+              fi
+            done < <(grep -E '^\|' "$readme" \
+              | grep -vE '^\|[[:space:]]*Nom' \
+              | grep -vE '^\|[-[:space:]:]*\|[-[:space:]:]*\|$')
+          done
+
+          # Compare with the enrolled students list
+          : > missing.txt
+          while IFS= read -r gh_id; do
+            key=$(echo "$gh_id" | tr '[:upper:]' '[:lower:]')
+            if [[ -z "${submitted[$key]+x}" ]]; then
+              echo "$gh_id" >> missing.txt
+            fi
+          done < enrolled_ids.txt
+
+          sort -fo missing.txt missing.txt
+          echo "Soumissions manquantes : $(wc -l < missing.txt)"
+
+      # Create GitHub issue with the list of missing students
+      - name: Créer l'issue
+        if: steps.context.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          TASK_NUM="${{ steps.context.outputs.task_num }}"
+          LABEL="${{ steps.context.outputs.label }}"
+          COUNT=$(wc -l < missing.txt | tr -d ' ')
+
+          TITLE="Tâche ${TASK_NUM} — soumissions manquantes (${LABEL})"
+
+          if [[ "$COUNT" -eq 0 ]]; then
+            echo "Tous les étudiants ont soumis. Aucune issue créée."
+            exit 0
+          fi
+
+          gh issue create \
+            --title "$TITLE" \
+            --body-file missing.txt

@@ -3,27 +3,27 @@
  Pour faire une présentation sur la gestion de dépendances, choisissez un des sujets listés ci-dessous et indiquez votre nom, ou proposez votre propre sujet. Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontreal.ca) le plus tôt possible pour valider le sujet.
 
 [concept] Gestionnaire de paquets
-- Nom: 
+- Nom: Joseph Soufsaf
 - Présentation: 
 
 [concept] Bots pour la mise à jour des dépendances
-- Nom: 
+- Nom: David Correa
 - Présentation: 
 
 [concept] Mise à jour des dépendances qui brisent le build (a.k.a breaking dependency update)
-- Nom: 
+- Nom: Rafi Dahoui
 - Présentation: 
 
 [concept] le [lockfile](https://arxiv.org/pdf/2505.04834)
-- Nom: 
+- Nom: Adem-Abdelkrim Ghaoui
 - Présentation: 
 
 [concept] le build reproductible
-- Nom: 
+- Nom: Laurent-Philippe Roy-Lemaire
 - Présentation: 
 
 [concept] analyse statique pour la réduction des dépendances
-- Nom: 
+- Nom: Toky Erick Rabenantoandro
 - Présentation: 
 
 [concept] Dependency hell
