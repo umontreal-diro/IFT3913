@@ -41,8 +41,8 @@ jobs:
       - name: Valider les changements
         id: validate
         env:
-          ALL_FILES: ${{ steps.all-changed-files.outputs.all_changed_files }}
-          MATCHED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+          ALL_FILES: ${{ steps.all-changed-files.outputs.all_changed_and_modified_files }}
+          MATCHED_FILES: ${{ steps.changed-files.outputs.all_changed_and_modified_files }}
           ADDED_FILES: ${{ steps.changed-files.outputs.added_files }}
           MODIFIED_FILES: ${{ steps.changed-files.outputs.modified_files }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}

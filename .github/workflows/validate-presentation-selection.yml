@@ -12,7 +12,7 @@ jobs:
       pull-requests: write
       contents: write  # For auto merging
       issues: write
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -36,46 +36,11 @@ jobs:
           base_sha: ${{ github.event.pull_request.base.sha }}
           sha: ${{ github.event.pull_request.head.sha }}
 
-      - name: Debug - Compare git diff vs tj-actions output
-        env:
-          ALL_FILES: ${{ steps.all-changed-files.outputs.all_changed_files }}
-          MATCHED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-          DELETED_FILES: ${{ steps.all-changed-files.outputs.deleted_files }}
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-        run: |
-          echo "=== Git repo state ==="
-          echo "Is shallow: $(git rev-parse --is-shallow-repository)"
-          echo "HEAD: $(git rev-parse HEAD)"
-          echo "BASE_SHA: $BASE_SHA"
-          echo "HEAD_SHA: $HEAD_SHA"
-          echo ""
-          echo "=== Raw git diff (two-dot) ==="
-          git diff --name-status --diff-filter=ACDMRTUX "$BASE_SHA".."$HEAD_SHA" || echo "FAILED with exit code $?"
-          echo ""
-          echo "=== Raw git diff (three-dot) ==="
-          git diff --name-status --diff-filter=ACDMRTUX "$BASE_SHA"..."$HEAD_SHA" || echo "FAILED with exit code $?"
-          echo ""
-          echo "=== git merge-base ==="
-          git merge-base "$BASE_SHA" "$HEAD_SHA" || echo "FAILED with exit code $?"
-          echo ""
-          echo "=== git log between SHAs ==="
-          git log --oneline "$BASE_SHA".."$HEAD_SHA" || echo "FAILED with exit code $?"
-          echo ""
-          echo "=== GitHub API PR files ==="
-          gh api repos/${{ github.repository }}/pulls/$PR_NUMBER/files --jq '.[].filename' || echo "FAILED"
-          echo ""
-          echo "=== tj-actions outputs ==="
-          echo "all_changed_files: '$ALL_FILES'"
-          echo "matched_files: '$MATCHED_FILES'"
-          echo "deleted_files: '$DELETED_FILES'"
-
       - name: Valider les changements
         id: validate
         env:
-          ALL_FILES: ${{ steps.all-changed-files.outputs.all_changed_files }}
-          MATCHED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+          ALL_FILES: ${{ steps.all-changed-files.outputs.all_changed_and_modified_files }}
+          MATCHED_FILES: ${{ steps.changed-files.outputs.all_changed_and_modified_files }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
@@ -95,34 +60,34 @@ jobs:
             echo "valid=false" >> $GITHUB_OUTPUT
             exit 0
           fi
-          
+
           file=${changed_files[0]}
-          
+
           # Check if file matches expected pattern
           if [[ ! "$file" =~ ^presentations/Semaine[0-9]{2}/readme\.md$ ]]; then
             echo "Erreur: Le fichier ne correspond pas au pattern attendu presentations/SemaineXX/readme.md"
             echo "valid=false" >> $GITHUB_OUTPUT
             exit 0
           fi
-          
+
           # Get the diff for the changed file
           git diff "$BASE_SHA" "$HEAD_SHA" -- "$file" > diff.txt
-          
+
           # Count lines that were added/removed (excluding context lines)
           added_lines=$(grep "^+" diff.txt | grep -v "^+++" | wc -l)
           removed_lines=$(grep "^-" diff.txt | grep -v "^---" | wc -l)
-          
+
           # Extract actual changes (ignoring +/- prefixes)
           added_content=$(grep "^+" diff.txt | grep -v "^+++" | sed 's/^+//')
           removed_content=$(grep "^-" diff.txt | grep -v "^---" | sed 's/^-//')
-          
+
           # Validate changes - allow any modifications to Nom and Présentation fields
           valid=false
-          
+
           # Check if all changes are only to Nom or Présentation fields
           if [ $added_lines -gt 0 ] && [ $removed_lines -ge 0 ]; then
             all_valid=true
-            
+
             # Check removed lines
             while IFS= read -r line; do
               if [ -n "$line" ]; then
@@ -133,7 +98,7 @@ jobs:
                 fi
               fi
             done <<< "$removed_content"
-            
+
             # Check added lines - must be Nom: or Présentation: fields (can be empty or with content)
             if [ "$all_valid" = true ]; then
               while IFS= read -r line; do
@@ -146,7 +111,7 @@ jobs:
                 fi
               done <<< "$added_content"
             fi
-            
+
             if [ "$all_valid" = true ]; then
               valid=true
             fi
@@ -175,7 +140,7 @@ jobs:
           GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
           gh pr review ${{ github.event.pull_request.number }} --approve --body "Auto-approuvé 💯."
-          
+
           # Merge
           gh pr merge ${{ github.event.pull_request.number }} --squash
 
@@ -185,11 +150,11 @@ jobs:
           GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
           gh pr comment ${{ github.event.pull_request.number }} --body "Cette PR ne peut pas être auto-approuvée ❌. Seules les modifications suivantes sont autorisées dans les fichiers readme:
-          
+
           1. Modifier un seul champ 'Nom:' de vide à rempli (ex: 'Nom:' → 'Nom: Tim Toady')
           2. Modifier un champ 'Nom:' et son champ 'Présentation:' correspondant
           3. Modifier un seul champ 'Présentation:' de vide à rempli
-          
+
           La PR est automatiquement fermée. Veuillez corriger votre contribution et vous assurer que vos modifications correspondent exactement à l'un de ces patterns et n'affectent qu'un seul fichier readme.md dans un dossier Semaine avant de soumettre une nouvelle PR 👍."
 
           # Close the PR
