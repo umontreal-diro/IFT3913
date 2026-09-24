@@ -89,7 +89,7 @@ jobs:
               if [[ "${line:0:1}" == $'\t' ]]; then
                 content="${line:1}"
                 # Filled "- Nom:" line (not empty)
-                if echo "$content" | grep -qE '^-[[:space:]]*Nom:[[:space:]]+\S'; then
+                if echo "$content" | grep -qE '^-[[:space:]]*Nom:[[:space:]]*\S'; then
                   author=$(resolve_author "$current_sha")
                   [[ -n "$author" ]] && registered["$author"]=1
                 fi
@@ -110,7 +110,7 @@ jobs:
           for readme in presentations/Semaine*/readme.md; do
             [[ -f "$readme" ]] || continue
             sem=$(basename "$(dirname "$readme")")
-            reg=$(grep -cE '^-[[:space:]]*Nom:[[:space:]]+\S' "$readme") || true
+            reg=$(grep -cE '^-[[:space:]]*Nom:[[:space:]]*\S' "$readme") || true
             links=$(grep -cE '^-[[:space:]]*Présentation:[[:space:]]+\S' "$readme") || true
             echo "${sem},${reg},${links}" >> tache1_weekly.csv
           done
