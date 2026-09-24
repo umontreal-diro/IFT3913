@@ -31,10 +31,26 @@ jobs:
           base_sha: ${{ github.event.pull_request.base.sha }}
           sha: ${{ github.event.pull_request.head.sha }}
 
+      - name: Obtenir tous les fichiers modifiés
+        id: all-changed-files
+        uses: tj-actions/changed-files@v47
+        with:
+          base_sha: ${{ github.event.pull_request.base.sha }}
+          sha: ${{ github.event.pull_request.head.sha }}
+
       - name: Valider les changements
         id: validate
         run: |
           set -e
+
+          # Reject if the PR touches any files outside the allowed pattern
+          IFS=' ' read -ra all_files <<< "${{ steps.all-changed-files.outputs.all_changed_files }}"
+          IFS=' ' read -ra matched_files <<< "${{ steps.changed-files.outputs.all_changed_files }}"
+          if [ ${#all_files[@]} -ne ${#matched_files[@]} ]; then
+            echo "error=La PR modifie des fichiers en dehors de tache2/*/readme.md." >> $GITHUB_OUTPUT
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
 
           all_changed="${{ steps.changed-files.outputs.all_changed_files }}"
           all_added="${{ steps.changed-files.outputs.added_files }}"

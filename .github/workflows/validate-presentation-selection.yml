@@ -29,11 +29,27 @@ jobs:
           base_sha: ${{ github.event.pull_request.base.sha }}
           sha: ${{ github.event.pull_request.head.sha }}
 
+      - name: Obtenir tous les fichiers modifiés
+        id: all-changed-files
+        uses: tj-actions/changed-files@v47
+        with:
+          base_sha: ${{ github.event.pull_request.base.sha }}
+          sha: ${{ github.event.pull_request.head.sha }}
+
       - name: Valider les changements
         id: validate
         run: |
+          # Reject if the PR touches any files outside the allowed pattern
+          all_files=(${{ steps.all-changed-files.outputs.all_changed_files }})
+          matched_files=(${{ steps.changed-files.outputs.all_changed_files }})
+          if [ ${#all_files[@]} -ne ${#matched_files[@]} ]; then
+            echo "Erreur: La PR modifie des fichiers en dehors de presentations/SemaineXX/readme.md"
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
           # Check if only one readme file was changed
-          changed_files=(${{ steps.changed-files.outputs.all_changed_files }})
+          changed_files=("${matched_files[@]}")
           if [ ${#changed_files[@]} -ne 1 ]; then
             echo "Erreur: Un seul fichier readme.md doit être modifié"
             echo "valid=false" >> $GITHUB_OUTPUT
