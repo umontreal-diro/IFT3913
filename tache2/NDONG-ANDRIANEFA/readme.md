@@ -1,18 +1,9 @@
-\# Tâche 2
-
-
+# Tâche 2
 
 | Nom complet | Identifiant GitHub |
-
 |---|---|
+| Nom Prénom | mollyfleuur |
+| Nom Prénom | cyreanne0 |
 
-| Oceane Molly-fleur Ndong | mollyfleuur |
-
-| Cyreanne Candy Andrianefa | cyreanne0 |
-
-
-
-\- Lien vers le répertoire GitHub : 
-
-\- Lien vers le README du répertoire :  
-
+- Lien vers le répertoire GitHub :
+- Lien vers le README du répertoire :
