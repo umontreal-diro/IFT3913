@@ -36,6 +36,41 @@ jobs:
           base_sha: ${{ github.event.pull_request.base.sha }}
           sha: ${{ github.event.pull_request.head.sha }}
 
+      - name: Debug - Compare git diff vs tj-actions output
+        env:
+          ALL_FILES: ${{ steps.all-changed-files.outputs.all_changed_files }}
+          MATCHED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+          DELETED_FILES: ${{ steps.all-changed-files.outputs.deleted_files }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          echo "=== Git repo state ==="
+          echo "Is shallow: $(git rev-parse --is-shallow-repository)"
+          echo "HEAD: $(git rev-parse HEAD)"
+          echo "BASE_SHA: $BASE_SHA"
+          echo "HEAD_SHA: $HEAD_SHA"
+          echo ""
+          echo "=== Raw git diff (two-dot) ==="
+          git diff --name-status --diff-filter=ACDMRTUX "$BASE_SHA".."$HEAD_SHA" || echo "FAILED with exit code $?"
+          echo ""
+          echo "=== Raw git diff (three-dot) ==="
+          git diff --name-status --diff-filter=ACDMRTUX "$BASE_SHA"..."$HEAD_SHA" || echo "FAILED with exit code $?"
+          echo ""
+          echo "=== git merge-base ==="
+          git merge-base "$BASE_SHA" "$HEAD_SHA" || echo "FAILED with exit code $?"
+          echo ""
+          echo "=== git log between SHAs ==="
+          git log --oneline "$BASE_SHA".."$HEAD_SHA" || echo "FAILED with exit code $?"
+          echo ""
+          echo "=== GitHub API PR files ==="
+          gh api repos/${{ github.repository }}/pulls/$PR_NUMBER/files --jq '.[].filename' || echo "FAILED"
+          echo ""
+          echo "=== tj-actions outputs ==="
+          echo "all_changed_files: '$ALL_FILES'"
+          echo "matched_files: '$MATCHED_FILES'"
+          echo "deleted_files: '$DELETED_FILES'"
+
       - name: Valider les changements
         id: validate
         env:
