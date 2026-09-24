@@ -40,21 +40,29 @@ jobs:
 
       - name: Valider les changements
         id: validate
+        env:
+          ALL_FILES: ${{ steps.all-changed-files.outputs.all_changed_files }}
+          MATCHED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+          ADDED_FILES: ${{ steps.changed-files.outputs.added_files }}
+          MODIFIED_FILES: ${{ steps.changed-files.outputs.modified_files }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_CREATED: ${{ github.event.pull_request.created_at }}
         run: |
           set -e
 
           # Reject if the PR touches any files outside the allowed pattern
-          IFS=' ' read -ra all_files <<< "${{ steps.all-changed-files.outputs.all_changed_files }}"
-          IFS=' ' read -ra matched_files <<< "${{ steps.changed-files.outputs.all_changed_files }}"
+          IFS=' ' read -ra all_files <<< "$ALL_FILES"
+          IFS=' ' read -ra matched_files <<< "$MATCHED_FILES"
           if [ ${#all_files[@]} -ne ${#matched_files[@]} ]; then
             echo "error=La PR modifie des fichiers en dehors de tache3/*/readme.md." >> $GITHUB_OUTPUT
             echo "valid=false" >> $GITHUB_OUTPUT
             exit 0
           fi
 
-          all_changed="${{ steps.changed-files.outputs.all_changed_files }}"
-          all_added="${{ steps.changed-files.outputs.added_files }}"
-          all_modified="${{ steps.changed-files.outputs.modified_files }}"
+          all_changed="$MATCHED_FILES"
+          all_added="$ADDED_FILES"
+          all_modified="$MODIFIED_FILES"
 
           IFS=' ' read -ra changed_files <<< "$all_changed"
 
@@ -176,7 +184,7 @@ jobs:
 
           # Time restriction: links can only be submitted within 4 days of deadline
           if [ "$has_links" = true ]; then
-            PR_CREATED="${{ github.event.pull_request.created_at }}"
+            # PR_CREATED is set via env
             CREATED_EPOCH=$(date -d "$PR_CREATED" +%s)
             # 4 days before Nov 17 = Nov 13 00:00 EST = Nov 13 05:00 UTC
             EARLIEST_EPOCH=$(date -d "2026-11-13T05:00:00Z" +%s)
@@ -190,7 +198,7 @@ jobs:
 
           # For updates: only the links section should change
           if [ "$is_new" = false ]; then
-            diff_output=$(git diff "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}" -- "$file")
+            diff_output=$(git diff "$BASE_SHA" "$HEAD_SHA" -- "$file")
 
             added_lines=$(echo "$diff_output" | grep "^+" | grep -v "^+++" | sed 's/^+//')
             removed_lines=$(echo "$diff_output" | grep "^-" | grep -v "^---" | sed 's/^-//')
@@ -254,3 +262,6 @@ jobs:
           La PR est automatiquement fermée. Veuillez corriger et soumettre une nouvelle PR."
 
           gh pr close ${{ github.event.pull_request.number }}
+
+          # Fail the check so it shows as failed in the PR status
+          exit 1

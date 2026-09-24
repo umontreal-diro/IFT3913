@@ -38,10 +38,15 @@ jobs:
 
       - name: Valider les changements
         id: validate
+        env:
+          ALL_FILES: ${{ steps.all-changed-files.outputs.all_changed_files }}
+          MATCHED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           # Reject if the PR touches any files outside the allowed pattern
-          all_files=(${{ steps.all-changed-files.outputs.all_changed_files }})
-          matched_files=(${{ steps.changed-files.outputs.all_changed_files }})
+          IFS=' ' read -ra all_files <<< "$ALL_FILES"
+          IFS=' ' read -ra matched_files <<< "$MATCHED_FILES"
           if [ ${#all_files[@]} -ne ${#matched_files[@]} ]; then
             echo "Erreur: La PR modifie des fichiers en dehors de presentations/SemaineXX/readme.md"
             echo "valid=false" >> $GITHUB_OUTPUT
@@ -66,7 +71,7 @@ jobs:
           fi
           
           # Get the diff for the changed file
-          git diff ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} -- "$file" > diff.txt
+          git diff "$BASE_SHA" "$HEAD_SHA" -- "$file" > diff.txt
           
           # Count lines that were added/removed (excluding context lines)
           added_lines=$(grep "^+" diff.txt | grep -v "^+++" | wc -l)
@@ -154,3 +159,6 @@ jobs:
 
           # Close the PR
           gh pr close ${{ github.event.pull_request.number }}
+
+          # Fail the check so it shows as failed in the PR status
+          exit 1
