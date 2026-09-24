@@ -2,8 +2,8 @@
 
 | Nom complet | Identifiant GitHub |
 |---|---|
-| Nom Prénom | mollyfleuur |
-| Nom Prénom | cyreanne0 |
+| Ndong Oceane Molly-Fleur | mollyfleuur |
+| Andrianefa Cyreanne Candy | cyreanne0 |
 
 - Lien vers le répertoire GitHub :
 - Lien vers le README du répertoire :
