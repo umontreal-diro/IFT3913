@@ -1,4 +1,4 @@
-mise à jour: 26.09.24
+mise à jour: 26.09.25
 
 
 # Inscriptions tâche 1:
@@ -17,9 +17,9 @@ mise à jour: 26.09.24
 | Semaine12 | 10 | 0 |
 | **Total** | **97** | **23** |
 
-inscrits : adam-msr; adawaila; AguibouF; Alaealoui; anasys0x; anddina; ans1008; axh23399; ayaelb8; AZAT0THT; bbroux; CarlosDanielZQ; Chrisamy; chrismadara45; chucky5264; cyreanne0; David-LeGOAT; doctor277; emnagarna; EnzoT454; farah-romdhane; fatimazahrae5; FaustGzx; fauverick; FlyingCanoe; gt674; IsabelleGuillard; islamsamahtanisha; jeannicbeaulieu; jessielam-j; JHK01; landry000; laylaelshahawy; lucastionohoue-glitch; luluunityy; Mad-Barry; mah0504; mango825; mariaalitouche; marwahoumayed22; Mastalp; Maysaa29; mollyfleuur; MoSk3; Murfew; musa223-ui; naderghaddar; nass1379; Ost98; Overengined; Perzivalle; PhuongAnh-Tran; radiahteur; Rayyan-Oumlil; shems00; Soglo3006; stephen-jt; TalaDhaiby; tarekzerroug; Tim8059; Toky5; TomCt998; Tong3410976; udeme-sml; vizard24; YD0304; yohanzytoon; Zouhair-36
+inscrits : adam-msr; adawaila; Alaealoui; anasys0x; anddina; ans1008; axh23399; ayaelb8; AZAT0THT; bbroux; CarlosDanielZQ; Chrisamy; chrismadara45; chucky5264; cyreanne0; David-LeGOAT; doctor277; emnagarna; EnzoT454; farah-romdhane; fatimazahrae5; FaustGzx; fauverick; FlyingCanoe; gt674; islamsamahtanisha; jeannicbeaulieu; jessielam-j; JHK01; landry000; laylaelshahawy; lucastionohoue-glitch; luluunityy; Mad-Barry; mah0504; mariaalitouche; marwahoumayed22; Mastalp; Maysaa29; mollyfleuur; MoSk3; Murfew; musa223-ui; naderghaddar; nass1379; Ost98; Overengined; PhuongAnh-Tran; radiahteur; Rayyan-Oumlil; shems00; Soglo3006; stephen-jt; TalaDhaiby; Tim8059; Toky5; TomCt998; Tong3410976; vizard24; YD0304; yohanzytoon; Zouhair-36
 
-non-inscrits : aminekh04; azaminoure-ship-it; DavidStanescu13; FakeTMG; GELOkm; larryg-447; massicos; NizarLakhder; OlivierLarueUmontreal; rayenrizk; Reine18; StarPlatinumSan; womboteemo; yns-bkh
+non-inscrits : AguibouF; aminekh04; azaminoure-ship-it; DavidStanescu13; FakeTMG; GELOkm; IsabelleGuillard; larryg-447; mango825; massicos; NizarLakhder; OlivierLarueUmontreal; Perzivalle; rayenrizk; Reine18; StarPlatinumSan; tarekzerroug; udeme-sml; womboteemo; yns-bkh
 
 
 # Inscriptions tâche 2:
