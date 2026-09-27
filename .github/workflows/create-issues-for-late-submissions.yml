@@ -88,7 +88,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          curl -sf -X POST "https://studium-uat.umontreal.ca/webservice/rest/server.php" \
+          curl -sf -X POST "https://studium.umontreal.ca/webservice/rest/server.php" \
             --data-urlencode "wstoken=$STUDIUM_TOKEN" \
             --data-urlencode "wsfunction=core_enrol_get_enrolled_users" \
             --data-urlencode "moodlewsrestformat=json" \
