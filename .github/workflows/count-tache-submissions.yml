@@ -93,7 +93,7 @@ jobs:
               [[ -z "$nom_line" ]] && continue
 
               # Use git log -S (pickaxe) to find the first commit that introduced this line
-              first_sha=$(git log --reverse -S "$nom_line" --format='%H' -- "$readme" | head -1)
+              first_sha=$(git log --reverse -S "$nom_line" --format='%H' -- "$readme" | head -1 || true)
               [[ -n "$first_sha" ]] || continue
 
               author=$(resolve_author "$first_sha")
