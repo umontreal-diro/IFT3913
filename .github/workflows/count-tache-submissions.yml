@@ -74,16 +74,35 @@ jobs:
             echo "${sha_cache[$sha]}"
           }
 
+          SKIP_AUTHORS="yogyagamage bbaudry"
+
+          is_skip_author() {
+            local a="$1"
+            for skip in $SKIP_AUTHORS; do
+              [[ "$a" == "$skip" ]] && return 0
+            done
+            return 1
+          }
+
+          # Blame a specific line at a given revision, return the SHA
+          blame_line_at() {
+            local rev="$1" file="$2" lineno="$3"
+            git blame --porcelain -L "${lineno},${lineno}" "$rev" -- "$file" \
+              | head -1 | awk '{print $1}'
+          }
+
           declare -A registered
 
           for readme in presentations/Semaine*/readme.md; do
             [[ -f "$readme" ]] || continue
             current_sha=""
+            current_lineno=0
 
             while IFS= read -r line; do
-              # Porcelain header: SHA followed by line numbers
-              if [[ "$line" =~ ^([0-9a-f]{40})[[:space:]] ]]; then
+              # Porcelain header: SHA orig_line final_line
+              if [[ "$line" =~ ^([0-9a-f]{40})[[:space:]][0-9]+[[:space:]]([0-9]+) ]]; then
                 current_sha="${BASH_REMATCH[1]}"
+                current_lineno="${BASH_REMATCH[2]}"
               fi
               # Content line (starts with a tab)
               if [[ "${line:0:1}" == $'\t' ]]; then
@@ -91,6 +110,16 @@ jobs:
                 # Filled "- Nom:" line (not empty)
                 if echo "$content" | grep -qE '^-[[:space:]]*Nom:[[:space:]]*\S'; then
                   author=$(resolve_author "$current_sha")
+                  # If the author is a skip author, walk back to find the original student
+                  if is_skip_author "$author"; then
+                    prev_sha=$(blame_line_at "${current_sha}^" "$readme" "$current_lineno" 2>/dev/null || true)
+                    if [[ -n "$prev_sha" && "$prev_sha" != "0000000000000000000000000000000000000000" ]]; then
+                      prev_author=$(resolve_author "$prev_sha")
+                      if [[ -n "$prev_author" ]] && ! is_skip_author "$prev_author"; then
+                        author="$prev_author"
+                      fi
+                    fi
+                  fi
                   [[ -n "$author" ]] && registered["$author"]=1
                 fi
               fi
