@@ -110,16 +110,17 @@ jobs:
                 # Filled "- Nom:" line (not empty)
                 if echo "$content" | grep -qE '^-[[:space:]]*Nom:[[:space:]]*\S'; then
                   author=$(resolve_author "$current_sha")
-                  # If the author is a skip author, walk back to find the original student
-                  if is_skip_author "$author"; then
-                    prev_sha=$(blame_line_at "${current_sha}^" "$readme" "$current_lineno" 2>/dev/null || true)
-                    if [[ -n "$prev_sha" && "$prev_sha" != "0000000000000000000000000000000000000000" ]]; then
-                      prev_author=$(resolve_author "$prev_sha")
-                      if [[ -n "$prev_author" ]] && ! is_skip_author "$prev_author"; then
-                        author="$prev_author"
-                      fi
-                    fi
-                  fi
+                  # If the author is a skip author, walk back through history
+                  walk_sha="$current_sha"
+                  for _ in $(seq 1 10); do
+                    is_skip_author "$author" || break
+                    prev_sha=$(blame_line_at "${walk_sha}^" "$readme" "$current_lineno" 2>/dev/null || true)
+                    [[ -n "$prev_sha" && "$prev_sha" != "0000000000000000000000000000000000000000" && "$prev_sha" != "$walk_sha" ]] || break
+                    prev_author=$(resolve_author "$prev_sha")
+                    [[ -n "$prev_author" ]] || break
+                    author="$prev_author"
+                    walk_sha="$prev_sha"
+                  done
                   [[ -n "$author" ]] && registered["$author"]=1
                 fi
               fi
