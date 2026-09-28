@@ -84,47 +84,34 @@ jobs:
             return 1
           }
 
-          # Blame a specific line at a given revision, return the SHA
-          blame_line_at() {
-            local rev="$1" file="$2" lineno="$3"
-            git blame --porcelain -L "${lineno},${lineno}" "$rev" -- "$file" \
-              | head -1 | awk '{print $1}'
-          }
-
           declare -A registered
 
           for readme in presentations/Semaine*/readme.md; do
             [[ -f "$readme" ]] || continue
-            current_sha=""
-            current_lineno=0
 
-            while IFS= read -r line; do
-              # Porcelain header: SHA orig_line final_line
-              if [[ "$line" =~ ^([0-9a-f]{40})[[:space:]][0-9]+[[:space:]]([0-9]+) ]]; then
-                current_sha="${BASH_REMATCH[1]}"
-                current_lineno="${BASH_REMATCH[2]}"
-              fi
-              # Content line (starts with a tab)
-              if [[ "${line:0:1}" == $'\t' ]]; then
-                content="${line:1}"
-                # Filled "- Nom:" line (not empty)
-                if echo "$content" | grep -qE '^-[[:space:]]*Nom:[[:space:]]*\S'; then
-                  author=$(resolve_author "$current_sha")
-                  # If the author is a skip author, walk back through history
-                  walk_sha="$current_sha"
-                  for _ in $(seq 1 10); do
-                    is_skip_author "$author" || break
-                    prev_sha=$(blame_line_at "${walk_sha}^" "$readme" "$current_lineno" 2>/dev/null || true)
-                    [[ -n "$prev_sha" && "$prev_sha" != "0000000000000000000000000000000000000000" && "$prev_sha" != "$walk_sha" ]] || break
-                    prev_author=$(resolve_author "$prev_sha")
-                    [[ -n "$prev_author" ]] || break
-                    author="$prev_author"
-                    walk_sha="$prev_sha"
-                  done
-                  [[ -n "$author" ]] && registered["$author"]=1
+            while IFS= read -r nom_line; do
+              [[ -z "$nom_line" ]] && continue
+
+              # Use git log -S (pickaxe) to find the first commit that introduced this line
+              first_sha=$(git log --reverse -S "$nom_line" --format='%H' -- "$readme" | head -1)
+              [[ -n "$first_sha" ]] || continue
+
+              author=$(resolve_author "$first_sha")
+
+              # If the first introducer is still a skip author, fall back to
+              # blame on the current HEAD
+              if [[ -z "$author" ]] || is_skip_author "$author"; then
+                blame_sha=$(git blame --porcelain "$readme" \
+                  | grep -B1 -F "$nom_line" \
+                  | head -1 | awk '{print $1}')
+                if [[ -n "$blame_sha" ]]; then
+                  blame_author=$(resolve_author "$blame_sha")
+                  [[ -n "$blame_author" ]] && author="$blame_author"
                 fi
               fi
-            done < <(git blame --porcelain "$readme")
+
+              [[ -n "$author" ]] && ! is_skip_author "$author" && registered["$author"]=1
+            done < <(grep -E '^-[[:space:]]*Nom:[[:space:]]*\S' "$readme")
           done
 
           # Save registered GitHub IDs (lowercased for consistent matching)
