@@ -8,7 +8,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [concept] Analyse de mutation
 - Nom: Tala Dhaiby
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1Yo8BvAXWfp16mMXSZMzWVq8OpYZWayy1FUu0dKP3VkY/edit?usp=sharing
 
 [concept] Test basé sur les propriétés
 - Nom: Landry Ntebou
