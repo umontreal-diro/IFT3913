@@ -12,7 +12,7 @@ jobs:
       pull-requests: write
       contents: write  # For auto merging
       issues: write
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -29,44 +29,65 @@ jobs:
           base_sha: ${{ github.event.pull_request.base.sha }}
           sha: ${{ github.event.pull_request.head.sha }}
 
+      - name: Obtenir tous les fichiers modifiés
+        id: all-changed-files
+        uses: tj-actions/changed-files@v47
+        with:
+          base_sha: ${{ github.event.pull_request.base.sha }}
+          sha: ${{ github.event.pull_request.head.sha }}
+
       - name: Valider les changements
         id: validate
+        env:
+          ALL_FILES: ${{ steps.all-changed-files.outputs.all_changed_and_modified_files }}
+          MATCHED_FILES: ${{ steps.changed-files.outputs.all_changed_and_modified_files }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
+          # Reject if the PR touches any files outside the allowed pattern
+          IFS=' ' read -ra all_files <<< "$ALL_FILES"
+          IFS=' ' read -ra matched_files <<< "$MATCHED_FILES"
+          if [ ${#all_files[@]} -ne ${#matched_files[@]} ]; then
+            echo "Erreur: La PR modifie des fichiers en dehors de presentations/SemaineXX/readme.md"
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
           # Check if only one readme file was changed
-          changed_files=(${{ steps.changed-files.outputs.all_changed_files }})
+          changed_files=("${matched_files[@]}")
           if [ ${#changed_files[@]} -ne 1 ]; then
             echo "Erreur: Un seul fichier readme.md doit être modifié"
             echo "valid=false" >> $GITHUB_OUTPUT
             exit 0
           fi
-          
+
           file=${changed_files[0]}
-          
+
           # Check if file matches expected pattern
           if [[ ! "$file" =~ ^presentations/Semaine[0-9]{2}/readme\.md$ ]]; then
             echo "Erreur: Le fichier ne correspond pas au pattern attendu presentations/SemaineXX/readme.md"
             echo "valid=false" >> $GITHUB_OUTPUT
             exit 0
           fi
-          
+
           # Get the diff for the changed file
-          git diff ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} -- "$file" > diff.txt
-          
+          git diff "$BASE_SHA" "$HEAD_SHA" -- "$file" > diff.txt
+
           # Count lines that were added/removed (excluding context lines)
           added_lines=$(grep "^+" diff.txt | grep -v "^+++" | wc -l)
           removed_lines=$(grep "^-" diff.txt | grep -v "^---" | wc -l)
-          
+
           # Extract actual changes (ignoring +/- prefixes)
           added_content=$(grep "^+" diff.txt | grep -v "^+++" | sed 's/^+//')
           removed_content=$(grep "^-" diff.txt | grep -v "^---" | sed 's/^-//')
-          
+
           # Validate changes - allow any modifications to Nom and Présentation fields
           valid=false
-          
+
           # Check if all changes are only to Nom or Présentation fields
           if [ $added_lines -gt 0 ] && [ $removed_lines -ge 0 ]; then
             all_valid=true
-            
+
             # Check removed lines
             while IFS= read -r line; do
               if [ -n "$line" ]; then
@@ -77,7 +98,7 @@ jobs:
                 fi
               fi
             done <<< "$removed_content"
-            
+
             # Check added lines - must be Nom: or Présentation: fields (can be empty or with content)
             if [ "$all_valid" = true ]; then
               while IFS= read -r line; do
@@ -90,7 +111,7 @@ jobs:
                 fi
               done <<< "$added_content"
             fi
-            
+
             if [ "$all_valid" = true ]; then
               valid=true
             fi
@@ -119,7 +140,7 @@ jobs:
           GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
           gh pr review ${{ github.event.pull_request.number }} --approve --body "Auto-approuvé 💯."
-          
+
           # Merge
           gh pr merge ${{ github.event.pull_request.number }} --squash
 
@@ -129,12 +150,15 @@ jobs:
           GH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
           gh pr comment ${{ github.event.pull_request.number }} --body "Cette PR ne peut pas être auto-approuvée ❌. Seules les modifications suivantes sont autorisées dans les fichiers readme:
-          
+
           1. Modifier un seul champ 'Nom:' de vide à rempli (ex: 'Nom:' → 'Nom: Tim Toady')
           2. Modifier un champ 'Nom:' et son champ 'Présentation:' correspondant
           3. Modifier un seul champ 'Présentation:' de vide à rempli
-          
+
           La PR est automatiquement fermée. Veuillez corriger votre contribution et vous assurer que vos modifications correspondent exactement à l'un de ces patterns et n'affectent qu'un seul fichier readme.md dans un dossier Semaine avant de soumettre une nouvelle PR 👍."
 
           # Close the PR
           gh pr close ${{ github.event.pull_request.number }}
+
+          # Fail the check so it shows as failed in the PR status
+          exit 1

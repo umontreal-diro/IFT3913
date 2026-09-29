@@ -26,7 +26,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          curl -sf -X POST "https://studium-uat.umontreal.ca/webservice/rest/server.php" \
+          curl -sf -X POST "https://studium.umontreal.ca/webservice/rest/server.php" \
             --data-urlencode "wstoken=$STUDIUM_TOKEN" \
             --data-urlencode "wsfunction=core_enrol_get_enrolled_users" \
             --data-urlencode "moodlewsrestformat=json" \
@@ -74,27 +74,44 @@ jobs:
             echo "${sha_cache[$sha]}"
           }
 
+          SKIP_AUTHORS="yogyagamage bbaudry"
+
+          is_skip_author() {
+            local a="$1"
+            for skip in $SKIP_AUTHORS; do
+              [[ "$a" == "$skip" ]] && return 0
+            done
+            return 1
+          }
+
           declare -A registered
 
           for readme in presentations/Semaine*/readme.md; do
             [[ -f "$readme" ]] || continue
-            current_sha=""
 
-            while IFS= read -r line; do
-              # Porcelain header: SHA followed by line numbers
-              if [[ "$line" =~ ^([0-9a-f]{40})[[:space:]] ]]; then
-                current_sha="${BASH_REMATCH[1]}"
-              fi
-              # Content line (starts with a tab)
-              if [[ "${line:0:1}" == $'\t' ]]; then
-                content="${line:1}"
-                # Filled "- Nom:" line (not empty)
-                if echo "$content" | grep -qE '^-[[:space:]]*Nom:[[:space:]]+\S'; then
-                  author=$(resolve_author "$current_sha")
-                  [[ -n "$author" ]] && registered["$author"]=1
+            while IFS= read -r nom_line; do
+              [[ -z "$nom_line" ]] && continue
+
+              # Use git log -S (pickaxe) to find the first commit that introduced this line
+              first_sha=$(git log --reverse -S "$nom_line" --format='%H' -- "$readme" | head -1 || true)
+              [[ -n "$first_sha" ]] || continue
+
+              author=$(resolve_author "$first_sha")
+
+              # If the first introducer is still a skip author, fall back to
+              # blame on the current HEAD
+              if [[ -z "$author" ]] || is_skip_author "$author"; then
+                blame_sha=$(git blame --porcelain "$readme" \
+                  | grep -B1 -F "$nom_line" \
+                  | head -1 | awk '{print $1}')
+                if [[ -n "$blame_sha" ]]; then
+                  blame_author=$(resolve_author "$blame_sha")
+                  [[ -n "$blame_author" ]] && author="$blame_author"
                 fi
               fi
-            done < <(git blame --porcelain "$readme")
+
+              [[ -n "$author" ]] && ! is_skip_author "$author" && registered["$author"]=1
+            done < <(grep -E '^-[[:space:]]*Nom:[[:space:]]*\S' "$readme")
           done
 
           # Save registered GitHub IDs (lowercased for consistent matching)
@@ -110,7 +127,7 @@ jobs:
           for readme in presentations/Semaine*/readme.md; do
             [[ -f "$readme" ]] || continue
             sem=$(basename "$(dirname "$readme")")
-            reg=$(grep -cE '^-[[:space:]]*Nom:[[:space:]]+\S' "$readme") || true
+            reg=$(grep -cE '^-[[:space:]]*Nom:[[:space:]]*\S' "$readme") || true
             links=$(grep -cE '^-[[:space:]]*Présentation:[[:space:]]+\S' "$readme") || true
             echo "${sem},${reg},${links}" >> tache1_weekly.csv
           done

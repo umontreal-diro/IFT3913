@@ -38,7 +38,7 @@ def fetch_enrolled_students(token):
     }).encode()
 
     req = Request(
-        "https://studium-uat.umontreal.ca/webservice/rest/server.php",
+        "https://studium.umontreal.ca/webservice/rest/server.php",
         data=params,
         method="POST",
     )
