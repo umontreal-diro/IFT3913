@@ -24,7 +24,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [demo] [Hypothesis](https://hypothesis.readthedocs.io/en/latest/) pour le test basé sur les propriétés en Python
 - Nom: Alison Deblois 
-- Présentation: 
+- Présentation:https://docs.google.com/presentation/d/1IvNQ4T5ICgBqvBjaBeGq5pX08sQLxhvJhpBN91mvYKQ/edit?usp=sharing
 
 [demo] [Mockito](https://site.mockito.org/) pour les mocks en Java
 - Nom: Stephen Thangathurai
