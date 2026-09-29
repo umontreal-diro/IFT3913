@@ -2,8 +2,8 @@
 
 | Nom complet | Identifiant GitHub |
 |---|---|
-| Nom Prénom | github-username |
-| Nom Prénom | github-username |
+| Tong Xu | Tong3410976 |
+| Taoudi Bensouda | Taoudi27 |
 
 - Lien vers le répertoire GitHub :
 - Lien vers le README du répertoire :
