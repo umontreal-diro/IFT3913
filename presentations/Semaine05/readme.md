@@ -4,7 +4,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [concept] Mocks et stubs
 - Nom: Layla Elshahawy
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/16JFrmYYGOLdDhtmI__0x0YFKcuvyQDq777RUd6QvnF8/edit?usp=sharing
 
 [concept] Analyse de mutation
 - Nom: Tala Dhaiby
