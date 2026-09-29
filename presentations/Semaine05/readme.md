@@ -16,7 +16,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [concept] Test combinatoire
 - Nom:Sami sabil
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1-qFe67mbXDv3RUN1qqjQHoyTIRp2xGWBTmBlR9uyaAY/edit?usp=sharing 
 
 [concept] Test polymorphique pour la couverture des données
 - Nom:
