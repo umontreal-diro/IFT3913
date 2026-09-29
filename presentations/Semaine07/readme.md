@@ -36,7 +36,7 @@ Pour faire une présentation sur le test et sécurité, choisissez un des sujets
 - Présentation: 
 
 [demo] [semgrep](https://github.com/semgrep/semgrep) pour l'analyse statique
-- Nom: 
+- Nom: Toky Erick Rabenantoandro
 - Présentation: 
 
 [demo] [Frama-C](https://frama-c.com/) pour l'analyse statique en C
