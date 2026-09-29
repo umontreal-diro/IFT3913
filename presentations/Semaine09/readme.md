@@ -11,7 +11,7 @@
 - Présentation:
   
 [concept] Test sur la compatibilité réseau
-- Nom:
+- Nom: Joe El-Hayek
 - Présentation:
 
 [concept] test de migration de données entre environnements
@@ -19,7 +19,7 @@
 - Présentation:
  
 [concept] Cross-platform testing with Appium
-- Nom:
+- Nom: Nader Ghaddar
 - Présentation:
   
 [concept] Tests de comptabilité dans les environnements virtualisés et conteneurisés (Docker, Kubernetes)
@@ -35,7 +35,7 @@
 - Présentation:
   
 [Concept] Comment les langages de programmation eux-mêmes sont testés
-- Nom:
+- Nom: Adam Ally Musaphur
 - Présentation:
   
 [concept] Cross-browser testing

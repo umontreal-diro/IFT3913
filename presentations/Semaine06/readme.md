@@ -3,7 +3,7 @@
 Pour faire une présentation sur test et IA choisissez un des sujets listés ci-dessous et indiquez votre nom. Si vous souhaitez faire une présentation sur un autre sujet, contacter les assistants le plus tôt possible pour valider le nouveau sujet.
 
 [concept] Génération automatique de test avec un algorithme génétique    
-- Nom: 
+- Nom: Oceane Molly-Fleur Ndong 
 - Présentation: 
 
 [concept] Génération automatique de données de test avec l'IA      
@@ -11,7 +11,7 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 - Présentation: 
 
 [concept] Génération automatique de mocks et configurations avec l'IA
-- Nom: 
+- Nom: Alexis Gouault
 - Présentation: 
 
 [concept] Génération automatique de tests paramétrés avec l'IA
@@ -19,12 +19,12 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 - Présentation: 
 
 [concept] Maintenance des tests avec l'IA
-- Nom: 
+- Nom: Jessie Lam
 - Présentation: 
 
 [concept] Revue de code assistée par les LLM
 - Nom: Dina Andolsi
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1u2n90eoapcHoCSKfFbXx0w1Qbo37Tc28s2h4jIgxF4M/edit?usp=sharing
 
 [concept] Qualité des tests générés avec l'IA
 - Nom: Cherir Roustom Abdeldjalel
@@ -36,12 +36,12 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 
 [demo] [Evosuite](https://github.com/EvoSuite/evosuite)
 - Nom: Maria Alitouche
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1_tVsAQ1TSjEA3PGaEZpbnnrxGoX_h48CkSHFSrYAIRg/edit?usp=sharing
 
 [demo] [TestSpark](https://github.com/JetBrains-Research/TestSpark)
-- Nom: 
+- Nom: Andrei Bituleanu
 - Présentation: 
 
 [demo] [Guardrails](https://github.com/guardrails-ai/guardrails)
-- Nom: 
+- Nom: Andy Nguema Luemba
 - Présentation: 
