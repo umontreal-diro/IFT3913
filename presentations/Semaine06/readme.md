@@ -24,7 +24,7 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 
 [concept] Revue de code assistée par les LLM
 - Nom: Dina Andolsi
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1u2n90eoapcHoCSKfFbXx0w1Qbo37Tc28s2h4jIgxF4M/edit?usp=sharing
 
 [concept] Qualité des tests générés avec l'IA
 - Nom: Cherir Roustom Abdeldjalel
@@ -36,7 +36,7 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 
 [demo] [Evosuite](https://github.com/EvoSuite/evosuite)
 - Nom: Maria Alitouche
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1_tVsAQ1TSjEA3PGaEZpbnnrxGoX_h48CkSHFSrYAIRg/edit?usp=sharing
 
 [demo] [TestSpark](https://github.com/JetBrains-Research/TestSpark)
 - Nom: Andrei Bituleanu
