@@ -32,7 +32,7 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 
 [concept] Bugs dans le code généré par l'IA
 - Nom: Timothey chaput
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/10HH401y723qpQbxjywX5upMYpSEUFzczl8X2U0CnwrM/edit?usp=sharing
 
 [demo] [Evosuite](https://github.com/EvoSuite/evosuite)
 - Nom: Maria Alitouche
