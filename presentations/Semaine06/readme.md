@@ -4,7 +4,7 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 
 [concept] Génération automatique de test avec un algorithme génétique    
 - Nom: Oceane Molly-Fleur Ndong 
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1PpOvqQITupPkEYaHuv0Jt2Kl50rehGXR/edit?usp=drive_link&ouid=107804431153068258227&rtpof=true&sd=true
 
 [concept] Génération automatique de données de test avec l'IA      
 - Nom: Yohan Zytoon
