@@ -4,7 +4,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [concept] Mocks et stubs
 - Nom: Layla Elshahawy
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/16JFrmYYGOLdDhtmI__0x0YFKcuvyQDq777RUd6QvnF8/edit?usp=sharing
 
 [concept] Analyse de mutation
 - Nom: Tala Dhaiby
@@ -12,7 +12,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [concept] Test basé sur les propriétés
 - Nom: Landry Ntebou
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1UAj5QU6qn3gXvzomB60YFj7nBe1nUHgIv4cpYYyyweY/edit?slide=id.gd5b15f0a3_5_26#slide=id.gd5b15f0a3_5_26
 
 [concept] Test combinatoire
 - Nom:Sami sabil
@@ -32,7 +32,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [demo] [Cucumber](https://cucumber.io/) pour le test basé comportement en Java
 - Nom: Anas Mrani Alaoui
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1aaj5Vy20WGmLauB0KGcvP07QkIWTsjzNhlKam4_h-_4/edit?usp=sharing
 
 [demo] [Java faker](https://github.com/DiUS/java-faker) pour l'isolation de tests en Java
 - Nom: Youwei Dong
@@ -40,7 +40,7 @@ Pour faire une présentation sur le test unitaire avancé, choisissez un des suj
 
 [demo] [AutoParams](https://github.com/AutoParams/AutoParams) pour les tests paramétrés en Java
 - Nom: Mahdi Slimani
-- Présentation: 
+- Présentation: https://canva.link/928d0vxrtjmqtnd
 
 [demo] [afl++](https://github.com/AFLplusplus/AFLplusplus)
 - Nom: 
