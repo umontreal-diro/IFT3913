@@ -1,4 +1,4 @@
-mise à jour: 26.10.04
+mise à jour: 26.10.05
 
 
 # Inscriptions tâche 1:
@@ -9,8 +9,8 @@ mise à jour: 26.10.04
 | Semaine04 | 10 | 10 |
 | Semaine05 | 9 | 8 |
 | Semaine06 | 11 | 4 |
-| Semaine07 | 9 | 0 |
-| Semaine08 | 6 | 0 |
+| Semaine07 | 8 | 0 |
+| Semaine08 | 7 | 0 |
 | Semaine09 | 11 | 0 |
 | Semaine10 | 10 | 0 |
 | Semaine11 | 11 | 0 |
