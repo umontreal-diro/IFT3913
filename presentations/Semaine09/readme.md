@@ -35,7 +35,7 @@
 - Présentation:
   
 [Concept] Comment les langages de programmation eux-mêmes sont testés
-- Nom: Adam Ally Musaphur
+- Nom:
 - Présentation:
   
 [concept] Cross-browser testing
