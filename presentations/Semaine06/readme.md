@@ -20,8 +20,7 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 
 [concept] Maintenance des tests avec l'IA
 - Nom: Jessie Lam
-- Présentation: 
-
+- Présentation: https://docs.google.com/presentation/d/1Gf-mC3cXHezkuGrtOM1LgihikAkHFDZyeAq9v3fNSLw/edit?usp=sharing
 [concept] Revue de code assistée par les LLM
 - Nom: Dina Andolsi
 - Présentation: https://docs.google.com/presentation/d/1u2n90eoapcHoCSKfFbXx0w1Qbo37Tc28s2h4jIgxF4M/edit?usp=sharing
