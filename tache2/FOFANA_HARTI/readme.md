@@ -5,5 +5,5 @@
 | FOFANA Aguibou | AguibouF |
 | HARTI Anas | axh23399 |
 
-- Lien vers le répertoire GitHub :
-- Lien vers le README du répertoire :
+- Lien vers le répertoire GitHub :https://github.com/AguibouF/tika
+- Lien vers le README du répertoire :https://github.com/AguibouF/tika/blob/main/README.md
