@@ -28,7 +28,7 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 
 [concept] Qualité des tests générés avec l'IA
 - Nom: Cherir Roustom Abdeldjalel
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1nOw9fHwW9th4mCjLFzt3b6neNR0dHj_j/edit?usp=sharing&ouid=111791944417273067706&rtpof=true&sd=true
 
 [concept] Bugs dans le code généré par l'IA
 - Nom: Timothey chaput
