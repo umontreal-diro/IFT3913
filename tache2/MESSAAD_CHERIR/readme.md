@@ -2,7 +2,7 @@
 
 | Nom complet | Identifiant GitHub |
 |---|---|
-| Messaad Abdekmouhcine | abdel2154 |
+| Messaad Abdelmouhcine | abdel2154 |
 | Cherir Roustom Abdeldjalel  | R0us24 |
 
 - Lien vers le répertoire GitHub :
