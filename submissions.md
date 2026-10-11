@@ -1,4 +1,4 @@
-mise à jour: 26.10.10
+mise à jour: 26.10.11
 
 
 # Inscriptions tâche 1:
@@ -24,11 +24,11 @@ non-inscrits : azaminoure-ship-it; DavidStanescu13; FakeTMG; GELOkm; gy23578; Ma
 
 # Inscriptions tâche 2:
 
-nombre: 0
+nombre: 8
 
-inscrits : 
+inscrits : AguibouF; aminekh04; anddina; axh23399; FlyingCanoe; nass1379; Rayyan-Oumlil; Tim8059
 
-non-inscrits : 0xD34DC0DE; abdel2154; adam-msr; AdemGhaoui; AguibouF; Alaealoui; aminekh04; anasys0x; anddina; Andy00L; ans1008; axh23399; ayaelb8; Aymtrack; azaminoure-ship-it; AZAT0THT; bbroux; CarlosDanielZQ; Chrisamy; chrismadara45; chucky5264; cyreanne0; David-LeGOAT; DavidStanescu13; doctor277; dthierno; elfarkhanas; emnagarna; EnzoT454; FakeTMG; farah-romdhane; fatimazahrae5; FaustGzx; fauverick; FlyingCanoe; GELOkm; gt674; gy23578; IsabelleGuillard; islamsamahtanisha; jeannicbeaulieu; jessielam-j; JHK01; Jomii06; JosephSoufsaf; KingBrick12; landry000; Larry-g447; laylaelshahawy; lucastionohoue-glitch; LucBrennan; luluunityy; Mad-Barry; mah0504; MaM; mango825; mariaalitouche; Markeyjuju; marwahoumayed22; Mastalp; Maysaa29; MehdiSLM; mollyfleuur; MoSk3; Murfew; musa223-ui; naderghaddar; nass1379; NizarLakhder; OlivierLarueUmontreal; Ost98; Overengined; Perzivalle; PhuongAnh-Tran; R0us24; RAHMSAL; rayenrizk; Rayyan-Oumlil; ReddKingK17; Reine18; samruhix; shems00; Soglo3006; starplatinumsanFR; stephen-jt; TalaDhaiby; tarekzerroug; Thomas-Ring; Tim8059; Toky5; TomCt998; Tong3410976; udeme-sml; vizard24; waydala; womboteemo; YD0304; yns-bkh; yohanzytoon; Zouhair-36
+non-inscrits : 0xD34DC0DE; abdel2154; adam-msr; AdemGhaoui; Alaealoui; anasys0x; Andy00L; ans1008; ayaelb8; Aymtrack; azaminoure-ship-it; AZAT0THT; bbroux; CarlosDanielZQ; Chrisamy; chrismadara45; chucky5264; cyreanne0; David-LeGOAT; DavidStanescu13; doctor277; dthierno; elfarkhanas; emnagarna; EnzoT454; FakeTMG; farah-romdhane; fatimazahrae5; FaustGzx; fauverick; GELOkm; gt674; gy23578; IsabelleGuillard; islamsamahtanisha; jeannicbeaulieu; jessielam-j; JHK01; Jomii06; JosephSoufsaf; KingBrick12; landry000; Larry-g447; laylaelshahawy; lucastionohoue-glitch; LucBrennan; luluunityy; Mad-Barry; mah0504; MaM; mango825; mariaalitouche; Markeyjuju; marwahoumayed22; Mastalp; Maysaa29; MehdiSLM; mollyfleuur; MoSk3; Murfew; musa223-ui; naderghaddar; NizarLakhder; OlivierLarueUmontreal; Ost98; Overengined; Perzivalle; PhuongAnh-Tran; R0us24; RAHMSAL; rayenrizk; ReddKingK17; Reine18; samruhix; shems00; Soglo3006; starplatinumsanFR; stephen-jt; TalaDhaiby; tarekzerroug; Thomas-Ring; Toky5; TomCt998; Tong3410976; udeme-sml; vizard24; waydala; womboteemo; YD0304; yns-bkh; yohanzytoon; Zouhair-36
 
 
 # Inscriptions tâche 3:
