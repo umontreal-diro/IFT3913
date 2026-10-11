@@ -1,13 +1,9 @@
-# Tâche 2 — IFT3913
+# Tâche 2
 
-## Membres du binôme
-
-| Nom et prénom | Identifiant GitHub |
+| Nom complet | Identifiant GitHub |
 |---|---|
-| KHANFOUDI Maysaa | Maysaa29 |
-| ROY-LEMAIRE Laurent-Philippe | Mastalp |
+| Khanfoudi Maysaa | Maysaa29 |
+| Roy-Lemaire Laurent-Philippe | Mastalp |
 
-## Liens du projet
-
-- Dépôt GitHub : 
-- README du projet : 
+- Lien vers le répertoire GitHub :
+- Lien vers le README du répertoire :
