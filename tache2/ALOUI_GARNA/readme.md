@@ -3,5 +3,5 @@
 | Aloui Alae | Alaealoui |
 | Garna Emna | emnagarna |
 
-- Lien vers le repertoire GitHub :
-- Lien vers le README du repertoire :
+- Lien vers le répertoire GitHub :
+- Lien vers le README du répertoire :
