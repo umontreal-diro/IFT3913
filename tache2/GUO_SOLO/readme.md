@@ -3,7 +3,6 @@
 | Nom complet | Identifiant GitHub |
 |---|---|
 | Zhexin Guo | FaustGzx |
-| Nom Prénom | github-username |
 
 - Lien vers le répertoire GitHub :
 - Lien vers le README du répertoire :
