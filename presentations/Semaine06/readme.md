@@ -8,7 +8,7 @@ Pour faire une présentation sur test et IA choisissez un des sujets listés ci-
 
 [concept] Génération automatique de données de test avec l'IA      
 - Nom: Yohan Zytoon
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1HjxdWfp7YNCpqpUznjq4soR6vpGycgz52vmVSPJqs0w/edit?usp=sharing
 
 [concept] Génération automatique de mocks et configurations avec l'IA
 - Nom: Alexis Gouault
