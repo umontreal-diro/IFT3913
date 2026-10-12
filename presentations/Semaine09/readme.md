@@ -19,7 +19,7 @@
 - Présentation:
  
 [concept] Cross-platform testing with Appium
-- Nom:
+- Nom: Nader Ghaddar
 - Présentation:
   
 [concept] Tests de comptabilité dans les environnements virtualisés et conteneurisés (Docker, Kubernetes)
@@ -35,7 +35,7 @@
 - Présentation:
   
 [Concept] Comment les langages de programmation eux-mêmes sont testés
-- Nom: Adam Ally Musaphur
+- Nom: David Stanescu
 - Présentation:
   
 [concept] Cross-browser testing
@@ -43,7 +43,7 @@
 - Présentation:
   
 [concept] Test de compatibilité entre environnements
-- Nom: Rayen Rizk
+- Nom: Rayen Rizk 
 - Présentation:
 
 [demo] Docker pour tester dans un environnement uniforme

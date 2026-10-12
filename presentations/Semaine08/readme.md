@@ -23,7 +23,7 @@
 - Présentation: 
 
 [concept] analyse statique pour la réduction des dépendances
-- Nom: Toky Erick Rabenantoandro
+- Nom: Taha Azami
 - Présentation: 
 
 [concept] Dependency hell
@@ -39,7 +39,7 @@
 - Présentation: 
 
 [demo] [tree-shaking](https://dev.to/softheartengineer/tree-shaking-in-js-51do)
-- Nom: 
+- Nom: Nizar Lakhder
 - Présentation: 
 
 [demo] [Dependency Updater](https://github.com/softaworks/agent-toolkit/tree/main/skills/dependency-updater)
