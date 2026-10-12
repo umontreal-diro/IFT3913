@@ -35,7 +35,7 @@
 - Présentation:
   
 [Concept] Comment les langages de programmation eux-mêmes sont testés
-- Nom:
+- Nom: David Stanescu
 - Présentation:
   
 [concept] Cross-browser testing
