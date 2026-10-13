@@ -29,7 +29,7 @@ Pour faire une présentation sur le test et sécurité, choisissez un des sujets
 
 [demo] [AFL](https://github.com/AFLplusplus/AFLplusplus)
 - Nom: Émerick Poulin
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1f3qeE-gYIqYM4S2KPMfSepy_dR96NWeFfmjv-kZvj3c/edit?usp=sharing
 
 [demo] [findbugs](https://github.com/findbugsproject/findbugs) pour le test statique en Java
 - Nom: Reine Guinguiere
