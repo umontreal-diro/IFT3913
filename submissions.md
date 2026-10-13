@@ -24,11 +24,11 @@ non-inscrits : azaminoure-ship-it; FakeTMG; GELOkm; gy23578; MaM; OlivierLarueUm
 
 # Inscriptions tâche 2:
 
-nombre: 82
+nombre: 97
 
-inscrits : 0xD34DC0DE; abdel2154; adam-msr; AdemGhaoui; AguibouF; Alaealoui; aminekh04; anasys0x; anddina; ans1008; axh23399; ayaelb8; Aymtrack; CarlosDanielZQ; chrismadara45; chucky5264; DavidStanescu13; doctor277; elfarkhanas; emnagarna; EnzoT454; FakeTMG; farah-romdhane; fatimazahrae5; FaustGzx; fauverick; FlyingCanoe; GELOkm; gt674; gy23578; IsabelleGuillard; jeannicbeaulieu; jessielam-j; JHK01; Jomii06; JosephSoufsaf; KingBrick12; landry000; laylaelshahawy; lucastionohoue-glitch; luluunityy; Mad-Barry; mango825; mariaalitouche; marwahoumayed22; Mastalp; Maysaa29; MehdiSLM; MoSk3; Murfew; musa223-ui; nass1379; NizarLakhder; OlivierLarueUmontreal; Ost98; Perzivalle; R0us24; rayenrizk; Rayyan-Oumlil; ReddKingK17; samruhix; shems00; Soglo3006; stephen-jt; TalaDhaiby; Thomas-Ring; Tim8059; TomCt998; Tong3410976; vizard24; womboteemo; YD0304; yns-bkh; yohanzytoon; Zouhair-36
+inscrits : 0xD34DC0DE; abdel2154; adam-msr; AdemGhaoui; AguibouF; Alaealoui; aminekh04; anasys0x; anddina; Andy00L; ans1008; axh23399; ayaelb8; Aymtrack; CarlosDanielZQ; chrismadara45; chucky5264; cyreanne0; DavidStanescu13; doctor277; dthierno; elfarkhanas; emnagarna; EnzoT454; FakeTMG; farah-romdhane; fatimazahrae5; FaustGzx; fauverick; FlyingCanoe; GELOkm; gt674; gy23578; IsabelleGuillard; islamsamahtanisha; jeannicbeaulieu; jessielam-j; JHK01; Jomii06; JosephSoufsaf; KingBrick12; landry000; laylaelshahawy; lucastionohoue-glitch; LucBrennan; luluunityy; Mad-Barry; MaM; mango825; mariaalitouche; marwahoumayed22; Mastalp; Maysaa29; MehdiSLM; mollyfleuur; MoSk3; Murfew; musa223-ui; naderghaddar; nass1379; NizarLakhder; OlivierLarueUmontreal; Ost98; Overengined; Perzivalle; PhuongAnh-Tran; R0us24; RAHMSAL; rayenrizk; Rayyan-Oumlil; ReddKingK17; samruhix; shems00; Soglo3006; stephen-jt; TalaDhaiby; tarekzerroug; Thomas-Ring; Tim8059; Toky5; TomCt998; Tong3410976; vizard24; waydala; womboteemo; YD0304; yns-bkh; yohanzytoon; Zouhair-36
 
-non-inscrits : Andy00L; azaminoure-ship-it; AZAT0THT; bbroux; Chrisamy; cyreanne0; David-LeGOAT; dthierno; islamsamahtanisha; Larry-g447; LucBrennan; mah0504; MaM; Markeyjuju; mollyfleuur; naderghaddar; Overengined; PhuongAnh-Tran; RAHMSAL; Reine18; starplatinumsanFR; tarekzerroug; Toky5; udeme-sml; waydala
+non-inscrits : azaminoure-ship-it; AZAT0THT; bbroux; Chrisamy; David-LeGOAT; Larry-g447; mah0504; Markeyjuju; Reine18; starplatinumsanFR; udeme-sml
 
 
 # Inscriptions tâche 3:
