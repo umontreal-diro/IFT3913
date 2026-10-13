@@ -31,15 +31,15 @@
 - Présentation: 
 
 [demo] [cycloneDX](https://cyclonedx.org/) pour la génération de 'software bill of materials'
-- Nom: 
+- Nom: Dickson Ma
 - Présentation: 
 
 [demo] [Nix](https://nixos.org/), gestionnaire de paquets
-- Nom: 
+- Nom: Yanis Boukhili
 - Présentation: 
 
 [demo] [tree-shaking](https://dev.to/softheartengineer/tree-shaking-in-js-51do)
-- Nom: 
+- Nom: Nizar Lakhder
 - Présentation: 
 
 [demo] [Dependency Updater](https://github.com/softaworks/agent-toolkit/tree/main/skills/dependency-updater)
