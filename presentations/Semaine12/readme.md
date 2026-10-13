@@ -39,7 +39,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 - Présentation:
 
 [démo]  tests de performances avec K6 en javascript
-- Nom:
+- Nom: Adam Ally Musaphur
 - Présentation:
 
 [démo]  Shadow Testing en production
