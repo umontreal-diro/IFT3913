@@ -17,15 +17,15 @@ Pour faire une présentation sur le test et sécurité, choisissez un des sujets
 
 [concept] Mesure de complexité du code
 - Nom: Aymane Rachidi
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1z_ivBwN3LPVuQ84vdn1Tz3eK63D0xB2-/edit?slide=id.p8#slide=id.p8
 
 [concept] Test statique pour la sécurité (SAST)
 - Nom: Yassine benbouabid
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/12xM-7UQxuWuTD8isKte6WB_27AgXU5uMhYk03kTpfEQ/edit?usp=sharing
 
 [concept] Test dynamique pour la sécurité (DAST)
 - Nom: Yaovi Florient Gadedjro Abagha
-- Présentation: 
+- Présentation: https://canva.link/dast-pptx
 
 [demo] [AFL](https://github.com/AFLplusplus/AFLplusplus)
 - Nom: Émerick Poulin
