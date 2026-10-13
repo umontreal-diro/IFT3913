@@ -5,7 +5,7 @@ Pour faire une présentation sur le test et sécurité, choisissez un des sujets
 
 [concept] Test par fuzzing
 - Nom: Thomas Côté
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1tTbi1Mz5bIsOR23O1kE2RFG9gfNhqlcLkUn_bZRis80/edit?pli=1&slide=id.h5444d236bcf8f6bd_3_121#slide=id.h5444d236bcf8f6bd_3_121 
 
 [concept] Code lint
 - Nom: Zhexin Guo
