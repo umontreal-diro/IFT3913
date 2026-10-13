@@ -13,7 +13,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Test pour les véhicules autonomes
-- Nom:
+- Nom: Emna Garna
 - Présentation:
 
 [concept] Test d'applications mobiles
@@ -33,7 +33,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Tester une plateforme de streaming
-- Nom:
+- Nom: Cyreanne Candy Andrianefa
 - Présentation:
 
 [concept] Tester un système d'intégration continue
@@ -45,5 +45,5 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Test de systèmes de cinéma numérique
-- Nom: Melila Benmakhlouf
+- Nom:  Amine Khettal
 - Présentation:

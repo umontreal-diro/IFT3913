@@ -3,15 +3,15 @@
   Pour faire une présentation sur le test et la diversité des environnements, choisissez un des sujets listés ci-dessous et indiquez votre nom, ou proposez votre propre sujet. Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontreal.ca) le plus tôt possible pour valider le sujet.
 
 [concept] A/B testing
-- Nom:
+- Nom:Anas Harti
 - Présentation:
    
 [concept] Back to back testing
-- Nom:
+- Nom:Simon Guy
 - Présentation:
   
 [concept] Test sur la compatibilité réseau
-- Nom:
+- Nom: Joe El-Hayek
 - Présentation:
 
 [concept] test de migration de données entre environnements
@@ -19,7 +19,7 @@
 - Présentation:
  
 [concept] Cross-platform testing with Appium
-- Nom:
+- Nom: Nader Ghaddar
 - Présentation:
   
 [concept] Tests de comptabilité dans les environnements virtualisés et conteneurisés (Docker, Kubernetes)
@@ -35,18 +35,18 @@
 - Présentation:
   
 [Concept] Comment les langages de programmation eux-mêmes sont testés
-- Nom:
+- Nom: David Stanescu
 - Présentation:
   
 [concept] Cross-browser testing
-- Nom:
+- Nom: Alexandre Soglo Booh Louha
 - Présentation:
   
 [concept] Test de compatibilité entre environnements
-- Nom:
+- Nom: Rayen Rizk 
 - Présentation:
 
 [demo] Docker pour tester dans un environnement uniforme
-- Nom:
+- Nom: Marc-Julius Nadeau
 - Présentation:
   
