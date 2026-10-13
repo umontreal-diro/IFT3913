@@ -25,7 +25,7 @@ Pour faire une présentation sur le test et sécurité, choisissez un des sujets
 
 [concept] Test dynamique pour la sécurité (DAST)
 - Nom: Yaovi Florient Gadedjro Abagha
-- Présentation: 
+- Présentation: https://canva.link/dast-pptx
 
 [demo] [AFL](https://github.com/AFLplusplus/AFLplusplus)
 - Nom: Émerick Poulin
