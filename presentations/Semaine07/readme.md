@@ -9,7 +9,7 @@ Pour faire une présentation sur le test et sécurité, choisissez un des sujets
 
 [concept] Code lint
 - Nom: Zhexin Guo
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1yo_55shdtwz1sYHMjW1OFBav1RqC0piY/edit?usp=drivesdk&ouid=100930134911017535828&rtpof=true&sd=true
 
 [concept] la revue de code
 - Nom: Maysaa Khanfoudi
