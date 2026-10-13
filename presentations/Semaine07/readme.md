@@ -9,7 +9,7 @@ Pour faire une présentation sur le test et sécurité, choisissez un des sujets
 
 [concept] Code lint
 - Nom: Zhexin Guo
-- Présentation: https://docs.google.com/presentation/d/1yo_55shdtwz1sYHMjW1OFBav1RqC0piY/edit?usp=drivesdk&ouid=100930134911017535828&rtpof=true&sd=true
+- Présentation: 
 
 [concept] la revue de code
 - Nom: Maysaa Khanfoudi
@@ -33,7 +33,7 @@ Pour faire une présentation sur le test et sécurité, choisissez un des sujets
 
 [demo] [findbugs](https://github.com/findbugsproject/findbugs) pour le test statique en Java
 - Nom: Reine Guinguiere
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1Lx4BRr11i6epnsPz9KYJC2MaXAFiIsSA/edit?usp=drive_link&ouid=115938698296947681852&rtpof=true&sd=true
 
 [demo] [semgrep](https://github.com/semgrep/semgrep) pour l'analyse statique
 - Nom: Toky Erick Rabenantoandro
