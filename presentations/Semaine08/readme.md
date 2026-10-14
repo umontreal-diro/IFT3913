@@ -43,5 +43,5 @@
 - Présentation: 
 
 [demo] [Dependency Updater](https://github.com/softaworks/agent-toolkit/tree/main/skills/dependency-updater)
-- Nom: 
+- Nom: Rayyan Oumlil
 - Présentation: 
