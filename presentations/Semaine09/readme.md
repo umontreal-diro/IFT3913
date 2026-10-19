@@ -27,7 +27,7 @@
 - Présentation:
   
 [demo] [gauge](https://github.com/getgauge/gauge) pour le test multi platformes
-- Nom:
+- Nom: Jaden Keenan-Mbemba
 - Présentation:
   
 [demo] [selenium](https://www.selenium.dev/) pour le test web
