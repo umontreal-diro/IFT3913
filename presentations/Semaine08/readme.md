@@ -28,7 +28,7 @@
 
 [concept] Dependency hell
 - Nom: Hamza Aqel
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1J41jJYVc8w5ShUi7fFDEI9pNZQUu3TyS/edit?slide=id.p1#slide=id.p1
 
 [demo] [cycloneDX](https://cyclonedx.org/) pour la génération de 'software bill of materials'
 - Nom: Dickson Ma
