@@ -44,4 +44,4 @@
 
 [demo] [Dependency Updater](https://github.com/softaworks/agent-toolkit/tree/main/skills/dependency-updater)
 - Nom: Mohamed Saidana
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1j49x7VDLovHhM7gNpbAgp6M9aJYV-_PsVCUkzfQw7YE/edit?usp=sharing
