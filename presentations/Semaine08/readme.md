@@ -8,7 +8,7 @@
 
 [concept] Bots pour la mise à jour des dépendances
 - Nom: David Correa
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1T9YDK0uvpf1WYY3gmRaXFZRUNey406Gm/edit?usp=sharing&ouid=104504500712273410748&rtpof=true&sd=true
 
 [concept] Mise à jour des dépendances qui brisent le build (a.k.a breaking dependency update)
 - Nom: Rafi Dahoui
