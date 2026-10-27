@@ -16,7 +16,7 @@
 
 [concept] le [lockfile](https://arxiv.org/pdf/2505.04834)
 - Nom: Adem-Abdelkrim Ghaoui
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1rtS4DBXJajE0oCZOISEj803qEQqneIGYezKmMhawYnI/edit?usp=sharing
 
 [concept] le build reproductible
 - Nom: Laurent-Philippe Roy-Lemaire
