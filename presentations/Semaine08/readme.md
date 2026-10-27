@@ -24,7 +24,7 @@
 
 [concept] analyse statique pour la réduction des dépendances
 - Nom: Taha Azami
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1Y1PxZRbN2g5CBOjpXTItignwridIPaLMxord8aGoLn8/edit?usp=sharing
 
 [concept] Dependency hell
 - Nom: Hamza Aqel
