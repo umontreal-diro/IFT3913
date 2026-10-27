@@ -4,7 +4,7 @@
 
 [concept] Gestionnaire de paquets
 - Nom: Joseph Soufsaf
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1pnI9gFtuPWoF4ZwaNqEX1c6lAo16EEK3G80pVnZwG8c/edit?slide=id.h1c4f36e53be516da_0_1197#slide=id.h1c4f36e53be516da_0_1197
 
 [concept] Bots pour la mise à jour des dépendances
 - Nom: David Correa
