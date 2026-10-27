@@ -12,7 +12,7 @@
 
 [concept] Mise à jour des dépendances qui brisent le build (a.k.a breaking dependency update)
 - Nom: Rafi Dahoui
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1AL3GiNOroJoBYHOUI9plT4VPgwKPhyLDKM_uGJbSNBQ/edit?usp=drivesdk
 
 [concept] le [lockfile](https://arxiv.org/pdf/2505.04834)
 - Nom: Adem-Abdelkrim Ghaoui
