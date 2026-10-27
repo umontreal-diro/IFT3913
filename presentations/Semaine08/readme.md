@@ -32,7 +32,7 @@
 
 [demo] [cycloneDX](https://cyclonedx.org/) pour la génération de 'software bill of materials'
 - Nom: Dickson Ma
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/12nUhNHoOhSe6ZiwD3Ix96Rlj7TaqnOCd/edit?slide=id.p1#slide=id.p1
 
 [demo] [Nix](https://nixos.org/), gestionnaire de paquets
 - Nom: Yanis Boukhili
