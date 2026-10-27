@@ -40,7 +40,7 @@
 
 [demo] [tree-shaking](https://dev.to/softheartengineer/tree-shaking-in-js-51do)
 - Nom: Nizar Lakhder
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1CYd5utJ1I33Sm-w7GpFF8UxYA3aqGHR9/edit?usp=drive_link&ouid=105718065616675994252&rtpof=true&sd=true
 
 [demo] [Dependency Updater](https://github.com/softaworks/agent-toolkit/tree/main/skills/dependency-updater)
 - Nom: Mohamed Saidana
