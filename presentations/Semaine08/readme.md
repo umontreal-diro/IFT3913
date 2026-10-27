@@ -20,7 +20,7 @@
 
 [concept] le build reproductible
 - Nom: Laurent-Philippe Roy-Lemaire
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1QZFjhPdf_TU6pPpYWv-PywJihTymvQBgxg2JXWaa8fU/edit?usp=sharing 
 
 [concept] analyse statique pour la réduction des dépendances
 - Nom: Taha Azami
