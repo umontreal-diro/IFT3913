@@ -1,4 +1,4 @@
-mise à jour: 26.10.27
+mise à jour: 26.10.28
 
 
 # Inscriptions tâche 1:
