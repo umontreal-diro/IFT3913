@@ -32,7 +32,7 @@
   
 [demo] [selenium](https://www.selenium.dev/) pour le test web
 - Nom: Enric Soldevila
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1-yMjXko56NkBozUOzsTWLF4KuZANTdkUqIxiUmV7M4c/edit?usp=sharing
   
 [Concept] Comment les langages de programmation eux-mêmes sont testés
 - Nom: David Stanescu
