@@ -40,7 +40,7 @@
   
 [concept] Cross-browser testing
 - Nom: Alexandre Soglo Booh Louha
-- Présentation:https://docs.google.com/presentation/d/1-yMjXko56NkBozUOzsTWLF4KuZANTdkUqIxiUmV7M4c/edit?usp=sharing
+- Présentation: https://udemontreal-my.sharepoint.com/:p:/g/personal/alexandre_booh_louha_umontreal_ca/IQBmPku1speUQa0ruzMCR4juAdkH9S8zPVmN06ekweu4cks?e=ayVg1g
   
 [concept] Test de compatibilité entre environnements
 - Nom: Rayen Rizk 
