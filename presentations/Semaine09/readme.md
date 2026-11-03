@@ -8,7 +8,7 @@
    
 [concept] Back to back testing
 - Nom:Simon Guy
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1PDujaytvRweplcAL-eDyK_hSdrRfYpgQeM7zY1_bLFI/edit?usp=sharing
   
 [concept] Test sur la compatibilité réseau
 - Nom: Joe El-Hayek
