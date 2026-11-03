@@ -48,5 +48,5 @@
 
 [demo] Docker pour tester dans un environnement uniforme
 - Nom: Marc-Julius Nadeau
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1V4G3WOkmoodvC-bNtyfewGRY801B1zXAdIJf7kQpWvc/edit?usp=sharing
   
