@@ -4,7 +4,7 @@
 
 [concept] A/B testing
 - Nom:Anas Harti
-- Présentation:
+- Présentation:https://docs.google.com/presentation/d/1EX71aDeGGERQqobA38MlIstlneP-YvIlwsXbCELhn0w/edit?usp=sharing
    
 [concept] Back to back testing
 - Nom:Simon Guy
