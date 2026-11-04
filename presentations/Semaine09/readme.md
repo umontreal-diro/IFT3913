@@ -12,7 +12,7 @@
   
 [concept] Test sur la compatibilité réseau
 - Nom: Joe El-Hayek
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1mI4Auoa2acKvsLmy7CLesp4VaGDVEqK4/edit?slide=id.p1#slide=id.p1
 
 [concept] test de migration de données entre environnements
 - Nom: David Serafini
