@@ -36,7 +36,7 @@
   
 [Concept] Comment les langages de programmation eux-mêmes sont testés
 - Nom: David Stanescu
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1BnsV2o7QqpxfyaJRfGK5gH1iDNQHEoXN45-ZzZ3IXKo/edit?usp=sharing
   
 [concept] Cross-browser testing
 - Nom: Alexandre Soglo Booh Louha
