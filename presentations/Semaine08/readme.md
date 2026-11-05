@@ -36,7 +36,7 @@
 
 [demo] [Nix](https://nixos.org/), gestionnaire de paquets
 - Nom: Yanis Boukhili
-- Présentation: 
+- Présentation: https://docs.google.com/presentation/d/1WYMm-DifKYzHidRQVq03MdCT_awePeXb_tHWlY0IrVs/edit?usp=sharing 
 
 [demo] [tree-shaking](https://dev.to/softheartengineer/tree-shaking-in-js-51do)
 - Nom: Nizar Lakhder
