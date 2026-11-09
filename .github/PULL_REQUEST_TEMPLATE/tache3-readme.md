@@ -2,8 +2,8 @@
 
 | Nom complet | Identifiant GitHub |
 |---|---|
-| Nom Prénom | github-username |
-| Nom Prénom | github-username |
+| Thomas Ring | Thomas-Ring |
+| Vianney Landry Ntebou Soutsing | landry000 |
 
 - Lien vers le répertoire GitHub :
 - Lien vers le README du répertoire :
