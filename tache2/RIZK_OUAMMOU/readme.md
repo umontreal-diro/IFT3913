@@ -5,5 +5,5 @@
 | Rayen Rizk | rayenrizk |
 | Mohamed Badr Ouammou | gy23578 |
 
-- Lien vers le répertoire GitHub :
-- Lien vers le README du répertoire :
+- Lien vers le répertoire GitHub : https://github.com/rayenrizk/tika
+- Lien vers le README du répertoire : https://github.com/rayenrizk/tika/blob/main/README.md
