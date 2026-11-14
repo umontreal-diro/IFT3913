@@ -2,8 +2,8 @@
 
 | Nom complet | Identifiant GitHub |
 |---|---|
-| Nom Prénom | github-username |
-| Nom Prénom | github-username |
+| Messaad Abdelmouhcine | abdel2154 |
+| Cherir Roustom Abdeldjalel | R0us24 |
 
 - Lien vers le répertoire GitHub :
 - Lien vers le README du répertoire :
