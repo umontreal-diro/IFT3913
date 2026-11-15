@@ -6,7 +6,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Qualité logicielle pour l'aéronautique
 - Nom: Théodore Le Roy
-- Présentation:
+- Présentation: https://theodoreleroy.com/aeronautique.pdf
 
 [concept] Test des systèmes bancaires
 - Nom:Georges Cacko
