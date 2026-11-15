@@ -128,7 +128,7 @@ jobs:
             [[ -f "$readme" ]] || continue
             sem=$(basename "$(dirname "$readme")")
             reg=$(grep -cE '^-[[:space:]]*Nom:[[:space:]]*\S' "$readme") || true
-            links=$(grep -cE '^-[[:space:]]*Présentation:[[:space:]]+\S' "$readme") || true
+            links=$(grep -cE '^-[[:space:]]*Présentation:[[:space:]]*[^[:space:]]' "$readme") || true
             echo "${sem},${reg},${links}" >> tache1_weekly.csv
           done
 

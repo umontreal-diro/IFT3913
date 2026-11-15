@@ -18,7 +18,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Test d'applications mobiles
 - Nom:Jominia Ahouandjinou
-- Présentation:
+- Présentation: https://canva.link/pgv414qjadfyepr 
 
 [concept] Test pour les jeux vidéos
 - Nom: Thomas Ring
@@ -45,5 +45,5 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 - Présentation:
 
 [concept] Test de systèmes de cinéma numérique
-- Nom:
+- Nom:  Amine Khettal
 - Présentation:
