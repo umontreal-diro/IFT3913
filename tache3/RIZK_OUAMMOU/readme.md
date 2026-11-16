@@ -1,17 +1,9 @@
+# Tâche 3
 
-# Tâche 3 — IFT3913
-
-## Membres de l'équipe
-
-| Nom complet | GitHub |
+| Nom complet | Identifiant GitHub |
 |---|---|
-| Rayen Rizk | [rayenrizk](https://github.com/rayenrizk) |
-| Mohamed Badr Ouammou | [gy23578](https://github.com/gy23578) |
+| Rayen Rizk | rayenrizk |
+| Mohamed Badr Ouammou | gy23578 |
 
-## Liens du travail
-
-**Dépôt GitHub :**
-https://github.com/rayenrizk/tika/tree/tache3-semgrep
-
-**Rapport complet :**
-https://github.com/rayenrizk/tika/blob/tache3-semgrep/docs/tache3/README.md
+- Lien vers le répertoire GitHub : https://github.com/rayenrizk/tika/tree/tache3-semgrep
+- Lien vers le README du répertoire : https://github.com/rayenrizk/tika/blob/tache3-semgrep/docs/tache3/README.md
