@@ -1,0 +1,9 @@
+# Tâche 3
+
+| Nom complet | Identifiant GitHub |
+|---|---|
+| Georges Divine Cacko Mouguen | ReddKingK17 |
+| Adem-Abdelkrim Ghaoui | AdemGhaoui |
+
+- Lien vers le répertoire GitHub : https://github.com/ReddKingK17/tika
+- Lien vers le README du répertoire : https://github.com/ReddKingK17/tika/blob/main/rapports/README-tache3.md
