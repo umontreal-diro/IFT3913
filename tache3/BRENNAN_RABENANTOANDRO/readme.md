@@ -5,5 +5,5 @@
 | Brennan Luc | LucBrennan |
 | Rabenantoandro Toky Erick | Toky5 |
 
-- Lien vers le répertoire GitHub : https://github.com/Toky5/tika
-- Lien vers le README du répertoire : https://github.com/Toky5/tika/blob/main/README.md
+- Lien vers le répertoire GitHub : https://github.com/LucBrennan/tika
+- Lien vers le README du répertoire : https://github.com/LucBrennan/tika/blob/main/tache3/README.md
