@@ -22,7 +22,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Test pour les jeux vidéos
 - Nom: Thomas Ring
-- Présentation:
+- Présentation: https://canva.link/bvbtd8vap5bmsph
 
 [concept] Tester des systèmes à base d'IA
 - Nom: Rayyan Oumlil
@@ -34,7 +34,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Tester une plateforme de streaming
 - Nom: Cyreanne Candy Andrianefa
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1qwWpIoA11A7gjERQzjBvJPpXxxWOjk-IPA3kGmuiQnw/edit?usp=sharing
 
 [concept] Tester un système d'intégration continue
 - Nom: Gabriele Theagene
@@ -46,4 +46,4 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Test de systèmes de cinéma numérique
 - Nom:  Amine Khettal
-- Présentation:
+- Présentation:  https://docs.google.com/presentation/d/16hwexXVCb3FYjN2ORoeLmTuSjeIIhOoh/edit?usp=drive_link&ouid=105752579907270604755&rtpof=true&sd=true
