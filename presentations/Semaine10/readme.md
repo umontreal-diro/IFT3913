@@ -22,7 +22,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Test pour les jeux vidéos
 - Nom: Thomas Ring
-- Présentation:
+- Présentation: https://canva.link/bvbtd8vap5bmsph
 
 [concept] Tester des systèmes à base d'IA
 - Nom: Rayyan Oumlil
