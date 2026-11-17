@@ -5,5 +5,5 @@
 | Khanfoudi Maysaa | Maysaa29 |
 | Laurent-Philippe Roy-Lemaire | Mastalp |
 
-- Référentiel GitHub : https://github.com/Mastalp/tika/tree/ift3913-tests
-- README : https://github.com/Mastalp/tika/blob/ift3913-tests/README.md
+- Référentiel GitHub : [https://github.com/Mastalp/tika/tree/ift3913-tests](https://github.com/Mastalp/tika/tree/ift3913-tests)
+- README : [https://github.com/Mastalp/tika/blob/ift3913-tests/README.md](https://github.com/Mastalp/tika/blob/ift3913-tests/README.md)
