@@ -1,4 +1,4 @@
-mise à jour: 26.11.15
+mise à jour: 26.11.16
 
 
 # Inscriptions tâche 1:
@@ -33,8 +33,8 @@ non-inscrits : azaminoure-ship-it; AZAT0THT; starplatinumsanFR
 
 # Inscriptions tâche 3:
 
-nombre: 7
+nombre: 34
 
-inscrits : chrismadara45; fatimazahrae5; fauverick; marwahoumayed22; OlivierLarueUmontreal; waydala; womboteemo
+inscrits : abdel2154; adam-msr; AdemGhaoui; aminekh04; ayaelb8; Chrisamy; chrismadara45; EnzoT454; FakeTMG; fatimazahrae5; fauverick; gy23578; KingBrick12; laylaelshahawy; lucastionohoue-glitch; luluunityy; marwahoumayed22; Murfew; musa223-ui; OlivierLarueUmontreal; Overengined; R0us24; RAHMSAL; rayenrizk; Rayyan-Oumlil; ReddKingK17; TalaDhaiby; Tong3410976; udeme-sml; vizard24; waydala; womboteemo
 
-non-inscrits : 0xD34DC0DE; abdel2154; adam-msr; AdemGhaoui; AguibouF; Alaealoui; aminekh04; anasys0x; anddina; Andy00L; ans1008; axh23399; ayaelb8; Aymtrack; azaminoure-ship-it; AZAT0THT; bbroux; CarlosDanielZQ; Chrisamy; chucky5264; cyreanne0; David-LeGOAT; DavidStanescu13; doctor277; dthierno; elfarkhanas; emnagarna; EnzoT454; FakeTMG; farah-romdhane; FaustGzx; FlyingCanoe; GELOkm; gt674; gy23578; IsabelleGuillard; islamsamahtanisha; jeannicbeaulieu; jessielam-j; JHK01; Jomii06; JosephSoufsaf; KingBrick12; landry000; Larry-g447; laylaelshahawy; lucastionohoue-glitch; LucBrennan; luluunityy; Mad-Barry; mah0504; MaM; mango825; mariaalitouche; Markeyjuju; Mastalp; Maysaa29; MehdiSLM; mollyfleuur; MoSk3; Murfew; musa223-ui; naderghaddar; nass1379; NizarLakhder; Ost98; Overengined; Perzivalle; PhuongAnh-Tran; R0us24; RAHMSAL; rayenrizk; Rayyan-Oumlil; ReddKingK17; Reine18; samruhix; shems00; Soglo3006; starplatinumsanFR; stephen-jt; TalaDhaiby; tarekzerroug; Thomas-Ring; Tim8059; Toky5; TomCt998; Tong3410976; udeme-sml; vizard24; YD0304; yns-bkh; yohanzytoon; Zouhair-36
+non-inscrits : 0xD34DC0DE; AguibouF; Alaealoui; anasys0x; anddina; Andy00L; ans1008; axh23399; Aymtrack; azaminoure-ship-it; AZAT0THT; bbroux; CarlosDanielZQ; chucky5264; cyreanne0; David-LeGOAT; DavidStanescu13; doctor277; dthierno; elfarkhanas; emnagarna; farah-romdhane; FaustGzx; FlyingCanoe; GELOkm; gt674; IsabelleGuillard; islamsamahtanisha; jeannicbeaulieu; jessielam-j; JHK01; Jomii06; JosephSoufsaf; landry000; Larry-g447; LucBrennan; Mad-Barry; mah0504; MaM; mango825; mariaalitouche; Markeyjuju; Mastalp; Maysaa29; MehdiSLM; mollyfleuur; MoSk3; naderghaddar; nass1379; NizarLakhder; Ost98; Perzivalle; PhuongAnh-Tran; Reine18; samruhix; shems00; Soglo3006; starplatinumsanFR; stephen-jt; tarekzerroug; Thomas-Ring; Tim8059; Toky5; TomCt998; YD0304; yns-bkh; yohanzytoon; Zouhair-36
