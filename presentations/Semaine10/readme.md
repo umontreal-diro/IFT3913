@@ -46,4 +46,4 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Test de systèmes de cinéma numérique
 - Nom:  Amine Khettal
-- Présentation:
+- Présentation:  https://docs.google.com/presentation/d/16hwexXVCb3FYjN2ORoeLmTuSjeIIhOoh/edit?usp=drive_link&ouid=105752579907270604755&rtpof=true&sd=true
