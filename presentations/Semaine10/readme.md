@@ -6,7 +6,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Qualité logicielle pour l'aéronautique
 - Nom: Théodore Le Roy
-- Présentation:
+- Présentation: https://theodoreleroy.com/aeronautique.pdf
 
 [concept] Test des systèmes bancaires
 - Nom:Georges Cacko
@@ -18,7 +18,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Test d'applications mobiles
 - Nom:Jominia Ahouandjinou
-- Présentation:
+- Présentation: https://canva.link/pgv414qjadfyepr 
 
 [concept] Test pour les jeux vidéos
 - Nom: Thomas Ring

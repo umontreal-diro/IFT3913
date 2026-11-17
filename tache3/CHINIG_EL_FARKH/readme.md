@@ -1,9 +1,9 @@
-# Tâche 2
+# Tâche 3
 
 | Nom complet | Identifiant GitHub |
 |---|---|
-| Mrani Alaoui Anas | Anasys0x |
-| Rachidi Aymane | Aymtrack |
+| CHINIG Aymen | AymenCHINIG1 |
+| EL FARKH Anas | elfarkhanas |
 
 - Lien vers le répertoire GitHub :
 - Lien vers le README du répertoire :
