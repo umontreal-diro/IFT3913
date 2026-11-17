@@ -56,23 +56,24 @@ Vous pouvez contacter les assistantes de cours, Meriem, Yogya et Madjda, à cett
 - Quizz
 - Introduction + [présentations d'étudiants](presentations/Semaine09/readme.md)
 - matériel préparatoire: [Cross Browser Testing Overview](https://www.datadoghq.com/knowledge-center/cross-browser-testing/)
- 
-## Semaine #10 mardi 10 novembre: [Tester dans un domaine spécifique](https://github.com/umontreal-diro/IFT3913/issues/10)
+
+## Semaine #10 mardi 10 novembre: ~~à Ubisoft [Tester dans un domaine spécifique](https://github.com/umontreal-diro/IFT3913/issues/10)~~
 - Introduction + [présentations d'étudiants](presentations/Semaine10/readme.md)
 - matériel préparatoire: [Mobile Game Testing: Types, Tools, and More](https://game-ace.com/blog/mobile-game-testing/)
  
-## Semaine #11 mardi 17 novembre: [Test et humour](https://github.com/umontreal-diro/IFT3913/issues/9)
+## Semaine #11 mardi 17 novembre: [Tester dans un domaine spécifique](https://github.com/umontreal-diro/IFT3913/issues/10)
+- Introduction + [présentations d'étudiants](presentations/Semaine10/readme.md)
+- matériel préparatoire: [Mobile Game Testing: Types, Tools, and More](https://game-ace.com/blog/mobile-game-testing/)
+ 
+## Semaine #12 mardi 24 novembre: [Test et humour](https://github.com/umontreal-diro/IFT3913/issues/9)
 - Introduction + [présentations d'étudiants](presentations/Semaine11/readme.md)
 - matériel préparatoire: [With Great Humor Comes Great Developer Engagement](https://arxiv.org/pdf/2312.01680)
  
-## Semaine #12 mardi 24 novembre novembre: [Test en production](https://github.com/umontreal-diro/IFT3913/issues/11)
+## Semaine #13 mardi 1er décembre: [Test en production](https://github.com/umontreal-diro/IFT3913/issues/11)
 - Quizz
 - Introduction + [présentations d'étudiants](presentations/Semaine12/readme.md)
 - matériel préparatoire: [I test in prod](https://increment.com/testing/i-test-in-production/)
- 
-## Semaine #13 mardi 1er décembre: conclusion 
-- Discussion ouverte sur la qualité logicielle et le déroulé d'IFT3915-A25
-- matériel préparatoire: [On the Costs and Benefits of Adopting Lifelong Learning for Software Analytics](https://dl.acm.org/doi/pdf/10.1145/3639477.3639717)
+
 
 # Evaluation IFT3913 A26
 
