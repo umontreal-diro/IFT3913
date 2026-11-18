@@ -19,7 +19,7 @@ Pour faire une présentation sur la couverture de code, choisissez un des sujets
 - Présentation: https://docs.google.com/presentation/d/1mHUM7UUdW_nYL7hzbfDOn2zhgmaDDn2xQqvS1o9iMWk/edit?usp=sharing 
 
 [concept] Couverture pour les réseaux de neurones 
-- Nom: 
+- Nom: Nourdin Azami
 - Présentation: 
 
 [concept] Avantages et limites de la couverture de test 
