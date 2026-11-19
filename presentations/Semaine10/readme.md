@@ -10,7 +10,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Test des systèmes bancaires
 - Nom:Georges Cacko
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1D-5inR9ioSLDaUXruuIZTNeMyv1bb80C/edit?usp=sharing&ouid=105915734014756574845&rtpof=true&sd=true
 
 [concept] Test pour les véhicules autonomes
 - Nom: Emna Garna
