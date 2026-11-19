@@ -38,7 +38,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Tester un système d'intégration continue
 - Nom: Gabriele Theagene
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1Oi4z3U0u5ceQPIl3W0qsTJDx0nO1Phm-DLQUC04Jpjg/edit?usp=sharing
 
 [concept] Tests d'interopérabilité dans le domaine de la santé
 - Nom: Radiah Mohamed Assowe
