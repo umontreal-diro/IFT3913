@@ -30,7 +30,7 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Tester un chatbot
 - Nom: Jean-Nicolas Beaulieu
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1HZhm7_sN0Jc2fylBsdUnDiwpVABdlRHOqOg9xzv9700/edit?usp=sharing
 
 [concept] Tester une plateforme de streaming
 - Nom: Cyreanne Candy Andrianefa
