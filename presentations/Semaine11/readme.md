@@ -46,4 +46,4 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [demo] [lolcommits](https://github.com/lolcommits)
 - Nom: Ahmed Mami
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/17JXMJOhL-qqp7rII0bqMFmnTLOOEr66U/edit?usp=sharing&ouid=102347875206886720208&rtpof=true&sd=true
