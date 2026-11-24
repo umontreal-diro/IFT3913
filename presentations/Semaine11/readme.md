@@ -26,7 +26,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [concept] Humour en ligne de commande
 - Nom: Anas El Farkh
-- Présentation:
+- Présentation:https://docs.google.com/presentation/d/1v48N2oRpqWdtE63LoOkcrdbpobTQhwm1oBPTy8mI0fA/edit?usp=sharing
 
 [concept] Qualité logicielle pour les easter eggs 
 - Nom: Ali Awada
