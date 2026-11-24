@@ -30,7 +30,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [concept] Qualité logicielle pour les easter eggs 
 - Nom: Ali Awada
-- Présentation:
+- Présentation: https://waydala.github.io/oral-easter-eggs/
 
 [concept] Humour dans les cours de génie logiciel
 - Nom: Houmayed Marwa
