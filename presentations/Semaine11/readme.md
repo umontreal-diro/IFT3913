@@ -42,7 +42,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [demo] [thefuck](https://github.com/nvbn/thefuck) 
 - Nom: Olivier Simard
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1ttrzOKgJS-l3PJ0kWos3tNbmDq4oHx0-CuHt3kxkSP4/edit?usp=sharing
 
 [demo] [lolcommits](https://github.com/lolcommits)
 - Nom: Ahmed Mami
