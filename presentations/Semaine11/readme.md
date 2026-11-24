@@ -14,7 +14,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [concept] Humour dans les bibliothèques de test
 - Nom: Aymen CHINIG
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/16NMEj1hvFRW5z-2-3sG7qbYS0p6QP5MZRCLk0Jm2ft0/edit?usp=sharing
 
 [concept] Humour dans la documentation logicielle
 - Nom: Abdourahman Saleh
