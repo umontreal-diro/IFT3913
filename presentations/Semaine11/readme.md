@@ -22,7 +22,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [concept] Humour pour la gestion de projets logiciels
 - Nom: Fatima Zahrae El fakir
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1l98TpUBpbnM_H81wcWQBALHCcb2GRaSX/edit?usp=sharing&ouid=108892023328533245457&rtpof=true&sd=true
 
 [concept] Humour en ligne de commande
 - Nom: Anas El Farkh
