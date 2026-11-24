@@ -18,7 +18,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [concept] Humour dans la documentation logicielle
 - Nom: Abdourahman Saleh
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1Aj5GA2bpumCg8Eb71214naKirAyvxqrBytWigLikonY/edit?usp=sharing
 
 [concept] Humour pour la gestion de projets logiciels
 - Nom: Fatima Zahrae El fakir
