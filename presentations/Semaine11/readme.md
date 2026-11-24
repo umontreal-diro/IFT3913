@@ -34,7 +34,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [concept] Humour dans les cours de génie logiciel
 - Nom: Houmayed Marwa
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1RikAWU9ptm0G9dthyO2tSJnP1Wr5h263Z5qY551gshg/edit?slide=id.p7#slide=id.p7
 
 [demo] [volkswagen](https://github.com/auchenberg/volkswagen)
 - Nom: shems kaghat
