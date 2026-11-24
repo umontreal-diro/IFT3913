@@ -10,7 +10,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [concept] Les messages d’erreur absurdes et humoristiques
 - Nom: Taoudi Bensouda
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/18fnv_QDvQR5KJThpaiyNGM3L-v8-r1wE/edit?usp=sharing&ouid=110446826630078202579&rtpof=true&sd=true
 
 [concept] Humour dans les bibliothèques de test
 - Nom: Aymen CHINIG
