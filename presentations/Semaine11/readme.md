@@ -38,7 +38,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [demo] [volkswagen](https://github.com/auchenberg/volkswagen)
 - Nom: shems kaghat
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1Fb2QO3b-c5USIiM5yvW0H0MxWWl8im8XEffHlEZGEQk/edit?usp=sharing
 
 [demo] [thefuck](https://github.com/nvbn/thefuck) 
 - Nom: Olivier Simard
