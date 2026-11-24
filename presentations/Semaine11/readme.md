@@ -6,7 +6,7 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [concept] Easter eggs dans la programmation
 - Nom: Étienne Poliquin Daher
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1LTGCZVj7h0GV57nJ75sfvpYLxIe-gR9g47d24xzjAs0/edit?usp=sharing
 
 [concept] Les messages d’erreur absurdes et humoristiques
 - Nom: Taoudi Bensouda
