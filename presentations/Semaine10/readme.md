@@ -6,11 +6,11 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Qualité logicielle pour l'aéronautique
 - Nom: Théodore Le Roy
-- Présentation:
+- Présentation: https://theodoreleroy.com/aeronautique.pdf
 
 [concept] Test des systèmes bancaires
 - Nom:Georges Cacko
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1sf6ml-3HaiiCfjEoRTcgyZfeCQbTfzxR/edit?usp=sharing&ouid=105915734014756574845&rtpof=true&sd=true
 
 [concept] Test pour les véhicules autonomes
 - Nom: Emna Garna
@@ -18,27 +18,27 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Test d'applications mobiles
 - Nom:Jominia Ahouandjinou
-- Présentation:
+- Présentation: https://canva.link/pgv414qjadfyepr 
 
 [concept] Test pour les jeux vidéos
 - Nom: Thomas Ring
-- Présentation:
+- Présentation: https://canva.link/bvbtd8vap5bmsph
 
 [concept] Tester des systèmes à base d'IA
 - Nom: Rayyan Oumlil
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1l0G30NKI4ckyqNsS51r47SYXJX1Mr1kSM4a7pWxMNyA/edit?usp=sharing
 
 [concept] Tester un chatbot
 - Nom: Jean-Nicolas Beaulieu
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1HZhm7_sN0Jc2fylBsdUnDiwpVABdlRHOqOg9xzv9700/edit?usp=sharing
 
 [concept] Tester une plateforme de streaming
 - Nom: Cyreanne Candy Andrianefa
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1qwWpIoA11A7gjERQzjBvJPpXxxWOjk-IPA3kGmuiQnw/edit?usp=sharing
 
 [concept] Tester un système d'intégration continue
 - Nom: Gabriele Theagene
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1Oi4z3U0u5ceQPIl3W0qsTJDx0nO1Phm-DLQUC04Jpjg/edit?usp=sharing
 
 [concept] Tests d'interopérabilité dans le domaine de la santé
 - Nom: Radiah Mohamed Assowe
@@ -46,4 +46,4 @@ Ce cours est dédié à la présentation de solutions de test et assurance quali
 
 [concept] Test de systèmes de cinéma numérique
 - Nom:  Amine Khettal
-- Présentation:
+- Présentation:  https://docs.google.com/presentation/d/16hwexXVCb3FYjN2ORoeLmTuSjeIIhOoh/edit?usp=drive_link&ouid=105752579907270604755&rtpof=true&sd=true

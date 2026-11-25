@@ -6,44 +6,44 @@ Pour proposer votre propre sujet,  contactez les assistants (dift3913@iro.umontr
 
 [concept] Easter eggs dans la programmation
 - Nom: Étienne Poliquin Daher
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1LTGCZVj7h0GV57nJ75sfvpYLxIe-gR9g47d24xzjAs0/edit?usp=sharing
 
 [concept] Les messages d’erreur absurdes et humoristiques
 - Nom: Taoudi Bensouda
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/18fnv_QDvQR5KJThpaiyNGM3L-v8-r1wE/edit?usp=sharing&ouid=110446826630078202579&rtpof=true&sd=true
 
 [concept] Humour dans les bibliothèques de test
 - Nom: Aymen CHINIG
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/16NMEj1hvFRW5z-2-3sG7qbYS0p6QP5MZRCLk0Jm2ft0/edit?usp=sharing
 
 [concept] Humour dans la documentation logicielle
 - Nom: Abdourahman Saleh
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1Aj5GA2bpumCg8Eb71214naKirAyvxqrBytWigLikonY/edit?usp=sharing
 
 [concept] Humour pour la gestion de projets logiciels
 - Nom: Fatima Zahrae El fakir
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1l98TpUBpbnM_H81wcWQBALHCcb2GRaSX/edit?usp=sharing&ouid=108892023328533245457&rtpof=true&sd=true
 
 [concept] Humour en ligne de commande
 - Nom: Anas El Farkh
-- Présentation:
+- Présentation:https://docs.google.com/presentation/d/1v48N2oRpqWdtE63LoOkcrdbpobTQhwm1oBPTy8mI0fA/edit?usp=sharing
 
 [concept] Qualité logicielle pour les easter eggs 
 - Nom: Ali Awada
-- Présentation:
+- Présentation: https://waydala.github.io/oral-easter-eggs/
 
 [concept] Humour dans les cours de génie logiciel
 - Nom: Houmayed Marwa
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1RikAWU9ptm0G9dthyO2tSJnP1Wr5h263Z5qY551gshg/edit?slide=id.p7#slide=id.p7
 
 [demo] [volkswagen](https://github.com/auchenberg/volkswagen)
 - Nom: shems kaghat
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1Fb2QO3b-c5USIiM5yvW0H0MxWWl8im8XEffHlEZGEQk/edit?usp=sharing
 
 [demo] [thefuck](https://github.com/nvbn/thefuck) 
 - Nom: Olivier Simard
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/1ttrzOKgJS-l3PJ0kWos3tNbmDq4oHx0-CuHt3kxkSP4/edit?usp=sharing
 
 [demo] [lolcommits](https://github.com/lolcommits)
 - Nom: Ahmed Mami
-- Présentation:
+- Présentation: https://docs.google.com/presentation/d/17JXMJOhL-qqp7rII0bqMFmnTLOOEr66U/edit?usp=sharing&ouid=102347875206886720208&rtpof=true&sd=true
