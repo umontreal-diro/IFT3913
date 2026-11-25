@@ -36,7 +36,7 @@ Pour faire une présentation sur le test en production, choisissez un des sujets
 
 [demo] [opentelemetry](https://opentelemetry.io/) pour l'observabilité en production
 - Nom: Hung Nguyen
-- Présentation:
+- Présentation:[lien](https://docs.google.com/presentation/d/1CZowyv2udtbx8nc7BwleTjmGJEb3iCp4kTpOOrOsBBI/edit?slide=id.h5693042a7ddc748a_3_0#slide=id.h5693042a7ddc748a_3_0)
 
 [démo]  tests de performances avec K6 en javascript
 - Nom: Adam Ally Musaphur
